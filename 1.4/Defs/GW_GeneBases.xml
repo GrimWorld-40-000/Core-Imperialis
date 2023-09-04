@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneCategoryDef>
+        <defName>GW_Races</defName>
+        <label>Grimworld Races</label>
+        <displayPriorityInXenotype>501</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneDef Abstract="true" Name="GW_Races">
+        <displayCategory>GW_Races</displayCategory>
+        <exclusionTags>
+            <li>GW_Race</li>
+            <li>BodySize</li>
+            <li>Body_Size_Multiplier</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

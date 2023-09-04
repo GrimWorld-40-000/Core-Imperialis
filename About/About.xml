@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>GrimWorld 40,000 - Core Imperialis</name>
+  <author>Sparky, Clashgore, HappyPurging, Odzmang, BlackMarket420, Tittymcswaggy, Alite, Abomination</author>
+  <packageId>Grimworld.Core</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+
+  <loadBefore>
+    <li>HappyPurging.AgeofDarkness</li>
+    <li>Grimworld.AstraMilitarum</li>
+  </loadBefore>
+
+  <loadAfter>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>ceteam.combatextended</li>
+  </loadAfter>
+
+  <description>
+This is the core for the Grimworld 40,000 mod series. 
+
+The core currently adds
+Corpse Starch
+Grimworld Medkits
+Recreation Table in Warhammer style
+Ammo for all imperial factions
+Adamantium, Auramite, Ceramite
+A trader that will automatically stock itself with the things above, along with the things added by Angel of Death and Astra Militarium if you have those installed. 
+
+  </description>
+</ModMetaData>
+

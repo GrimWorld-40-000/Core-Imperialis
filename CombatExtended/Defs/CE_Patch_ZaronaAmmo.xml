@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+		<defName>AmmoZaronaround</defName>
+		<label>.450 Zarona</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>Things/Ammo/AutogunAmmo/AutogunAmmo_c</iconPath></ThingCategoryDef>
+
+	<!--Ammunition Set-->
+
+	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+		<defName>AmmoSet_Zaronaround</defName>
+		<label>.450 Zarona</label>
+		<ammoTypes>
+			<Ammo_Zaronaround>Bullet_Zaronaround</Ammo_Zaronaround>
+			<Ammo_Zaronaround_AP>Bullet_Zaronaround_AP</Ammo_Zaronaround_AP>
+			<Ammo_Zaronaround_HP>Bullet_Zaronaround_HP</Ammo_Zaronaround_HP>
+		</ammoTypes>
+		<similarTo>AmmoSet_Pistol</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!--Ammo-->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="ZaronaroundBase" ParentName="HP_AM_AdvAmmoBase" Abstract="True" MayRequire="Grimworld.AstraMilitarum">
+		<description>.450 Zarona rounds come from Zarona and are mainly used in the Zarona Mk II.</description>
+		<statBases>
+			<Mass>0.018</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+		</tradeTags>
+		<stackLimit>500</stackLimit>
+		<thingCategories>
+			<li>AmmoZaronaround</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ZaronaroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Zaronaround</defName>
+		<label>.450 Zarona cartridge (FMJ)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Zaronaround</cookOffProjectile>
+		<ammoClass>FullMetalJacket</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ZaronaroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Zaronaround_AP</defName>
+		<label>.450 Zarona cartridge (AP)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Zaronaround_AP</cookOffProjectile>
+		<ammoClass>ArmorPiercing</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ZaronaroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Zaronaround_HP</defName>
+		<label>.450 Zarona cartridge (HP)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Zaronaround_HP</cookOffProjectile>
+		<ammoClass>HollowPoint</ammoClass>
+	</ThingDef>
+
+		<!--Projectiles-->
+
+	<ThingDef Name="BaseZaronaround" ParentName="BaseBulletCE" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>100</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseZaronaround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Zaronaround</defName>
+		<label>.450 Zarona bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
+			<armorPenetrationBlunt>46.2</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseZaronaround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Zaronaround_AP</defName>
+		<label>.450 Zarona bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>13</armorPenetrationSharp>
+			<armorPenetrationBlunt>46.2</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseZaronaround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Zaronaround_HP</defName>
+		<label>.450 Zarona bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>23</damageAmountBase>
+			<armorPenetrationSharp>3.3</armorPenetrationSharp>
+			<armorPenetrationBlunt>46.2</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!--Recipes-->
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Zaronaround</defName>
+		<label>make .450 Zarona (FMJ) cartridges x500</label>
+		<description>Craft 500 .450 Zarona (FMJ) cartridges</description>
+		<jobString>Making 500 shots worth of .450 Zarona (FMJ) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Zaronaround>500</Ammo_Zaronaround>
+		</products>
+		<workAmount>2000</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Zaronaround_AP</defName>
+		<label>make .450 Zarona (AP) cartridges x500</label>
+		<description>Craft 500 .450 Zarona (AP) cartridges</description>
+		<jobString>Making 500 shots worth of .450 Zarona (AP) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Zaronaround_AP>500</Ammo_Zaronaround_AP>
+		</products>
+		<workAmount>2400</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Zaronaround_HP</defName>
+		<label>make .450 Zarona (HP) cartridges x500</label>
+		<description>Craft 500 .450 Zarona (HP) cartridges</description>
+		<jobString>Making 500 shots worth of .450 Zarona (HP) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Zaronaround_HP>500</Ammo_Zaronaround_HP>
+		</products>
+		<workAmount>2000</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+</Defs>

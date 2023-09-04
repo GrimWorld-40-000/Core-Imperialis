@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+		<defName>AmmoStubround</defName>
+		<label>8.25mm Long</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>Things/Ammo/AutogunAmmo/AutogunAmmo_c</iconPath></ThingCategoryDef>
+
+	<!--Ammunition Set-->
+
+	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+		<defName>AmmoSet_Stubround</defName>
+		<label>8.25mm Long</label>
+		<ammoTypes>
+			<Ammo_Stubround>Bullet_Stubround</Ammo_Stubround>
+			<Ammo_Stubround_AP>Bullet_Stubround_AP</Ammo_Stubround_AP>
+			<Ammo_Stubround_HP>Bullet_Stubround_HP</Ammo_Stubround_HP>
+			<Ammo_Stubround_Incendiary>Bullet_Stubround_Incendiary</Ammo_Stubround_Incendiary>
+			<Ammo_Stubround_HE>Bullet_Stubround_HE</Ammo_Stubround_HE>
+			<Ammo_Stubround_Sabot>Bullet_Stubround_Sabot</Ammo_Stubround_Sabot>
+		</ammoTypes>
+		<similarTo>AmmoSet_Rifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!--Ammo-->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="StubroundBase" ParentName="HP_AM_AdvAmmoBase" Abstract="True" MayRequire="Grimworld.AstraMilitarum">
+		<description>8.25mm Longs are commonly used in older weapons like Heavy Stubbers.</description>
+		<statBases>
+			<Mass>0.018</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+		</tradeTags>
+		<stackLimit>500</stackLimit>
+		<thingCategories>
+			<li>AmmoStubround</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround</defName>
+		<label>8.25mm Long cartridge (FMJ)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround</cookOffProjectile>
+		<ammoClass>FullMetalJacket</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround_AP</defName>
+		<label>8.25mm Long cartridge (AP)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround_AP</cookOffProjectile>
+		<ammoClass>ArmorPiercing</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround_HP</defName>
+		<label>8.25mm Long cartridge (HP)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround_HP</cookOffProjectile>
+		<ammoClass>HollowPoint</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround_Incendiary</defName>
+		<label>8.25mm Long cartridge (AP-I)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround_Incendiary</cookOffProjectile>
+		<ammoClass>IncendiaryAP</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround_HE</defName>
+		<label>8.25mm Long cartridge (AP-HE)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround_HE</cookOffProjectile>
+		<ammoClass>ExplosiveAP</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StubroundBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Ammo_Stubround_Sabot</defName>
+		<label>8.25mm Long cartridge (Sabot)</label>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Things/Ammo/AutogunAmmo</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.081</MarketValue>
+		</statBases>
+		<cookOffProjectile>Bullet_Stubround_Sabot</cookOffProjectile>
+		<ammoClass>Sabot</ammoClass>
+	</ThingDef>
+
+		<!--Projectiles-->
+
+	<ThingDef Name="BaseStubround" ParentName="BaseBulletCE" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>115</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround</defName>
+		<label>8.25mm Long bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationSharp>5.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>76.22</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround_AP</defName>
+		<label>8.25mm Long bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>11</armorPenetrationSharp>
+			<armorPenetrationBlunt>76.22</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround_HP</defName>
+		<label>8.25mm Long bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>24</damageAmountBase>
+			<armorPenetrationSharp>3</armorPenetrationSharp>
+			<armorPenetrationBlunt>76.22</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround_Incendiary</defName>
+		<label>8.25mm Long bullet (AP-I)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>11</armorPenetrationSharp>
+			<armorPenetrationBlunt>76.22</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>7</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround_HE</defName>
+		<label>8.25mm Long bullet (AP-HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationSharp>5.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>76.22</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>9</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseStubround" MayRequire="Grimworld.AstraMilitarum">
+		<defName>Bullet_Stubround_Sabot</defName>
+		<label>8.25mm Long bullet (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<speed>156</speed>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>97.73</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!--Recipes-->
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround</defName>
+		<label>make 8.25 Long (FMJ) cartridges x500</label>
+		<description>Craft 500 8.25 Long (FMJ) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long (FMJ) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround>500</Ammo_Stubround>
+		</products>
+		<workAmount>2000</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround_AP</defName>
+		<label>make 8.25 Long (AP) cartridges x500</label>
+		<description>Craft 500 8.25 Long (AP) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long (AP) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround_AP>500</Ammo_Stubround_AP>
+		</products>
+		<workAmount>2400</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround_HP</defName>
+		<label>make 8.25 Long (HP) cartridges x500</label>
+		<description>Craft 500 8.25 Long (HP) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long (HP) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround_HP>500</Ammo_Stubround_HP>
+		</products>
+		<workAmount>2000</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround_Incendiary</defName>
+		<label>make 8.25 Long (AP-I) cartridges x500</label>
+		<description>Craft 500 8.25 Long (AP-I) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long AP-I) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround_Incendiary>500</Ammo_Stubround_Incendiary>
+		</products>
+		<workAmount>3240</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround_HE</defName>
+		<label>make 8.25 Long (AP-HE) cartridges x500</label>
+		<description>Craft 500 8.25 Long (AP-HE) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long (AP-HE) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround_HE>500</Ammo_Stubround_HE>
+		</products>
+		<workAmount>3000</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+		<defName>MakeAmmo_Stubround_Sabot</defName>
+		<label>make 8.25 Long (Sabot) cartridges x500</label>
+		<description>Craft 500 8.25 Long (Sabot) cartridges</description>
+		<jobString>Making 500 shots worth of 8.25 Long (Sabot) cartridges</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Stubround_Sabot>500</Ammo_Stubround_Sabot>
+		</products>
+		<workAmount>1800</workAmount>
+		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+	</RecipeDef>
+</Defs>
