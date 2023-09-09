@@ -102,6 +102,7 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<speed>120.0</speed>
+			<soundExplode>MortarBomb_Explode</soundExplode>
 			<damageDef>Burn</damageDef>
 			<damageAmountBase>450</damageAmountBase>
 			<explosionRadius>1.5</explosionRadius>
