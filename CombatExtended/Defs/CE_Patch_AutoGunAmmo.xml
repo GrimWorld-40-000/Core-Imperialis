@@ -2,8 +2,8 @@
 <Defs>
 	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
 		<defName>AmmoAutoGun</defName>
-		<label>autogun</label>
-		<parent>AmmoPistols</parent>
+		<label>8.25mm</label>
+		<parent>AmmoRifles</parent>
 		<iconPath>Things/Ammo/AutogunAmmo/AutogunAmmo_c</iconPath></ThingCategoryDef>
 
 	<!--Ammunition Set-->
@@ -16,7 +16,7 @@
 			<Ammo_AutoGun_AP>Bullet_AutoGun_AP</Ammo_AutoGun_AP>
 			<Ammo_AutoGun_HP>Bullet_AutoGun_HP</Ammo_AutoGun_HP>
 		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
+		<similarTo>AmmoSet_Rifle</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!--Ammo-->

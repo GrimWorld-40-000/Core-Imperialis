@@ -73,7 +73,7 @@
 		<!--Ammunition Bases-->
 	<RecipeDef ParentName="AmmoRecipeBase" Name="HP_AM_AmmoRecipeBase" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
 		<recipeUsers>
-			<li>HP_AM_MilitarumFabricationBench</li>
+			<li>GW_AmmoBench</li>
 		</recipeUsers>
 		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
 	</RecipeDef>
@@ -83,6 +83,7 @@
 		<stackLimit>500</stackLimit>
 		<tradeTags>
 			<li>HPAmmo</li>
+			<li>GW_AM_Ammo</li>
 			<li>CE_AutoEnableTrade</li>
 		</tradeTags>
 	</ThingDef>
@@ -98,7 +99,7 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase" Name="HP_AmmoRecipeBase" Abstract="true">
 		<recipeUsers>
-			<li MayRequire="Grimworld.AstraMilitarum">HP_AM_MilitarumFabricationBench</li>
+			<li>GW_AmmoBench</li>
 		</recipeUsers>
 		<researchPrerequisite>HP_Ammo</researchPrerequisite>
 	</RecipeDef>

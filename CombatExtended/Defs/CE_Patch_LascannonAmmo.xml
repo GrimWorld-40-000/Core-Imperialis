@@ -40,9 +40,15 @@
 		<label>Lascanon Bolt</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Flame_Secondary</damageDef>
-			<damageAmountBase>100.0</damageAmountBase>
+			<damageAmountBase>80</damageAmountBase>
 			<armorPenetrationSharp>1000</armorPenetrationSharp>
 			<armorPenetrationBlunt>1</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb</def>
+					<amount>20</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 

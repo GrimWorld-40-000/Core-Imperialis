@@ -20,7 +20,6 @@
 			<Ammo_HeavyBolter_Vengeance>Bullet_HeavyBolter_Vengeance</Ammo_HeavyBolter_Vengeance>
 			<Ammo_HeavyBolter_Tempest>Bullet_HeavyBolter_Tempest</Ammo_HeavyBolter_Tempest>
 		</ammoTypes>
-		<similarTo>AmmoSet_Rifle</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 		<!--Ammo-->
@@ -197,7 +196,7 @@
 					<amount>5</amount>
 				</li>
 				<li>
-					<def>AcidBurn</def>
+					<def>GW_Hellfire</def>
 					<amount>55</amount>
 				</li>
 			</secondaryDamage>

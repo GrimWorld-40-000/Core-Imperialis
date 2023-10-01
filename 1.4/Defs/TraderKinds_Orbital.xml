@@ -43,7 +43,7 @@
             </li>
             <li Class="StockGenerator_MarketValue">
                 <tradeTag>HPOuter</tradeTag>
-                <countRange>3~5</countRange>
+                <countRange>-1~2</countRange>
             </li>
             <li Class="StockGenerator_MarketValue">
                 <tradeTag>HPShield</tradeTag>
@@ -57,6 +57,10 @@
                 <tradeTag>HPMedicine</tradeTag>
                 <countRange>8~10</countRange>
             </li>
+            <li Class="StockGenerator_MarketValue">
+                <tradeTag>GW_Exotic</tradeTag>
+                <countRange>0~30</countRange>
+            </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>HP_Adamantium</thingDef>
                 <countRange>250~450</countRange>
@@ -68,6 +72,17 @@
             <li Class="StockGenerator_SingleDef">
                 <thingDef>HP_Ceramite</thingDef>
                 <countRange>300~750</countRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>GW_BuildingMaterials</tradeTag>
+                <countRange>
+                    <min>300</min>
+                    <max>500</max>
+                </countRange>
+                <thingDefCountRange>
+                    <min>0</min>
+                    <max>10</max>
+                </thingDefCountRange>
             </li>
             <li Class="StockGenerator_Tag" MayRequire="ceteam.combatextended">
                 <tradeTag>HPAmmo</tradeTag>

@@ -42,6 +42,12 @@
 			<damageAmountBase>13.0</damageAmountBase>
 			<armorPenetrationSharp>19.5</armorPenetrationSharp>
 			<armorPenetrationBlunt>1</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 

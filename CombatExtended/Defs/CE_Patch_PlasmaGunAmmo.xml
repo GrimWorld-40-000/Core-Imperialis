@@ -25,6 +25,15 @@
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 	
+	<CombatExtended.AmmoSetDef MayRequire="HappyPurging.AgeofDarkness">
+		<defName>AmmoSet_PlasmaCannon</defName>
+		<ammoTypes>
+			<Ammo_PlasmaGun>Bullet_PlasmaGun</Ammo_PlasmaGun>
+			<Ammo_Overcharged>Bullet_Overcharged</Ammo_Overcharged>
+			<Ammo_PlasmaCannon>Bullet_PlasmaCannon</Ammo_PlasmaCannon>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
 	<!--Ammo-->
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase" MayRequire="HappyPurging.AgeofDarkness">
@@ -88,6 +97,37 @@
 			<li>AmmoPlasmaGun</li>
 		</thingCategories>
 	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase" MayRequire="HappyPurging.AgeofDarkness">
+		<defName>Ammo_PlasmaCannon</defName>
+		<label>plasma cannon fuel tank</label> 
+		<description>Hydrogen fuel tank for plasma cannon ammunition</description>
+		<statBases>
+			<Mass>0.064</Mass>
+			<Bulk>0.058</Bulk>
+			<MarketValue>1.068</MarketValue>
+		</statBases>
+		<ammoClass>Plasma</ammoClass>
+		<graphicData>
+			<texPath>Things/Ammo/PlasmaGun</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4.2</explosiveRadius>
+				<damageAmountBase>24</damageAmountBase>
+				<explosiveDamageType>PrometheumFlame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.05</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.10</startWickHitPointsPercent>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+				<explodeOnKilled>True</explodeOnKilled>
+				<wickTicks>60~120</wickTicks>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>AmmoPlasmaGun</li>
+		</thingCategories>
+	</ThingDef>
 
 		<!--Projectiles-->
 
@@ -103,7 +143,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<speed>120.0</speed>
 			<damageDef>Burn</damageDef>
-			<damageAmountBase>450</damageAmountBase>
+			<damageAmountBase>300</damageAmountBase>
 			<explosionRadius>1.5</explosionRadius>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 		</projectile>
@@ -111,7 +151,7 @@
 	
 	<ThingDef ParentName="BaseExplosiveBullet" MayRequire="HappyPurging.AgeofDarkness">
 		<defName>Bullet_Overcharged</defName>
-		<label>plasma shot</label>
+		<label>overcharged plasma shot</label>
 		<graphicData>
 			<texPath>Things/Projectiles/Plasma_Projectile</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -121,7 +161,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<speed>120.0</speed>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>450</damageAmountBase>
+			<damageAmountBase>375</damageAmountBase>
 			<explosionRadius>3.5</explosionRadius>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			<secondaryDamage>
@@ -133,14 +173,39 @@
 			<screenShakeFactor>0</screenShakeFactor>
 		</projectile>
 	</ThingDef>
+	
+	<ThingDef ParentName="BaseExplosiveBullet" MayRequire="HappyPurging.AgeofDarkness">
+		<defName>Bullet_PlasmaCannon</defName>
+		<label>plasma cannon shot</label>
+		<graphicData>
+			<texPath>Things/Projectiles/Plasma_Projectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.8</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>120.0</speed>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>450</damageAmountBase>
+			<explosionRadius>6.5</explosionRadius>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<secondaryDamage>
+				<li>
+					<def>PrometheumFlame</def>
+					<amount>120</amount>
+				</li>
+			</secondaryDamage>
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+	</ThingDef>
 
 	<!--Recipes-->
 
 	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
 		<defName>MakeAmmo_PlasmaGun</defName>
-		<label>make plasmagun hydrogen fuel flasks x5</label>
-		<description>Craft 5 plasmagun fuel flasks</description>
-		<jobString>Making 5 shots worth of plasmagun fuel flasks</jobString>
+		<label>make plasmagun hydrogen fuel flasks x10</label>
+		<description>Craft 10 plasmagun fuel flasks</description>
+		<jobString>Making 10 shots worth of plasmagun fuel flasks</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -184,7 +249,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_PlasmaGun>500</Ammo_PlasmaGun>
+			<Ammo_PlasmaGun>10</Ammo_PlasmaGun>
 		</products>
 		<workAmount>5940</workAmount>
 	</RecipeDef>
@@ -237,7 +302,60 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_PlasmaGun>5</Ammo_PlasmaGun>
+			<Ammo_Overcharged>5</Ammo_Overcharged>
+		</products>
+		<workAmount>7663</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+		<defName>MakeAmmo_PlasmaCannon</defName>
+		<label>make overcharged fuel flasks x5</label>
+		<description>Craft 5 overcharged fuel flasks</description>
+		<jobString>Making 5 shots worth of overcharged fuel flasks</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>116</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HP_Ceramite</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>55</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>65</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>HP_Ceramite</li>
+				<li>Prometheum</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_PlasmaCannon>5</Ammo_PlasmaCannon>
 		</products>
 		<workAmount>7663</workAmount>
 	</RecipeDef>

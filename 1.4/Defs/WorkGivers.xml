@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <WorkGiverDef>
+        <defName>GW_DoBillsFurnace</defName>
+        <label>work at furnace</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>98</priorityInType>
+        <fixedBillGiverDefs>
+            <li>GW_Furnace</li>
+        </fixedBillGiverDefs>
+        <verb>manufacture materials</verb>
+        <gerund>manufacturing materials at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+</Defs>
