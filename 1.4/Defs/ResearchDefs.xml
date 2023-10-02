@@ -55,4 +55,18 @@
 		<researchViewX>5.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>GW_BlastDoors</defName>
+        <label>grimworld blast doors</label>
+        <description>Allows for the creation of blast doors, which are super thick doors that can take an extremely long time to open when unpowered.</description>
+        <tab>Odz_ResearchTab_Adeptus</tab>
+        <prerequisites>
+            <li>Autodoors</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<baseCost>2000</baseCost>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
 </Defs>
