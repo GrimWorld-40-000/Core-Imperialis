@@ -12,7 +12,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(89,83,68)</color>
-      <colorTwo>(147,144,134)</colorTwo>
+      <colorTwo>(169,170,169)</colorTwo>
     </graphicData>
     <statBases>
       <MaxHitPoints>5000</MaxHitPoints>
@@ -35,7 +35,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(89,83,68)</color>
-      <colorTwo>(187,173,25)</colorTwo>
+      <colorTwo>(147,108,71)</colorTwo>
     </graphicData>
     <statBases>
       <MaxHitPoints>10000</MaxHitPoints>
@@ -57,8 +57,8 @@
       <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <color>(114,114,114)</color>
-      <colorTwo>(70,70,70)</colorTwo>
+      <color>(89,83,68)</color>
+      <colorTwo>(230,230,230)</colorTwo>
     </graphicData>
     <statBases>
       <MaxHitPoints>3600</MaxHitPoints>
