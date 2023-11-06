@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="HappyPurging.AgeofDarkness">
+	<ThingCategoryDef>
 		<defName>AmmoBolter</defName>
 		<label>.75 Caliber</label>
 		<parent>AmmoRifles</parent>
@@ -9,7 +9,7 @@
 
 	<!--Ammunition Set-->
 
-	<CombatExtended.AmmoSetDef MayRequire="HappyPurging.AgeofDarkness">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_Bolter</defName>
 		<label>.75 Caliber Bolt</label>
 		<ammoTypes>
@@ -26,7 +26,7 @@
 
 	<!--Ammo-->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="BolterBase" ParentName="HP_AmmoBase" Abstract="True" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BolterBase" ParentName="HP_AmmoBase" Abstract="True">
 		<description>.75 caliber bullets commonly used in bolter guns.</description>
 		<statBases>
 			<Mass>0.038</Mass>
@@ -42,7 +42,7 @@
 	</ThingDef>
 	
 				<!-- ============ Standard ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter</defName>
 		<label>.75 Caliber cartridge (Standard)</label>
 		<graphicData>
@@ -57,7 +57,7 @@
 	</ThingDef>
 	
 				<!-- ============ Kraken ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Kraken</defName>
 		<label>.75 Caliber cartridge (Kraken)</label>
 		<description>Powerful armour-piercing rounds. The deuterium core is replaced by a solid adamantine core and uses a heavier main charge. Upon impact, the outer casing peels away and the high velocity adamantium needle accelerates into the victim, where the larger detonator propels shards of super hardened metal further into the wound</description>
@@ -73,7 +73,7 @@
 	</ThingDef>
 	
 				<!-- ============ Hellfire ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Hellfire</defName>
 		<label>.75 Caliber cartridge (Hellfire)</label>
 		<description>Replaces the core and tip of the standard bolt round with a vial of mutagenic acid, and thousands of needles that fire into the target's flesh on impact, pumping the acid into the target. Developed specially to combat Tyranids.</description>
@@ -89,7 +89,7 @@
 	</ThingDef>
 	
 				<!-- ============ Inferno ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Inferno</defName>
 		<label>.75 Caliber cartridge (Inferno)</label>
 		<description>Designed to immolate their targets and destroy them with superheated chemical fire. The deuterium core is replaced with an oxy-phosphorus gel, known as Promethium.</description>
@@ -105,7 +105,7 @@
 	</ThingDef>
 	
 				<!-- ============ Korvidari ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Korvidari</defName>
 		<label>.75 Caliber cartridge (Korvidari)</label>
 		<description>Utilized by the Raven Guard. These are etched with raven-feather charms and sport an abnormally long range. The bolts are packed with extra propellant for superior range and accuracy. Each bolt also houses a minute, hyper-sensitive targeting and flight correction relay, allowing for a marksman's accuracy even against heavily obscured foes.</description>
@@ -121,7 +121,7 @@
 	</ThingDef>
 	
 				<!-- ============ Vengeance ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Vengeance</defName>
 		<label>.75 Caliber cartridge (Vengeance)</label>
 		<description>Utilise an unstable flux technology which makes them slightly hazardous to use but makes them very good against armoured targets. In fact, they were originally developed to combat Traitor Marines</description>
@@ -137,7 +137,7 @@
 	</ThingDef>
 	
 				<!-- ============ Tempest ============ -->
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BolterBase">
 		<defName>Ammo_Bolter_Tempest</defName>
 		<label>.75 Caliber cartridge (Tempest)</label>
 		<description>Incorporate tiny plasma shock generators that emit electromagnetic and thermal radiation when the shell detonates. Produced only on Mars, Tempest shells are noted as particularly effective against machines and mechanical targets.</description>
@@ -154,7 +154,7 @@
 
 		<!--Projectiles-->
 
-	<ThingDef Name="BaseBolter" ParentName="BaseBulletCE" Abstract="true" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Name="BaseBolter" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectiles/Bolter_Projectile</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -167,7 +167,7 @@
 	</ThingDef>
 	
 				<!-- ============ Standard ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter</defName>
 		<label>.75 Caliber Bolt</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -184,7 +184,7 @@
 	</ThingDef>
 	
 				<!-- ============ Kraken ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Kraken</defName>
 		<label>.75 Caliber Bolt (Kraken)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -201,7 +201,7 @@
 	</ThingDef>
 	
 				<!-- ============ Hellfire ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Hellfire</defName>
 		<label>.75 Caliber Bolt (Hellfire)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -222,7 +222,7 @@
 	</ThingDef>
 	
 				<!-- ============ Inferno ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Inferno</defName>
 		<label>.75 Caliber Bolt (Inferno)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -239,7 +239,7 @@
 	</ThingDef>
 	
 				<!-- ============ Korvidari ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Korvidari</defName>
 		<label>.75 Caliber Bolt (Korvidari)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -260,7 +260,7 @@
 	</ThingDef>
 	
 				<!-- ============ Vengeance ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Vengeance</defName>
 		<label>.75 Caliber Bolt (Vengeance)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -272,7 +272,7 @@
 	</ThingDef>
 	
 				<!-- ============ Tempest ============ -->
-	<ThingDef ParentName="BaseBolter" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseBolter">
 		<defName>Bullet_Bolter_Tempest</defName>
 		<label>.75 Caliber Bolt (Tempest)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -293,7 +293,7 @@
 	<!--Recipes-->
 	
 			<!-- ============ Standard ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter</defName>
 		<label>make bolter (Standard) cartridges x500</label>
 		<description>Craft 500 bolter (Standard) cartridges</description>
@@ -329,7 +329,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Kraken ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Kraken</defName>
 		<label>make bolter (Kraken) cartridges x500</label>
 		<description>Craft 500 bolter (Kraken) cartridges</description>
@@ -366,7 +366,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Hellfire ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Hellfire</defName>
 		<label>make bolter (Hellfire) cartridges x500</label>
 		<description>Craft 500 bolter (Hellfire) cartridges</description>
@@ -412,7 +412,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Inferno ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Inferno</defName>
 		<label>make bolter (Inferno) cartridges x500</label>
 		<description>Craft 500 bolter (Inferno) cartridges</description>
@@ -449,7 +449,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Korvidari ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Korvidari</defName>
 		<label>make bolter (Korvidari) cartridges x500</label>
 		<description>Craft 500 bolter (Korvidari) cartridges</description>
@@ -495,7 +495,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Vengeance ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Vengeance</defName>
 		<label>make bolter (Vengeance) cartridges x500</label>
 		<description>Craft 500 bolter (Vengeance) cartridges</description>
@@ -541,7 +541,7 @@
 	</RecipeDef>
 	
 			<!-- ============ Tempest ============ -->
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Bolter_Tempest</defName>
 		<label>make bolter (Tempest) cartridges x500</label>
 		<description>Craft 500 bolter (Tempest) cartridges</description>
