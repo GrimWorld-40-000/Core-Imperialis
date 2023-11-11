@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="HappyPurging.AgeofDarkness">
+	<ThingCategoryDef>
 		<defName>AmmoMeltaGun</defName>
 		<label>melta gun power cell</label>
 		<parent>AmmoAdvanced</parent>
@@ -9,7 +9,7 @@
 
 	<!--Ammunition Set-->
 
-	<CombatExtended.AmmoSetDef MayRequire="HappyPurging.AgeofDarkness">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_MeltaGun</defName>
 		<label>Meltagun Ammo Canister</label>
 		<ammoTypes>
@@ -19,7 +19,7 @@
 
 	<!--Ammo-->
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase">
 		<defName>Ammo_MeltaGun</defName>
 		<label>Meltagun Ammo Canister</label> 
 		<description>Canister of Pyrum-petrol fuel for Meltaguns</description>
@@ -52,7 +52,7 @@
 
 		<!--Projectiles-->
 
-	<ThingDef ParentName="BaseExplosiveBullet" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseExplosiveBullet">
 		<defName>Bullet_MeltaGun</defName>
 		<label>Meltagun Canister</label>
 		<graphicData>
@@ -80,7 +80,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_MeltaGun</defName>
 		<label>make meltagun canisters x20</label>
 		<description>Craft 20 melta gun power cells</description>
