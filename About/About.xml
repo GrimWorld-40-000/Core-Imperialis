@@ -15,7 +15,17 @@
   <loadAfter>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>ceteam.combatextended</li>
+    <li>Grimworld.Framework</li>
   </loadAfter>
+
+	<modDependencies>
+		<li>
+			<packageId>Grimworld.Framework</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl> <!--Needs to be changed to whatever the actual page is-->
+			<downloadUrl>https://github.com/GrimWorld-40-000/GrimWorld-Framework</downloadUrl>
+		</li>
+	</modDependencies>
 
   <description>
 This is the core for the Grimworld 40,000 mod series. 
