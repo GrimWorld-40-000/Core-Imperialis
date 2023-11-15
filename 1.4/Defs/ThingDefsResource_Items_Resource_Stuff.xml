@@ -158,4 +158,35 @@
             </statFactors>
         </stuffProps>
     </ThingDef>
+
+    <ThingDef ParentName="ResourceBase" Name="GW_STC_Fragment">
+        <defName>GW_STC_Fragment</defName>
+        <label>STC fragment</label>
+        <description>A fragment of a Standard Template Construct(STC), STCs were an advanced intelligent computer database that containing details of technology from before the Age of Strife. These allowed workers to build anything from a lasgun to a bunker. These fragments are only shadows of this once great technology, careful study of these fragments can yield clues to long lost technologies.\n\nThese can be studied at a Cogitator to discover new and powerful researches that can be completed by your colonists at a research bench. \n\nThey can be recovered from traders and recieved as mission rewards.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GW_Cogitator</ThingDef>
+        </descriptionHyperlinks>
+        <possessionCount>2</possessionCount>
+        <uiIconPath>UI/GW_STC_Fragment</uiIconPath>
+        <graphicData>
+            <texPath>Things/Resource/STC</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <MarketValue>8000</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>0.6</Flammability>
+            <DeteriorationRate>2.0</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <allowedArchonexusCount>10</allowedArchonexusCount>
+    </ThingDef>
 </Defs>

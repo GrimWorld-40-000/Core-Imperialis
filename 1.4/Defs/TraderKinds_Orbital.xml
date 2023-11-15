@@ -73,6 +73,10 @@
                 <thingDef>HP_Ceramite</thingDef>
                 <countRange>300~750</countRange>
             </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>GW_STC_Fragment</thingDef>
+                <countRange>2~5</countRange>
+            </li>
             <li Class="StockGenerator_Tag">
                 <tradeTag>GW_Drugs</tradeTag>
                 <countRange>

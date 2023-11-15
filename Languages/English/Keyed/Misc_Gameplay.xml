@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<GW_StudySTCFragments>Study STC fragments</GW_StudySTCFragments>
+	<GW_StudySTCFragmentsDescription>Study STC fragments to unlock lost technologies.</GW_StudySTCFragmentsDescription>
+	<GW_STCFragmentsRequired>STC fragments</GW_STCFragmentsRequired>
+	<GW_Progress>Progress</GW_Progress>
+	<GW_DurationLeft>{0} left</GW_DurationLeft>
+	<GW_StudyingPaused>Assembly paused</GW_StudyingPaused>
+	<GW_DiscoveringProject>Discovering project : </GW_DiscoveringProject>
+	<GW_StudyFragmentsDialogTitle>Study STC Fragments to discover projects for your colonists to research</GW_StudyFragmentsDialogTitle>
+	<GW_Projects>Projects:</GW_Projects>
+	<GW_DiscoveredResearchDetails>Discovered research details:</GW_DiscoveredResearchDetails>
+	<GW_StartStudy>Study research</GW_StartStudy>
+	<GW_StudyCompleteMessage>{0} has studied long lost fragments of Imperial technology and found they contain the blueprints for {1}.\n\nYour colony can now attempt to decode these blueprints to gain what was lost.\n\n\n\n\nThe research project {1} is now available to reserach at a research bench (provided all other pre-requisites have been met).</GW_StudyCompleteMessage>
+	<GW_NewResearchDiscovered>New research discovered</GW_NewResearchDiscovered>
+</LanguageData>
