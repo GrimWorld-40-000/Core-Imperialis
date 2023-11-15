@@ -68,6 +68,8 @@
 		<baseCost>5000</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>6.00</researchViewY>
+        <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
+        <discoveredLetterText>You now have the technology to build a cogitator. Many of the advanced Imperium technologies require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
