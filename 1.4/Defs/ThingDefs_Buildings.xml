@@ -156,6 +156,7 @@
         <defName>GW_Cogitator</defName>
         <label>cogitator</label>
         <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one cogitator.</description>
+        <thingClass>Core_Imp.Building_Cogitator</thingClass>
         <graphicData>
             <texPath>Things/Building/Misc/GW_Cogitator</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -164,6 +165,8 @@
         <uiIconScale>0.85</uiIconScale>
         <researchPrerequisites><li>GW_Cogitator</li></researchPrerequisites>
         <size>(2,2)</size>
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
         <rotatable>false</rotatable>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -173,6 +176,7 @@
         <designationCategory>GrimworldCategory</designationCategory>
         <minifiedDef>MinifiedThing</minifiedDef>
         <canOverlapZones>false</canOverlapZones>
+        <tickerType>Normal</tickerType>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
         <thingCategories>
             <li>BuildingsMisc</li>
@@ -182,6 +186,7 @@
             <WorkToBuild>15000</WorkToBuild>
             <Mass>80</Mass>
             <Flammability>0</Flammability>
+            <ResearchSpeedFactor>1.0</ResearchSpeedFactor>
         </statBases>
         <costList>
             <HP_Ceramite>40</HP_Ceramite>
@@ -197,12 +202,13 @@
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>700</basePowerConsumption>
+                <idlePowerDraw>500</idlePowerDraw>
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Facility">
                 <statOffsets>
-                <ResearchSpeedFactor>0.3</ResearchSpeedFactor>
+                    <ResearchSpeedFactor>0.3</ResearchSpeedFactor>
                 </statOffsets>
                 <maxSimultaneous>1</maxSimultaneous>
             </li>
