@@ -169,7 +169,7 @@
         <possessionCount>2</possessionCount>
         <uiIconPath>UI/GW_STC_Fragment</uiIconPath>
         <graphicData>
-            <texPath>Things/UI/GW_STC_Fragment</texPath>
+            <texPath>Things/Resource/STC</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
