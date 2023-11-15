@@ -79,7 +79,7 @@
         <designationCategory>GrimworldCategory</designationCategory>
         <constructEffect>ConstructMetal</constructEffect>
         <researchPrerequisites>
-            <li>GW_PlasmaGenerator</li>
+            <li>GW_PlasmaReactor</li>
         </researchPrerequisites>
         <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
     </ThingDef>
@@ -147,7 +147,7 @@
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
         </placeWorkers>
         <researchPrerequisites>
-            <li>GW_GrimworldManufacturing</li>
+            <li>GW_GrimworldMaterials</li>
         </researchPrerequisites>
     </ThingDef>
 
