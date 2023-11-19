@@ -167,6 +167,18 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Launchers</defName>
+		<label>launchers</label>
+        <description>Unlocks launchers</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>5000</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Bolters</defName>
 		<label>bolters</label>
         <description>This research unlocks all bolt weapons like Boltguns, Heavy Boltguns ect.</description>
