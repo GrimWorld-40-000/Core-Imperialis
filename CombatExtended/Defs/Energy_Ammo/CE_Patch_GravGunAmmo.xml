@@ -160,7 +160,7 @@
 
 	<!--===== Recipes =====-->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="redherring.cantmakethisyet"><!--HappyPurging.AgeofDarkness-->
 		<defName>MakeAmmo_GravCell</defName>
 		<label>make graviton power cell x5</label>
 		<description>Craft 5 graviton power cells</description>
@@ -202,6 +202,7 @@
 			<Ammo_GravCell>5</Ammo_GravCell>
 		</products>
 		<workAmount>5940</workAmount>
+		<researchPrerequisite>GW_SM_GravWeapons</researchPrerequisite>
 	</RecipeDef>
 
 </Defs>

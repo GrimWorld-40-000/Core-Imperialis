@@ -485,6 +485,6 @@
 			<Ammo_HeavyBolter_Tempest>500</Ammo_HeavyBolter_Tempest>
 		</products>
 		<workAmount>13800</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_Bolters</researchPrerequisite>
 	</RecipeDef>
 </Defs>

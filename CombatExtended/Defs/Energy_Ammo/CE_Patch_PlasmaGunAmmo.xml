@@ -252,6 +252,7 @@
 			<Ammo_PlasmaGun>10</Ammo_PlasmaGun>
 		</products>
 		<workAmount>5940</workAmount>
+		<researchPrerequisite>GW_PlasmaWeapons</researchPrerequisite>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
@@ -305,6 +306,7 @@
 			<Ammo_Overcharged>5</Ammo_Overcharged>
 		</products>
 		<workAmount>7663</workAmount>
+		<researchPrerequisite>GW_PlasmaWeapons</researchPrerequisite>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
@@ -358,5 +360,6 @@
 			<Ammo_PlasmaCannon>5</Ammo_PlasmaCannon>
 		</products>
 		<workAmount>7663</workAmount>
+		<researchPrerequisite>GW_PlasmaWeapons</researchPrerequisite>
 	</RecipeDef>
 </Defs>

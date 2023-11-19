@@ -126,7 +126,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_AutoGun</defName>
 		<label>make 8.25mm (FMJ) cartridges x500</label>
 		<description>Craft 500 8.25mm (FMJ) cartridges</description>
@@ -150,11 +150,11 @@
 			<Ammo_AutoGun>500</Ammo_AutoGun>
 		</products>
 		<workAmount>2100</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_AutoGun_AP</defName>
 		<label>make 8.25mm (AP) cartridges x500</label>
 		<description>Craft 500 8.25mm (AP) cartridges</description>
@@ -178,11 +178,11 @@
 			<Ammo_AutoGun_AP>500</Ammo_AutoGun_AP>
 		</products>
 		<workAmount>2520</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_AutoGun_HP</defName>
 		<label>make 8.25mm (HP) cartridges x500</label>
 		<description>Craft 500 8.25mm (HP) cartridges</description>
@@ -206,6 +206,6 @@
 			<Ammo_AutoGun_HP>500</Ammo_AutoGun_HP>
 		</products>
 		<workAmount>2100</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 </Defs>
