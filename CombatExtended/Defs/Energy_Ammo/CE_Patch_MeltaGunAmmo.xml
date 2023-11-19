@@ -122,5 +122,6 @@
 			<Ammo_MeltaGun>20</Ammo_MeltaGun>
 		</products>
 		<workAmount>8800</workAmount>
+		<researchPrerequisite>GW_MeltaWeapons</researchPrerequisite>
 	</RecipeDef>
 </Defs>

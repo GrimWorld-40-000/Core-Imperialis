@@ -189,7 +189,7 @@
 
 	<!-- ==================== Recipes ========================== -->
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_GW_Autocannon_FMJ</defName>
 		<label>make autocannon (FMJ) cartridge x200</label>
 		<description>Craft 200 autocannon (FMJ) cartridges.</description>
@@ -213,9 +213,10 @@
 			<Ammo_GW_Autocannon_FMJ>200</Ammo_GW_Autocannon_FMJ>
 		</products>
 		<workAmount>13000</workAmount>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_GW_Autocannon_AP</defName>
 		<label>make autocannon (AP) cartridge x200</label>
 		<description>Craft 200 autocannon (AP) cartridges.</description>
@@ -239,9 +240,10 @@
 			<Ammo_GW_Autocannon_AP>200</Ammo_GW_Autocannon_AP>
 		</products>
 		<workAmount>15600</workAmount>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_GW_Autocannon_Incendiary</defName>
 		<label>make autocannon (AP-I) cartridge x200</label>
 		<description>Craft 200 autocannon (AP-I) cartridges.</description>
@@ -274,9 +276,10 @@
 			<Ammo_GW_Autocannon_Incendiary>200</Ammo_GW_Autocannon_Incendiary>
 		</products>
 		<workAmount>22600</workAmount>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_GW_Autocannon_HE</defName>
 		<label>make autocannon (AP-HE) cartridge x200</label>
 		<description>Craft 200 autocannon (AP-HE) cartridges.</description>
@@ -309,9 +312,10 @@
 			<Ammo_GW_Autocannon_HE>200</Ammo_GW_Autocannon_HE>
 		</products>
 		<workAmount>30200</workAmount>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_GW_Autocannon_Sabot</defName>
 		<label>make autocannon (Sabot) cartridge x200</label>
 		<description>Craft 200 autocannon (Sabot) cartridges.</description>
@@ -353,6 +357,7 @@
 			<Ammo_GW_Autocannon_Sabot>200</Ammo_GW_Autocannon_Sabot>
 		</products>
 		<workAmount>19800</workAmount>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
 </Defs>

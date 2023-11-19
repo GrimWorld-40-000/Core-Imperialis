@@ -53,7 +53,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_Lasbolt</defName>
 		<label>make Lasgun Power Pack x500</label>
 		<description>Craft 500 Lasgun Power Pack</description>
@@ -95,6 +95,6 @@
 			<Ammo_Lasbolt>500</Ammo_Lasbolt>
 		</products>
 		<workAmount>4600</workAmount>
-		<researchPrerequisite>HP_AM_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_Lasguns</researchPrerequisite>
 	</RecipeDef>
 </Defs>

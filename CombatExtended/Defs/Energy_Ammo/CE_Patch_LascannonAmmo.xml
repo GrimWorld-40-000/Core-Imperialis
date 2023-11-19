@@ -54,7 +54,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_Lascannon</defName>
 		<label>make Lascannon Power Pack x500</label>
 		<description>Craft 50 Lascannon Power Pack</description>
@@ -96,6 +96,6 @@
 			<Ammo_Lascannon>50</Ammo_Lascannon>
 		</products>
 		<workAmount>10000</workAmount>
-		<researchPrerequisite>HP_AM_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_LasCannonTurret</researchPrerequisite>
 	</RecipeDef>
 </Defs>

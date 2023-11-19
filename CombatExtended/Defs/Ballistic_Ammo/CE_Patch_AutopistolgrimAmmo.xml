@@ -126,7 +126,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_Autopistolgrim</defName>
 		<label>make 4.10mm HIVE (FMJ) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (FMJ) cartridges</description>
@@ -150,11 +150,11 @@
 			<Ammo_Autopistolgrim>500</Ammo_Autopistolgrim>
 		</products>
 		<workAmount>1700</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_Autopistolgrim_AP</defName>
 		<label>make 4.10mm HIVE (AP) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (AP) cartridges</description>
@@ -178,11 +178,11 @@
 			<Ammo_Autopistolgrim_AP>500</Ammo_Autopistolgrim_AP>
 		</products>
 		<workAmount>2040</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AM_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
 		<defName>MakeAmmo_Autopistolgrim_HP</defName>
 		<label>make 4.10mm HIVE (HP) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (HP) cartridges</description>
@@ -206,6 +206,6 @@
 			<Ammo_Autopistolgrim_HP>500</Ammo_Autopistolgrim_HP>
 		</products>
 		<workAmount>1700</workAmount>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
+		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 </Defs>

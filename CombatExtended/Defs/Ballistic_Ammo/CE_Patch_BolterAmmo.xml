@@ -326,6 +326,7 @@
 			<Ammo_Bolter>500</Ammo_Bolter>
 		</products>
 		<workAmount>4200</workAmount>
+		<researchPrerequisite>GW_Bolters</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Kraken ============ -->
@@ -362,7 +363,7 @@
 			<Ammo_Bolter_Kraken>500</Ammo_Bolter_Kraken>
 		</products>
 		<workAmount>5040</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Hellfire ============ -->
@@ -408,7 +409,7 @@
 			<Ammo_Bolter_Hellfire>500</Ammo_Bolter_Hellfire>
 		</products>
 		<workAmount>4200</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Inferno ============ -->
@@ -445,7 +446,7 @@
 			<Ammo_Bolter_Inferno>500</Ammo_Bolter_Inferno>
 		</products>
 		<workAmount>6720</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Korvidari ============ -->
@@ -491,7 +492,7 @@
 			<Ammo_Bolter_Korvidari>500</Ammo_Bolter_Korvidari>
 		</products>
 		<workAmount>6360</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Vengeance ============ -->
@@ -537,7 +538,7 @@
 			<Ammo_Bolter_Vengeance>500</Ammo_Bolter_Vengeance>
 		</products>
 		<workAmount>4000</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 	
 			<!-- ============ Tempest ============ -->
@@ -574,6 +575,6 @@
 			<Ammo_Bolter_Tempest>500</Ammo_Bolter_Tempest>
 		</products>
 		<workAmount>6400</workAmount>
-		<researchPrerequisite>HP_AdvAmmo</researchPrerequisite>
+		<researchPrerequisite>GW_AdvancedBolterMunitions</researchPrerequisite>
 	</RecipeDef>
 </Defs>
