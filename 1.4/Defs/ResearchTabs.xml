@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   <ResearchTabDef>
+		<defName>Odz_ResearchTab_Adeptus</defName>
+		<label>Adeptus Astartes</label>
+	</ResearchTabDef>
+
+	<ResearchTabDef MayRequire="HappyPurging.AgeofDarkness">
+		<defName>Armors_AA</defName>
+		<label>Armors of Adeptus Astartes</label>
+	</ResearchTabDef>
+
+	<ResearchTabDef MayRequire="Grimworld.AstraMilitarum">
+		<defName>ODZ_40K_ImperiumOfMan</defName>
+		<label>Astra Militarum</label>
+	</ResearchTabDef>
+</Defs>
