@@ -58,9 +58,6 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<forceShowRoomStats>true</forceShowRoomStats>
 		</building>
-		<researchPrerequisites>
-			<li>HP_Ammo</li>
-		</researchPrerequisites>
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
