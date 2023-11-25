@@ -1,83 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-		<!--Ammo Reseach Project-->
-	<ResearchProjectDef MayRequire="Grimworld.AstraMilitarum">
-		<defName>HP_AM_Ammo</defName>
-		<label>grimworld (AM) ammuntions</label>
-		<description>Allows for the production of various ammunition used by guns like autoguns.</description>
-		<baseCost>1000</baseCost>
-		<techLevel>Industrial</techLevel>
-		<tab>ODZ_40K_ImperiumOfMan</tab>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<prerequisites>
-			<li>ODZ_40K_MilitarumFabricationBench</li>
-		</prerequisites>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef MayRequire="Grimworld.AstraMilitarum">
-		<defName>HP_AM_AdvAmmo</defName>
-		<label>grimworld (AM) advanced ammuntions</label>
-		<description>Allows for the production of various advanced ammunition used by guns like lasguns.</description>
-		<baseCost>2000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<tab>ODZ_40K_ImperiumOfMan</tab>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<prerequisites>
-			<li>HP_AM_Ammo</li>
-		</prerequisites>
-		<researchViewX>2.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>HP_Ammo</defName>
-		<label>grimworld ammuntions</label>
-		<description>Allows for the production of various ammunition used by guns like Bolters, Melta Guns, and Plasma Guns.</description>
-		<baseCost>8000</baseCost>
-		<techLevel>Ultra</techLevel>
-		<tab>Odz_ResearchTab_Adeptus</tab>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<prerequisites>
-			<li MayRequire="Grimworld.AstraMilitarum">ODZ_40K_MilitarumFabricationBench</li>
-		</prerequisites>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>HP_AdvAmmo</defName>
-		<label>grimworld advanced ammuntions</label>
-		<description>Allows for the production of various advanced ammunition used by guns like Bolters.</description>
-		<baseCost>13000</baseCost>
-		<techLevel>Ultra</techLevel>
-		<tab>Odz_ResearchTab_Adeptus</tab>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<prerequisites>
-			<li>HP_Ammo</li>
-		</prerequisites>
-		<researchViewX>2.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
-	</ResearchProjectDef>
-
 		<!--Ammunition Bases-->
-	<RecipeDef ParentName="AmmoRecipeBase" Name="HP_AM_AmmoRecipeBase" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
-		<recipeUsers>
-			<li>GW_AmmoBench</li>
-		</recipeUsers>
-		<researchPrerequisite>HP_AM_Ammo</researchPrerequisite>
-	</RecipeDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="HP_AM_AmmoBase" ParentName="AmmoBase" Abstract="True">
 		<techLevel>Industrial</techLevel>
 		<stackLimit>500</stackLimit>
@@ -101,7 +24,6 @@
 		<recipeUsers>
 			<li>GW_AmmoBench</li>
 		</recipeUsers>
-		<researchPrerequisite>HP_Ammo</researchPrerequisite>
 	</RecipeDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="HP_AmmoBase" ParentName="AmmoBase" Abstract="True">
