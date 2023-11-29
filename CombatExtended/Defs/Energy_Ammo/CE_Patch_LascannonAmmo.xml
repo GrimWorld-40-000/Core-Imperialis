@@ -24,7 +24,7 @@
 		<label>Lascannon Power Pack</label>
 		<graphicData>
 			<graphicClass>Graphic_StackCount</graphicClass>
-			<texPath>Things/Ammo/LasgunAmmo</texPath>
+			<texPath>Things/Ammo/Lascannons</texPath>
 		</graphicData>
 		<statBases>
 			<MarketValue>3.015</MarketValue>
