@@ -43,7 +43,7 @@
 		<defName>Ammo_57x483mmBofors_HE</defName>
 		<label>57x483mm Bofors cartridge (HE)</label>
 		<graphicData>
-			<texPath>Things/Ammo/BattleCannon/BattleCannonShell</texPath>
+			<texPath>Things/Ammo/BattleCannon</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
