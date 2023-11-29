@@ -2,29 +2,30 @@
 <Defs>
 
 	<ThingCategoryDef>
-		<defName>Ammo57x483mmBofors</defName>
-		<label>57x483mm Bofors</label>
+		<defName>Ammo120mmCannonShells</defName>
+		<label>120mm cannon shell</label>
 		<parent>AmmoShells</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberAutocannonLarge</iconPath>
+		<iconPath>UI/Icons/ThingCategories/CaliberCannon</iconPath>
 	</ThingCategoryDef>
 
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_57x483mmBofors</defName>
-		<label>57x483mm Bofors</label>
+		<defName>AmmoSet_120mmCannonShell</defName>
+		<label>120mm cannon shells</label>
 		<ammoTypes>
-			<Ammo_57x483mmBofors_HE>Bullet_57x483mmBofors_HE</Ammo_57x483mmBofors_HE>
+			<Ammo_120mmCannonShell_HEAT>Bullet_120mmCannonShell_HEAT</Ammo_120mmCannonShell_HEAT>
+			<Ammo_120mmCannonShell_HE>Bullet_120mmCannonShell_HE</Ammo_120mmCannonShell_HE>
 		</ammoTypes>
-		<similarTo>AmmoSet_LightCannon</similarTo>
+		<similarTo>AmmoSet_HeavyCannon</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo57x483mmBoforsBase" ParentName="HeavyAmmoBase" Abstract="True">
-		<description>Large caliber cartridge used by naval artillery cannons.</description>
+	<ThingDef Class="CombatExtended.AmmoDef" Name="120mmCannonShellBase" ParentName="HeavyAmmoBase" Abstract="True">
+		<description>Large cannon shells, typically used by 120mm smoothbore tank guns.</description>
 		<thingCategories>
-			<li>Ammo57x483mmBofors</li>
+			<li>Ammo120mmCannonShells</li>
 		</thingCategories>
 		<stackLimit>25</stackLimit>
 		<tradeTags>
@@ -32,37 +33,50 @@
 			<li>CE_AutoEnableCrafting_TableMachining</li>
 		</tradeTags>
 		<statBases>
-			<Mass>6.1</Mass>
-			<Bulk>10.56</Bulk>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>22.3</Mass>
+			<Bulk>66.09</Bulk>
 		</statBases>
-		<cookOffFlashScale>20</cookOffFlashScale>
+		<cookOffFlashScale>35</cookOffFlashScale>
 		<cookOffSound>MortarBomb_Explode</cookOffSound>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo57x483mmBoforsBase">
-		<defName>Ammo_57x483mmBofors_HE</defName>
-		<label>57x483mm Bofors cartridge (HE)</label>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmCannonShellBase">
+		<defName>Ammo_120mmCannonShell_HEAT</defName>
+		<label>120mm cannon shell (HEAT)</label>
 		<graphicData>
 			<texPath>Things/Ammo/BattleCannon</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>39.32</MarketValue>
+			<MarketValue>149.17</MarketValue>
+		</statBases>
+		<ammoClass>RocketHEAT</ammoClass>
+		<detonateProjectile>Bullet_120mmCannonShell_HEAT</detonateProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmCannonShellBase">
+		<defName>Ammo_120mmCannonShell_HE</defName>
+		<label>120mm cannon shell (HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/BattleCannon</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>172.67</MarketValue>
 		</statBases>
 		<ammoClass>GrenadeHE</ammoClass>
-		<detonateProjectile>Bullet_57x483mmBofors_HE</detonateProjectile>
+		<detonateProjectile>Bullet_120mmCannonShell_HE</detonateProjectile>
 	</ThingDef>
 
 	<!-- ================== Projectiles ================== -->
 
-	<ThingDef Name="Base57x483mmBoforsBullet" ParentName="BaseExplosiveBullet" Abstract="true">
+	<ThingDef Name="Base120mmCannonShell" ParentName="BaseExplosiveBullet" Abstract="true">
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_Big</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>193</speed>
-			<soundExplode>MortarBomb_Explode</soundExplode>
+			<speed>229</speed>
 			<flyOverhead>false</flyOverhead>
 			<dropsCasings>true</dropsCasings>
 			<casingMoteDefname>Fleck_BigShell</casingMoteDefname>
@@ -70,20 +84,56 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="Base57x483mmBoforsBullet">
-		<defName>Bullet_57x483mmBofors_HE</defName>
-		<label>57x483mm Bofors bullet (HE)</label>
+	<ThingDef ParentName="Base120mmCannonShell">
+		<defName>Bullet_120mmCannonShell_HEAT</defName>
+		<label>120mm cannon shell (HEAT)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Cannon/HEAT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>405</damageAmountBase>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<armorPenetrationSharp>420</armorPenetrationSharp>
+			<armorPenetrationBlunt>62.411</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>208</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1.5</explosiveRadius>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>18</Fragment_Large>
+					<Fragment_Small>21</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="Base120mmCannonShell">
+		<defName>Bullet_120mmCannonShell_HE</defName>
+		<label>120mm cannon shell (HE)</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Cannon/HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bomb</damageDef>
-			<damageAmountBase>108</damageAmountBase>
-			<explosionRadius>2</explosionRadius>
+			<damageAmountBase>315</damageAmountBase>
+			<explosionRadius>4</explosionRadius>
+			<soundExplode>MortarBomb_Explode</soundExplode>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_Fragments">
 				<fragments>
-					<Fragment_Large>7</Fragment_Large>
-					<Fragment_Small>14</Fragment_Small>
+					<Fragment_Large>30</Fragment_Large>
+					<Fragment_Small>80</Fragment_Small>
 				</fragments>
 			</li>
 		</comps>
@@ -92,10 +142,11 @@
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_57x483mmBofors_HE</defName>
-		<label>make 57x483mm Bofors (HE) cartridge x25</label>
-		<description>Craft 25 57x483mm Bofors (HE) cartridges.</description>
-		<jobString>Making 57x483mm Bofors (HE) cartridges.</jobString>
+		<defName>MakeAmmo_120mmCannonShell_HEAT</defName>
+		<label>make 120mm HEAT cannon shells x2</label>
+		<description>Craft 2 120mm HEAT cannon shells.</description>
+		<jobString>Making 120mm HEAT cannon shells.</jobString>
+		<workAmount>13000</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -103,7 +154,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>122</count>
+				<count>90</count>
 			</li>
 			<li>
 				<filter>
@@ -119,7 +170,7 @@
 						<li>FSX</li>
 					</thingDefs>
 				</filter>
-				<count>11</count>
+				<count>7</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -130,12 +181,58 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_57x483mmBofors_HE>25</Ammo_57x483mmBofors_HE>
+			<Ammo_120mmCannonShell_HEAT>2</Ammo_120mmCannonShell_HEAT>
 		</products>
 		<skillRequirements>
 			<Crafting>4</Crafting>
 		</skillRequirements>
-		<workAmount>17800</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_120mmCannonShell_HE</defName>
+		<label>make 120mm HE cannon shells x2</label>
+		<description>Craft 2 120mm HE cannon shells.</description>
+		<jobString>Making 120mm HE cannon shells.</jobString>
+		<workAmount>15400</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>90</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_120mmCannonShell_HE>2</Ammo_120mmCannonShell_HE>
+		</products>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
 	</RecipeDef>
 
 </Defs>
