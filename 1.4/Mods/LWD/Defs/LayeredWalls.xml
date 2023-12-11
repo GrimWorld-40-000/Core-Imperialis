@@ -4,7 +4,7 @@
     <ThingDef ParentName="LWD_Base_Shootable">
         <defName>GW_Wall_Destr_Shootable</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Shootable</texPath>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Shootable_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
@@ -19,7 +19,7 @@
     <ThingDef ParentName="LWD_Base_Climbable">
         <defName>GW_Wall_Destr_Climbable</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Climbable</texPath>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Climbable_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
@@ -34,7 +34,7 @@
     <ThingDef ParentName="LWD_Base_Rubble">
         <defName>GW_Wall_Destr_Rubble</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Rubble</texPath>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Rubble_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
@@ -50,7 +50,7 @@
     <ThingDef ParentName="LWD_Base_Shootable">
         <defName>GW_ReinforcedWall_Destr_Shootable</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_ReinforcedWall_Shootable</texPath>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Shootable_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
@@ -66,7 +66,7 @@
     <ThingDef ParentName="LWD_Base_Climbable">
         <defName>GW_ReinforcedWall_Destr_Climbable</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_ReinforcedWall_Climbable</texPath>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Climbable_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
@@ -82,7 +82,7 @@
     <ThingDef ParentName="LWD_Base_Rubble">
         <defName>GW_ReinforcedWall_Destr_Rubble</defName>
         <graphicData>
-            <texPath>Things/Building/Linked/GW_ReinforcedWall_Rubble</texPath>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Rubble_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <linkType>Basic</linkType>
         </graphicData>
