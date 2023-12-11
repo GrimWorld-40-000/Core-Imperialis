@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW_Wall"]/comps</xpath>
+        <value>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_Wall_Destr_Shootable</NextLayerDef>
+                <NextLayerDef_Alternative>GW_Wall_Destr_Climbable</NextLayerDef_Alternative>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <!--  New HP =  500 - (100 + 50)/3 - 150 -->
+            <MaxHitPoints>300</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/comps</xpath>
+        <value>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_ReinforcedWall_Destr_Shootable</NextLayerDef>
+                <NextLayerDef_Alternative>GW_ReinforcedWall_Destr_Climbable</NextLayerDef_Alternative>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>
