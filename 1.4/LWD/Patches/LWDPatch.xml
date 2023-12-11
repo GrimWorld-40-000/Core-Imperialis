@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <!--  New HP =  500 - (100 + 50)/3 - 150 -->
+            <MaxHitPoints>300</MaxHitPoints>
+        </value>
+    </Operation>
+</Patch>

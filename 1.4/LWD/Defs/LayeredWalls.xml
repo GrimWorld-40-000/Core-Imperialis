@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Basic Wall-->
+    <ThingDef ParentName="LWD_Base_Shootable">
+        <defName>GW_Wall_Destr_Shootable</defName>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Shootable</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_Wall_Destr_Rubble</NextLayerDef>
+                <ParentLayerDef>GW_Wall</ParentLayerDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="LWD_Base_Climbable">
+        <defName>GW_Wall_Destr_Climbable</defName>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Climb</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_Wall_Destr_Rubble</NextLayerDef>
+                <ParentLayerDef>GW_Wall</ParentLayerDef>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <ThingDef ParentName="LWD_Base_Rubble">
+        <defName>GW_Wall_Destr_Rubble</defName>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_OrdinaryWalls_Rubble</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <ParentLayerDef>GW_Wall</ParentLayerDef>
+                <RestoreToParentWorkAmount>1000</RestoreToParentWorkAmount>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <!--Reinforced Wall-->
+    <ThingDef ParentName="LWD_Base_Shootable">
+        <defName>GW_ReinforcedWall_Destr_Shootable</defName>
+        <label>reinforced loophole wall</label>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Shootable</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_ReinforcedWall_Destr_Rubble</NextLayerDef>
+                <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                <RestoreToParentWorkAmount>1200</RestoreToParentWorkAmount>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <ThingDef ParentName="LWD_Base_Climbable">
+        <defName>GW_ReinforcedWall_Destr_Climbable</defName>
+        <label>reinforced breached wall</label>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Climb</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <NextLayerDef>GW_ReinforcedWall_Destr_Rubble</NextLayerDef>
+                <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                <RestoreToParentWorkAmount>1200</RestoreToParentWorkAmount>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <ThingDef ParentName="LWD_Base_Rubble">
+        <defName>GW_ReinforcedWall_Destr_Rubble</defName>
+        <graphicData>
+            <texPath>Things/Building/Linked/GW_ReinforcedWall_Rubble</texPath>
+        </graphicData>
+        <comps>
+            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                <RestoreToParentWorkAmount>1000</RestoreToParentWorkAmount>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
