@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="GW_Wall"]/comps</xpath>
+        <xpath>Defs/ThingDef[defName="GW_Wall"]</xpath>
         <value>
-            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
-                <NextLayerDef>GW_Wall_Destr_Shootable</NextLayerDef>
-                <NextLayerDef_Alternative>GW_Wall_Destr_Climbable</NextLayerDef_Alternative>
-            </li>
+            <comps>
+                <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                    <NextLayerDef>GW_Wall_Destr_Shootable</NextLayerDef>
+                    <NextLayerDef_Alternative>GW_Wall_Destr_Climbable</NextLayerDef_Alternative>
+                </li>
+            </comps>
         </value>
     </Operation>
 
@@ -19,12 +21,14 @@
     </Operation>
 
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/comps</xpath>
+        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]</xpath>
         <value>
-            <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
-                <NextLayerDef>GW_ReinforcedWall_Destr_Shootable</NextLayerDef>
-                <NextLayerDef_Alternative>GW_ReinforcedWall_Destr_Climbable</NextLayerDef_Alternative>
-            </li>
+            <comps>
+                <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                    <NextLayerDef>GW_ReinforcedWall_Destr_Shootable</NextLayerDef>
+                    <NextLayerDef_Alternative>GW_ReinforcedWall_Destr_Climbable</NextLayerDef_Alternative>
+                </li>
+            </comps>
         </value>
     </Operation>
 
