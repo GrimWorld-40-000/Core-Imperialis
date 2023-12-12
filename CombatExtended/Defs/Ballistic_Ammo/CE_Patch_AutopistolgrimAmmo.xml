@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+	<ThingCategoryDef>
 		<defName>AmmoAutopistolgrim</defName>
 		<label>hiveworld autopistol</label>
 		<parent>AmmoPistols</parent>
@@ -8,7 +8,7 @@
 
 	<!--Ammunition Set-->
 
-	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_Autopistolgrim</defName>
 		<label>4.10mm HIVE</label>
 		<ammoTypes>
@@ -21,7 +21,7 @@
 
 	<!--Ammo-->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="AutopistolgrimBase" ParentName="HP_AM_AmmoBase" Abstract="True" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="AutopistolgrimBase" ParentName="HP_AM_AmmoBase" Abstract="True">
 		<description>4.10mm HIVE ammunition that is most commonly used by pistol weapons</description>
 		<statBases>
 			<Mass>0.015</Mass>
@@ -36,7 +36,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase">
 		<defName>Ammo_Autopistolgrim</defName>
 		<label>4.10mm HIVE cartridge (FMJ)</label>
 		<graphicData>
@@ -50,7 +50,7 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase">
 		<defName>Ammo_Autopistolgrim_AP</defName>
 		<label>4.10mm HIVE cartridge (AP)</label>
 		<graphicData>
@@ -64,7 +64,7 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutopistolgrimBase">
 		<defName>Ammo_Autopistolgrim_HP</defName>
 		<label>4.10mm HIVE cartridge (HP)</label>
 		<graphicData>
@@ -80,7 +80,7 @@
 
 		<!--Projectiles-->
 
-	<ThingDef Name="BaseAutopistolgrim" ParentName="BaseBulletCE" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Name="BaseAutopistolgrim" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -91,7 +91,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutopistolgrim" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutopistolgrim">
 		<defName>Bullet_Autopistolgrim</defName>
 		<label>4.10mm HIVE (FMJ)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -102,7 +102,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutopistolgrim" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutopistolgrim">
 		<defName>Bullet_Autopistolgrim_AP</defName>
 		<label>4.10mm HIVE (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -113,7 +113,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutopistolgrim" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutopistolgrim">
 		<defName>Bullet_Autopistolgrim_HP</defName>
 		<label>hiveworld autopistol bullet (HP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -126,7 +126,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Autopistolgrim</defName>
 		<label>make 4.10mm HIVE (FMJ) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (FMJ) cartridges</description>
@@ -154,7 +154,7 @@
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Autopistolgrim_AP</defName>
 		<label>make 4.10mm HIVE (AP) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (AP) cartridges</description>
@@ -182,7 +182,7 @@
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Autopistolgrim_HP</defName>
 		<label>make 4.10mm HIVE (HP) cartridges x500</label>
 		<description>Craft 500 4.10mm HIVE (HP) cartridges</description>

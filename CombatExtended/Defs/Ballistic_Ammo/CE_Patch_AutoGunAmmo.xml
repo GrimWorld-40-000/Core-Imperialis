@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+	<ThingCategoryDef>
 		<defName>AmmoAutoGun</defName>
 		<label>8.25mm</label>
 		<parent>AmmoRifles</parent>
@@ -8,7 +8,7 @@
 
 	<!--Ammunition Set-->
 
-	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_AutoGun</defName>
 		<label>8.25mm</label>
 		<ammoTypes>
@@ -21,7 +21,7 @@
 
 	<!--Ammo-->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="AutoGunBase" ParentName="HP_AM_AmmoBase" Abstract="True" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="AutoGunBase" ParentName="HP_AM_AmmoBase" Abstract="True">
 		<description>8.25mm autogun ammunition.</description>
 		<statBases>
 			<Mass>0.019</Mass>
@@ -36,7 +36,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase">
 		<defName>Ammo_AutoGun</defName>
 		<label>8.25mm cartridge (FMJ)</label>
 		<graphicData>
@@ -50,7 +50,7 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase">
 		<defName>Ammo_AutoGun_AP</defName>
 		<label>8.25mm cartridge (AP)</label>
 		<graphicData>
@@ -64,7 +64,7 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AutoGunBase">
 		<defName>Ammo_AutoGun_HP</defName>
 		<label>8.25mm cartridge (HP)</label>
 		<graphicData>
@@ -80,7 +80,7 @@
 
 		<!--Projectiles-->
 
-	<ThingDef Name="BaseAutoGun" ParentName="BaseBulletCE" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Name="BaseAutoGun" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -91,7 +91,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutoGun" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutoGun">
 		<defName>Bullet_AutoGun</defName>
 		<label>8.25mm cartridge (FMJ)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -102,7 +102,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutoGun" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutoGun">
 		<defName>Bullet_AutoGun_AP</defName>
 		<label>8.25mm cartridge (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -113,7 +113,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseAutoGun" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseAutoGun">
 		<defName>Bullet_AutoGun_HP</defName>
 		<label>8.25mm cartridge (HP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -126,7 +126,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_AutoGun</defName>
 		<label>make 8.25mm (FMJ) cartridges x500</label>
 		<description>Craft 500 8.25mm (FMJ) cartridges</description>
@@ -154,7 +154,7 @@
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_AutoGun_AP</defName>
 		<label>make 8.25mm (AP) cartridges x500</label>
 		<description>Craft 500 8.25mm (AP) cartridges</description>
@@ -182,7 +182,7 @@
 	</RecipeDef>
 
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_AutoGun_HP</defName>
 		<label>make 8.25mm (HP) cartridges x500</label>
 		<description>Craft 500 8.25mm (HP) cartridges</description>
