@@ -17,7 +17,7 @@
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 
-	<CombatExtended.AmmoSetDef MayRequire="HappyPurging.AgeofDarkness">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_PlasmaIncinerator</defName>
 		<ammoTypes>
 			<Ammo_PlasmaGun>Bullet_PlasmaGun</Ammo_PlasmaGun>
@@ -25,7 +25,7 @@
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 	
-	<CombatExtended.AmmoSetDef MayRequire="HappyPurging.AgeofDarkness">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_PlasmaCannon</defName>
 		<ammoTypes>
 			<Ammo_PlasmaGun>Bullet_PlasmaGun</Ammo_PlasmaGun>
@@ -67,7 +67,7 @@
 		</thingCategories>
 	</ThingDef>
 	
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase">
 		<defName>Ammo_Overcharged</defName>
 		<label>pressurized fuel flask</label> 
 		<description>Plasma containment power cell for plasmagun ammunition</description>
@@ -98,7 +98,7 @@
 		</thingCategories>
 	</ThingDef>
 	
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HP_AmmoBase">
 		<defName>Ammo_PlasmaCannon</defName>
 		<label>plasma cannon fuel tank</label> 
 		<description>Hydrogen fuel tank for plasma cannon ammunition</description>
@@ -149,7 +149,7 @@
 		</projectile>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseExplosiveBullet" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseExplosiveBullet">
 		<defName>Bullet_Overcharged</defName>
 		<label>overcharged plasma shot</label>
 		<graphicData>
@@ -174,7 +174,7 @@
 		</projectile>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseExplosiveBullet" MayRequire="HappyPurging.AgeofDarkness">
+	<ThingDef ParentName="BaseExplosiveBullet">
 		<defName>Bullet_PlasmaCannon</defName>
 		<label>plasma cannon shot</label>
 		<graphicData>
@@ -255,7 +255,7 @@
 		<researchPrerequisite>GW_PlasmaWeapons</researchPrerequisite>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_OverchargedPlasma</defName>
 		<label>make overcharged fuel flasks x5</label>
 		<description>Craft 5 overcharged fuel flasks</description>
@@ -309,7 +309,7 @@
 		<researchPrerequisite>GW_PlasmaWeapons</researchPrerequisite>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="HappyPurging.AgeofDarkness">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_PlasmaCannon</defName>
 		<label>make overcharged fuel flasks x5</label>
 		<description>Craft 5 overcharged fuel flasks</description>

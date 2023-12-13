@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+	<ThingCategoryDef>
 		<defName>AmmoLasboltsmall</defName>
 		<label>Laspistol Power Pack</label>
 		<parent>AmmoAdvanced</parent>
@@ -8,7 +8,7 @@
 
 	<!--Ammunition Set-->
 
-	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_Lasboltsmall</defName>
 		<label>Laspistol Power Pack</label>
 		<ammoTypes>
@@ -18,7 +18,7 @@
 
 	<!--Ammo-->
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="LaserChargePackBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="LaserChargePackBase">
 		<defName>Ammo_Lasboltsmall</defName>
 		<label>Laspistol Power Pack</label>
 		<graphicData>
@@ -37,7 +37,7 @@
 	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
 		<defName>Bullet_Lasboltsmall</defName>
 		<label>Pistol Lasbolt</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Grimworld.AstraMilitarum">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Flame_Secondary</damageDef>
 			<damageAmountBase>13.0</damageAmountBase>
 			<armorPenetrationSharp>19.5</armorPenetrationSharp>
@@ -53,7 +53,7 @@
 
 	<!--Recipes-->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Lasboltsmall</defName>
 		<label>make Laspistol Power Pack x500</label>
 		<description>Craft 500 Laspistol Power Pack</description>

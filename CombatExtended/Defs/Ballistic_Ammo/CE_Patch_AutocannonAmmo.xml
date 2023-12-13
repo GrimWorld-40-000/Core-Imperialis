@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingCategoryDef MayRequire="Grimworld.AstraMilitarum">
+	<ThingCategoryDef>
 		<defName>AmmoGWAutocannon</defName>
 		<label>autocannon</label>
 		<parent>AmmoRifles</parent>
@@ -9,7 +9,7 @@
 	
 	<!-- ==================== AmmoSet ========================== -->
 
-	<CombatExtended.AmmoSetDef MayRequire="Grimworld.AstraMilitarum">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_GW_Autocannon</defName>
 		<label>autocannon</label>
 		<ammoTypes>
@@ -24,7 +24,7 @@
 	
 	<!-- ==================== Ammo ========================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoGWAutocannonBase" ParentName="AmmoBase" Abstract="True" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoGWAutocannonBase" ParentName="AmmoBase" Abstract="True">
 		<description>A ridiculously large and powerful caliber sporting cartridge.</description>
 		<statBases>
 			<Mass>0.319</Mass>
@@ -39,7 +39,7 @@
 		</thingCategories>
 	</ThingDef>
 	
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase">
 		<defName>Ammo_GW_Autocannon_FMJ</defName>
 		<label>autocannon cartridge (FMJ)</label>
 		<graphicData>
@@ -53,7 +53,7 @@
 		<cookOffProjectile>Bullet_GW_Autocannon_FMJ</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase">
 		<defName>Ammo_GW_Autocannon_AP</defName>
 		<label>autocannon cartridge (AP)</label>
 		<graphicData>
@@ -67,7 +67,7 @@
 		<cookOffProjectile>Bullet_GW_Autocannon_AP</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase">
 		<defName>Ammo_GW_Autocannon_Incendiary</defName>
 		<label>autocannon cartridge (AP-I)</label>
 		<graphicData>
@@ -81,7 +81,7 @@
 		<cookOffProjectile>Bullet_GW_Autocannon_Incendiary</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase">
 		<defName>Ammo_GW_Autocannon_HE</defName>
 		<label>autocannon cartridge (AP-HE)</label>
 		<graphicData>
@@ -95,7 +95,7 @@
 		<cookOffProjectile>Bullet_GW_Autocannon_HE</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGWAutocannonBase">
 		<defName>Ammo_GW_Autocannon_Sabot</defName>
 		<label>autocannon cartridge (Sabot)</label>
 		<graphicData>
@@ -112,7 +112,7 @@
 
 	<!-- ================== Projectiles ================== -->
 
-	<ThingDef Name="BaseGWAutocannonBullet" ParentName="BaseBulletCE" Abstract="true" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef Name="BaseGWAutocannonBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -124,7 +124,7 @@
 		</projectile>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseGWAutocannonBullet" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseGWAutocannonBullet">
 		<defName>Bullet_GW_Autocannon_FMJ</defName>
 		<label>autocannon bullet (FMJ)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -134,7 +134,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGWAutocannonBullet" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseGWAutocannonBullet">
 		<defName>Bullet_GW_Autocannon_AP</defName>
 		<label>autocannon bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -144,7 +144,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGWAutocannonBullet" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseGWAutocannonBullet">
 		<defName>Bullet_GW_Autocannon_Incendiary</defName>
 		<label>autocannon bullet (AP-I)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -160,7 +160,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGWAutocannonBullet" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseGWAutocannonBullet">
 		<defName>Bullet_GW_Autocannon_HE</defName>
 		<label>autocannon bullet (AP-HE)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -176,7 +176,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGWAutocannonBullet" MayRequire="Grimworld.AstraMilitarum">
+	<ThingDef ParentName="BaseGWAutocannonBullet">
 		<defName>Bullet_GW_Autocannon_Sabot</defName>
 		<label>autocannon bullet (Sabot)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -189,7 +189,7 @@
 
 	<!-- ==================== Recipes ========================== -->
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_GW_Autocannon_FMJ</defName>
 		<label>make autocannon (FMJ) cartridge x200</label>
 		<description>Craft 200 autocannon (FMJ) cartridges.</description>
@@ -216,7 +216,7 @@
 		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_GW_Autocannon_AP</defName>
 		<label>make autocannon (AP) cartridge x200</label>
 		<description>Craft 200 autocannon (AP) cartridges.</description>
@@ -243,7 +243,7 @@
 		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_GW_Autocannon_Incendiary</defName>
 		<label>make autocannon (AP-I) cartridge x200</label>
 		<description>Craft 200 autocannon (AP-I) cartridges.</description>
@@ -279,7 +279,7 @@
 		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_GW_Autocannon_HE</defName>
 		<label>make autocannon (AP-HE) cartridge x200</label>
 		<description>Craft 200 autocannon (AP-HE) cartridges.</description>
@@ -315,7 +315,7 @@
 		<researchPrerequisite>GW_Autoguns</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="HP_AmmoRecipeBase" MayRequire="Grimworld.AstraMilitarum">
+	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_GW_Autocannon_Sabot</defName>
 		<label>make autocannon (Sabot) cartridge x200</label>
 		<description>Craft 200 autocannon (Sabot) cartridges.</description>
