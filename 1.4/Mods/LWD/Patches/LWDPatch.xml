@@ -1,10 +1,127 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <!--Basic Wall-->
+
+            <ThingDef ParentName="LWD_Base_Shootable">
+                <defName>GW_Wall_Destr_Shootable</defName>
+                <graphicData>
+                    <texPath>Things/Building/Linked/GW_OrdinaryWalls_Shootable</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+                        <ParentLayerDef>GW_Wall</ParentLayerDef>
+                    </li>
+                </comps>
+            </ThingDef>
+
+            <ThingDef ParentName="LWD_Base_Climbable">
+                <defName>GW_Wall_Destr_Climbable</defName>
+                <graphicData>
+                    <texPath>Things/Building/Linked/GW_OrdinaryWalls_Climb</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <NextLayerDef>GW_Wall_Destr_Rubble</NextLayerDef>
+                        <ParentLayerDef>GW_Wall</ParentLayerDef>
+                    </li>
+                </comps>
+            </ThingDef>
+
+            <ThingDef ParentName="LWD_Base_Rubble">
+                <defName>GW_Wall_Destr_Rubble</defName>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <ParentLayerDef>GW_Wall</ParentLayerDef>
+                        <RestoreToParentWorkAmount>1200</RestoreToParentWorkAmount>
+                    </li>
+                </comps>
+            </ThingDef>
+
+
+            <!--Reinforced Wall-->
+            <ThingDef ParentName="LWD_Base_Shootable">
+                <defName>GW_ReinforcedWall_Destr_Shootable</defName>
+                <label>reinforced loophole wall</label>
+                <graphicData>
+                    <texPath>Things/Building/Linked/GW_ReinforcedWall_Shootable</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <NextLayerDef>GW_ReinforcedWall_Destr_Rubble</NextLayerDef>
+                        <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                        <RestoreToParentWorkAmount>1000</RestoreToParentWorkAmount>
+                    </li>
+                </comps>
+            </ThingDef>
+            
+            <ThingDef ParentName="LWD_Base_Climbable">
+                <defName>GW_ReinforcedWall_Destr_Climbable</defName>
+                <label>reinforced breached wall</label>
+                <graphicData>
+                    <texPath>Things/Building/Linked/GW_ReinforcedWall_Climb</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <NextLayerDef>GW_ReinforcedWall_Destr_Rubble</NextLayerDef>
+                        <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                        <RestoreToParentWorkAmount>1000</RestoreToParentWorkAmount>
+                    </li>
+                </comps>
+            </ThingDef>
+
+            <ThingDef ParentName="LWD_Base_Rubble">
+                <defName>GW_ReinforcedWall_Destr_Rubble</defName>
+                <comps>
+                    <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                        <ParentLayerDef>GW_ReinforcedWall</ParentLayerDef>
+                        <RestoreToParentWorkAmount>2000</RestoreToParentWorkAmount>
+                    </li>
+                </comps>
+            </ThingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW_Wall"]</xpath>
+        <value>
+            <comps>
+                <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                    <NextLayerDef>GW_Wall_Destr_Shootable</NextLayerDef>
+                    <NextLayerDef_Alternative>GW_Wall_Destr_Climbable</NextLayerDef_Alternative>
+                    <doubleDowngradeChance>0.1</doubleDowngradeChance>
+                    <InstantFullDestructionChance>0</InstantFullDestructionChance>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/statBases/MaxHitPoints</xpath>
         <value>
             <!--  New HP =  500 - (100 + 50)/3 - 150 -->
             <MaxHitPoints>300</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]</xpath>
+        <value>
+            <comps>
+                <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+                    <NextLayerDef>GW_ReinforcedWall_Destr_Shootable</NextLayerDef>
+                    <NextLayerDef_Alternative>GW_ReinforcedWall_Destr_Climbable</NextLayerDef_Alternative>
+                    <doubleDowngradeChance>0.1</doubleDowngradeChance>
+                    <InstantFullDestructionChance>0</InstantFullDestructionChance>
+                </li>
+            </comps>
         </value>
     </Operation>
 </Patch>
