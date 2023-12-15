@@ -128,14 +128,6 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <uiIconPath>Things/Building/Linked/GW_OrdinaryWalls_MenuIcon</uiIconPath>
-        <comps>
-            <li Class="LayeredDestruction.CompProperties_LayeredDestruction" MayRequire="Keshash.LayeredWallDestruction">
-                <NextLayerDef>GW_Wall_Destr_Shootable</NextLayerDef>
-                <NextLayerDef_Alternative>GW_Wall_Destr_Climbable</NextLayerDef_Alternative>
-                <doubleDowngradeChance>0.1</doubleDowngradeChance>
-                <InstantFullDestructionChance>0</InstantFullDestructionChance>
-            </li>
-        </comps>
         <uiIconPathsStuff Inherit="False" />
     </ThingDef>
 
@@ -153,14 +145,6 @@
             <WorkToBuild>300</WorkToBuild>
             <Flammability>0.75</Flammability>
         </statBases>
-        <comps>
-            <li Class="LayeredDestruction.CompProperties_LayeredDestruction" MayRequire="Keshash.LayeredWallDestruction">
-                <NextLayerDef>GW_ReinforcedWall_Destr_Shootable</NextLayerDef>
-                <NextLayerDef_Alternative>GW_ReinforcedWall_Destr_Climbable</NextLayerDef_Alternative>
-                <doubleDowngradeChance>0.1</doubleDowngradeChance>
-                <InstantFullDestructionChance>0</InstantFullDestructionChance>
-            </li>
-        </comps>
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
         <costStuffCount>10</costStuffCount>
