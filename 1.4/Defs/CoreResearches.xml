@@ -122,7 +122,7 @@
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_PlasmaWeapons</defName>
-		<label>plasmaguns</label>
+		<label>plasma weapons</label>
         <description>Unlocks plasmaguns</description>
 		<prerequisites>
 			<li>Gunsmithing</li>
@@ -145,7 +145,7 @@
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_MeltaWeapons</defName>
-		<label>melta</label>
+		<label>melta weapons</label>
         <description>Unlocks melta guns</description>
 		<prerequisites>
 			<li>Gunsmithing</li>
