@@ -13,7 +13,7 @@
                 </graphicData>
                 <comps>
                     <li Class="LayeredDestruction.CompProperties_LayeredDestruction">
-                        <NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+                        <NextLayerDef>GW_Wall_Destr_Rubble</NextLayerDef>
                         <ParentLayerDef>GW_Wall</ParentLayerDef>
                     </li>
                 </comps>
