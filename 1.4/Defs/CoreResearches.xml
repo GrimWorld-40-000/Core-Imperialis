@@ -294,7 +294,7 @@
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_LasCannonTurret</defName>
-		<label>las-cannon turret</label>
+		<label>lascannon turret</label>
         <description>To be written.</description>
 		<prerequisites>
 			<li>GW_Lasguns</li>

@@ -4,5 +4,6 @@
 		<li>/</li>
 		<li>1.4</li>
         <li IfModActive="ceteam.combatextended">CombatExtended</li>
+        <li IfModActive="Keshash.LayeredWallDestruction">1.4/Mods/LWD</li>
 	</v1.4>
 </loadFolders>
