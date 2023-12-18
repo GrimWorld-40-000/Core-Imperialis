@@ -2,7 +2,7 @@
 <Defs>
     <ResearchTabDef>
 		<defName>GW_GrimTech</defName>
-		<label>Grimworld</label>
+		<label>Grimworld 40,000</label>
 	</ResearchTabDef>
 
     <ResearchProjectDef Abstract="True" Name="GW_ImperiumTechBase">
