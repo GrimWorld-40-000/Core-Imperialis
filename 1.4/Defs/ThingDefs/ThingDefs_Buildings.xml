@@ -158,8 +158,8 @@
         <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one cogitator.</description>
         <thingClass>Core_Imp.Building_Cogitator</thingClass>
         <graphicData>
-            <texPath>Things/Building/Misc/GW_Cogitator</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Cogitator/GW_Cogitator</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>2.46875</drawSize>
         </graphicData>
         <uiIconScale>0.85</uiIconScale>
@@ -167,7 +167,7 @@
         <size>(2,2)</size>
         <hasInteractionCell>true</hasInteractionCell>
         <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
-        <rotatable>false</rotatable>
+        <rotatable>true</rotatable>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <castEdgeShadows>true</castEdgeShadows>
@@ -179,6 +179,7 @@
         <tickerType>Normal</tickerType>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
         <thingCategories>
+            <li>BuildingsProduction</li>
             <li>BuildingsMisc</li>
         </thingCategories>
         <statBases>
