@@ -158,7 +158,7 @@
         <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one cogitator.</description>
         <thingClass>Core_Imp.Building_Cogitator</thingClass>
         <graphicData>
-            <texPath>Things/Building/Misc/GW_Cogitator</texPath>
+            <texPath>Things/Building/Cogitator/GW_Cogitator</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>2.46875</drawSize>
         </graphicData>
