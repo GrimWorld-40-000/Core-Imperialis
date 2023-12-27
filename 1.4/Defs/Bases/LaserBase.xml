@@ -18,7 +18,7 @@
         <beamGraphic>GW_BeamGraphic</beamGraphic>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Projectiles/Las Bolt</texPath>
+            <texPath>Things/Projectiles/Las_Bolt</texPath>
             <shaderType>TransparentPostLight</shaderType>
             <drawSize>1.5</drawSize>
         </graphicData>
