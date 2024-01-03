@@ -15,5 +15,21 @@
         </projectile>
       </ThingDef>
     
+      <SoundDef> <!--In this file because all heavy bolter guns are using this sound-->
+		<defName>HP_Heavy_Bolt_Gun_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />  
+		<maxSimultaneous>10</maxSimultaneous>  
+        <subSounds>
+          <li>
+            <grains>
+              <li Class="AudioGrain_Folder">
+                <clipPath>Weapons/Boltgun</clipPath>
+              </li>
+            </grains>      
+            <volumeRange>40~40</volumeRange>      
+          </li>
+        </subSounds>
+	</SoundDef>
     
 </Defs>
