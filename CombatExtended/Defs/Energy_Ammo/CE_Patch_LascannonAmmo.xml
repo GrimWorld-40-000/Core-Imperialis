@@ -56,7 +56,7 @@
 
 	<RecipeDef ParentName="HP_AmmoRecipeBase">
 		<defName>MakeAmmo_Lascannon</defName>
-		<label>make Lascannon Power Pack x500</label>
+		<label>make Lascannon Power Pack x50</label>
 		<description>Craft 50 Lascannon Power Pack</description>
 		<jobString>Making 50 shots worth of Lascannon Power Pack</jobString>
 		<ingredients>
