@@ -1,0 +1,4 @@
+C:\Users\Shado\Desktop\run\RimWorld\Mods\megaraid\Assemblies\Megaraid.dll
+C:\Users\Shado\Desktop\run\RimWorld\Mods\megaraid\Source\megaraid\obj\Debug\megaraid.csproj.AssemblyReference.cache
+C:\Users\Shado\Desktop\run\RimWorld\Mods\megaraid\Source\megaraid\obj\Debug\megaraid.csproj.CoreCompileInputs.cache
+C:\Users\Shado\Desktop\run\RimWorld\Mods\megaraid\Source\megaraid\obj\Debug\Megaraid.dll

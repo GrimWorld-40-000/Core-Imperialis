@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IncidentDef>
+    <defName>BombardmentRaid</defName>
+    <label>Enemy Bombardment Raid</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>megaraid.RaidTrigger</workerClass>
+    <baseChance>1.8</baseChance>
+    <minRefireDays>90</minRefireDays>
+    <letterDef>ThreatBig</letterDef>
+    <category>ThreatBig</category>
+    <minThreatPoints>5000</minThreatPoints>
+    <minPopulation>1</minPopulation>
+    <letterLabel>Mega Raid</letterLabel>
+    <letterText>Text</letterText>
+  </IncidentDef>
+</Defs>

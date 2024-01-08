@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GameConditionDef>
+    <defName>MRBombard</defName>
+    <conditionClass>megaraid.BombardmentRaid</conditionClass>
+    <label>Bombardment</label>
+    <description>A massive bombardment is beginning.</description>
+    <endMessage>The bombardment is ending.</endMessage>
+    <letterText>A massive bombardment is beginning...</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+  </GameConditionDef>
+</Defs>
