@@ -11,7 +11,7 @@
     <minRefireDays>90</minRefireDays>
     <letterDef>ThreatBig</letterDef>
     <category>ThreatBig</category>
-    <minThreatPoints>5000</minThreatPoints>
+    <minThreatPoints>8000</minThreatPoints>
     <minPopulation>1</minPopulation>
     <letterLabel>Mega Raid</letterLabel>
     <letterText>Text</letterText>

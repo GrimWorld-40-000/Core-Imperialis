@@ -168,6 +168,9 @@
         </descriptionHyperlinks>
         <possessionCount>2</possessionCount>
         <uiIconPath>UI/GW_STC_Fragment</uiIconPath>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+          </thingSetMakerTags>
         <graphicData>
             <texPath>Things/Resource/STC</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -187,6 +190,9 @@
         <thingCategories>
             <li>Manufactured</li>
         </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+          </tradeTags>
         <allowedArchonexusCount>10</allowedArchonexusCount>
     </ThingDef>
 </Defs>
