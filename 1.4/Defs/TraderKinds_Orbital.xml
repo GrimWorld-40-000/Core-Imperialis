@@ -54,6 +54,10 @@
                 <countRange>8~10</countRange>
             </li>
             <li Class="StockGenerator_MarketValue">
+                <tradeTag>GW_SM_Backpacks</tradeTag>
+                <countRange>8~10</countRange>
+            </li>
+            <li Class="StockGenerator_MarketValue">
                 <tradeTag>HPMedicine</tradeTag>
                 <countRange>8~10</countRange>
             </li>
