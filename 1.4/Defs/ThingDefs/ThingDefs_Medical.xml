@@ -6,7 +6,7 @@
 <ThingDef ParentName="MedicineBase">
     <defName>FieldMedkit</defName>
     <label>Field medkit</label>
-    <description>A kit of basic medicine, favoured by the Astra Militarum for being simple to mass produce in bulk.</description>
+    <description>The Field Medkit in Warhammer 40,000 not only infuses the battlefield with festive cheer but also boasts enhanced effectiveness, surpassing even the medicinal properties of herbal remedies found in RimWorld.</description>
     <possessionCount>4</possessionCount>
     <graphicData>
       <texPath>Things/Medicine/FieldMedkit</texPath>
@@ -46,7 +46,7 @@
 <ThingDef ParentName="MedicineBase">
     <defName>AdvancedMedkit</defName>
     <label>Advanced medkit</label>
-    <description>A kit of advanced medicine often reserved for people of importance or provided to elite unites.</description>
+    <description>The Advanced Medkit in Warhammer 40,000 stands as a pinnacle of medical technology, exceeding conventional standards with its state-of-the-art diagnostic scanners, nanobot-infused healing agents, and adaptive capabilities, making it a superior counterpart to the medicine found in RimWorld.</description>
     <possessionCount>3</possessionCount>
     <graphicData>
       <texPath>Things/Medicine/AdvancedMedkit</texPath>
@@ -88,7 +88,7 @@
    <ThingDef ParentName="MedicineBase">
     <defName>RelicMedkit</defName>
     <label>Relic medkit</label>
-    <description>A kit of highly effective medicine. How the rogue traders procure these kits is a mystery kept well.</description>
+    <description>The Relic Medkit in Warhammer 40,000, obtainable through prestigious vendors or mysterious discoveries, features arcane technologies, potent serums, and sacred incantations, surpassing even Glitterworld medicine in its unparalleled healing capabilities on the grim battlefield.</description>
     <possessionCount>2</possessionCount>
     <graphicData>
       <texPath>Things/Medicine/RelicMedkit</texPath>

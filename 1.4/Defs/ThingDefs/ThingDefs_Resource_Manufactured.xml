@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>GW_ComponentRelic</defName>
         <label>relic component</label>
-        <description>Extremely advanced components used for very advanced Imperium technology.</description>
+        <description>The Relic Component, a rare and unparalleled find in the world of RimWorld, transcends the capabilities of its advanced counterparts. Boasting an otherworldly fusion of enigmatic alloys, quantum circuitry, and ancient energy matrices, this mystical artifact surpasses the efficiency of even the most advanced components, offering a level of technological mastery that hints at an elusive and advanced civilization lost to the annals of time.</description>
         <graphicData>
             <texPath>Things/Resource/RelicComponent</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -115,7 +115,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Rockcrete</defName>
         <label>rockcrete</label>
-        <description>An Imperium building material made by mixing stone and steel.</description>
+        <description>Rockcrete, a formidable construction material in the Warhammer 40,000 universe, is meticulously crafted by blending the durability of stone with the strength of steel-reinforced concrete. This fusion of materials results in an impervious barrier that fortifies the Imperium's structures, withstanding the relentless onslaught of warfare in the grim darkness of the 41st millennium.</description>
         <graphicData>
             <texPath>Things/Resource/Rockcrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -196,7 +196,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Plascrete</defName>
         <label>plascrete</label>
-        <description>An Imperium building material made by mixing stone and plasteel.</description>
+        <description>Plascrete, a resilient construction material in the Warhammer 40,000 universe, is ingeniously forged by combining the sturdiness of stone with the advanced properties of plasteel. This amalgamation results in a robust and versatile substance, capable of withstanding the harsh realities of warfare, serving as a stalwart foundation for the Imperium's structures in the grim and tumultuous 41st millennium.</description>
         <graphicData>
             <texPath>Things/Resource/Plascrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -278,7 +278,7 @@
     <RecipeDef>
         <defName>GW_Make_Ceramite</defName>
         <label>make ceramite</label>
-        <description>Shape and fire large amounts of stone to create ceramite.</description>
+        <description>Ceramite Stone in Warhammer 40,000 is expertly fashioned by combining substantial amounts of stone, creating a robust material that marries the durability of stone with heat-resistant properties. This unique blend stands as a testament to the Imperium's ingenuity, offering steadfast defense against the fiery battles of the 41st millennium.</description>
         <jobString>manufacturing ceramite.</jobString>
         <workAmount>10000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -292,7 +292,7 @@
                         <li>StoneBlocks</li>
                     </categories>
                 </filter>
-                <count>80</count>
+                <count>140</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>

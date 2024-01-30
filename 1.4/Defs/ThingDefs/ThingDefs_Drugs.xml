@@ -3,7 +3,7 @@
     <ThingDef ParentName="MakeableDrugBase">
         <defName>GW_FenrisianAle</defName>
         <label>fenrisian ale</label>
-        <description>Fenrisian ale is an extremely potent alcohol that can leave most people unconscious after just a few drinks.</description>
+        <description>Fenrisian Ale, hailing from the icy world of Fenris in Warhammer 40,000, is a robust and potent brew known for its hearty flavor with hints of smokiness. Popular among the Space Wolves Chapter, it fosters a sense of brotherhood during feasts and celebrations. In RimWorld, Fenrisian Ale serves as a morale-boosting element, allowing colonists to share in its distinctive taste, promoting camaraderie and community in the harsh environment of the RimWorld.</description>
         <descriptionHyperlinks>
             <HediffDef>AlcoholHigh</HediffDef>
             <HediffDef>AlcoholTolerance</HediffDef>
@@ -87,7 +87,7 @@
     <ThingDef ParentName="MakeableDrugBase">
         <defName>GW_CombatStims</defName>
         <label>combat stims</label>
-        <description>An injectible combat stim that enhances various combative abilties of the pawn, with high risk of addiction and uncontrollable outbursts of anger.</description>
+        <description>Combat Stims in Warhammer 40,000, potent pharmaceutical compounds, temporarily enhance combat abilities but come with risks. Administered by Imperial forces, they provide a surge in agility, strength, and resilience on the battlefield against the grim threats of the 41st millennium. In RimWorld, while offering a calculated boost to combat capabilities, Combat Stims are also drugs that may induce anger outbursts and addictive behavior, adding complexity and risk to their use in the challenging environment of the RimWorld colony.</description>
         <descriptionHyperlinks>
             <HediffDef>GW_CombatStimsHigh</HediffDef>
             <HediffDef>GW_CombatStimsTolerance</HediffDef>

@@ -4,7 +4,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>GW_PlasmaGenerator</defName>
         <label>plasma generator</label>
-        <description>This generator uses uranium to start a nuclear reaction to generate massive amounts of electricity through the creation of plasma.</description>
+        <description>Plasma Generator in RimWorld harnesses the energy potential of uranium as its primary fuel source. This advanced power facility efficiently converts uranium into a high-energy plasma, generating a substantial and reliable power supply for your colony. The Plasma Generator offers a cutting-edge solution for energy needs, utilizing uranium's potent properties to ensure a stable and sustainable power grid for your RimWorld settlement.</description>
         <thingClass>Building</thingClass>
         <drawerType>MapMeshAndRealTime</drawerType>
         <graphicData>
@@ -88,7 +88,7 @@
     <ThingDef ParentName="BenchBase">
         <defName>GW_Furnace</defName>
         <label>furnace</label>
-        <description>A furnace designed for manufacturing resources like rockcrete and plascrete.</description>
+        <description>The furnace in RimWorld has been upgraded to enable the producing of advanced construction materials such as Ceramite, Plascrete, and Rockcrete. Through careful smelting and refining processes, colonists can now transform raw materials into these resilient and versatile building components. This enhanced furnace functionality empowers players to fortify their structures with these durable materials, providing heightened defenses against the challenges and adversities that RimWorld's harsh environment presents.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -155,7 +155,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>GW_Cogitator</defName>
         <label>cogitator</label>
-        <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one cogitator.</description>
+        <description>The Cogitator in RimWorld, now repurposed as an advanced research station for studying Standard Template Constructs (STC), ingeniously utilizes the human brain as its central processing unit (CPU). When strategically placed near a high-tech research bench, the Cogitator, with the brain as its neural interface, significantly enhances research speed and efficiency.\n\nFurthermore, this brain-linked Cogitator has the unique ability to connect to a limited number of research benches simultaneously, forming a collaborative network that synergizes the cognitive capabilities of multiple researchers. This innovative use of the human brain as a CPU fosters a more profound connection between the researchers and the STC knowledge, accelerating the pace of technological advancement in the quest for survival on the RimWorld.</description>
         <thingClass>Core_Imp.Building_Cogitator</thingClass>
         <graphicData>
             <texPath>Things/Building/Cogitator/GW_Cogitator</texPath>
@@ -225,7 +225,7 @@
     <ThingDef ParentName="FurnitureWithQualityBase">
         <defName>GW_WarhammerTable</defName>
         <label>Warhammer table</label>
-        <description>A table where people can gather to play some table-top game the archotechs used to call "Warhammer".\n\nPawns require chairs around the table to use it.</description>
+        <description>The Warhammer Table in RimWorld has been introduced as a recreation facility where colonists can gather to engage in strategic and immersive tabletop gaming experiences. Modeled after the intricate and tactical games of the Warhammer 40,000 universe, this recreation table becomes a focal point for social interactions and leisure.\n\nColonists, when in need of relaxation, assemble around the Warhammer Table to enjoy a simulated yet captivating strategic experience. The table enhances the joy of recreation, providing a shared activity that not only entertains but also fosters camaraderie among your RimWorld inhabitants. Additionally, the intricacies of the Warhammer gaming sessions offer a mental escape, contributing to the well-being of your colonists in the challenging environment of the RimWorld.\n\nPawns require chairs around the table to use it.</description>
         <graphicData>
             <texPath>Things/Building/Joy/WH_BoardGameTable</texPath>
             <graphicClass>Graphic_Single</graphicClass>

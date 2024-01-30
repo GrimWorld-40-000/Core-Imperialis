@@ -3,7 +3,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>CorpseStarch</defName>
     <label>Corpse starch</label>
-    <description>Corpse-starch is a synthetic food source created from recycled dead humans.</description>
+    <description>Corpse Starch in the Warhammer 40,000 universe is a sustenance derived from reconstituted biomass, primarily recycled from the deceased. This nutrient-rich substance, often produced under strict Imperial regulations, serves as a pragmatic solution to the perpetual scarcity of resources in the grim and unforgiving 41st millennium. As a staple food source, Corpse Starch underscores the Imperium's grim determination to endure amidst the darkest challenges of the galaxy, providing sustenance in the face of scarcity and adversity.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Foods</li>

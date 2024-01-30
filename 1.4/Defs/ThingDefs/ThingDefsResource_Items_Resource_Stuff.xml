@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Adamantium</defName>
         <label>Adamantium</label>
-        <description>Adamantium is a metal that is perhaps the strongest substance known to the Imperium, and is invulnerable to attacks from most known weapons.</description>
+        <description>Adamantium in the Warhammer 40,000 universe is an exceptionally durable and rare metal alloy, known for its incredible strength and resilience. Forged through arcane and complex processes, this material is a cornerstone in the construction of Imperial armor and structures. Its legendary toughness and ability to withstand extreme conditions make it a symbol of unyielding defense in the grim and war-torn 41st millennium.</description>
         <graphicData>
             <texPath>Things/Resource/Adamantium</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -56,7 +56,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Auramite</defName>
         <label>Auramite</label>
-        <description>Auramite is a material of unknown provenance but extraordinary resilience used to construct the customised, golden suits of power armour known as Custodian Armour worn by the Adeptus Custodes, the bodyguard of the Emperor of Mankind.</description>
+        <description>Auramite in the Warhammer 40,000 universe stands as a formidable and revered metallic alloy known for its exceptional strength, surpassing even the legendary qualities of adamantium. Uniquely crafted for the Imperium and exclusively utilized by the elite Legio Custodes, Auramite serves as a symbol of unparalleled technological prowess. This extraordinary metal is a cornerstone in the construction of the Custodes' advanced armor and fortifications, embodying the pinnacle of durability and resistance in the relentless warfare of the grim and turbulent 41st millennium.</description>
         <graphicData>
             <texPath>Things/Resource/Auramite</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -109,7 +109,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Ceramite</defName>
         <label>Ceramite</label>
-        <description>Ceramite is a form of heat and shock-resistant ceramic material that is widely used throughout the Imperium of Man.</description>
+        <description>Ceramite in the Warhammer 40,000 universe is a durable composite material, meticulously engineered for its heat-resistant and protective qualities. Widely employed in the construction of Imperial armor and fortifications, ceramite serves as a vital component in the Imperium's defense against the intense and varied threats of the grim 41st millennium. This exceptional material, prized for its ability to withstand extreme conditions, is prominently featured in the crafting of Astartes armors, enhancing the resilience of Space Marine warriors on the battlefield.</description>
         <graphicData>
             <texPath>Things/Resource/Ceramite</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -117,7 +117,7 @@
         <resourceReadoutPriority>First</resourceReadoutPriority>
         <soundInteract>Silver_Drop</soundInteract>
         <soundDrop>Silver_Drop</soundDrop>		
-        <stackLimit>500</stackLimit>
+        <stackLimit>1000</stackLimit>
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
@@ -162,7 +162,7 @@
     <ThingDef ParentName="ResourceBase" Name="GW_STC_Fragment">
         <defName>GW_STC_Fragment</defName>
         <label>STC fragment</label>
-        <description>A fragment of a Standard Template Construct(STC), STCs were an advanced intelligent computer database that containing details of technology from before the Age of Strife. These allowed workers to build anything from a lasgun to a bunker. These fragments are only shadows of this once great technology, careful study of these fragments can yield clues to long lost technologies.\n\nThese can be studied at a Cogitator to discover new and powerful researches that can be completed by your colonists at a research bench. \n\nThey can be recovered from traders and recieved as mission rewards.</description>
+        <description>In Warhammer 40.000, STC fragments represent salvaged fragments from an ancient Standard Template Construct, offering a unique and invaluable source of technological knowledge. Functioning as the game's equivalent of techprints, these fragments can be utilized by colonists to unlock advanced technologies, granting the community access to new and sophisticated innovations. As precious relics of a forgotten era, STC fragments serve as a bridge between the past and the present, allowing RimWorld colonies to harness the secrets of advanced technologies for their survival and prosperity. \n\nThey can be recovered from traders and recieved as mission rewards.</description>
         <descriptionHyperlinks>
             <ThingDef>GW_Cogitator</ThingDef>
         </descriptionHyperlinks>
@@ -181,7 +181,7 @@
         <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
             <MaxHitPoints>70</MaxHitPoints>
-            <MarketValue>8000</MarketValue>
+            <MarketValue>6000</MarketValue>
             <Mass>0.6</Mass>
             <Flammability>0.6</Flammability>
             <DeteriorationRate>2.0</DeteriorationRate>
