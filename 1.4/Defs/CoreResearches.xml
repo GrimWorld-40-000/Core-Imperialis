@@ -65,7 +65,7 @@
 		<label>grimworld materials</label>
         <description>Allows for the creation of materials like rockcrete and plascrete. Furnace allow to produce them.</description>
 		<prerequisites>
-			<li>Fabrication</li>
+			<li>MicroelectronicsBasics</li>
 		</prerequisites>
         <baseCost>2000</baseCost>
 		<researchViewX>0.00</researchViewX>
@@ -77,6 +77,7 @@
 		<label>advanced grimworld materials</label>
         <description>Allows for the creation of advanced materials, like relic components.</description>
 		<prerequisites>
+			<li>Fabrication</li>
 			<li>GW_GrimworldMaterials</li>
 		</prerequisites>
         <baseCost>6000</baseCost>
