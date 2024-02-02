@@ -46,18 +46,6 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
-		<defName>GW_GrimworldMaterials</defName>
-		<label>grimworld materials</label>
-        <description>Allows for the creation of materials like rockcrete and plascrete. Furnace allow to produce them.</description>
-		<prerequisites>
-			<li>Fabrication</li>
-		</prerequisites>
-        <baseCost>8000</baseCost>
-		<researchViewX>0.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
         <defName>GW_Cogitator</defName>
         <label>cogitator</label>
         <description>Allows for the construction of a cogitator. Cogitator also allow you to use STC which you can buy to unlock new reaserches.</description>
@@ -66,10 +54,35 @@
         </prerequisites>
 		<techLevel>Spacer</techLevel>
 		<baseCost>5000</baseCost>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
         <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
         <discoveredLetterText>You now have the technology to build a cogitator. Many of the advanced Imperium technologies require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_GrimworldMaterials</defName>
+		<label>grimworld materials</label>
+        <description>Allows for the creation of materials like rockcrete and plascrete. Furnace allow to produce them.</description>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AdvancedGrimworldMaterials</defName>
+		<label>advanced grimworld materials</label>
+        <description>Allows for the creation of advanced materials, like relic components.</description>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>GW_GrimworldMaterials</li>
+		</prerequisites>
+        <baseCost>6000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">

@@ -104,7 +104,7 @@
         <products>
             <GW_ComponentRelic>1</GW_ComponentRelic>
         </products>
-        <researchPrerequisite>GW_GrimworldMaterials</researchPrerequisite>
+        <researchPrerequisite>GW_AdvancedGrimworldMaterials</researchPrerequisite>
         <skillRequirements>
             <Crafting>15</Crafting>
         </skillRequirements>
