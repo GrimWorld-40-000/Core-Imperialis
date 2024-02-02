@@ -79,6 +79,7 @@
 		<prerequisites>
 			<li>Fabrication</li>
 			<li>GW_GrimworldMaterials</li>
+			<li>AdvancedFabrication</li>
 		</prerequisites>
         <baseCost>6000</baseCost>
 		<researchViewX>1.00</researchViewX>
