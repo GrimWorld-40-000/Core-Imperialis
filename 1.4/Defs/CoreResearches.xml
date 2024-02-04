@@ -50,10 +50,10 @@
         <label>cogitator</label>
         <description>Allows for the construction of a cogitator. Cogitator also allow you to use STC which you can buy to unlock new reaserches.</description>
         <prerequisites>
-            <li>AdvancedFabrication</li>
+            <li>MultiAnalyzer</li>
         </prerequisites>
 		<techLevel>Spacer</techLevel>
-		<baseCost>5000</baseCost>
+		<baseCost>8500</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
         <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
@@ -100,12 +100,13 @@
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Chainswords</defName>
-		<label>chainswords</label>
+		<label>Basic meele weapons</label>
         <description>The chainsword is essentially a sword with powered teeth that run along a single-edged blade like that of a chainsaw. Most versions of the weapon make use of monomolecularly-edged or otherwise razor-sharp teeth. Chainswords are not subtle weapons, and wielding one is a statement in its own right: they are horrific tools of war, designed to bite, tear and eviscerate where more primitive blades merely cut and slice.</description>
 		<prerequisites>
-			<li>Fabrication</li>
+			<li>Machining</li>
+			<li>LongBlades</li>
 		</prerequisites>
-        <baseCost>3000</baseCost>
+        <baseCost>5000</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 	</ResearchProjectDef>

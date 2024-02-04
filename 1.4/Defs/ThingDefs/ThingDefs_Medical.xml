@@ -25,6 +25,7 @@
 	<costList>
      <MedicineHerbal>3</MedicineHerbal>
     </costList>
+	<uiIconScale>1.6</uiIconScale>
     <recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
@@ -66,6 +67,7 @@
       <FieldMedkit>2</FieldMedkit>
       <Neutroamine>2</Neutroamine>
     </costList>
+	<uiIconScale>1.6</uiIconScale>
     <recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
@@ -104,6 +106,7 @@
       <MedicalQualityMax>2.0</MedicalQualityMax>
       <DeteriorationRate>2.0</DeteriorationRate>
     </statBases>
+	<uiIconScale>1.6</uiIconScale>
 	<tradeTags>
       <li>HPMedicine</li>
     </tradeTags>

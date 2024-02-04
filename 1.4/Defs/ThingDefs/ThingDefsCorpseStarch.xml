@@ -21,7 +21,7 @@
       <DeteriorationRate>2</DeteriorationRate>
       <Nutrition>0.05</Nutrition>
     </statBases>
-	
+	<uiIconScale>1.6</uiIconScale>
 	  <recipeMaker>
       <recipeUsers>
         <li>ElectricStove</li>
