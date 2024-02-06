@@ -2,7 +2,7 @@
 <Defs>
     <ResearchTabDef>
 		<defName>GW_GrimTech</defName>
-		<label>Grimworld 40,000</label>
+		<label>GrimWorld 40,000</label>
 	</ResearchTabDef>
 
     <ResearchProjectDef Abstract="True" Name="GW_ImperiumTechBase">
@@ -31,7 +31,7 @@
 		</prerequisites>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
-        <baseCost>12000</baseCost>
+        <baseCost>7000</baseCost>
         <modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
@@ -53,7 +53,7 @@
             <li>MultiAnalyzer</li>
         </prerequisites>
 		<techLevel>Spacer</techLevel>
-		<baseCost>8500</baseCost>
+		<baseCost>4500</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
         <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
@@ -79,9 +79,8 @@
 		<prerequisites>
 			<li>Fabrication</li>
 			<li>GW_GrimworldMaterials</li>
-			<li>AdvancedFabrication</li>
 		</prerequisites>
-        <baseCost>6000</baseCost>
+        <baseCost>3500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>6.00</researchViewY>
 	</ResearchProjectDef>
@@ -93,7 +92,7 @@
         <prerequisites>
             <li>Autodoors</li>
         </prerequisites>
-		<baseCost>2000</baseCost>
+		<baseCost>1600</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>6.00</researchViewY>
 	</ResearchProjectDef>
@@ -106,7 +105,7 @@
 			<li>Machining</li>
 			<li>LongBlades</li>
 		</prerequisites>
-        <baseCost>5000</baseCost>
+        <baseCost>3500</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 	</ResearchProjectDef>
@@ -118,7 +117,7 @@
 		<prerequisites>
 			<li>GW_Chainswords</li>
 		</prerequisites>
-        <baseCost>7000</baseCost>
+        <baseCost>5500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
         <modExtensions>
@@ -142,7 +141,7 @@
 		<prerequisites>
 			<li>Gunsmithing</li>
 		</prerequisites>
-        <baseCost>5000</baseCost>
+        <baseCost>4000</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>2.00</researchViewY>
         <modExtensions>
@@ -165,7 +164,7 @@
 		<prerequisites>
 			<li>Gunsmithing</li>
 		</prerequisites>
-        <baseCost>5000</baseCost>
+        <baseCost>4000</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>2.00</researchViewY>
         <modExtensions>
@@ -188,7 +187,7 @@
 		<prerequisites>
 			<li>Gunsmithing</li>
 		</prerequisites>
-        <baseCost>5000</baseCost>
+        <baseCost>3000</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>2.00</researchViewY>
 	</ResearchProjectDef>
@@ -200,7 +199,7 @@
 		<prerequisites>
 			<li>Gunsmithing</li>
 		</prerequisites>
-        <baseCost>5000</baseCost>
+        <baseCost>3500</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 	</ResearchProjectDef>
@@ -212,7 +211,7 @@
 		<prerequisites>
 			<li>Fabrication</li>
 		</prerequisites>
-        <baseCost>8000</baseCost>
+        <baseCost>3000</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>3.00</researchViewY>
 	</ResearchProjectDef>
@@ -227,7 +226,7 @@
 			<li>GasOperation</li>
 			<li>GunTurrets</li>
 		</prerequisites>
-        <baseCost>10000</baseCost>
+        <baseCost>4000</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>4.70</researchViewY>
 	</ResearchProjectDef>
@@ -242,7 +241,7 @@
 			<li>GunTurrets</li>
 			<li>PrecisionRifling</li>
 		</prerequisites>
-        <baseCost>10000</baseCost>
+        <baseCost>5000</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>2.70</researchViewY>
 	</ResearchProjectDef>
@@ -254,7 +253,7 @@
 		<prerequisites>
 			<li>GW_Bolters</li>
 		</prerequisites>
-        <baseCost>12000</baseCost>
+        <baseCost>6500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>3.30</researchViewY>
         <modExtensions>
