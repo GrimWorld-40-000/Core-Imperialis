@@ -190,10 +190,11 @@
             <ResearchSpeedFactor>1.0</ResearchSpeedFactor>
         </statBases>
         <costList>
-            <HP_Ceramite>40</HP_Ceramite>
-            <Plasteel>50</Plasteel>
-            <Gold>20</Gold>
-            <GW_ComponentRelic>4</GW_ComponentRelic>
+            <HP_Ceramite>100</HP_Ceramite>
+            <Plasteel>200</Plasteel>
+            <Gold>120</Gold>
+            <ComponentIndustrial>20</ComponentIndustrial>
+			<Steel>100</Steel>
             <Brain>1</Brain>
         </costList>
         <building>

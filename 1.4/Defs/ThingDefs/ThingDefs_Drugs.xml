@@ -26,7 +26,6 @@
             <Flammability>0.5</Flammability>
             <Nutrition>0.10</Nutrition>
         </statBases>
-		<uiIconScale>1.6</uiIconScale>
         <tradeTags>
             <li>GW_Drugs</li>
         </tradeTags>
