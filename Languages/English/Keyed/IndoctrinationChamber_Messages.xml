@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <IndoctrinationChamber_CarryToJob>Carry to indoctrinating chamber</IndoctrinationChamber_CarryToJob>
+<IndoctrinationChamber_Finished>Conversion finished!</IndoctrinationChamber_Finished>
+<IndoctrinationChamber_Progress>Progress</IndoctrinationChamber_Progress>
+<IndoctrinationChamber_Empty>Waiting for loyal pawn.</IndoctrinationChamber_Empty>
+<IndoctrinationChamber_Ready>has been converted successfully.</IndoctrinationChamber_Ready>
+<IndoctrinationChamber_ColonistsCantUse>Colonists can't use the chamber.</IndoctrinationChamber_ColonistsCantUse>
+<IndoctrinationChamber_BrainDamage>has received brain damage from using the chamber!</IndoctrinationChamber_BrainDamage>
+</LanguageData>
