@@ -13,6 +13,7 @@
         </graphicData>
         <researchPrerequisites>
             <li>Cryptosleep</li>
+			<li>indoctrination_chamber</li>
         </researchPrerequisites>
         <altitudeLayer>Building</altitudeLayer>
         <uiIconPath>Chamber/IndoctrinationChamber_UI</uiIconPath>
@@ -28,7 +29,7 @@
         </statBases>
         <tickerType>Normal</tickerType>
         <size>(3,4)</size>
-        <designationCategory>Misc</designationCategory>
+        <designationCategory>GrimworldCategory</designationCategory>
         <uiOrder>2050</uiOrder>
         <hasInteractionCell>true</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -39,10 +40,11 @@
             <destroySound>BuildingDestroyed_Metal_Small</destroySound>
         </building>
         <costList>
-            <Steel>180</Steel>
-            <Uranium>5</Uranium>
-            <ComponentIndustrial>4</ComponentIndustrial>
-            <ComponentSpacer>1</ComponentSpacer>
+            <Steel>350</Steel>
+            <Plasteel>40</Plasteel>
+			<HP_Ceramite>30</HP_Ceramite>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
         </costList>
         <placeWorkers>
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
