@@ -2,8 +2,8 @@
     <HediffDef ParentName="DiseaseBase">
         <defName>IndoctrinationChamberSickness</defName>
         <label>indoctrination chamber sickness</label>
-        <description>placeholder.</description>
-        <descriptionShort>After-effects of using a cryptosleep pod including dizziness, nausea, and vomiting.</descriptionShort>
+        <description>After-effects of using a Indocrination chamber cause sickness including dizziness, nausea, and vomiting.</description>
+        <descriptionShort>After-effects of using a Indocrination chamber cause sickness including dizziness, nausea, and vomiting.</descriptionShort>
         <makesSickThought>true</makesSickThought>
         <scenarioCanAdd>true</scenarioCanAdd>
         <comps>
