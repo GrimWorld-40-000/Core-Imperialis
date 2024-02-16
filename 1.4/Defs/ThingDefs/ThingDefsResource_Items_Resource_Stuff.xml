@@ -117,11 +117,11 @@
         <resourceReadoutPriority>First</resourceReadoutPriority>
         <soundInteract>Silver_Drop</soundInteract>
         <soundDrop>Silver_Drop</soundDrop>		
-        <stackLimit>1000</stackLimit>
+        <stackLimit>500</stackLimit>
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>10</MarketValue>
+            <MarketValue>50</MarketValue>
             <Mass>1</Mass>
             <StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
             <StuffPower_Armor_Blunt>0.75</StuffPower_Armor_Blunt>
