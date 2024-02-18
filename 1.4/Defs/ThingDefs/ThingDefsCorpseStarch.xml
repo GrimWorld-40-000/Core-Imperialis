@@ -19,7 +19,7 @@
       <Flammability>0.6</Flammability>
       <WorkToMake>700</WorkToMake>
       <DeteriorationRate>2</DeteriorationRate>
-      <Nutrition>0.05</Nutrition>
+      <Nutrition>0.75</Nutrition>
     </statBases>
 	<uiIconScale>1.6</uiIconScale>
 	  <recipeMaker>
@@ -27,7 +27,7 @@
         <li>ElectricStove</li>
 		    <li>FueledStove</li>
       </recipeUsers>
-      <bulkRecipeCount>20</bulkRecipeCount>
+      <bulkRecipeCount>60</bulkRecipeCount>
     </recipeMaker>
       
     <costList>
