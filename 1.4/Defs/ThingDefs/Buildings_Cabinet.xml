@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>GW_VehicleToolCabinet</defName>
-		<label>Imperial vehicle tool cabinet</label>
+		<label>Imperial tool cabinet</label>
 		<description>Simple utility tool cabinet to speed up work around.</description>
 		<graphicData>
 			<texPath>Things/Building/ToolCabinet/WH_VehicleToolCabinet</texPath>
