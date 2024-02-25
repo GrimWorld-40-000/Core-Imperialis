@@ -1,0 +1,15 @@
+{
+  "TextureModID": "happypurging.ageofdarkness",
+  "ItemDefName": "GW_SM_Melee_TermSword",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.63372004,
+  "OffY": 0.164095491,
+  "Rotation": 30.0,
+  "ScaleX": 1.5,
+  "ScaleY": 1.5,
+  "HandsMode": 1,
+  "BladeStart": 0.28423202,
+  "BladeEnd": 1.5773381,
+  "MeleeWeaponType": 6
+}

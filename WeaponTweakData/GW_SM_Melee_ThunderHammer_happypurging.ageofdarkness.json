@@ -1,0 +1,12 @@
+{
+  "TextureModID": "happypurging.ageofdarkness",
+  "ItemDefName": "GW_SM_Melee_ThunderHammer",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.197406277,
+  "ScaleX": 1.5,
+  "ScaleY": 1.5,
+  "BladeStart": 0.5971333,
+  "BladeEnd": 0.826484859,
+  "MeleeWeaponType": 1
+}

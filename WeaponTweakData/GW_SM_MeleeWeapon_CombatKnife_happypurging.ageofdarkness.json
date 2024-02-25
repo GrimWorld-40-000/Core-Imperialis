@@ -1,0 +1,12 @@
+{
+  "TextureModID": "happypurging.ageofdarkness",
+  "ItemDefName": "GW_SM_MeleeWeapon_CombatKnife",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.4879183,
+  "ScaleX": 1.5,
+  "ScaleY": 1.5,
+  "BladeStart": 0.197406277,
+  "BladeEnd": 1.178157,
+  "MeleeWeaponType": 48
+}

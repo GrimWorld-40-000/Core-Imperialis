@@ -1,0 +1,12 @@
+{
+  "TextureModID": "happypurging.ageofdarkness",
+  "ItemDefName": "GW_SM_Melee_TermPowerFist",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "ScaleX": 2.0,
+  "ScaleY": 2.0,
+  "HandsMode": 2,
+  "BladeStart": 0.107303888,
+  "BladeEnd": 0.319180965,
+  "MeleeWeaponType": 8
+}

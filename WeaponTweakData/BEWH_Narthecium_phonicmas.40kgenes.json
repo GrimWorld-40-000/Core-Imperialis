@@ -1,0 +1,10 @@
+{
+  "TextureModID": "phonicmas.40kgenes",
+  "ItemDefName": "BEWH_Narthecium",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "HandsMode": 2,
+  "BladeStart": 0.0264848415,
+  "BladeEnd": 0.424027443,
+  "MeleeWeaponType": 56
+}
