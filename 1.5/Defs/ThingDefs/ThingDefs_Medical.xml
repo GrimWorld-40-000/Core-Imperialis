@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Field medkit ====================-->
+
+<ThingDef ParentName="MedicineBase">
+    <defName>FieldMedkit</defName>
+    <label>Field medkit</label>
+    <description>The Field Medkit in Warhammer 40,000 not only infuses the battlefield with festive cheer but also boasts enhanced effectiveness, surpassing even the medicinal properties of herbal remedies found in RimWorld.</description>
+    <possessionCount>4</possessionCount>
+    <graphicData>
+      <texPath>Things/Medicine/FieldMedkit</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>12</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.6</Flammability>
+      <MedicalPotency>0.70</MedicalPotency>
+      <MedicalQualityMax>0.70</MedicalQualityMax>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+	<costList>
+     <MedicineHerbal>3</MedicineHerbal>
+    </costList>
+	<uiIconScale>1.6</uiIconScale>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+        <Intellectual>3</Intellectual>
+      </skillRequirements>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <allowedArchonexusCount>15</allowedArchonexusCount>
+  </ThingDef>
+
+ <!--=============== Advanced medkit ====================-->
+
+<ThingDef ParentName="MedicineBase">
+    <defName>AdvancedMedkit</defName>
+    <label>Advanced medkit</label>
+    <description>The Advanced Medkit in Warhammer 40,000 stands as a pinnacle of medical technology, exceeding conventional standards with its state-of-the-art diagnostic scanners, nanobot-infused healing agents, and adaptive capabilities, making it a superior counterpart to the medicine found in RimWorld.</description>
+    <possessionCount>3</possessionCount>
+    <graphicData>
+      <texPath>Things/Medicine/AdvancedMedkit</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>22</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.6</Flammability>
+      <MedicalPotency>1.10</MedicalPotency>
+      <MedicalQualityMax>1.10</MedicalQualityMax>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+	<costList>
+      <FieldMedkit>2</FieldMedkit>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+	<uiIconScale>1.6</uiIconScale>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <allowedArchonexusCount>8</allowedArchonexusCount>
+  </ThingDef>
+  
+   <!--=============== Relic medkit ====================-->
+   
+   <ThingDef ParentName="MedicineBase">
+    <defName>RelicMedkit</defName>
+    <label>Relic medkit</label>
+    <description>The Relic Medkit in Warhammer 40,000, obtainable through prestigious vendors or mysterious discoveries, features arcane technologies, potent serums, and sacred incantations, surpassing even Glitterworld medicine in its unparalleled healing capabilities on the grim battlefield.</description>
+    <possessionCount>2</possessionCount>
+    <graphicData>
+      <texPath>Things/Medicine/RelicMedkit</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.6</Flammability>
+      <MedicalPotency>2.0</MedicalPotency>
+      <MedicalQualityMax>2.0</MedicalQualityMax>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+	<uiIconScale>1.6</uiIconScale>
+	<tradeTags>
+      <li>HPMedicine</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <allowedArchonexusCount>3</allowedArchonexusCount>
+  </ThingDef>
+  
+   
+  </Defs>
+  

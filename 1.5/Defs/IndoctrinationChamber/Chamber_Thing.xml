@@ -1,0 +1,71 @@
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>IndoctrinationChamber</defName>
+        <label>indoctrination chamber</label>
+        <description>A self-powered sarcophagus designed to keep a person in a state of suspended animation for many years.</description>
+        <thingClass>Chamber.Building_Chamber</thingClass>
+        <containedPawnsSelectable>true</containedPawnsSelectable>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Chamber/IndoctrinationChamber_Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(4.5, 4.5)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>Cryptosleep</li>
+			<li>indoctrination_chamber</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <uiIconPath>Chamber/IndoctrinationChamber_UI</uiIconPath>
+        <passability>PassThroughOnly</passability>
+        <pathCost>42</pathCost>
+        <blockWind>true</blockWind>
+        <fillPercent>0.5</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <WorkToBuild>3200</WorkToBuild>
+            <MaxHitPoints>250</MaxHitPoints>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <size>(3,4)</size>
+        <designationCategory>GrimworldCategory</designationCategory>
+        <uiOrder>2050</uiOrder>
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <rotatable>false</rotatable>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <costList>
+            <Steel>350</Steel>
+            <Plasteel>40</Plasteel>
+			<HP_Ceramite>30</HP_Ceramite>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
+        </costList>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <inspectorTabs>
+            <li>ITab_ContentsCasket</li>
+        </inspectorTabs>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <modExtensions>
+            <li Class="Chamber.ChamberModExtension">
+                <ticksToFinish>480</ticksToFinish>
+                <brainDamageChance>0.9</brainDamageChance>
+                <brainDamageSeverity>0.2</brainDamageSeverity>
+                <chamberTopGraphic>
+                    <texPath>Chamber/IndoctrinationChamber_Top</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>(4.5,4.5)</drawSize>
+                    <shaderType>Cutout</shaderType>
+                </chamberTopGraphic>
+            </li>
+        </modExtensions>
+    </ThingDef>
+</Defs>
