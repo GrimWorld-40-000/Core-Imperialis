@@ -25,9 +25,10 @@
 	  <recipeMaker>
       <recipeUsers>
         <li>ElectricStove</li>
-		    <li>FueledStove</li>
+		<li>FueledStove</li>
       </recipeUsers>
       <bulkRecipeCount>60</bulkRecipeCount>
+	  <workSkill>Cooking</workSkill>
     </recipeMaker>
       
     <costList>
