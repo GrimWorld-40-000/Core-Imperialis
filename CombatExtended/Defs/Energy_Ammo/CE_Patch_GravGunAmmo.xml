@@ -5,7 +5,7 @@
 		<defName>AmmoGravCell</defName>
 		<label>Graviton Power Cell</label>
 		<parent>AmmoAdvanced</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberFuelLarge</iconPath>
+		<iconPath>Things/Ammo/Grav/GravGun_c</iconPath>
 	</ThingCategoryDef>
 
 	<!--===== AmmoSet =====-->
