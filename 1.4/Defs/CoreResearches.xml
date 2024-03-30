@@ -114,7 +114,7 @@
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Chainswords</defName>
-		<label>Basic meele weapons</label>
+		<label>Basic melee weapons</label>
         <description>The chainsword is essentially a sword with powered teeth that run along a single-edged blade like that of a chainsaw. Most versions of the weapon make use of monomolecularly-edged or otherwise razor-sharp teeth. Chainswords are not subtle weapons, and wielding one is a statement in its own right: they are horrific tools of war, designed to bite, tear and eviscerate where more primitive blades merely cut and slice.</description>
 		<prerequisites>
 			<li>Machining</li>
