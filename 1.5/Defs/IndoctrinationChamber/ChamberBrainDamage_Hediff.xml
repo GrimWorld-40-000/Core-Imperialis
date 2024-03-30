@@ -1,0 +1,60 @@
+<Defs>
+    <HediffDef ParentName="InjuryBase">
+        <defName>IndoctrinationChamber_BrainDamage</defName>
+        <label>brainwash damage</label>
+        <labelNoun>brainwash damage</labelNoun>
+        <description>Brainwash Damage.</description>
+        <defaultLabelColor>(147,152,155)</defaultLabelColor>
+        <comps>
+          <li Class="HediffCompProperties_GetsPermanent">
+            <permanentLabel>brainwashed</permanentLabel>
+          </li>
+        </comps>
+        <injuryProps>
+          <painPerSeverity>0.0125</painPerSeverity>
+          <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+          <bleedRate>0</bleedRate>
+          <canMerge>false</canMerge>
+          <destroyedLabel>Torn off</destroyedLabel>
+          <destroyedOutLabel>Torn out</destroyedOutLabel>
+        </injuryProps>
+        <stages>
+          <li>
+            <minSeverity>0.1</minSeverity>
+            <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.2</minSeverity>
+            <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.3</minSeverity>
+            <partEfficiencyOffset>-0.3</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.4</minSeverity>
+            <partEfficiencyOffset>-0.4</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.5</minSeverity>
+            <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.6</minSeverity>
+            <partEfficiencyOffset>-0.6</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.7</minSeverity>
+            <partEfficiencyOffset>-0.7</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.8</minSeverity>
+            <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+          </li>
+          <li>
+            <minSeverity>0.9</minSeverity>
+            <partEfficiencyOffset>-0.9</partEfficiencyOffset>
+          </li>
+        </stages>
+      </HediffDef>
+</Defs>

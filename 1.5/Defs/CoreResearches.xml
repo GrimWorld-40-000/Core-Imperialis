@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchTabDef>
+		<defName>GW_GrimTech</defName>
+		<label>Grimworld 40,000</label>
+		<generalTitle>Grimworld 40,000</generalTitle>
+    	<generalDescription>Unlock technologies that grant items from the Warhammer universe. Many technologies within this tab require special blueprints to begin research.</generalDescription>
+	</ResearchTabDef>
+
+    <ResearchProjectDef Abstract="True" Name="GW_ImperiumTechBase">
+		<techLevel>Spacer</techLevel>
+		<tab>GW_GrimTech</tab>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_DrugProduction</defName>
+		<label>imperium drug production</label>
+        <description>Allows for the production of various mind altering substances common throughout the imperium, from fenrisian ale to combat stims. Fenrisian Ale, called Mjød in the unique Fenrisian Low Gothic dialect, is an extremely potent concoction distilled from the fermentation of the native plants of Fenris. Battle stimulants basicly works as massive power boost, but have cost of addiction.</description>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PlasmaReactor</defName>
+		<label>plasma reactor</label>
+        <description>Allows for the creation of the plasma generator, a massive structure that converts uranium into electricity. Uses uranium to generate massive amount of power.</description>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+        <baseCost>7000</baseCost>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>GW_Cogitator</defName>
+        <label>cogitator</label>
+        <description>Allows for the construction of a cogitator. Cogitator also allow you to use STC which you can buy to unlock new reaserches.</description>
+        <prerequisites>
+            <li>MultiAnalyzer</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<baseCost>4500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+        <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
+        <discoveredLetterText>You now have the technology to build a cogitator. Many of the advanced Imperium technologies require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>indoctrination_chamber</defName>
+        <label>Indoctrination chamber</label>
+        <description>Allows for the construction of a Indoctrination chamber. Chamber allow you to recruit "unwavering loyal" pawns with risk of pernament brain damage.</description>
+        <prerequisites>
+            <li>MultiAnalyzer</li>
+			<li>Cryptosleep</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<baseCost>4500</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_GrimworldMaterials</defName>
+		<label>grimworld materials</label>
+        <description>Allows for the creation of materials like rockcrete and plascrete. Furnace allow to produce them.</description>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AdvancedGrimworldMaterials</defName>
+		<label>advanced grimworld materials</label>
+        <description>Allows for the creation of advanced materials, like relic components.</description>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>GW_GrimworldMaterials</li>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>GW_BlastDoors</defName>
+        <label>grimworld blast doors</label>
+        <description>Allows for the creation of blast doors, which are super thick doors that can take an extremely long time to open when unpowered.</description>
+        <prerequisites>
+            <li>Autodoors</li>
+        </prerequisites>
+		<baseCost>1600</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Chainswords</defName>
+		<label>Basic melee weapons</label>
+        <description>The chainsword is essentially a sword with powered teeth that run along a single-edged blade like that of a chainsaw. Most versions of the weapon make use of monomolecularly-edged or otherwise razor-sharp teeth. Chainswords are not subtle weapons, and wielding one is a statement in its own right: they are horrific tools of war, designed to bite, tear and eviscerate where more primitive blades merely cut and slice.</description>
+		<prerequisites>
+			<li>Machining</li>
+			<li>LongBlades</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PowerMeleeWeapons</defName>
+		<label>power melee weapons</label>
+        <description>Power Weapons are rare and greatly coveted personal close combat weapons that are used on the battlefields of the 41st Millennium. Power weapons generally exude a hazy field of bluish energy that wraps around the primary impact region of a melee weapon, be it a sword's blade or warhammer's head, which is capable of disrupting the molecular bonds of matter when it strikes. These weapons may be constructed to appear as a primitive, simple melee weapon, with the power field generator concealed within the hilt or haft of the weapon.</description>
+		<prerequisites>
+			<li>GW_Chainswords</li>
+		</prerequisites>
+        <baseCost>5500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+				<longLabel>True</longLabel>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PlasmaWeapons</defName>
+		<label>plasma weapons</label>
+        <description>Plasma Weapons are highly potent and destructive directed energy weapons utilised in many forms by the advanced intelligent species of the Milky Way Galaxy. Most Plasma Weapons work by delivering pulses of searing energy and superheated matter that have been transmuted into a gaseous plasma state that carries an electrical charge. The plasma "bolts" fired by these weapons explode on impact and generate the destructive heat of a small sun, and the sheer amount of energy released by the impact of superheated plasma is often enough to completely vaporise the target.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>4000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_MeltaWeapons</defName>
+		<label>melta weapons</label>
+        <description>The Meltagun, also called a "Fusion Gun," "Melter," or "Cooker," is a powerful, short-ranged anti-armour weapon that produces an intense, energetic beam of heat in the tens of thousands of degrees Centigrade. A Meltagun works by inducing a minute, sub-molecular reaction within a highly-pressurised pyrum-petrol fuel mix located within an ammunition canister, and then projecting the resulting plasma through the canister and from the weapon's barrel as a blast of incredible heat.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>4000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Launchers</defName>
+		<label>launchers</label>
+        <description>A Grenade Launcher serves the role of an explosives launcher weapon for the Imperial armed forces that can be used and carried by a single, un-augmented Human. The grenades are typically equipped with either Frag or Krak explosive charges, although Grenade Launcher projectile warheads are smaller and less powerful than their Missile Launcher warhead equivalents.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Flamers</defName>
+		<label>flamers</label>
+        <description>Flamers, also known as "Flame Guns", are Flamer Weapons that come in a wide variety of designs and patterns, but all are ideal for flushing out enemies in cover and putting groups of foes to the torch with projected flame. The two most common variants of Flamers either have a detachable fuel canister under the barrel, or a hose connecting to a backpack canister.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Bolters</defName>
+		<label>bolters</label>
+        <description>The bolter, also called a boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts. The bolter is a weapon synonymous with the Adeptus Astartes, and rightly so. However, although the Space Marines are its primary users, the bolter finds itself in use in military organisations throughout the Imperium. The weapon is fearsome, with explosive rounds capable of ripping through or blowing apart a foe.</description>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+        <baseCost>3000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_TarantulaTurrets</defName>
+		<label>tarantula turrets</label>
+        <description>The Tarantula Sentry Gun, sometimes simply referred to as a Sentry Gun, is an automated mobile weapons system used by the Astra Militarum, various Planetary Defence Forces, the Adeptus Arbites, and the Adeptus Astartes. The exact origins of the Tarantula's nickname is unknown. The Tarantula Sentry Gun is operated by a Machine Spirit (artificial intelligence)-controlled logic engine capable of operating entirely without Human input.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>GW_Lasguns</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+		</prerequisites>
+        <baseCost>6500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>4.70</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_BolterTurrets</defName>
+		<label>Astartes turrets</label>
+        <description>Astartes much more powerful counter part of tarrantula turret. Place them and you will see how they destroy your and Imperium of Mankind foes!</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+        <baseCost>5000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.70</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AdvancedBolters</defName>
+		<label>advanced bolters</label>
+        <description>The bolter, also called a boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts. The bolter is a weapon synonymous with the Adeptus Astartes, and rightly so. However, although the Space Marines are its primary users, the bolter finds itself in use in military organisations throughout the Imperium. The weapon is fearsome, with explosive rounds capable of ripping through or blowing apart a foe.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+		</prerequisites>
+        <baseCost>7000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.30</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase" MayRequire="ceteam.combatextended">
+		<defName>GW_AdvancedBolterMunitions</defName>
+		<label>advanced bolter munitions</label>
+        <description>Allows for the production of various advanced ammunition used by guns like Bolters.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Autoguns</defName>
+		<label>autoguns</label>
+        <description>An Autogun is a fully automatic Auto Weapon that fires solid-slug ballistic rounds at the intended target in rapid succession. Cheap, rugged and reliable, it can be found throughout the Imperium of Man, where it is appreciated for its decent damage and accuracy. Its main drawbacks are its weight and the need to carry a large amount of cumbersome ammunition for prolonged operations. The latter drawback has led to the Astra Militarum being equipped with Lasguns as its standard armament since the early 32nd Millennium.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>1600</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Lasguns</defName>
+		<label>lasguns</label>
+        <description>The Lasgun, also sometimes referred to as a Lasrifle, is a directed-energy antipersonnel weapon used by the military forces of the Imperium of Man, and it is the most common and widely-used type of laser weapon in the galaxy. It is standard-issue for the Adeptus Mechanicus' cybernetic Skitarii infantry, all Astra Militarum rank-and-file infantry and most junior Astra Militarum officers. Lasguns are reliable, easy to maintain and to produce, and are readily available on most Imperial worlds.</description>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+        <baseCost>1800</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_LasCannonTurret</defName>
+		<label>lascannon turret</label>
+        <description>The powerful Lascannon is a formidable Laser Weapon whose energetic beam of coherent light is capable of penetrating most armoured vehicles. It is the favourite anti-tank weapon of the Astra Militarum and is also commonly used by the Space Marines.</description>
+		<prerequisites>
+			<li>GW_Lasguns</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+		</prerequisites>
+        <baseCost>2500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+</Defs>

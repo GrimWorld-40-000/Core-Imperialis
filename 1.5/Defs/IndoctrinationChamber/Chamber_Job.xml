@@ -1,0 +1,9 @@
+<Defs>
+    <JobDef>
+        <defName>CarryToIndoctrinatingChamberJob</defName>
+        <driverClass>Chamber.JobDriver_CarryToChamber</driverClass>
+        <reportString>carrying TargetA to indoctrinating chamber.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+        <taleOnCompletion>PutIntoCryptosleep</taleOnCompletion>
+      </JobDef>
+</Defs>
