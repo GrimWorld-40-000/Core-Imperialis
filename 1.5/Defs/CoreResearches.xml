@@ -3,6 +3,8 @@
     <ResearchTabDef>
 		<defName>GW_GrimTech</defName>
 		<label>Grimworld 40,000</label>
+		<generalTitle>Grimworld 40,000</generalTitle>
+    	<generalDescription>Unlock technologies that grant items from the Warhammer universe. Many technologies within this tab require special blueprints to begin research.</generalDescription>
 	</ResearchTabDef>
 
     <ResearchProjectDef Abstract="True" Name="GW_ImperiumTechBase">

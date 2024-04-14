@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Brain"]</xpath>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <ThingDef ParentName="BodyPartNaturalBase">
+                            <defName>Brain</defName>
+                            <label>brain</label>
+                            <description>A biological human brain. Allows the being to be conscious.</description>
+                            <statBases>
+                                <MarketValue>1500</MarketValue>
+                                <Mass>2</Mass>
+                            </statBases>
+                        </ThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/BodyPartDef[defName="Brain"]</xpath>
+                    <value><spawnThingOnRemoved>Brain</spawnThingOnRemoved></value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value><li>GW_Cogitator</li></value>
+    </Operation>
+</Patch>

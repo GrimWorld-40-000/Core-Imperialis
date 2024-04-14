@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>CorpseStarch</defName>
+    <label>Corpse starch</label>
+    <description>Corpse Starch in the Warhammer 40,000 universe is a sustenance derived from reconstituted biomass, primarily recycled from the deceased. This nutrient-rich substance, often produced under strict Imperial regulations, serves as a pragmatic solution to the perpetual scarcity of resources in the grim and unforgiving 41st millennium. As a staple food source, Corpse Starch underscores the Imperium's grim determination to endure amidst the darkest challenges of the galaxy, providing sustenance in the face of scarcity and adversity.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Food/Corpse Starch</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.0</MarketValue>
+      <Mass>0.018</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>700</WorkToMake>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.75</Nutrition>
+    </statBases>
+	<uiIconScale>1.6</uiIconScale>
+	  <recipeMaker>
+      <recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+      </recipeUsers>
+      <bulkRecipeCount>60</bulkRecipeCount>
+	  <workSkill>Cooking</workSkill>
+    </recipeMaker>
+      
+    <costList>
+      <Meat_Human>5</Meat_Human>
+    </costList>
+	
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>70</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+</Defs>
+
