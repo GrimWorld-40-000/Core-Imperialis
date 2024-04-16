@@ -121,7 +121,7 @@ namespace Core_Imp.Dialogs
             }
             if (Widgets.ButtonText(new Rect(rect.x, rect.y, ButSize.x, ButSize.y), "Close".Translate()))
             {
-                Close();
+                Close(true);
             }
         }
 
@@ -253,7 +253,7 @@ namespace Core_Imp.Dialogs
         private void StartAssembly()
         {
             cogitator.Start(selectedProject);
-            Close();
+            Close(true);
         }
 
         private List<Pair<ResearchPrerequisitesUtility.UnlockedHeader, List<Def>>> UnlockedDefsGroupedByPrerequisites(ResearchProjectDef project)
