@@ -3,6 +3,7 @@
   <name>GrimWorld 40,000 - Core Imperialis</name>
   <author>Clashgore, Odzmang, BlackMarket420, Tittymcswaggy, Alite, Abomination, Epsilon, Maxim, Shun The Witch, Samael, Con</author>
   <packageId>Grimworld.Core</packageId>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/CoreImperialisModIcon</modIconPath>
   <supportedVersions>
     <li>1.4</li>
     <li>1.5</li>
