@@ -75,6 +75,24 @@
                 <colorB>(255, 255, 255)</colorB>
                 <colorC>(180, 65, 74)</colorC>
             </li>
+			 <li>
+				<name>Auramite</name>
+				<colorA>(199, 160, 82)</colorA>
+				<colorB>(149, 38, 34)</colorB>
+				<colorC>(85, 194, 206)</colorC>
+			  </li>
+			  <li>
+				<name>Shadowkeepers</name>
+				<colorA>(78, 70, 70)</colorA>
+				<colorB>(139, 38, 34)</colorB>
+				<colorC>(46, 158, 168)</colorC>
+			  </li>
+			  <li>
+				<name>Solar Watch</name>
+				<colorA>(244, 238, 225)</colorA>
+				<colorB>(189, 55, 57)</colorB>
+				<colorC>(85, 195, 206)</colorC>
+			  </li>
         </palettes>
     </GW4KArmor.PaletteDef>
   
@@ -153,6 +171,24 @@
                 <colorB>(180, 65, 74)</colorB>
                 <colorC>(174, 66, 66)</colorC>
             </li>
+			 <li>
+				<name>Auramite</name>
+				<colorA>(199, 160, 82)</colorA>
+				<colorB>(149, 38, 34)</colorB>
+				<colorC>(85, 194, 206)</colorC>
+			  </li>
+			  <li>
+				<name>Shadowkeepers</name>
+				<colorA>(78, 70, 70)</colorA>
+				<colorB>(139, 38, 34)</colorB>
+				<colorC>(46, 158, 168)</colorC>
+			  </li>
+			  <li>
+				<name>Solar Watch</name>
+				<colorA>(244, 238, 225)</colorA>
+				<colorB>(189, 55, 57)</colorB>
+				<colorC>(85, 195, 206)</colorC>
+			  </li>
         </palettes>
     </GW4KArmor.PaletteDef>
   
@@ -231,6 +267,24 @@
                 <colorB>(255, 255, 255)</colorB>
                 <colorC>(180, 65, 74)</colorC>
             </li>
+			 <li>
+				<name>Auramite</name>
+				<colorA>(199, 160, 82)</colorA>
+				<colorB>(149, 38, 34)</colorB>
+				<colorC>(85, 194, 206)</colorC>
+			  </li>
+			  <li>
+				<name>Shadowkeepers</name>
+				<colorA>(78, 70, 70)</colorA>
+				<colorB>(139, 38, 34)</colorB>
+				<colorC>(46, 158, 168)</colorC>
+			  </li>
+			  <li>
+				<name>Solar Watch</name>
+				<colorA>(244, 238, 225)</colorA>
+				<colorB>(189, 55, 57)</colorB>
+				<colorC>(85, 195, 206)</colorC>
+			  </li>
         </palettes>
     </GW4KArmor.PaletteDef>
   
