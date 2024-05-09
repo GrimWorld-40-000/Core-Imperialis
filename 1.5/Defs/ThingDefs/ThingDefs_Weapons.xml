@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <ThingDef ParentName="BaseWeapon">
 		<defName>GW_SS_Phaseblade</defName>
         <label>Xenophase Blade</label>
         <description>Xenophase Blade is a potent, Power Sword-like melee weapon derived from xenos technology used by select warriors of the Deathwatch Chapter who have earned by their deeds and time of service in the Long Vigil the special trust of their watch fortress' watch commander.</description>
@@ -16,11 +16,9 @@
         <techLevel>Spacer</techLevel>
         <weaponTags>
             <li>GW_PhaseBlade</li>
+            <li>UltratechMelee</li>
         </weaponTags>
         <generateCommonality>0.01</generateCommonality>
-        <costList>
-            <Plasteel>100</Plasteel>
-        </costList>
         <statBases>
 			<MaxHitPoints>1400</MaxHitPoints>
             <WorkToMake>1000</WorkToMake>
@@ -32,9 +30,19 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <equippedAngleOffset>0</equippedAngleOffset>
-        <recipeMaker>
-            <recipeUsers Inherit="False" />
-        </recipeMaker>
+        <smeltable>false</smeltable>
+        <thingCategories>
+			<li>WeaponsMelee</li>
+		</thingCategories>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>Ultratech</li>
+		</weaponClasses>
+        <comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
         <tools>
             <li>
                 <label>handle</label>
@@ -66,7 +74,6 @@
 				<armorPenetration>2.3</armorPenetration>
             </li>
         </tools>
-	    <comps />
     </ThingDef>
 
     <!--Volk weapons-->
@@ -91,7 +98,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseHumanMakeableGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>GW_SS_VolkCulverin</defName>
         <label>volkite culverin</label>
         <description>The Volkite Culverin is a type of Volkite Weapon, and is the heaviest man-portable Volkite Weapon known to have been available to Imperial forces during the Great Crusade and Horus Heresy-eras.</description>
@@ -102,12 +109,6 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <tradeability>Sellable</tradeability>
-        <recipeMaker>
-            <recipeUsers Inherit="False" />
-        </recipeMaker>
-        <costList>
-            <Plasteel>100</Plasteel>
-        </costList>
         <statBases>
             <WorkToMake>61000</WorkToMake>
             <Mass>15</Mass>
@@ -126,6 +127,7 @@
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <smeltable>false</smeltable>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -181,7 +183,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseHumanMakeableGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>GW_SS_VolkCaliver</defName>
         <label>Volkite caliver</label>
         <description>The Volkite Caliver was a Volkite heavy weapon variant carried by Space Marine and Mechanicum infantry forces. A Volkite rifle with a devastating effect on flesh and bone.</description>
@@ -192,9 +194,6 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <tradeability>Sellable</tradeability>
-        <recipeMaker>
-            <recipeUsers Inherit="False" />
-        </recipeMaker>
         <statBases>
             <WorkToMake>38000</WorkToMake>
             <Mass>10</Mass>
@@ -204,15 +203,13 @@
             <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
         </statBases>
-        <costList>
-            <Plasteel>100</Plasteel>
-        </costList>
         <weaponTags>
             <li>GW_SS_VolkCaliver</li>
         </weaponTags>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <smeltable>false</smeltable>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -269,7 +266,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseHumanMakeableGun">
+    <ThingDef ParentName="BaseGunWithQuality">
 		<defName>GW_SM_VolkSerpenta</defName>
 		<label>Volkite serpenta</label>
 		<description>The pistol variant of a Volkite Weapon wielded single-handed, the Volkite Serpenta was sometimes carried by high-ranking soldiers of the Imperial Army and the Tech-priests of the ancient Mechanicum during the Great Crusade era.</description>
@@ -280,9 +277,6 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
         <tradeability>Sellable</tradeability>
-		<recipeMaker>
-			<recipeUsers Inherit="False" />
-		</recipeMaker>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
 			<Mass>5</Mass>
@@ -295,9 +289,7 @@
 		<equippedStatOffsets>
 			<MoveSpeed>0.10</MoveSpeed>
 		</equippedStatOffsets>
-		<costList>
-            <Plasteel>100</Plasteel>
-        </costList>
+        <smeltable>false</smeltable>
 		<weaponTags>
 			<li>GW_SM_VolkSerpenta</li>
 		</weaponTags>
@@ -360,7 +352,7 @@
         </projectile>
     </ThingDef>
     
-    <ThingDef ParentName="BaseHumanMakeableGun">
+    <ThingDef ParentName="BaseGunWithQuality">
 		<defName>GW_SS_VolkBlast</defName>
 		<label>Volkite blaster</label>
 		<description>The Volkite Blaster is one of the few types of Volkite Weapon still used by the military forces of the Imperium in the 41st Millennium. Volkite Blasters are known to be wielded by Adeptus Mechanicus magi dominus.</description>
@@ -371,9 +363,6 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
         <tradeability>Sellable</tradeability>
-		<recipeMaker>
-			<recipeUsers Inherit="False" />
-		</recipeMaker>
 		<statBases>
 			<WorkToMake>62000</WorkToMake>
 			<Mass>20</Mass>
@@ -386,9 +375,7 @@
 		<equippedStatOffsets>
 			<MoveSpeed>-0.20</MoveSpeed>
 		</equippedStatOffsets>
-		<costList>
-            <Plasteel>100</Plasteel>
-        </costList>
+        <smeltable>false</smeltable>
 		<weaponTags>
 			<li>GW_SS_VolkBlast</li>
 		</weaponTags>
