@@ -365,7 +365,7 @@
         <tradeability>Sellable</tradeability>
 		<statBases>
 			<WorkToMake>62000</WorkToMake>
-			<Mass>20</Mass>
+			<Mass>7</Mass>
 			<AccuracyTouch>0.35</AccuracyTouch>
 			<AccuracyShort>0.45</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
