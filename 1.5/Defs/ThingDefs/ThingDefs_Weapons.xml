@@ -83,7 +83,7 @@
         <description>Pew pew.</description>
         <graphicData>
             <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
-            <drawSize>2.0</drawSize>
+            <drawSize>1.0</drawSize>
         </graphicData>
         <textures>
             <li>Things/Weapons/GW_Volkite_Bolt</li>
