@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			Defs/ThingDef[
+			defName="Gun_PumpShotgun" or
+			defName="Gun_ChainShotgun" or
+			defName="Gun_BoltActionRifle" or
+			defName="Gun_AssaultRifle" or
+			defName="Gun_SniperRifle" or
+			defName="Gun_HeavySMG" or
+			defName="Gun_IncendiaryLauncher" or
+			defName="Gun_LMG" or
+			defName="Gun_ChargeRifle"
+			]/thingCategories
+		</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+			defName="Gun_PumpShotgun" or
+			defName="Gun_ChainShotgun" or
+			defName="Gun_BoltActionRifle" or
+			defName="Gun_AssaultRifle" or
+			defName="Gun_SniperRifle" or
+			defName="Gun_HeavySMG" or
+			defName="Gun_IncendiaryLauncher" or
+			defName="Gun_LMG" or
+			defName="Gun_ChargeRifle"
+			]</xpath>
+			<value>
+				<thingCategories />
+			</value>
+		</nomatch>
+	</Operation>
+
+    <Operation Class="PatchOperationAdd">
+		<xpath>
+			Defs/ThingDef[
+			defName="Gun_PumpShotgun" or
+			defName="Gun_ChainShotgun" or
+			defName="Gun_BoltActionRifle" or
+			defName="Gun_AssaultRifle" or
+			defName="Gun_SniperRifle" or
+			defName="Gun_HeavySMG" or
+			defName="Gun_IncendiaryLauncher" or
+			defName="Gun_LMG" or
+			defName="Gun_ChargeRifle"
+			]/thingCategories
+		</xpath>
+		<value>
+			<li>TwoHanded</li>
+		</value>
+	</Operation>
+</Patch>
