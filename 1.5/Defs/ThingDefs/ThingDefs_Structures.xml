@@ -142,7 +142,7 @@
         </graphicData>
         <statBases>
             <MaxHitPoints>500</MaxHitPoints>
-            <WorkToBuild>300</WorkToBuild>
+            <WorkToBuild>1000</WorkToBuild>
             <Flammability>0.75</Flammability>
         </statBases>
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
