@@ -23,7 +23,7 @@
 			<MaxHitPoints>1400</MaxHitPoints>
             <WorkToMake>1000</WorkToMake>
             <Mass>5</Mass>
-			<MarketValue>6000</MarketValue>
+			<MarketValue>10000</MarketValue>
         </statBases>
 		<relicChance>1</relicChance>
 		<thingSetMakerTags>
@@ -111,6 +111,7 @@
         <tradeability>Sellable</tradeability>
         <statBases>
             <WorkToMake>61000</WorkToMake>
+			<MarketValue>10000</MarketValue>
             <Mass>15</Mass>
             <AccuracyTouch>0.75</AccuracyTouch>
             <AccuracyShort>0.65</AccuracyShort>
@@ -196,6 +197,7 @@
         <tradeability>Sellable</tradeability>
         <statBases>
             <WorkToMake>38000</WorkToMake>
+			<MarketValue>10000</MarketValue>
             <Mass>10</Mass>
             <AccuracyTouch>0.85</AccuracyTouch>
             <AccuracyShort>0.75</AccuracyShort>
@@ -279,6 +281,7 @@
         <tradeability>Sellable</tradeability>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
+			<MarketValue>10000</MarketValue>
 			<Mass>5</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
@@ -365,6 +368,7 @@
         <tradeability>Sellable</tradeability>
 		<statBases>
 			<WorkToMake>62000</WorkToMake>
+			<MarketValue>10000</MarketValue>
 			<Mass>7</Mass>
 			<AccuracyTouch>0.35</AccuracyTouch>
 			<AccuracyShort>0.45</AccuracyShort>
