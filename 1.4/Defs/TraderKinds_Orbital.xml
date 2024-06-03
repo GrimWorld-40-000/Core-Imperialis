@@ -67,7 +67,7 @@
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>HP_Adamantium</thingDef>
-                <countRange>250~450</countRange>
+                <countRange>150~250</countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>HP_Auramite</thingDef>
@@ -75,7 +75,7 @@
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>HP_Ceramite</thingDef>
-                <countRange>300~750</countRange>
+                <countRange>300~450</countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>GW_STC_Fragment</thingDef>
