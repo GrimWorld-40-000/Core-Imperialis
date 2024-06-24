@@ -2,7 +2,7 @@
 <Defs>
     <DesignationCategoryDef>
         <defName>GrimworldCategory</defName>
-        <label>Grimworld</label>
+        <label>GrimWorld</label>
         <order>10</order>
         <specialDesignatorClasses>
             <li>Designator_Cancel</li>
