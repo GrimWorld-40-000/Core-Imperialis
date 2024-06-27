@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="UnfinishedBase">
+		<defName>UnfinishedShield</defName>
+		<label>Unfinished shield</label>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedTechArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+	</ThingDef>
+
+    <ThingDef ParentName="ArmorSmithableBase" Name="GWShieldBase" Abstract="true">
+        <techLevel>Spacer</techLevel>
+        <thingCategories>
+            <li>GW_Shield</li>
+        </thingCategories>
+        <stuffCategories><li>Metallic</li></stuffCategories>
+        <possessionCount>1</possessionCount>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <bodyPartGroups>
+                <li>LeftHand</li>
+                <li>Arms</li>
+            </bodyPartGroups>
+            <layers>
+                <li>VFEC_OuterShell</li>
+                <li MayRequire="CETeam.CombatExtended">Shield</li>
+                <li>GW_Shield</li>
+            </layers>
+        </apparel>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <MaxHitPoints>550</MaxHitPoints>
+        </statBases>
+        <smeltable>true</smeltable>	
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedShield</unfinishedThingDef>
+        </recipeMaker>
+        <tradeTags>
+            <li>Armor</li>
+        </tradeTags>
+        <modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingCategoryDef>
+        <defName>GW_Shield</defName>
+        <label>grimworld shields</label>
+        <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>GW_CombatShield</defName>
+        <label>combat shields</label>
+        <parent>GW_Shield</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>GW_StormShield</defName>
+        <label>storm shields</label>
+        <parent>GW_Shield</parent>
+    </ThingCategoryDef>
+
+    <ApparelLayerDef>
+        <defName>GW_Shield</defName>
+        <label>shield</label>
+        <drawOrder>590</drawOrder>
+    </ApparelLayerDef>
+</Defs>
