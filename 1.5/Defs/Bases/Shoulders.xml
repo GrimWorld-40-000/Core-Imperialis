@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ApparelLayerDef>
+		<defName>GW_Shoulder</defName>
+		<label>shoulder</label>
+		<drawOrder>550</drawOrder>
+	</ApparelLayerDef>
+	
+	<ThingCategoryDef>
+		<defName>GW_ArmorShoulderPad</defName>
+		<label>shoulder pads</label>
+		<parent>ApparelArmor</parent>
+	</ThingCategoryDef>
+</Defs>
