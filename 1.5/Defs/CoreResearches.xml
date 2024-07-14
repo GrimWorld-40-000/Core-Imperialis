@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ResearchTabDef>
+    <!-- ResearchTabDef>
 		<defName>GW_GrimTech</defName>
 		<label>Grimworld 40,000</label>
 		<generalTitle>Grimworld 40,000</generalTitle>
@@ -21,7 +21,7 @@
 		</prerequisites>
         <baseCost>2000</baseCost>
 		<researchViewX>0.00</researchViewX>
-		<researchViewY>0.00</researchViewY>
+		<researchViewY>0.50</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
@@ -335,5 +335,5 @@
         <baseCost>2500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>5.40</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef -->
 </Defs>

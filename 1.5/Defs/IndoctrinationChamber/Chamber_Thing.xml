@@ -13,7 +13,7 @@
         </graphicData>
         <researchPrerequisites>
             <li>Cryptosleep</li>
-			<li>indoctrination_chamber</li>
+			<li>GW_IndoctrinationChamber</li>
         </researchPrerequisites>
         <altitudeLayer>Building</altitudeLayer>
         <uiIconPath>Chamber/IndoctrinationChamber_UI</uiIconPath>

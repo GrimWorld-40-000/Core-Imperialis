@@ -1,0 +1,59 @@
+<Defs>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_RulerFabrication</defName>
+		<label>ruler fabrication</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_PrimarchFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>20.50</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_ValdorArmor</defName>
+		<label>valdor's armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_RulerFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>21.00</researchViewX>
+		<researchViewY>1.90</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_MalcadorArmor</defName>
+		<label>malcador's armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_RulerFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>21.50</researchViewX>
+		<researchViewY>2.30</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_EmperorArmor</defName>
+		<label>emperor's armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_RulerFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>21.50</researchViewX>
+		<researchViewY>3.20</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_RulerWeapons</defName>
+		<label>rulers weapons</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_RulerFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>21.00</researchViewX>
+		<researchViewY>3.60</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,329 @@
+<Defs>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesFabrication</defName>
+		<label>astartes fabrication</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_Cogitator</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_SubModules</defName>
+		<label>sub-modules</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- Equipment -->
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesBasicMelee</defName>
+		<label>astartes basic melee weapon</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>1.10</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesPowerWeapons</defName>
+		<label>astartes power weapons</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesBasicMelee</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>1.10</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesShield</defName>
+		<label>astartes shields</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesEnergyWeapons</defName>
+		<label>astartes energy weapons</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>1.70</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesKineticWeapons</defName>
+		<label>astartes kinetic weapons</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>1.10</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesFlamers</defName>
+		<label>astartes flamers</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_LuciferBlack</defName>
+		<label>lucifer black</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_MilitariumFabrication</li>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+	</ResearchProjectDef>
+
+
+	<!-- Apparel? -->
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_JumpPacks</defName>
+		<label>jump packs</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesLightArmor</defName>
+		<label>astartes light armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesMediumArmor</defName>
+		<label>astartes medium armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesLightArmor</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>1.70</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesTerminatorArmor</defName>
+		<label>astartes terminator armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesMediumArmor</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>14.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstartesGravisArmor</defName>
+		<label>astartes gravis armor</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesMediumArmor</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>14.00</researchViewX>
+		<researchViewY>1.10</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstarteSpecialist</defName>
+		<label>astartes specialist</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_SubModules</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Techmarine</defName>
+		<label>techmarine</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstarteSpecialist</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Apothecary</defName>
+		<label>apothecary</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstarteSpecialist</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>3.80</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Liblarian</defName>
+		<label>liblarian</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstarteSpecialist</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>4.20</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Chaplain</defName>
+		<label>chaplain</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstarteSpecialist</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>4.60</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Centurians</defName>
+		<label>centurians</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstarteSpecialist</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+	</ResearchProjectDef>
+	
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Champions</defName>
+		<label>champions</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_SubModules</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_SonsOfUltramar</defName>
+		<label>sons of ultramar</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_Champions</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>3.90</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AngelOfCaliban</defName>
+		<label>angel of caliban</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_Champions</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>4.40</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_BlackKnights</defName>
+		<label>black knights</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_Champions</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>13.00</researchViewX>
+		<researchViewY>4.90</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- Security -->
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AstarteTurrets</defName>
+		<label>astartes turrets</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_AstartesFabrication</li>
+			<li>GW_ImperiumDefenseStructure</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>3.90</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- Vehicle -->
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_ImperialAdvancedTanks</defName>
+		<label>imperial advanced tanks</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_ImperialBasicTank</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>5.50</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_ImperialAdvancedAircraft</defName>
+		<label>imperial advanced aircraft</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_ImperialBasicAircraft</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>5.90</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Dreadnoughts</defName>
+		<label>dreadnoughts</label>
+		<description>. . .</description>
+		<prerequisites>
+			<li>GW_VehiclesFabrication</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
+
+
+</Defs>
