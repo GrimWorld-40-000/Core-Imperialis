@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ApparelLayerDef><!--It's the same as CEs so they will act interchangably-->
+		<defName>Backpack</defName>
+		<label>backpack</label>
+		<drawOrder>220</drawOrder>
+	</ApparelLayerDef>
+
+    <ThingCategoryDef>
+        <defName>GW_Backpacks</defName>
+        <label>grimworld backpacks</label>
+        <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingDef Abstract="true" Name="GW_BackpackBase" ParentName="ArmorMachineableBase">
+		<thingCategories>
+			<li>GW_Backpacks</li>
+		</thingCategories>
+		<tradeTags>
+			<li>GWBackpacks</li>
+		</tradeTags>
+		<apparel>
+			<drawData>
+				<dataSouth>
+					<layer>-1</layer>
+				</dataSouth>
+				<dataWest>
+					<offset>(0.0, 0.0, -0.1)</offset>
+					<layer>72</layer>
+				</dataWest>
+				<dataEast>
+					<offset>(0.0, 0.0, -0.1)</offset>
+					<layer>72</layer>
+				</dataEast>
+				<dataNorth>
+					<layer>100</layer>
+				</dataNorth>
+				<!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+			</drawData>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Backpack</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>
