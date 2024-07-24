@@ -49,7 +49,7 @@
             <DoorOpenSpeed>0.50</DoorOpenSpeed>
         </statBases>
         <researchPrerequisites>
-            <li>GW_BlastDoors</li>
+            <li MayRequire="grimworld.astramilitarum">GW_ImperiumDefenseStructure</li>
         </researchPrerequisites>
         <costStuffCount>100</costStuffCount>
         <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
