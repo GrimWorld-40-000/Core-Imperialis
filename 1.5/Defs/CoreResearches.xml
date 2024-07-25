@@ -200,6 +200,7 @@
 		<researchViewY>3.00</researchViewY>
 	</ResearchProjectDef>
 	
+	<!-- ruler -->
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_SM_RulerFabrication</defName>
 		<label>ruler fabrication</label>
@@ -211,6 +212,18 @@
 		<researchViewX>18.50</researchViewX>
 		<researchViewY>3.00</researchViewY>
 	</ResearchProjectDef>
+	<!-- new -->
+	<!-- <ResearchProjectDef ParentName="GW_ImperiumTechBase"> -->
+		<!-- <defName>GW_SM_RulerFabrication</defName> -->
+		<!-- <label>ruler fabrication</label> -->
+		<!-- <description>Astartes fabrication. First step to unlock Angels of Death weapons and armors!</description> -->
+        <!-- <baseCost>2000</baseCost> -->
+		<!-- <prerequisites> -->
+			<!-- <li>GW_SM_PrimarchFabrication</li> -->
+		<!-- </prerequisites> -->
+		<!-- <researchViewX>18.50</researchViewX> -->
+		<!-- <researchViewY>3.00</researchViewY> -->
+	<!-- </ResearchProjectDef> -->
 	
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
         <defName>indoctrination_chamber</defName>
