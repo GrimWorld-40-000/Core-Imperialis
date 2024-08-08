@@ -278,7 +278,7 @@
     <RecipeDef>
         <defName>GW_Make_Ceramite</defName>
         <label>make ceramite</label>
-        <description>Ceramite Stone in Warhammer 40,000 is expertly fashioned by combining substantial amounts of stone, creating a robust material that marries the durability of stone with heat-resistant properties. This unique blend stands as a testament to the Imperium's ingenuity, offering steadfast defense against the fiery battles of the 41st millennium.</description>
+        <description>An Imperial alloy of specially-bonded ceramic and metal. Tough but relatively lightweight, it is usually found in high-end Imperial armor - especially the Power Armor of the Adeptus Astartes.</description>
         <jobString>manufacturing ceramite.</jobString>
         <workAmount>10000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>

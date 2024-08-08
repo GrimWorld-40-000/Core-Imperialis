@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Adamantium</defName>
         <label>Adamantium</label>
-        <description>Adamantium in the Warhammer 40,000 universe is an exceptionally durable and rare metal alloy, known for its incredible strength and resilience. Forged through arcane and complex processes, this material is a cornerstone in the construction of Imperial armor and structures. Its legendary toughness and ability to withstand extreme conditions make it a symbol of unyielding defense in the grim and war-torn 41st millennium.</description>
+        <description>An exceptionally-strong material used in the Imperium of Man. Some of the strongest and toughest Imperial items are made of adamantium, including the blades of melee weapons and the armor plates of Terminator Armor.\n\nAdamantium was also used in the legendary giant mechs known as Imperial Titans - though they are now quite extinct, their corpses salvaged for whatever remains.</description>
         <graphicData>
             <texPath>Things/Resource/Adamantium</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -55,7 +55,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Auramite</defName>
         <label>Auramite</label>
-        <description>Auramite in the Warhammer 40,000 universe stands as a formidable and revered metallic alloy known for its exceptional strength, surpassing even the legendary qualities of adamantium. Uniquely crafted for the Imperium and exclusively utilized by the elite Legio Custodes, Auramite serves as a symbol of unparalleled technological prowess. This extraordinary metal is a cornerstone in the construction of the Custodes' advanced armor and fortifications, embodying the pinnacle of durability and resistance in the relentless warfare of the grim and turbulent 41st millennium.</description>
+        <description>A powerful material of unknown origin, used only in the armor and equipment of the Adeptus Custodes, the bodyguards of the God-Emperor of Mankind. As well as being exceptionally strong, it is also inert at the quantum level, providing minimal disruption for the psykers of old. Its natural tint is a golden color - while there used to be top-secret chemical processes to change its color at the molecular level, those processes were lost to time.\n\nThe One True Armor, the Power Armor used by the Master of Mankind Himself, was wrought of auramite, allowing him to freely channel his massive psychic power to destroy His enemies. However, He met his match in the form of His corrupted son, the arch-heretic Warmaster Horus Lupercal. The wounds He suffered from slaying His son bound the Emperor to the Golden Throne up until the very moment of His death.</description>
         <graphicData>
             <texPath>Things/Resource/Auramite</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -109,7 +109,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Ceramite</defName>
         <label>Ceramite</label>
-        <description>Ceramite in the Warhammer 40,000 universe is a durable composite material, meticulously engineered for its heat-resistant and protective qualities. Widely employed in the construction of Imperial armor and fortifications, ceramite serves as a vital component in the Imperium's defense against the intense and varied threats of the grim 41st millennium. This exceptional material, prized for its ability to withstand extreme conditions, is prominently featured in the crafting of Astartes armors, enhancing the resilience of Space Marine warriors on the battlefield.</description>
+        <description>An Imperial alloy of specially-bonded ceramic and metal. Tough but relatively lightweight, it is usually found in high-end Imperial armor - especially the Power Armor of the Adeptus Astartes.</description>
         <graphicData>
             <texPath>Things/Resource/Ceramite</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
