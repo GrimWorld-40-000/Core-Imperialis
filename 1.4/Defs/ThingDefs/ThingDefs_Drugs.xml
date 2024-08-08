@@ -3,7 +3,7 @@
     <ThingDef ParentName="MakeableDrugBase">
         <defName>GW_FenrisianAle</defName>
         <label>fenrisian ale</label>
-        <description>Fenrisian Ale, hailing from the icy world of Fenris in Warhammer 40,000, is a robust and potent brew known for its hearty flavor with hints of smokiness. Popular among the Space Wolves Chapter, it fosters a sense of brotherhood during feasts and celebrations. In RimWorld, Fenrisian Ale serves as a morale-boosting element, allowing colonists to share in its distinctive taste, promoting camaraderie and community in the harsh environment of the RimWorld.</description>
+        <description>A strong alcoholic drink native to the Imperial planet of Fenris, the homeworld of the Space Wolves chapter of the Adeptus Astartes. Also known as “Mjød”, the drink includes a natural Fenrisian toxin that temporarily shuts down the Oolitic Kidney of Space Marines, allowing them to get drunk. This bottled version comes with the antitoxin needed for non-Astartes to drink the ale, as the toxin would otherwise shut down their kidneys and kill them.\n\nWhere there are Space Wolves, there is a Mjød still. They have been found on planets, ships, and Imperial bases across the galaxy.</description>
         <descriptionHyperlinks>
             <HediffDef>AlcoholHigh</HediffDef>
             <HediffDef>AlcoholTolerance</HediffDef>
@@ -87,7 +87,7 @@
     <ThingDef ParentName="MakeableDrugBase">
         <defName>GW_CombatStims</defName>
         <label>combat stims</label>
-        <description>Combat Stims in Warhammer 40,000, potent pharmaceutical compounds, temporarily enhance combat abilities but come with risks. Administered by Imperial forces, they provide a surge in agility, strength, and resilience on the battlefield against the grim threats of the 41st millennium. In RimWorld, while offering a calculated boost to combat capabilities, Combat Stims are also drugs that may induce anger outbursts and addictive behavior, adding complexity and risk to their use in the challenging environment of the RimWorld colony.</description>
+        <description>A concoction of Imperial combat stimulants. It greatly increases the user’s combat capability - pain resistance, more accurate shooting, better chances of hitting and dodging in melee, faster movement, and faster wound healing. While it is considered a hard drug, it still has a safe dose.\n\nIn the Imperium, combat drugs (or combat stimms) are heavily associated with the Penal Legions of the Astra Militarum - especially the Savlar Chem Dogs, a vicious force of hardened criminals serving with the promise that they can loot the battlefield of anything they wish. Almost all of their equipment is stolen, but they use it to surprising effect in combat.\n\nOther forces that prominently use combat drugs include the Eversor Temple of the Officio Assassinorum, which deploys drug-crazed, skull-faced super soldiers to annihilate the target and anyone else nearby, and the Slaanesh-aligned Chaos Space Marines of the Emperor’s Children.</description>
         <descriptionHyperlinks>
             <HediffDef>GW_CombatStimsHigh</HediffDef>
             <HediffDef>GW_CombatStimsTolerance</HediffDef>

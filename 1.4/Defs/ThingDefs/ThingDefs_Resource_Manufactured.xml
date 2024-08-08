@@ -115,7 +115,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Rockcrete</defName>
         <label>rockcrete</label>
-        <description>Rockcrete, a formidable construction material in the Warhammer 40,000 universe, is meticulously crafted by blending the durability of stone with the strength of steel-reinforced concrete. This fusion of materials results in an impervious barrier that fortifies the Imperium's structures, withstanding the relentless onslaught of warfare in the grim darkness of the 41st millennium.</description>
+        <description>An Imperial material used in construction. It consists of crushed stone mixed with binding agents, creating cheap but durable slabs used in walls and floors. While it is tough enough to be used in fortifications, a determined siege will eventually wear down a rockcrete wall or bunker.</description>
         <graphicData>
             <texPath>Things/Resource/Rockcrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -196,7 +196,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Plascrete</defName>
         <label>plascrete</label>
-        <description>Plascrete, a resilient construction material in the Warhammer 40,000 universe, is ingeniously forged by combining the sturdiness of stone with the advanced properties of plasteel. This amalgamation results in a robust and versatile substance, capable of withstanding the harsh realities of warfare, serving as a stalwart foundation for the Imperium's structures in the grim and tumultuous 41st millennium.</description>
+        <description>A strong Imperial material used in construction. Mixing stone, plasteel, and Imperial binding agents creates a very durable material, which can then be used in fortifications. While it can be used to build defensive perimeters, the Imperium of Man also used plascrete in prefabricated habitation units and in military outposts.</description>
         <graphicData>
             <texPath>Things/Resource/Plascrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>

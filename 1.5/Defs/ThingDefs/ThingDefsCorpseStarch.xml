@@ -3,7 +3,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>CorpseStarch</defName>
     <label>Corpse starch</label>
-    <description>Corpse Starch in the Warhammer 40,000 universe is a sustenance derived from reconstituted biomass, primarily recycled from the deceased. This nutrient-rich substance, often produced under strict Imperial regulations, serves as a pragmatic solution to the perpetual scarcity of resources in the grim and unforgiving 41st millennium. As a staple food source, Corpse Starch underscores the Imperium's grim determination to endure amidst the darkest challenges of the galaxy, providing sustenance in the face of scarcity and adversity.</description>
+    <description>A can of synthetic food derived from human corpses. The Imperium of Man often uses it as a staple food for hiveworld citizens and Astra Militarum soldiers. This is especially true on the planet of Necromunda, where the hiveworld’s Corpse Guild collects thousands of dead every day.\n\nThere was no shortage of corpses in the Imperium, and there were many mouths to feed. Without corpse starch, the hiveworlds would have starved and the corpses of the dead would have spread disease widely.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Foods</li>
@@ -55,4 +55,3 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 </Defs>
-
