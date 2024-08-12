@@ -34,6 +34,7 @@
         <stuffProps>
             <categories>
                 <li>Metallic</li>
+                <li>Imperial_Metals</li>
             </categories>
             <commonality>0.1</commonality>
             <appearance>Metal</appearance>
@@ -89,6 +90,7 @@
         <stuffProps>
             <categories>
                 <li>Metallic</li>
+                <li>Imperial_Metals</li>
             </categories>
             <commonality>0.07</commonality>
             <appearance>Metal</appearance>
@@ -147,6 +149,7 @@
         <stuffProps>
             <categories>
                 <li>Metallic</li>
+                <li>Imperial_Metals</li>
             </categories>
             <commonality>0.12</commonality>
             <appearance>Metal</appearance>
