@@ -42,6 +42,9 @@
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
 		</comps>
         <tools>
             <li>
@@ -162,6 +165,11 @@
                 <cooldownTime>2.1</cooldownTime>
             </li>
         </tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
     </ThingDef>
 
     <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
@@ -245,6 +253,11 @@
                 <cooldownTime>2.1</cooldownTime>
             </li>
         </tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
     </ThingDef>
 
     <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
@@ -332,6 +345,11 @@
 				<cooldownTime>2.1</cooldownTime>
 			</li>
 		</tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
 	</ThingDef>
 
     <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
@@ -411,5 +429,10 @@
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>
