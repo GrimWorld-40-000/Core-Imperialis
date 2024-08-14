@@ -15,7 +15,7 @@
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_DrugProduction</defName>
 		<label>imperium drug production</label>
-        <description>Allows for the production of various mind altering substances common throughout the imperium, from fenrisian ale to combat stims. Fenrisian Ale, called Mjød in the unique Fenrisian Low Gothic dialect, is an extremely potent concoction distilled from the fermentation of the native plants of Fenris. Battle stimulants basicly works as massive power boost, but have cost of addiction.</description>
+        <description>Synthesise two of the Imperium of Man’s drugs - the enhancing Combat Stims and the incredibly-strong Fenrisian Ale (also known as Mjød).</description>
 		<prerequisites>
 			<li>DrugProduction</li>
 		</prerequisites>
