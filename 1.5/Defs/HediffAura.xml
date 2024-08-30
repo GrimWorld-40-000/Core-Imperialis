@@ -1,0 +1,583 @@
+<Defs>
+	<HediffDef>
+		<defName>GW40k_SS_InspiringAura</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>inspiring presence</label>
+		<description>Your mythic aura makes the colonists around you fight better. For the glory of the Emperor!</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="GW40kHediffAura.HediffCompProperties_AuraAndMote">
+				<!-- <allyOrNeutralHediff>GW40k_SS_InspiringAura_Reciever</allyOrNeutralHediff> -->
+				<!-- <hostileHediff>GW40k_SS_InspiringAura_Reciever</hostileHediff> -->
+				<ownerFactionHediff>GW40k_SS_InspiringAura_Reciever</ownerFactionHediff>
+				<affectWearer>false</affectWearer>
+				<severityPerTrigger>1</severityPerTrigger>
+				<tickInterval>120</tickInterval>
+				<radius>5</radius>
+				<mote>GW40k_SS_Aura</mote>
+				<uiIconEnabled>UI/Overlays/NeedsPower</uiIconEnabled>
+				<uiIconDisabled>UI/Overlays/PowerOff</uiIconDisabled>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GW40k_SS_InspiringAura_Reciever</defName>
+		<label>inspiring effect</label>
+		<description>The presence of a powerful being makes you fight better. But you get tired much faster.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>2500</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>1.3</MoveSpeed>
+					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+					<RestFallRateFactor>1.2</RestFallRateFactor>
+					<MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GW40k_SS_BattleFrenzy_Melee</defName>
+		<label>battle frenzy (melee)</label>
+		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0.01</minSeverity>
+		<maxSeverity>5.5</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="OnAttackHediff.HediffCompProperties_OnAttackHediff">
+				<durationTillReset>2500</durationTillReset>
+				<!-- in tick. 2500 = 1 in-game hour = 40~ second -->
+				<buffResetOnTargetChange>false</buffResetOnTargetChange>
+				<isOnlyMelee>true</isOnlyMelee>
+				<showRemainingTime>true</showRemainingTime>
+				<startingSeverity>1.0</startingSeverity>
+				<severityPerhit>0</severityPerhit>
+				<!-- on used attack verb, regardless if it hit -->
+				<severityOnTakinghit>0</severityOnTakinghit>
+				<!-- as the name imply -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Dormant</label>
+				<minSeverity>0.01</minSeverity>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>1</label>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.1</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>2</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>3</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>4</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>5</label>
+				<minSeverity>5</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+					<InjuryHealingFactor>0.7</InjuryHealingFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>			
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GW40k_SS_BattleFrenzy_MeleeHooded</defName>
+		<label>battle frenzy (melee)</label>
+		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0.01</minSeverity>
+		<maxSeverity>5.5</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="OnAttackHediff.HediffCompProperties_OnAttackHediff">
+				<durationTillReset>2500</durationTillReset>
+				<!-- in tick. 2500 = 1 in-game hour = 40~ second -->
+				<buffResetOnTargetChange>false</buffResetOnTargetChange>
+				<isOnlyMelee>true</isOnlyMelee>
+				<showRemainingTime>true</showRemainingTime>
+				<startingSeverity>1.0</startingSeverity>
+				<severityPerhit>0</severityPerhit>
+				<!-- on used attack verb, regardless if it hit -->
+				<severityOnTakinghit>0</severityOnTakinghit>
+				<!-- as the name imply -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Dormant</label>
+				<minSeverity>0.01</minSeverity>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>1</label>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.1</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>2</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>3</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>4</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>5</label>
+				<minSeverity>5</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+					<InjuryHealingFactor>0.7</InjuryHealingFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>			
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GW40k_SS_BattleFrenzy_MeleeHood</defName>
+		<label>battle frenzy (melee)</label>
+		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0.01</minSeverity>
+		<maxSeverity>5.5</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="OnAttackHediff.HediffCompProperties_OnAttackHediff">
+				<durationTillReset>2500</durationTillReset>
+				<!-- in tick. 2500 = 1 in-game hour = 40~ second -->
+				<buffResetOnTargetChange>false</buffResetOnTargetChange>
+				<isOnlyMelee>true</isOnlyMelee>
+				<showRemainingTime>true</showRemainingTime>
+				<startingSeverity>1.0</startingSeverity>
+				<severityPerhit>0.1</severityPerhit>
+				<!-- on used attack verb, regardless if it hit -->
+				<severityOnTakinghit>0.1</severityOnTakinghit>
+				<!-- as the name imply -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Dormant</label>
+				<minSeverity>0.01</minSeverity>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>1</label>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.1</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>2</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>3</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>4</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>5</label>
+				<minSeverity>5</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+					<InjuryHealingFactor>0.7</InjuryHealingFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+						<severityAmount>0.5</severityAmount>
+						<mtbHours>0.25</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>	
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GW40k_SS_BattleFrenzy_Ranged</defName>
+		<label>battle frenzy (ranged)</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0.01</minSeverity>
+		<maxSeverity>10.5</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="OnAttackHediff.HediffCompProperties_OnAttackHediff">
+				<durationTillReset>2500</durationTillReset>
+				<!-- in tick. 2500 = 1 in-game hour = 40~ second -->
+				<buffResetOnTargetChange>false</buffResetOnTargetChange>
+				<isOnlyRanged>true</isOnlyRanged>
+				<showRemainingTime>true</showRemainingTime>
+				<startingSeverity>1.0</startingSeverity>
+				<severityPerhit>0.1</severityPerhit>
+				<!-- on used attack verb, regardless if it hit -->
+				<severityOnTakinghit>0.1</severityOnTakinghit>
+				<!-- as the name imply -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Dormant</label>
+				<minSeverity>0.01</minSeverity>
+			</li>
+			<li>
+				<label>1</label>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.1</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.1</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>2</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.2</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.2</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>3</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.3</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.3</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>4</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.4</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.4</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>5</label>
+				<minSeverity>5</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.5</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.5</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>6</label>
+				<minSeverity>6</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.6</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.6</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>7</label>
+				<minSeverity>7</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.7</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.7</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>8</label>
+				<minSeverity>8</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.8</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.8</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>9</label>
+				<minSeverity>9</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.9</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.9</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>10</label>
+				<minSeverity>10</minSeverity>
+				<statOffsets>
+					<VEF_VerbCooldownFactor>-0.99</VEF_VerbCooldownFactor>
+					<AimingDelayFactor>-0.99</AimingDelayFactor>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_AddSeverity">
+						<hediff>GW40k_SS_BattleFrenzy_Ranged</hediff>
+						<severityAmount>-1</severityAmount>
+						<mtbHours>0.5</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
