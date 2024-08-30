@@ -1,0 +1,21 @@
+<Defs>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>GW40k_SS_Aura</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+		<solidTime>9999999</solidTime>
+		<needsMaintenance>true</needsMaintenance>
+		</mote>
+		<graphicData>
+		<graphicClass>Graphic_Mote</graphicClass>
+		<texPath>Effects/HediffAuraMask</texPath>
+		<shaderType>MoteGlow</shaderType>
+		<color>(32, 17, 0)</color>
+		<drawSize>12</drawSize>
+		</graphicData>
+	</ThingDef>
+
+</Defs>
