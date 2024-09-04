@@ -9,7 +9,6 @@
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
-        <li IfModActive="ceteam.combatextended">1.5/Mods/CombatExtended</li>
         <li IfModActive="Keshash.LayeredWallDestruction">1.5/Mods/LWD</li>
 	</v1.5>
 </loadFolders>
