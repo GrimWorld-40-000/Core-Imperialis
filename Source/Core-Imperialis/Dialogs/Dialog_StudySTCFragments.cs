@@ -65,7 +65,8 @@ namespace Core_Imp.Dialogs
             var stcManager = Find.World.GetComponent<WorldComponent_StudyManager>();
             Text.Font = GameFont.Small;
 
-            var visibleProjects = stcManager.ResearchProjects.Where(x => !x.prerequisites.Where(p => !p.IsFinished).Any() && !stcManager.CompletedAllRequirements(x));
+            
+            var visibleProjects = stcManager.ResearchProjects.Where(x => (!x.prerequisites?.Where(p => !p.IsFinished).Any() ?? false) && !stcManager.CompletedAllRequirements(x));
             const int YPerRequirement = 33;
             const int YMarginPerRequirement = 5;
             const int ItemSpacing = 10;
