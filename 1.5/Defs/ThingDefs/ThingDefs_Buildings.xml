@@ -147,7 +147,7 @@
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
         </placeWorkers>
         <researchPrerequisites>
-            <li>GW_GrimworldMaterials</li>
+            <li MayRequire="grimworld.astramilitarum">GW_AM_ImperiialMetals</li>
         </researchPrerequisites>
     </ThingDef>
 
