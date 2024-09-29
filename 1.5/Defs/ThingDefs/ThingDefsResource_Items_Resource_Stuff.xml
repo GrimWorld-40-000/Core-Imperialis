@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HP_Adamantium</defName>
         <label>Adamantium</label>
-        <description>An exceptionally-strong material used in the Imperium of Man. Some of the strongest and toughest Imperial items are made of adamantium, including the blades of melee weapons and the armor plates of Terminator Armor. \n\nAdamantium was also used in the legendary giant mechs known as Imperial Titans - though they are now quite extinct, their corpses salvaged for whatever remains.</description>
+        <description>An exceptionally-strong metal used in the Imperium of Man. Some of the strongest and toughest Imperial items are made of adamantium, including the blades of melee weapons and the armor plates of Terminator Armor. \n\nThe legendary Imperial Titans - giant mechs that stride the battlefield and crush all enemies before them - use adamantium armor, as well as smaller mechs such as the Imperial Knights. The biggest Titans are looked upon less as engines of war, and more as avatars of the Omnissiah, the Machine-God of the Adeptus Mechanicus.</description>
         <graphicData>
             <texPath>Things/Resource/Adamantium</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
