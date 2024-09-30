@@ -3,7 +3,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>CorpseStarch</defName>
     <label>Corpse starch</label>
-    <description>A can of synthetic food derived from human corpses. The Imperium of Man often uses it as a staple food for hiveworld citizens and Astra Militarum soldiers. This is especially true on the planet of Necromunda, where the hiveworld’s Corpse Guild collects thousands of dead every day.\n\nThere was no shortage of corpses in the Imperium, and there were many mouths to feed. Without corpse starch, the hiveworlds would have starved and the corpses of the dead would have spread disease widely.</description>
+    <description>A can of synthetic food derived from human corpses. The Imperium of Man often uses it as a staple food for hiveworld citizens and Astra Militarum soldiers. This is especially true on the planet of Necromunda, where the hiveworld’s Corpse Guild collects thousands of dead every day.\n\nThere is no shortage of corpses in the Imperium, and there are many mouths to feed. Without corpse starch, the hiveworlds would starve and the corpses of the dead would spread disease widely.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Foods</li>

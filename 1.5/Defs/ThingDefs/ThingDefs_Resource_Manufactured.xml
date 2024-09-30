@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>GW_ComponentRelic</defName>
         <label>relic component</label>
-        <description>The Relic Component, a rare and unparalleled find in the world of RimWorld, transcends the capabilities of its advanced counterparts. Boasting an otherworldly fusion of enigmatic alloys, quantum circuitry, and ancient energy matrices, this mystical artifact surpasses the efficiency of even the most advanced components, offering a level of technological mastery that hints at an elusive and advanced civilization lost to the annals of time.</description>
+        <description>Advanced, ancient pieces of technology, poorly understood even by the Imperium of Man that uses them. Not only are they extremely valuable as resources and commodities, but the Adeptus Mechanicus also values such things as religious artifacts. \n\nRogue Traders - those with a Warrant of Trade issued in the name of the Emperor, which grants them the ability to explore, trade, and fight as they wish - often come across such components and are willing to part with them only for a hefty sum. While being on the wrong side of the Great Rift has greatly hindered them, some Rogue Traders still pass through here, selling their wares to whoever can meet their prices.</description>
         <graphicData>
             <texPath>Things/Resource/RelicComponent</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -115,7 +115,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Rockcrete</defName>
         <label>rockcrete</label>
-        <description>Rockcrete, a formidable construction material in the Warhammer 40,000 universe, is meticulously crafted by blending the durability of stone with the strength of steel-reinforced concrete. This fusion of materials results in an impervious barrier that fortifies the Imperium's structures, withstanding the relentless onslaught of warfare in the grim darkness of the 41st millennium.</description>
+        <description>An Imperial material used in construction. It consists of crushed stone mixed with binding agents, creating cheap but durable slabs used in walls and floors. While it is tough enough to be used in fortifications, a determined siege will eventually wear down a rockcrete wall or bunker.</description>
         <graphicData>
             <texPath>Things/Resource/Rockcrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -196,7 +196,7 @@
     <ThingDef ParentName="StoneBlocksBase">
         <defName>GW_Plascrete</defName>
         <label>plascrete</label>
-        <description>Plascrete, a resilient construction material in the Warhammer 40,000 universe, is ingeniously forged by combining the sturdiness of stone with the advanced properties of plasteel. This amalgamation results in a robust and versatile substance, capable of withstanding the harsh realities of warfare, serving as a stalwart foundation for the Imperium's structures in the grim and tumultuous 41st millennium.</description>
+        <description>A strong Imperial material used in construction. Mixing stone, plasteel, and Imperial binding agents creates a very robust material, which can then be used in fortifications. While it can be used to build defensive perimeters, the Imperium of Man also used plascrete in prefabricated habitation units and in military outposts.</description>
         <graphicData>
             <texPath>Things/Resource/Plascrete</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -278,7 +278,7 @@
     <RecipeDef>
         <defName>GW_Make_Ceramite</defName>
         <label>make ceramite</label>
-        <description>An Imperial alloy of specially-bonded ceramic and metal. Tough but relatively lightweight, it is usually found in high-end Imperial armor - especially the Power Armor of the Adeptus Astartes.</description>
+        <description>Mix stone into ceramite, a strong type of Imperial ceramic armor.</description>
         <jobString>manufacturing ceramite.</jobString>
         <workAmount>10000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
