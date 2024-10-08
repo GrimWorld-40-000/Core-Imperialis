@@ -48,6 +48,29 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_VolkiteReactor</defName>
+		<label>volkite reactor</label>
+        <description>Allows for the creation of a close approximation of a volkite reactor. The secrets of making true volkite fuel cells have been lost, and all existing cells have burnt out, meaning you will have to use uranium. Even so, the Volkite reactor is far more powerful than alternatives.</description>
+		<prerequisites>
+			<li>GW_PlasmaReactor</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+        <baseCost>12000</baseCost>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
         <defName>GW_Cogitator</defName>
         <label>cogitator</label>
         <description>Allows for the construction of a cogitator. Cogitator also allow you to use STC which you can buy to unlock new reaserches.</description>
@@ -56,7 +79,7 @@
         </prerequisites>
 		<techLevel>Spacer</techLevel>
 		<baseCost>4500</baseCost>
-		<researchViewX>2.00</researchViewX>
+		<researchViewX>3.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
         <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
         <discoveredLetterText>You now have the technology to build a cogitator. Many of the advanced Imperium technologies require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
@@ -72,7 +95,7 @@
         </prerequisites>
 		<techLevel>Spacer</techLevel>
 		<baseCost>4500</baseCost>
-		<researchViewX>3.00</researchViewX>
+		<researchViewX>4.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
 	</ResearchProjectDef>
 
