@@ -13,4 +13,11 @@
 	<GW_StartStudy>Study research</GW_StartStudy>
 	<GW_StudyCompleteMessage>{0} has studied long lost fragments of Imperial technology and found they contain the blueprints for {1}.\n\nYour colony can now attempt to decode these blueprints to gain what was lost.\n\n\n\n\nThe research project {1} is now available to reserach at a research bench (provided all other pre-requisites have been met).</GW_StudyCompleteMessage>
 	<GW_NewResearchDiscovered>New research discovered</GW_NewResearchDiscovered>
+
+	<GW_ReactorOutdoorsLabel>Reactor unstable</GW_ReactorOutdoorsLabel>
+	<GW_ReactorOutdoorsDesc>A volkite reactor is breaking down due to being destabilized after exposure to the outdoors! Seal the room quickly. If the reactor takes too much damage it will explode very violently.</GW_ReactorOutdoorsDesc>
+	<GW_ReactorHotLabel>Reactor overheating</GW_ReactorHotLabel>
+	<GW_ReactorHotDesc>A volkite reactor is overheating! Cool the room and make sure that the reactor is kept well repaired. If the reactor takes too much damage it will explode very violently.</GW_ReactorHotDesc>
+
+
 </LanguageData>

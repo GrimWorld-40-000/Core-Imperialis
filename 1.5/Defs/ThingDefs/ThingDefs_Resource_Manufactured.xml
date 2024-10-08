@@ -307,4 +307,99 @@
             <HP_Ceramite>20</HP_Ceramite>
         </products>
     </RecipeDef>
+
+
+
+
+
+
+
+    <!-- Volkite cells -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>GW_VolkiteCells</defName>
+        <label>volkite cells</label>
+        <description>A thinly-walled plasteel shell lined with ceramite and uranium. Can be used as a manufactured fuel cell for volkite reactors.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Uranium</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>30</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <MarketValue>500</MarketValue>
+            <Mass>2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.01</DeteriorationRate>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>GW_Exotic</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <allowedArchonexusCount>5</allowedArchonexusCount>
+    </ThingDef>
+
+    <RecipeDef>
+        <defName>GW_Make_VolkiteCell</defName>
+        <label>make volkite fuel cell</label>
+        <description>Make a uranium-ceramite fuel cell capable of running a volkite reactor.</description>
+        <jobString>Making volkite fuel cell.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>1500</workAmount>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>HP_Ceramite</li>
+                </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Plasteel</li>
+                </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Uranium</li>
+                </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Plasteel</li>
+                <li>Uranium</li>
+                <li>HP_Ceramite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <GW_VolkiteCells>1</GW_VolkiteCells>
+        </products>
+        <researchPrerequisite>GW_VolkiteReactor</researchPrerequisite>
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>10</displayPriority>
+    </RecipeDef>
 </Defs>
