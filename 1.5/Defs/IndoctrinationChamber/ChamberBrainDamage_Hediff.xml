@@ -3,7 +3,7 @@
         <defName>IndoctrinationChamber_BrainDamage</defName>
         <label>brainwash damage</label>
         <labelNoun>brainwash damage</labelNoun>
-        <description>Brainwash Damage.</description>
+        <description>Damage to the brain caused by an Indoctrination Chamber.</description>
         <defaultLabelColor>(147,152,155)</defaultLabelColor>
         <comps>
           <li Class="HediffCompProperties_GetsPermanent">
