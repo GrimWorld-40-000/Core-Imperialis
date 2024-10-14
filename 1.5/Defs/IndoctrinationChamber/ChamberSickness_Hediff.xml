@@ -3,7 +3,7 @@
         <defName>IndoctrinationChamberSickness</defName>
         <label>indoctrination chamber sickness</label>
         <description>placeholder.</description>
-        <descriptionShort>After-effects of using a cryptosleep pod including dizziness, nausea, and vomiting.</descriptionShort>
+        <descriptionShort>After-effects of using an Indoctrination Chamber including dizziness, nausea, and vomiting.</descriptionShort>
         <makesSickThought>true</makesSickThought>
         <scenarioCanAdd>true</scenarioCanAdd>
         <comps>

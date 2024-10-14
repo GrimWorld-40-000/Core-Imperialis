@@ -110,7 +110,7 @@
     <ThingDef ParentName="GW_BlastDoorBase">
         <defName>GW_BlastDoor</defName>
         <label>blast door</label>
-        <description>Divides rooms. Blast doors are thick doors that can take a long time to open, which slows people down. The amount of slowdown depends on what the door is made of.</description>
+        <description>A reinforced but slow-to-open door of Imperial make. They can resist a determined assault better than other doors of standard materials, buying the defenders time to prepare. \n\nSuch doors are a common sight on Imperial ships - after all, certain types of live cargo can be extremely dangerous. Many an ambitious captain has lost their ship, along with their own lives and that of their crew, attempting to transport Tyranids to sell.</description>
         <graphicData>
             <texPath>Things/Building/Door/GW_Door_BlastDoor_Mover</texPath>
         </graphicData>
