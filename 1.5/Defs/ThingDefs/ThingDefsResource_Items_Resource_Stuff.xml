@@ -71,7 +71,7 @@
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>150</MarketValue>
+            <MarketValue>25</MarketValue>
             <Mass>0.8</Mass>
             <StuffPower_Armor_Sharp>1.65</StuffPower_Armor_Sharp>
             <StuffPower_Armor_Blunt>1.45</StuffPower_Armor_Blunt>
@@ -82,8 +82,8 @@
             <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
         </statBases>
         <deepCommonality>1</deepCommonality>
-        <deepCountPerPortion>10</deepCountPerPortion>
-        <deepLumpSizeRange>1~5</deepLumpSizeRange>
+        <deepCountPerPortion>300</deepCountPerPortion>
+        <deepLumpSizeRange>1~2</deepLumpSizeRange>
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
