@@ -160,13 +160,14 @@
         <graphicData>
             <texPath>Things/Building/Cogitator/GW_Cogitator</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>2.46875</drawSize>
+            <drawSize>3.35</drawSize>
+			<drawOffset>(0,0,0.15)</drawOffset>
         </graphicData>
         <uiIconScale>0.85</uiIconScale>
         <researchPrerequisites><li>GW_Cogitator</li></researchPrerequisites>
-        <size>(2,2)</size>
+        <size>(3,3)</size>
         <hasInteractionCell>true</hasInteractionCell>
-        <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
+        <interactionCellOffset>(0, 0, -2)</interactionCellOffset>
         <rotatable>true</rotatable>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
