@@ -32,7 +32,7 @@
         <designationCategory>GrimworldCategory</designationCategory>
         <uiOrder>2050</uiOrder>
         <hasInteractionCell>true</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <interactionCellOffset>(0,0,-2)</interactionCellOffset>
         <rotatable>false</rotatable>
         <defaultPlacingRot>North</defaultPlacingRot>
         <building>
