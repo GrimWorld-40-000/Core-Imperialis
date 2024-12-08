@@ -11,7 +11,7 @@
 		</mote>
 		<graphicData>
 		<graphicClass>Graphic_Mote</graphicClass>
-		<texPath>Effects/HediffAuraMask</texPath>
+		<texPath>Effects/Aura</texPath>
 		<shaderType>MoteGlow</shaderType>
 		<color>(32, 17, 0)</color>
 		<drawSize>12</drawSize>
