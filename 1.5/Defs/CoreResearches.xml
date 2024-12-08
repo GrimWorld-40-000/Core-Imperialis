@@ -233,7 +233,7 @@
 		<researchViewY>3.00</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_TarantulaTurrets</defName>
 		<label>tarantula turrets</label>
         <description>Create the Tarantula turret - an Astra Militarum sentry gun.</description>
@@ -246,9 +246,9 @@
         <baseCost>6500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>4.70</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef>!-->
 
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_BolterTurrets</defName>
 		<label>Astartes turrets</label>
         <description>Build manned and unmanned turrets fit for the Adeptus Astartes.</description>
@@ -261,7 +261,7 @@
         <baseCost>5000</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>2.70</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef>!-->
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_AdvancedBolters</defName>
@@ -323,7 +323,7 @@
 		<researchViewY>5.00</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_LasCannonTurret</defName>
 		<label>lascannon turret</label>
         <description>Construct manned and unmanned turrets for a heavy, armor-piercing lascannon.</description>
@@ -335,5 +335,5 @@
         <baseCost>2500</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>5.40</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef>!-->
 </Defs>
