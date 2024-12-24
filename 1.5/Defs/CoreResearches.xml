@@ -311,7 +311,7 @@
 		<researchViewY>4.00</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Lasguns</defName>
 		<label>lasguns</label>
         <description>Produce Imperial lasguns - laser weapons that are the mainstay of the Astra Militarum’s infantry</description>
@@ -321,7 +321,7 @@
         <baseCost>1800</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>5.00</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef>!-->
 
 	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_LasCannonTurret</defName>
