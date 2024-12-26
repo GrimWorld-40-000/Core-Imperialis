@@ -17,8 +17,8 @@
 				<tickInterval>120</tickInterval>
 				<radius>5</radius>
 				<mote>GW40k_SS_Aura</mote>
-				<uiIconEnabled>UI/Overlays/NeedsPower</uiIconEnabled>
-				<uiIconDisabled>UI/Overlays/PowerOff</uiIconDisabled>
+				<uiIconEnabled>UI/Icon-PowerGuilliman-Active</uiIconEnabled>
+				<uiIconDisabled>UI/Icon-PowerGuilliman-Inactive</uiIconDisabled>
 			</li>
 		</comps>
 		<stages>
