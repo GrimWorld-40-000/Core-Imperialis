@@ -84,8 +84,8 @@
 			<li>MicroelectronicsBasics</li>
 		</prerequisites>
         <baseCost>2000</baseCost>
-		<researchViewX>0.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+ 			<researchViewX>1.00</researchViewX>
+ 			<researchViewY>4.90</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
@@ -98,8 +98,8 @@
 			<li>AdvancedFabrication</li>
 		</prerequisites>
         <baseCost>3500</baseCost>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+  			<researchViewX>1.00</researchViewX>
+ 			<researchViewY>4.80</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
@@ -110,8 +110,8 @@
             <li>Autodoors</li>
         </prerequisites>
 		<baseCost>1600</baseCost>
-		<researchViewX>2.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+ 			<researchViewX>0.00</researchViewX>
+ 			<researchViewY>5.70</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
@@ -271,8 +271,8 @@
 			<li>GW_Bolters</li>
 		</prerequisites>
         <baseCost>7000</baseCost>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>3.30</researchViewY>
+ 			<researchViewX>1.00</researchViewX>
+  			<researchViewY>3.00</researchViewY>
         <modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
