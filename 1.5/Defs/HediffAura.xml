@@ -72,7 +72,7 @@
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
 				<startingSeverity>1.0</startingSeverity>
-				<severityPerhit>0</severityPerhit>
+				<severityPerhit>0.25</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0</severityOnTakinghit>
 				<!-- as the name imply -->
@@ -82,13 +82,6 @@
 			<li>
 				<label>Dormant</label>
 				<minSeverity>0.01</minSeverity>
-				<hediffGivers>
-					<li Class="HediffGiver_AddSeverity">
-						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
-						<severityAmount>0.5</severityAmount>
-						<mtbHours>0.25</mtbHours>
-					</li>
-				</hediffGivers>
 			</li>
 			<li>
 				<label>1</label>
@@ -187,7 +180,7 @@
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
 				<startingSeverity>1.0</startingSeverity>
-				<severityPerhit>0</severityPerhit>
+				<severityPerhit>0.25</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0</severityOnTakinghit>
 				<!-- as the name imply -->
@@ -197,13 +190,6 @@
 			<li>
 				<label>Dormant</label>
 				<minSeverity>0.01</minSeverity>
-				<hediffGivers>
-					<li Class="HediffGiver_AddSeverity">
-						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
-						<severityAmount>0.5</severityAmount>
-						<mtbHours>0.25</mtbHours>
-					</li>
-				</hediffGivers>
 			</li>
 			<li>
 				<label>1</label>
