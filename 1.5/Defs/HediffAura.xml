@@ -60,7 +60,7 @@
 		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
-		<initialSeverity>1</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<minSeverity>0.01</minSeverity>
 		<maxSeverity>5.5</maxSeverity>
 		<isBad>false</isBad>
@@ -71,7 +71,7 @@
 				<buffResetOnTargetChange>false</buffResetOnTargetChange>
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
-				<startingSeverity>1.0</startingSeverity>
+				<startingSeverity>0.01</startingSeverity>
 				<severityPerhit>0.25</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0</severityOnTakinghit>
@@ -168,7 +168,7 @@
 		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
-		<initialSeverity>1</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<minSeverity>0.01</minSeverity>
 		<maxSeverity>5.5</maxSeverity>
 		<isBad>false</isBad>
@@ -179,7 +179,7 @@
 				<buffResetOnTargetChange>false</buffResetOnTargetChange>
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
-				<startingSeverity>1.0</startingSeverity>
+				<startingSeverity>0.01</startingSeverity>
 				<severityPerhit>0.25</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0</severityOnTakinghit>
@@ -276,7 +276,7 @@
 		<description>The "Battle Frenzy" passive ability embodies the relentless and escalating ferocity of a lion in the Warhammer 40,000 universe as the battle rages on. Initially dormant, this ability awakens as the lion becomes increasingly immersed in the heat of combat, tapping into its primal instincts and unleashing its full potential.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
-		<initialSeverity>1</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<minSeverity>0.01</minSeverity>
 		<maxSeverity>5.5</maxSeverity>
 		<isBad>false</isBad>
@@ -287,7 +287,7 @@
 				<buffResetOnTargetChange>false</buffResetOnTargetChange>
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
-				<startingSeverity>1.0</startingSeverity>
+				<startingSeverity>0.01</startingSeverity>
 				<severityPerhit>0.1</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0.1</severityOnTakinghit>
@@ -298,13 +298,6 @@
 			<li>
 				<label>Dormant</label>
 				<minSeverity>0.01</minSeverity>
-				<hediffGivers>
-					<li Class="HediffGiver_AddSeverity">
-						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
-						<severityAmount>0.5</severityAmount>
-						<mtbHours>0.25</mtbHours>
-					</li>
-				</hediffGivers>
 			</li>
 			<li>
 				<label>1</label>
