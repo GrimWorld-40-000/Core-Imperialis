@@ -180,7 +180,7 @@
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
 				<startingSeverity>0.01</startingSeverity>
-				<severityPerhit>0.25</severityPerhit>
+				<severityPerhit>0.085</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0</severityOnTakinghit>
 				<!-- as the name imply -->
@@ -288,7 +288,7 @@
 				<isOnlyMelee>true</isOnlyMelee>
 				<showRemainingTime>true</showRemainingTime>
 				<startingSeverity>0.01</startingSeverity>
-				<severityPerhit>0.1</severityPerhit>
+				<severityPerhit>0.085</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0.1</severityOnTakinghit>
 				<!-- as the name imply -->
@@ -396,7 +396,7 @@
 				<isOnlyRanged>true</isOnlyRanged>
 				<showRemainingTime>true</showRemainingTime>
 				<startingSeverity>1.0</startingSeverity>
-				<severityPerhit>0.1</severityPerhit>
+				<severityPerhit>0.085</severityPerhit>
 				<!-- on used attack verb, regardless if it hit -->
 				<severityOnTakinghit>0.1</severityOnTakinghit>
 				<!-- as the name imply -->
