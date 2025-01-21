@@ -98,8 +98,8 @@
 			<li>AdvancedFabrication</li>
 		</prerequisites>
         <baseCost>3500</baseCost>
-  			<researchViewX>1.00</researchViewX>
- 			<researchViewY>4.80</researchViewY>
+  			<researchViewX>2.00</researchViewX>
+  			<researchViewY>5.00</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
