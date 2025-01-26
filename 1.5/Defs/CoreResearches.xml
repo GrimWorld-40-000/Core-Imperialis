@@ -84,7 +84,7 @@
 			<li>MicroelectronicsBasics</li>
 		</prerequisites>
         <baseCost>2000</baseCost>
- 			<researchViewX>1.00</researchViewX>
+  			<researchViewX>0.00</researchViewX>
  			<researchViewY>4.90</researchViewY>
 	</ResearchProjectDef>
 
@@ -98,7 +98,7 @@
 			<li>AdvancedFabrication</li>
 		</prerequisites>
         <baseCost>3500</baseCost>
-			<researchViewX>2.00</researchViewX>
+			<researchViewX>1.00</researchViewX>
 			<researchViewY>4.90</researchViewY>
 	</ResearchProjectDef>
 
