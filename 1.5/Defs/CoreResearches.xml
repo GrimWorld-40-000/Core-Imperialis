@@ -319,9 +319,10 @@
 			<li>Electricity</li>
 		</prerequisites>
         <baseCost>2000</baseCost>
-		<researchViewX>0.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.70</researchViewY>
 	</ResearchProjectDef>
+
 
 	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Lasguns</defName>
