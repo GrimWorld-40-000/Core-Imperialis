@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>GW_RepairBench</defName>
 		<label>repair table</label>
-		<description>A work station for assembling machinery like guns and ammunition, or breaking down dead mechanoids.</description>
+		<description>WIP</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/RepairBench/RepairBench</texPath>
@@ -67,7 +67,7 @@
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisites>
-			<li>Machining</li>
+			<li>GW_RepairBench</li>
 		</researchPrerequisites>
 		<designationHotKey>Misc7</designationHotKey>
 		<placeWorkers>
@@ -96,7 +96,7 @@
 	<RecipeDef>
 		<defName>GW_RepairWeapon</defName>
 		<label>repair weapon</label>
-		<description>Use heat and strong electromagnets to break down weapons into useful resources.</description>
+		<description>WIP</description>
 		<workerClass>RecipeMod.RecipeWorker_RepairItem</workerClass>
 		<recipeUsers>
 			<li>GW_RepairBench</li>

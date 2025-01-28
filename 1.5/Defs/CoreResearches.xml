@@ -311,6 +311,18 @@
 		<researchViewY>4.00</researchViewY>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_RepairBench</defName>
+		<label>repairing equipment</label>
+        <description>WIP.</description>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef>
+
 	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Lasguns</defName>
 		<label>lasguns</label>
