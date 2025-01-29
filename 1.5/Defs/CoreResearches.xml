@@ -311,6 +311,19 @@
 		<researchViewY>4.00</researchViewY>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_RepairBench</defName>
+		<label>Ritualistic repair</label>
+        <description>Learn the rituals of maintenance and repair that have served the Adeptus Mechanicus for millennia.</description>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.70</researchViewY>
+	</ResearchProjectDef>
+
+
 	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_Lasguns</defName>
 		<label>lasguns</label>
