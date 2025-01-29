@@ -2,8 +2,8 @@
 
 	<ThingDef ParentName="BenchBase">
 		<defName>GW_RepairBench</defName>
-		<label>repair table</label>
-		<description>WIP</description>
+		<label>Repair table</label>
+		<description>A workbench with the necessary equipment for repair and maintenance of Imperial equipment - not just mere tools, but incense, blessed oils, and other trappings of worship of the Omnissiah. \n\nThe Adeptus Mechanicus are a religious order just as much as they are technicians and engineers. They deeply believe in "placating the Machine Spirits" with rituals - the actual efficacy of those rituals ranges from being effective but misunderstood to being completely useless. Still, there remains a grain of truth in most of them, even if it is buried in superstition.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/RepairBench/RepairBench</texPath>
