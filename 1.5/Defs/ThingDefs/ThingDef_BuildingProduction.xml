@@ -118,6 +118,7 @@
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
+			<allowedHitPointsPercents>0.01~0.99</allowedHitPointsPercents>
 			<categories>
 				<li>Weapons</li>
 				<li>Apparel</li>
