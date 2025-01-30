@@ -80,7 +80,7 @@
 		<defName>GW_DoBillsRepairBench</defName>
 		<label>make things at machining table</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
-		<workType>Smithing</workType>
+		<workType>BasicWorker</workType>
 		<priorityInType>75</priorityInType>
 		<fixedBillGiverDefs>
 			<li>GW_RepairBench</li>
