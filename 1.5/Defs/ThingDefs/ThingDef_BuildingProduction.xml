@@ -134,5 +134,92 @@
 			</li>
 		</modExtensions>
 	</RecipeDef>
+	
+	<ThingDef ParentName="BenchBase" MayRequire="smashphil.vehicleframework">
+		<defName>GW_VehicleBench</defName>
+		<label>Imperial vehicle bench</label>
+		<description>Allow to craft all nessesary parts/sub-parts to build Imperial tanks.</description>
+		<graphicData>
+			<texPath>Things/Building/VehiclesBench/VehicleBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(7,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingClass>Building_WorkTable</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<minifiedDef />
+		<thingCategories Inherit="false" />
+		<size>(5,2)</size>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>GW_VehicleToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>250</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Breakdownable" />
+		</comps>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<fillPercent>0.5</fillPercent>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>GrimworldCategory</designationCategory>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>GW_VehiclesOfGrimworld</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<WorkGiverDef MayRequire="smashphil.vehicleframework">
+		<defName>GW_DoBillsVehicleBench</defName>
+		<label>fabricate things</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>50</priorityInType>
+		<fixedBillGiverDefs>
+			<li>GW_VehicleBench</li>
+		</fixedBillGiverDefs>
+		<verb>fabricate</verb>
+		<gerund>fabricating things at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 
 </Defs>
