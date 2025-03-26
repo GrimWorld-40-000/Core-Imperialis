@@ -323,7 +323,7 @@
 		<researchViewY>5.70</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName="GW_VoGBase" MayRequire="smashphil.vehicleframework">
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase" MayRequire="smashphil.vehicleframework">
 		<defName>GW_VehiclesOfGrimworld</defName>
 		<label>Imperial vehicles</label>
 		<description>The first step to understanding how to create vehicles used by various factions. This reaserch unlock garage doors, vehcile subparts like engine, suspension. To craft those things you need vehicle workbench.</description>
