@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_HeavyBolterNonCE</defName>
+    <label>0.998cal Heavy bolter ammo (non CE)</label>
+    <description>High-caliber rounds of self-propelling, armor-piercing, high-explosive ammunition, used in Imperial heavy bolters. While generally used to chew up enemy infantry of all kinds, it can also put a significant dent in lightly-armored vehicles.</description>
+    <graphicData>
+      <texPath>Things/Ammo/HeavyBolter1.0CAL</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>500</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.32</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>100</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>100</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_AutocannonammoNonCE</defName>
+    <label>0.787cal autocannon ammo (non CE)</label>
+    <description>20mm high-explosive ammunition used in autocannons mounted on Imperial vehicles. Autocannons are relatively fast-firing weapons - not as potent as a lascannon, but still heavy-hitting, and able to lay down a healthy volume of fire.</description>
+    <graphicData>
+      <texPath>Things/Ammo/AutoCannon</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.60</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>230</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>50</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+	  <Plasteel>5</Plasteel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_BattleCannonShellNonCE</defName>
+    <label>120mm battle cannon shell (non CE)</label>
+    <description>A 120mm shell suitable for the Battle Cannon of a Leman Russ battle tank. It is essentially the lasgun of vehicle combat - not the most powerful, but always reliable, and even the strongest vehicles are wary of them in large numbers.</description>
+    <graphicData>
+      <texPath>Things/Ammo/BattleCannon</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>100</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.32</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>130</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>20</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>170</Steel>
+	  <Plasteel>10</Plasteel>
+    </costList>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_LascannonammoNonCE</defName>
+    <label>Lascannon battery pack (non CE)</label>
+    <description>A large power pack to charge a lascannon. These contain enough energy to penetrate the armor of a light vehicle or split the skull of a Space Marine Terminator.</description>
+    <graphicData>
+      <texPath>Things/Ammo/Lascannons/LascannonAmmunition</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>500</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.32</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>240</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>100</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_HeavyPlasmaNonCE</defName>
+    <label>Plasmacannon cartridges (non CE)</label>
+    <description>A cartridge of hydrogen fuel used in vehicle-mounted Imperial plasma weapons. Armor and flesh stands little chance against the sheer unmitigated power of a sun.</description>
+    <graphicData>
+      <texPath>Things/Ammo/PlasmaGun</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>500</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.50</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>200</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>10</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <HP_Ceramite>2</HP_Ceramite>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_BanePrimaryCannonShellNonCE</defName>
+    <label>250mm battle cannon ammo (non CE)</label>
+    <description>A very large 250mm rocket-assisted, fin-stabilized shell used in Baneblade Cannons. Not only can these shells quickly reduce an enemy vehicle to scrap metal, but a tight cluster of infantry can be made to wish they were never born.</description>
+    <graphicData>
+      <texPath>Things/Vehicles/Baneblade/MegaBC</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>440</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>5</productCount>
+    </recipeMaker>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>150</Steel>
+	  <Plasteel>50</Plasteel>
+	  <HP_Ceramite>10</HP_Ceramite>
+	  <Chemfuel>60</Chemfuel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GW_BaneDemolisherCannonShellNonCE</defName>
+    <label>380mm demolisher cannon shell (non CE)</label>
+    <description>A titanic 380mm rocket-assisted shell used in Demolisher Cannons. Fairly short-ranged, but a solid hit from one of these can destroy almost any target, be they building or vehicle or infantry.</description>
+    <graphicData>
+	<texPath>Things/Vehicles/Baneblade/Demolisher</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>100</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>100</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>10</productCount>
+    </recipeMaker>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>30</Steel>
+      <Chemfuel>30</Chemfuel>
+    </costList>
+  </ThingDef>
+
+</Defs>

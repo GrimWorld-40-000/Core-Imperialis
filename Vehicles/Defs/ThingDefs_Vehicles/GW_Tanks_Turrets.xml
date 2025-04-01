@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<Vehicles.CustomHitFlags>
+		<defName>GW_Tank</defName>
+		<minFillPercent>0.75</minFillPercent>
+		<hitThroughPawns>true</hitThroughPawns>
+	</Vehicles.CustomHitFlags>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_GW_Plume</defName>
+		<thingClass>Vehicles.MoteCannonPlume</thingClass>
+		<graphicData>
+			<texPath>Animations/CannonPlume</texPath>
+			<graphicClass>Vehicles.Graphic_Animate</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0</fadeInTime>
+			<solidTime>1</solidTime>
+			<fadeOutTime>0</fadeOutTime>
+			<growthRate>0</growthRate>
+		</mote>
+	</ThingDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_GW_SmallPlume</defName>
+		<thingClass>Vehicles.MoteCannonPlume</thingClass>
+		<graphicData>
+			<texPath>Animations/CannonPlume</texPath>
+			<graphicClass>Vehicles.Graphic_Animate</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0</fadeInTime>
+			<solidTime>1</solidTime>
+			<fadeOutTime>0</fadeOutTime>
+			<growthRate>0</growthRate>
+		</mote>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_HeavyBolter</defName>
+		<label>Heavy Bolter bullet</label>
+		<graphicData>
+			<texPath>Things/Projectiles/Bolter_Projectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>45</damageAmountBase>
+			<explosionRadius>0.5</explosionRadius>
+			<armorPenetrationBase>0.4</armorPenetrationBase>
+			<stoppingPower>2.0</stoppingPower>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+</Defs>
