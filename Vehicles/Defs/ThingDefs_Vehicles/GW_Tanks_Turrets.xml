@@ -39,21 +39,4 @@
 			<growthRate>0</growthRate>
 		</mote>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_HeavyBolter</defName>
-		<label>Heavy Bolter bullet</label>
-		<graphicData>
-			<texPath>Things/Projectiles/Bolter_Projectile</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>45</damageAmountBase>
-			<explosionRadius>0.5</explosionRadius>
-			<armorPenetrationBase>0.4</armorPenetrationBase>
-			<stoppingPower>2.0</stoppingPower>
-			<speed>75</speed>
-		</projectile>
-	</ThingDef>
 </Defs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThingDef ParentName="BaseBullet">
-        <defName>HP_Bullet_HeavyBolter</defName>
+        <defName>GW_Bullet_HeavyBolter</defName>
         <label>bolter round</label>
         <graphicData>
           <texPath>Things/Projectiles/Bolter_Projectile</texPath>
