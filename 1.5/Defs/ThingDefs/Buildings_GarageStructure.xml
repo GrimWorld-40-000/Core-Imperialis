@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>GW_GarageDoorDropDown</defName>
+		<label>40k Garage Door</label>
+	</DesignatorDropdownGroupDef>
+	
 	<ThingDef ParentName="BuildingBase" Name="GW_GarageDoor" Abstract="True" MayRequire="smashphil.vehicleframework">
 		<category>Building</category>
 		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<designatorDropdown>GW_GarageDoorDropDown</designatorDropdown>
 		<fillPercent>1</fillPercent>
 		<useHitPoints>true</useHitPoints>
 		<stuffCategories>
