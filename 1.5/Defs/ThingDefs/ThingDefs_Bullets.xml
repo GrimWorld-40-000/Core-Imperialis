@@ -10,8 +10,9 @@
         <projectile>
           <damageDef>Bullet</damageDef>
           <damageAmountBase>45</damageAmountBase>
-          <stoppingPower>1</stoppingPower>
-          <speed>50</speed>
+          	<armorPenetrationBase>0.4</armorPenetrationBase>
+          <stoppingPower>2</stoppingPower>
+          <speed>75</speed>
         </projectile>
       </ThingDef>
     
@@ -31,4 +32,38 @@
       </li>
     </subSounds>
 	</SoundDef>
+
+    <ThingDef ParentName="BaseBullet">
+      <defName>GW_Bullet_Autocannon</defName>
+      <label>autocannon round</label>
+      <graphicData>
+              <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+      </graphicData>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>90</damageAmountBase>
+        <stoppingPower>1</stoppingPower>
+        <armorPenetrationBase>0.4</armorPenetrationBase>
+        <speed>88</speed>
+      </projectile>
+    </ThingDef>
+
+      <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+        <defName>GW_LascanonShot</defName>
+        <label>lascannon shot</label>
+        <description>An heavily charged beam of focused light fired from a lascannon.</description>
+        <textures>
+            <li>Things/Projectiles/Las_Bolt</li>
+        </textures>
+        <seam>0</seam>
+        <causefireChance>0.08</causefireChance>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>120</damageAmountBase>
+            <armorPenetrationBase>1</armorPenetrationBase>
+            <stoppingPower>1.8</stoppingPower>
+        </projectile>
+    </ThingDef>
 </Defs>
