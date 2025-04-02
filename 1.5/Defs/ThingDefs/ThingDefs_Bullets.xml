@@ -9,7 +9,7 @@
         </graphicData>
         <projectile>
           <damageDef>Bullet</damageDef>
-          <damageAmountBase>45</damageAmountBase>
+          <damageAmountBase>50</damageAmountBase>
           	<armorPenetrationBase>0.4</armorPenetrationBase>
           <stoppingPower>2</stoppingPower>
           <speed>75</speed>
@@ -45,7 +45,7 @@
         <damageDef>Bullet</damageDef>
         <damageAmountBase>90</damageAmountBase>
         <stoppingPower>1</stoppingPower>
-        <armorPenetrationBase>0.4</armorPenetrationBase>
+        <armorPenetrationBase>0.7</armorPenetrationBase>
         <speed>88</speed>
       </projectile>
     </ThingDef>
@@ -65,5 +65,22 @@
             <armorPenetrationBase>1</armorPenetrationBase>
             <stoppingPower>1.8</stoppingPower>
         </projectile>
+    </ThingDef>
+
+        <ThingDef ParentName="BaseBullet">
+      <defName>GW_Bullet_Assaultcannon</defName>
+      <label>assault cannon round</label>
+      <graphicData>
+              <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+      </graphicData>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>35</damageAmountBase>
+        <stoppingPower>1</stoppingPower>
+        <armorPenetrationBase>0.4</armorPenetrationBase>
+        <speed>80</speed>
+      </projectile>
     </ThingDef>
 </Defs>
