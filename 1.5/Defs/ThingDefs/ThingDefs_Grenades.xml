@@ -2,14 +2,14 @@
 <Defs>
     <ThingDef ParentName="BaseMakeableGrenade">
     <defName>Weapon_GrenadeKrak</defName>
-    <label>krak grenades</label>
+    <label>krak grenade</label>
     <description>Krak Grenades specialize in neutralizing armor, but with a small radius.</description>
     <recipeMaker>
       <researchPrerequisite>Machining</researchPrerequisite>
     </recipeMaker>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Grenades</texPath>
+      <texPath>Things/Weapons/Explosives/KrakGrenade</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <uiIconScale>1.3</uiIconScale>
@@ -51,28 +51,28 @@
     </verbs>
     <comps>
       <li Class="CompProperties_Explosive">
-        <explosiveRadius>2</explosiveRadius>
+        <explosiveRadius>1.6</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
       </li>
     </comps>
   </ThingDef>
 
-  <ThingDef Name="BaseFragGrenadeProjectile" ParentName="BaseGrenadeProjectile" Abstract="True">
+  <ThingDef Name="BaseKrakGrenadeProjectile" ParentName="BaseGrenadeProjectile" Abstract="True">
     <thingClass>Projectile_Explosive</thingClass>
     <graphicData>
-      <texPath>Things/Projectile/Grenade</texPath>
+      <texPath>Things/Projectiles/Krak_projectile</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>1.9</explosionRadius >
+      <explosionRadius>1.6</explosionRadius >
       <damageDef>Bomb</damageDef>
-      <!-- Use default damage from explosion def -->
+    <damageAmountBase>150</damageAmountBase>
       <explosionDelay>100</explosionDelay>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseFragGrenadeProjectile">
+  <ThingDef ParentName="BaseKrakGrenadeProjectile">
     <defName>Proj_GrenadeKrak</defName>
     <label>krak grenade</label>
   </ThingDef>
