@@ -17,6 +17,7 @@
   <loadAfter>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>ceteam.combatextended</li>
+    <li>SmashPhil.VehicleFramework</li>
     <li>Grimworld.Framework</li>
     <li>Keshash.LayeredWallDestruction</li>
   </loadAfter>
