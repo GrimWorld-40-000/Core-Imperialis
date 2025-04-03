@@ -11,7 +11,7 @@
 			<muteWhenPaused>True</muteWhenPaused>      
 			<grains>
 				<li Class="AudioGrain_Clip">
-					<clipPath>Sounds/HeavyLoop</clipPath>
+					<clipPath>HeavyLoop</clipPath>
 				</li>
 			</grains>      
 			<pitchRange>0.99~1.01</pitchRange>
@@ -31,7 +31,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
-            <clipPath>Sounds/JetLoop</clipPath>
+            <clipPath>JetLoop</clipPath>
           </li>
         </grains>
         <pitchRange>0.99~1.01</pitchRange>
@@ -51,7 +51,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
-            <clipPath>Sounds/JetStart5s</clipPath>
+            <clipPath>JetStart5s</clipPath>
           </li>
         </grains>
         <pitchRange>0.99~1.01</pitchRange>
@@ -69,7 +69,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
-            <clipPath>Sounds/JetStop5s</clipPath>
+            <clipPath>JetStop5s</clipPath>
           </li>
         </grains>
         <pitchRange>0.99~1.01</pitchRange>
