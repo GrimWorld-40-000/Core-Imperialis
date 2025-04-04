@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseMakeableGrenade">
-    <defName>Weapon_GrenadeKrak</defName>
+    <defName>GW_GrenadeKrak</defName>
     <label>krak grenade</label>
     <description>Krak Grenades specialize in neutralizing armor, but with a small radius.</description>
     <recipeMaker>
@@ -78,7 +78,7 @@
   </ThingDef>
 
    <ThingDef ParentName="BaseMakeableGrenade">
-    <defName>Weapon_GrenadeMelta</defName>
+    <defName>GW_GrenadeMelta</defName>
     <label>melta bomb</label>
     <description>Melta bomb, large explosion. Adeptus Ministorum recommends user is 100m from the explosion.</description>
     <recipeMaker>
