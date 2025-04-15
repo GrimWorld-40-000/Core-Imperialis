@@ -1,0 +1,17 @@
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\eridanus_quests.csproj.AssemblyReference.cache
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\eridanus_quests.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\eridanus.202743DB.Up2Date
+C:\Users\Paul\Downloads\taranchuk_lasers\Assemblies\eridanus_quests.dll
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\Angels-of-Death\Source\Quests\eridanus_quests\Assemblies\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\Angels-of-Death\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.AssemblyReference.cache
+C:\Users\Paul\Documents\GitHub\Angels-of-Death\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Documents\GitHub\Angels-of-Death\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Quests\eridanus_quests\Assemblies\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.AssemblyReference.cache
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\GrimWorld-Framework\Source\Quests\eridanus_quests\Assemblies\eridanus_quests.dll
+C:\Users\Paul\Documents\GitHub\GrimWorld-Framework\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.AssemblyReference.cache
+C:\Users\Paul\Documents\GitHub\GrimWorld-Framework\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Documents\GitHub\GrimWorld-Framework\Source\Quests\eridanus_quests\eridanus_quests\obj\Release\eridanus_quests.dll

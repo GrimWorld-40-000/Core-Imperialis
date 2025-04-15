@@ -1,0 +1,4 @@
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Mine-Extensions\Mine-Extensions\obj\Release\Mine-Extensions.csproj.AssemblyReference.cache
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Mine-Extensions\Mine-Extensions\obj\Release\Mine-Extensions.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Mine-Extensions\Assemblies\Mine-Extensions.dll
+C:\Users\Paul\Documents\GitHub\Core-Imperialis\Source\Mine-Extensions\Mine-Extensions\obj\Release\Mine-Extensions.dll
