@@ -52,15 +52,17 @@
       <texPath>Things/Building/Mines/Mine_planted</texPath>
     </graphicData>
     <costList>
-      <Shell_HighExplosive>2</Shell_HighExplosive>
+        <Steel>25</Steel>
+      <Chemfuel>5</Chemfuel>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <designationHotKey>Misc7</designationHotKey>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>5.9</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
-        <damageAmountBase>65</damageAmountBase>
-        <armorPenetrationBase>3</armorPenetrationBase>
+        <damageAmountBase>70</damageAmountBase>
+        <armorPenetrationBase>4</armorPenetrationBase>
         <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
         <wickTicks>5</wickTicks>
         <startWickOnDamageTaken>
