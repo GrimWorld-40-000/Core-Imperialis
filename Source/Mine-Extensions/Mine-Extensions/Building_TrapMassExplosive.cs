@@ -8,7 +8,7 @@ namespace mine_extensions
 {
 	public class Building_TrapMassExplosive : Building_Trap
 	{
-        public float reqMass = 400f;
+        public float reqMass = 300f;
 		public override void SpringSub(Pawn p)
 		{
 			GetComp<CompExplosive>().StartWick(p);
