@@ -45,9 +45,9 @@
   </ThingDef>
 
   <ThingDef ParentName="TrapATBase">
-    <defName>Trap_ATmine</defName>
-    <label>AT Mine</label>
-    <description>AT Mine, required 250kg to detonate. Doesn't discriminate if something is friend or foe.</description>
+    <defName>Trap_plasmaMine</defName>
+    <label>Plasma Charge</label>
+    <description>AT Mine, required 300kg to detonate. Doesn't discriminate if something is friend or foe.</description>
     <graphicData>
       <texPath>Things/Building/Mines/Mine_planted</texPath>
     </graphicData>

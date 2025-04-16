@@ -131,6 +131,50 @@
     </costList>
   </ThingDef>
 
+    <ThingDef ParentName="ResourceBase">
+    <defName>GW_VanquisherCannonShellNonCE</defName>
+    <label>120mm battle cannon shell (non CE)</label>
+    <description>A 120mm shell suitable for the Vanquisher Cannon of a Leman Russ battle tank. Suitable for anti-armor operations.</description>
+    <graphicData>
+      <texPath>Things/Ammo/BattleCannon</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>100</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>0.32</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.0</Flammability>
+      <WorkToMake>130</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>GW_VehiclesOfGrimworld</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>GW_VehicleBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <soundWorking>Recipe_Machining</soundWorking>
+        <productCount>20</productCount>
+    </recipeMaker>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>20</Plasteel>
+    </costList>
+  </ThingDef>
+
 
   <ThingDef ParentName="ResourceBase">
     <defName>GW_LascannonammoNonCE</defName>
