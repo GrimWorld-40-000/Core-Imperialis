@@ -313,7 +313,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>GW_BaneDemolisherCannonShellNonCE</defName>
+    <defName>GW_DemolisherCannonShellNonCE</defName>
     <label>380mm demolisher cannon shell (non CE)</label>
     <description>A titanic 380mm rocket-assisted shell used in Demolisher Cannons. Fairly short-ranged, but a solid hit from one of these can destroy almost any target, be they building or vehicle or infantry.</description>
     <graphicData>
@@ -351,9 +351,8 @@
         <productCount>10</productCount>
     </recipeMaker>
     <costList>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <Steel>30</Steel>
-      <Chemfuel>30</Chemfuel>
+      <Steel>50</Steel>
+      <Chemfuel>40</Chemfuel>
     </costList>
   </ThingDef>
 

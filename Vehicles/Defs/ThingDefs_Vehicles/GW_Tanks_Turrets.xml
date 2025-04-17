@@ -63,4 +63,58 @@
 			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
 		</projectile>
 	</ThingDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>GW_Vehicle_StormBolter</defName>
+		<label>Storm Bolter</label>
+		<description>WIP</description>
+		<turretType>Rotatable</turretType>
+		<shotSound>GW_Heavy_Bolt_Gun_Sound</shotSound>
+		<projectile>GW_Bullet_Bolter</projectile>
+		<reloadTimer>6.0</reloadTimer>
+		<warmUpTimer>1.0</warmUpTimer>
+		<magazineCapacity>100</magazineCapacity>
+		<chargePerAmmoCount>2</chargePerAmmoCount>
+		<genericAmmo>true</genericAmmo>
+		<hitFlags>IntendedTarget</hitFlags>
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.0</rotationSpeed>
+		<projectileOffset>1.0</projectileOffset>
+		<maxRange>28.9</maxRange>
+		<attachProjectileFlag>GW_Tank</attachProjectileFlag>
+		<fireModes>
+			<li>
+				<shotsPerBurst>4</shotsPerBurst>
+				<ticksBetweenShots>1</ticksBetweenShots>
+				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>10</shotsPerBurst>
+				<ticksBetweenShots>1</ticksBetweenShots>
+				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Gizmos/FireRate_Burst</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>20</shotsPerBurst>
+				<ticksBetweenShots>1</ticksBetweenShots>
+				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<label>Auto</label>
+				<texPath>UI/Gizmos/FireRate_Auto</texPath>
+			</li>
+		</fireModes>
+		<graphicData>
+			<texPath>Things/Item/Turrets/StormBolter/GW_HOI_PintleMounted_StormBolter</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2.5, 2.5)</drawSize>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>GW_HeavyBolterNonCE</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
 </Defs>

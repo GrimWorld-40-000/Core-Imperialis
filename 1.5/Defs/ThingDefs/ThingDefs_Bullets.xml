@@ -15,23 +15,22 @@
           <speed>88</speed>
         </projectile>
       </ThingDef>
-    
-  <SoundDef> <!--In this file because all heavy bolter guns are using this sound-->
-		<defName>HP_Heavy_Bolt_Gun_Sound</defName>
-		<context>MapOnly</context>
-		<maxSimultaneous>10</maxSimultaneous>  
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapons/Boltgun</clipFolderPath>
-          </li>
-        </grains>      
-        <volumeRange>40~40</volumeRange>    
-        <sustainLoop>False</sustainLoop>
-      </li>
-    </subSounds>
-	</SoundDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>GW_Bullet_Bolter</defName>
+    <label>bolter round</label>
+    <graphicData>
+      <texPath>Things/Projectiles/Bolter_Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+	  <armorPenetrationBase>0.3</armorPenetrationBase>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
       <defName>GW_Bullet_Autocannon</defName>
@@ -62,8 +61,8 @@
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>120</damageAmountBase>
-            <armorPenetrationBase>1</armorPenetrationBase>
-            <stoppingPower>1.8</stoppingPower>
+            <armorPenetrationBase>1.2</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
         </projectile>
     </ThingDef>
 
@@ -77,10 +76,50 @@
       </graphicData>
       <projectile>
         <damageDef>Bullet</damageDef>
-        <damageAmountBase>35</damageAmountBase>
+        <damageAmountBase>25</damageAmountBase>
         <stoppingPower>0.5</stoppingPower>
         <armorPenetrationBase>0.3</armorPenetrationBase>
         <speed>80</speed>
       </projectile>
+    </ThingDef>
+
+      <ThingDef ParentName="BaseBullet">
+        <defName>GW_Bullet_MultiMelta</defName>
+        <label>melta gun shot</label>
+        <graphicData>
+            <texPath>Things/Projectiles/Melta_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>150</damageAmountBase>
+            <stoppingPower>4</stoppingPower>
+            <armorPenetrationBase>3.5</armorPenetrationBase>
+            <speed>80</speed>
+        </projectile>
+    </ThingDef>
+
+     <ThingDef ParentName="BaseBullet">
+        <defName>GW_Bullet_Plasma_CannonShot</defName>
+        <label>plasma shot</label>
+        <graphicData>
+            <texPath>Things/Projectiles/Plasma_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>70</damageAmountBase>
+            <stoppingPower>2.5</stoppingPower>
+            <explosionRadius>2.4</explosionRadius>
+            <armorPenetrationBase>0.85</armorPenetrationBase>
+            <speed>120</speed>
+			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
+        </projectile>
     </ThingDef>
 </Defs>
