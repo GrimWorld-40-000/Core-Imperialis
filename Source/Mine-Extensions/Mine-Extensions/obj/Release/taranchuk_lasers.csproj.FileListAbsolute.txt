@@ -1,0 +1,5 @@
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\taranchuk_lasers.csproj.AssemblyReference.cache
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\taranchuk_lasers.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Downloads\taranchuk_lasers\Assemblies\taranchuk_lasers.dll
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\taranchu.399DBCEA.Up2Date
+C:\Users\Paul\Downloads\taranchuk_lasers\taranchuk_lasers\obj\Release\taranchuk_lasers.dll

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef Abstract="True" Name="GW_VoGBase" ParentName="GW_ImperiumTechBase">
+		<techLevel>Spacer</techLevel>
+    </ResearchProjectDef>	
+
+	<!--All vehicle researches are given a tier to make it easier to update and add on to. If desired, a tier can be completely skipped(i.e. have a Basic vehicles(1) and an Ultimate vehicles(3))-->
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier1LandVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>3500</baseCost>
+		<prerequisites>
+			<li>GW_VehiclesOfGrimworld</li>
+		</prerequisites>
+		<researchViewX>13.00</researchViewX>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier2LandTransportVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>11000</baseCost>
+		<researchViewX>14.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>1</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier2LandMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>5000</baseCost>
+		<researchViewX>14.00</researchViewX>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier3LandMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>6000</baseCost>
+		<researchViewX>15.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>1</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier4LandMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>6000</baseCost>
+		<researchViewX>16.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier5LandMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>7500</baseCost>
+		<researchViewX>17.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>3</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef Abstract="True" Name="GW_Tier6LandMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>9000</baseCost>
+		<researchViewX>18.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>5</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier1AirVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>6000</baseCost>
+		<researchViewX>15.00</researchViewX>
+		<prerequisites>
+			<li>GW_VehiclesOfGrimworld</li>
+			<li>TransportPod</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier2AirMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>7000</baseCost>
+		<researchViewX>16.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef Abstract="True" Name="GW_Tier3AirMilitaryVehicleResearch" ParentName="GW_VoGBase">
+		<baseCost>8500</baseCost>
+		<researchViewX>17.00</researchViewX>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>4</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<!--Imperium vehicles-->
+	<ResearchProjectDef ParentName="GW_Tier1LandVehicleResearch">
+		<defName>GW_ImperialLandVehicleResearch</defName>
+		<label>Imperial bikes</label>
+		<description>Bikes used by the Imperium of Man. Core of Imperial bikes from Warhammer 40,000 universe.</description>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2LandMilitaryVehicleResearch">
+		<defName>GW_ImperialLandMilitaryLightVehicleResearch</defName>
+		<label>Imperial land transport</label>
+		<description>Light land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Rhino or Taurox, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialLandVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier3LandMilitaryVehicleResearch">
+		<defName>GW_ImperialLandMilitaryMediumVehicleResearch</defName>
+		<label>Imperial basic tanks</label>
+		<description>Medium land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Chimera, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialLandMilitaryLightVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>0
+
+	<ResearchProjectDef ParentName="GW_Tier4LandMilitaryVehicleResearch">
+		<defName>GW_ImperialLandMilitaryHeavyVehicleResearch</defName>
+		<label>Imperial advanced tanks</label>
+		<description>Heavy land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Leman Russ, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialLandMilitaryMediumVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier5LandMilitaryVehicleResearch">
+		<defName>GW_ImperialLandMilitaryEliteVehicleResearch</defName>
+		<label>Imperial ultimate tanks</label>
+		<description>Elite land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Predator, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialLandMilitaryHeavyVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_Tier6LandMilitaryVehicleResearch">
+		<defName>GW_ImperialLandMilitaryTitanicVehicleResearch</defName>
+		<label>Imperial titanic tanks</label>
+		<description>Titanic land military vehicles used by the Imperium of Man. From "father of all baneblades" Stormhammer and Guilliman`s personal carrier Astraeus those mightiest and biggest tanks in Imperium armada.</description>
+		<prerequisites>
+			<li>GW_ImperialLandMilitaryEliteVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier1AirVehicleResearch">
+		<defName>GW_ImperialAirVehicleResearch</defName>
+		<label>Imperial basic aircrafts</label>
+		<description>Basic air vehicles used by the Imperium of Man. Core of Imperial drop pods from Warhammer 40,000 universe.</description>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2AirMilitaryVehicleResearch">
+		<defName>GW_ImperialAirMilitaryVehicleResearch</defName>
+		<label>Imperial advanced aircrafts</label>
+		<description>Light military aircrafts used by the Imperium of Man. Core of Imperial military aircrafts, like the Valkyrie, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialAirVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier3AirMilitaryVehicleResearch">
+		<defName>GW_ImperialAirMilitaryEliteVehicleResearch</defName>
+		<label>Imperial ultimate aircrafts</label>
+		<description>Elite military aircrafts used by the Imperium of Man. Core of Imperial military aircrafts, like the Overlord, from Warhammer 40,000 universe.</description>
+		<prerequisites>
+			<li>GW_ImperialAirMilitaryVehicleResearch</li>
+		</prerequisites>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+		<!--Necron vehicles-->
+<!--
+	<ResearchProjectDef ParentName="GW_Tier1VehicleResearch">
+		<defName>GW_NecronVehicles</defName>
+		<label>necron vehicles</label>
+		<description>Vehicles used by the Necrons.</description>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2VehicleResearch">
+		<defName>GW_AdvancedNecronVehicles</defName>
+		<label>advanced necron vehicles</label>
+		<description>Vehicles used by the Necrons.</description>
+		<prerequisites>
+			<li>GW_NecronVehicles</li>
+		</prerequisites>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+-->
+		<!--Daemon vehicles-->
+		<!--
+	<ResearchProjectDef ParentName="GW_Tier1VehicleResearch">
+		<defName>GW_DaemonVehicles</defName>
+		<label>daemon vehicles</label>
+		<description>Vehicles used by the Daemons.</description>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2VehicleResearch">
+		<defName>GW_AdvancedDaemonVehicles</defName>
+		<label>advanced daemon vehicles</label>
+		<description>Vehicles used by the Daemons.</description>
+		<prerequisites>
+			<li>GW_DaemonVehicles</li>
+		</prerequisites>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier3VehicleResearch">
+		<defName>GW_UltimateDaemonVehicles</defName>
+		<label>ultimate daemon vehicles</label>
+		<description>Vehicles used by the Daemons.</description>
+		<prerequisites>
+			<li>GW_AdvancedDaemonVehicles</li>
+		</prerequisites>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+-->
+		<!--Eldar vehicles-->
+<!--
+	<ResearchProjectDef ParentName="GW_Tier1VehicleResearch">
+		<defName>GW_EldarVehicles</defName>
+		<label>eldar vehicles</label>
+		<description>Vehicles used by the Eldar.</description>
+		<researchViewY>3.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2VehicleResearch">
+		<defName>GW_ComplexEldarVehicles</defName>
+		<label>complex eldar vehicles</label>
+		<description>Vehicles used by the Eldar.</description>
+		<prerequisites>
+			<li>GW_EldarVehicles</li>
+		</prerequisites>
+		<researchViewY>3.00</researchViewY>
+		<modExtensions Inherit="False"> 
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+				<longLabel>True</longLabel>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>4</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+	-->
+		<!--Complex Eldar Vehicles needs to use its own due to the label being too long, but also not long enough. Set longLabel to false to see what I mean-->
+
+		<!--Ork vehicles-->
+		<!--
+	<ResearchProjectDef ParentName="GW_Tier1VehicleResearch">
+		<defName>GW_OrkVehicles</defName>
+		<label>ork vehicles</label>
+		<description>Vehicles used by the Orks.</description>
+		<researchViewY>4.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_Tier2VehicleResearch">
+		<defName>GW_ComplexOrkVehicles</defName>
+		<label>complex ork vehicles</label>
+		<description>Vehicles used by the Orks.</description>
+		<prerequisites>
+			<li>GW_OrkVehicles</li>
+		</prerequisites>
+		<researchViewY>4.00</researchViewY>
+	</ResearchProjectDef>
+	-->
+</Defs>

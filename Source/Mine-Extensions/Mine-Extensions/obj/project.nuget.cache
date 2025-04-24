@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "yW4DVqHgRBY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paul\\Documents\\GitHub\\Core-Imperialis\\Source\\Mine-Extensions\\Mine-Extensions\\Mine-Extensions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paul\\.nuget\\packages\\krafs.publicizer\\2.3.0\\krafs.publicizer.2.3.0.nupkg.sha512",
+    "C:\\Users\\Paul\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4055-beta\\krafs.rimworld.ref.1.5.4055-beta.nupkg.sha512",
+    "C:\\Users\\Paul\\.nuget\\packages\\lib.harmony\\2.3.5\\lib.harmony.2.3.5.nupkg.sha512"
+  ],
+  "logs": []
+}
