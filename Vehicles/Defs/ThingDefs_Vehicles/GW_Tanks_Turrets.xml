@@ -80,25 +80,29 @@
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>2.0</rotationSpeed>
 		<projectileOffset>1.0</projectileOffset>
+		<projectileShifting>
+			<li>-0.1</li>
+			<li>0.1</li>
+		</projectileShifting>
 		<maxRange>28.9</maxRange>
 		<attachProjectileFlag>GW_Tank</attachProjectileFlag>
 		<fireModes>
 			<li>
-				<shotsPerBurst>4</shotsPerBurst>
+				<shotsPerBurst>2</shotsPerBurst>
 				<ticksBetweenShots>1</ticksBetweenShots>
 				<ticksBetweenBursts>12</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 			</li>
 			<li>
-				<shotsPerBurst>10</shotsPerBurst>
+				<shotsPerBurst>6</shotsPerBurst>
 				<ticksBetweenShots>1</ticksBetweenShots>
 				<ticksBetweenBursts>12</ticksBetweenBursts>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Burst</texPath>
 			</li>
 			<li>
-				<shotsPerBurst>20</shotsPerBurst>
+				<shotsPerBurst>12</shotsPerBurst>
 				<ticksBetweenShots>1</ticksBetweenShots>
 				<ticksBetweenBursts>12</ticksBetweenBursts>
 				<label>Auto</label>
