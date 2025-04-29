@@ -51,28 +51,28 @@
     </building>
   </ThingDef>
 
-  <ThingDef ParentName="RockBase">
-    <defName>MineableHP_Ceramite</defName>
-    <label>Ceramite ore</label>
-    <description>Rock containing bits of Ceramite.</description>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(89,83,68)</color>
-      <colorTwo>(230,230,230)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>3600</MaxHitPoints>
-    </statBases>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>HP_Ceramite</mineableThing>
-      <mineableYield>55</mineableYield>
-      <mineableScatterCommonality>0.12</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>6~12</mineableScatterLumpSizeRange>
-      <veinMineable>true</veinMineable>
-    </building>
-  </ThingDef>
+  <!-- <ThingDef ParentName="RockBase"> -->
+    <!-- <defName>MineableHP_Ceramite</defName> -->
+    <!-- <label>Ceramite ore</label> -->
+    <!-- <description>Rock containing bits of Ceramite.</description> -->
+    <!-- <graphicData> -->
+      <!-- <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath> -->
+      <!-- <graphicClass>Graphic_Single</graphicClass> -->
+      <!-- <shaderType>CutoutComplex</shaderType> -->
+      <!-- <color>(89,83,68)</color> -->
+      <!-- <colorTwo>(230,230,230)</colorTwo> -->
+    <!-- </graphicData> -->
+    <!-- <statBases> -->
+      <!-- <MaxHitPoints>3600</MaxHitPoints> -->
+    <!-- </statBases> -->
+    <!-- <building> -->
+      <!-- <isResourceRock>true</isResourceRock> -->
+      <!-- <mineableThing>HP_Ceramite</mineableThing> -->
+      <!-- <mineableYield>55</mineableYield> -->
+      <!-- <mineableScatterCommonality>0.12</mineableScatterCommonality> -->
+      <!-- <mineableScatterLumpSizeRange>6~12</mineableScatterLumpSizeRange> -->
+      <!-- <veinMineable>true</veinMineable> -->
+    <!-- </building> -->
+  <!-- </ThingDef> -->
 
 </Defs>
