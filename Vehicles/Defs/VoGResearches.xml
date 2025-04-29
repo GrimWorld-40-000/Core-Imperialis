@@ -5,6 +5,17 @@
     </ResearchProjectDef>	
 
 	<!--All vehicle researches are given a tier to make it easier to update and add on to. If desired, a tier can be completely skipped(i.e. have a Basic vehicles(1) and an Ultimate vehicles(3))-->
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase" MayRequire="smashphil.vehicleframework">
+		<defName>GW_VehiclesOfGrimworld</defName>
+		<label>Imperial vehicles</label>
+		<description>The first step to understanding how to create vehicles used by various factions. This reaserch unlock garage doors, vehcile subparts like engine, suspension. To craft those things you need vehicle workbench.</description>
+		<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>0.50</researchViewY>
+	</ResearchProjectDef>
 
 	<ResearchProjectDef Abstract="True" Name="GW_Tier1LandVehicleResearch" ParentName="GW_VoGBase">
 		<baseCost>3500</baseCost>
