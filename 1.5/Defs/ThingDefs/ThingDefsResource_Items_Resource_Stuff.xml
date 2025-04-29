@@ -143,9 +143,9 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
-        <deepCommonality>1</deepCommonality>
-        <deepCountPerPortion>15</deepCountPerPortion>
-        <deepLumpSizeRange>7~13</deepLumpSizeRange>
+        <!-- <deepCommonality>1</deepCommonality> -->
+        <!-- <deepCountPerPortion>15</deepCountPerPortion> -->
+        <!-- <deepLumpSizeRange>7~13</deepLumpSizeRange> -->
         <stuffProps>
             <categories>
                 <li>Metallic</li>
