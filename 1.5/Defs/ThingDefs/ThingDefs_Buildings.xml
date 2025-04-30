@@ -102,9 +102,8 @@
         <thingCategories Inherit="false" />
         <size>(3,2)</size>
         <costList>
-            <Steel>100</Steel>
-            <HP_Ceramite>50</HP_Ceramite>
-            <ComponentIndustrial>5</ComponentIndustrial>
+            <Steel>300</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="CompProperties_Power">
