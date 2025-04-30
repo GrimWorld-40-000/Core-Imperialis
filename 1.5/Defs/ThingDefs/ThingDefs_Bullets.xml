@@ -2,17 +2,17 @@
 <Defs>
     <ThingDef ParentName="BaseBullet">
         <defName>GW_Bullet_HeavyBolter</defName>
-        <label>bolter round</label>
+        <label>heavy bolter round</label>
         <graphicData>
           <texPath>Things/Projectiles/Bolter_Projectile</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
           <damageDef>Bullet</damageDef>
-          <damageAmountBase>50</damageAmountBase>
-          	<armorPenetrationBase>0.5</armorPenetrationBase>
-          <stoppingPower>1</stoppingPower>
-          <speed>88</speed>
+          <damageAmountBase>35</damageAmountBase>
+          	<armorPenetrationBase>0.4</armorPenetrationBase>
+          <stoppingPower>0.4</stoppingPower>
+          <speed>70</speed>
         </projectile>
       </ThingDef>
 
@@ -25,8 +25,8 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
-      <stoppingPower>1</stoppingPower>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>0.25</stoppingPower>
 	  <armorPenetrationBase>0.3</armorPenetrationBase>
       <speed>80</speed>
     </projectile>
@@ -43,9 +43,9 @@
       <projectile>
         <damageDef>Bullet</damageDef>
         <damageAmountBase>90</damageAmountBase>
-        <stoppingPower>2</stoppingPower>
+        <stoppingPower>1</stoppingPower>
         <armorPenetrationBase>0.7</armorPenetrationBase>
-        <speed>75</speed>
+        <speed>60</speed>
       </projectile>
     </ThingDef>
 
@@ -61,8 +61,8 @@
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>120</damageAmountBase>
-            <armorPenetrationBase>1.2</armorPenetrationBase>
-            <stoppingPower>1</stoppingPower>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
         </projectile>
     </ThingDef>
 
@@ -77,8 +77,8 @@
       <projectile>
         <damageDef>Bullet</damageDef>
         <damageAmountBase>25</damageAmountBase>
-        <stoppingPower>0.5</stoppingPower>
-        <armorPenetrationBase>0.3</armorPenetrationBase>
+        <stoppingPower>0.3</stoppingPower>
+        <armorPenetrationBase>0.25</armorPenetrationBase>
         <speed>80</speed>
       </projectile>
     </ThingDef>
@@ -93,10 +93,10 @@
       </graphicData>
       <projectile>
         <damageDef>Bullet</damageDef>
-        <damageAmountBase>45</damageAmountBase>
+        <damageAmountBase>30</damageAmountBase>
         <stoppingPower>0.4</stoppingPower>
-        <armorPenetrationBase>0.4</armorPenetrationBase>
-        <speed>80</speed>
+        <armorPenetrationBase>0.35</armorPenetrationBase>
+        <speed>65</speed>
       </projectile>
     </ThingDef>
 
@@ -112,10 +112,10 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Burn</damageDef>
-            <damageAmountBase>150</damageAmountBase>
-            <stoppingPower>4</stoppingPower>
-            <armorPenetrationBase>3.5</armorPenetrationBase>
-            <speed>80</speed>
+            <damageAmountBase>80</damageAmountBase>
+            <stoppingPower>2</stoppingPower>
+            <armorPenetrationBase>0.8</armorPenetrationBase>
+            <speed>75</speed>
         </projectile>
     </ThingDef>
 
@@ -131,10 +131,10 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Burn</damageDef>
-            <damageAmountBase>70</damageAmountBase>
-            <stoppingPower>2.5</stoppingPower>
-            <explosionRadius>2.4</explosionRadius>
-            <armorPenetrationBase>0.85</armorPenetrationBase>
+            <damageAmountBase>50</damageAmountBase>
+            <stoppingPower>1.7</stoppingPower>
+            <explosionRadius>2.1</explosionRadius>
+            <armorPenetrationBase>0.5</armorPenetrationBase>
             <speed>120</speed>
 			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
         </projectile>
