@@ -110,7 +110,7 @@
 			</li>
 		</fireModes>
 		<graphicData>
-			<texPath>Things/Item/Turrets/StormBolter/GW_HOI_PintleMounted_StormBolter</texPath>
+			<texPath>Things/Item/Turrets/StormBolter/GW_PintleMounted_StormBolter</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(2.5, 2.5)</drawSize>
