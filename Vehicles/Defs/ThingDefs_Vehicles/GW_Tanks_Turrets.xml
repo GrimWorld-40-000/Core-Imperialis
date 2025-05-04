@@ -88,23 +88,23 @@
 		<attachProjectileFlag>GW_Tank</attachProjectileFlag>
 		<fireModes>
 			<li>
-				<shotsPerBurst>2</shotsPerBurst>
-				<ticksBetweenShots>1</ticksBetweenShots>
-				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>4</ticksBetweenShots>
+				<ticksBetweenBursts>10</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>6</shotsPerBurst>
-				<ticksBetweenShots>1</ticksBetweenShots>
-				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<ticksBetweenShots>4</ticksBetweenShots>
+				<ticksBetweenBursts>20</ticksBetweenBursts>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Burst</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>12</shotsPerBurst>
-				<ticksBetweenShots>1</ticksBetweenShots>
-				<ticksBetweenBursts>12</ticksBetweenBursts>
+				<ticksBetweenShots>4</ticksBetweenShots>
+				<ticksBetweenBursts>20</ticksBetweenBursts>
 				<label>Auto</label>
 				<texPath>UI/Gizmos/FireRate_Auto</texPath>
 			</li>
@@ -143,22 +143,22 @@
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>8</ticksBetweenShots>
+				<ticksBetweenShots>12</ticksBetweenShots>
 				<ticksBetweenBursts>10</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>4</shotsPerBurst>
-				<ticksBetweenShots>8</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenShots>12</ticksBetweenShots>
+				<ticksBetweenBursts>25</ticksBetweenBursts>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Burst</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>10</shotsPerBurst>
-				<ticksBetweenShots>8</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenShots>12</ticksBetweenShots>
+				<ticksBetweenBursts>25</ticksBetweenBursts>
 				<label>Auto</label>
 				<texPath>UI/Gizmos/FireRate_Auto</texPath>
 			</li>
