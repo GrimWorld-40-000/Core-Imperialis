@@ -10,7 +10,7 @@
         <projectile>
           <damageDef>Bullet</damageDef>
           <damageAmountBase>35</damageAmountBase>
-          	<armorPenetrationBase>0.4</armorPenetrationBase>
+          	<armorPenetrationBase>0.6</armorPenetrationBase>
           <stoppingPower>0.4</stoppingPower>
           <speed>70</speed>
         </projectile>
@@ -27,11 +27,30 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>20</damageAmountBase>
-      <stoppingPower>0.25</stoppingPower>
+      <stoppingPower>0.4</stoppingPower>
 	  <armorPenetrationBase>0.3</armorPenetrationBase>
       <speed>80</speed>
     </projectile>
   </ThingDef>
+
+  	<!--===== Bolt Pistol Projectile =====-->
+	
+	<ThingDef ParentName="BaseBullet">
+        <defName>GW_Bullet_BoltPistol</defName>
+        <label>bolt</label>
+        <graphicData>
+            <texPath>Projectiles/BoltPistol_Proj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+			<stoppingPower>0.3</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
       <defName>GW_Bullet_Autocannon</defName>
@@ -78,7 +97,7 @@
       <projectile>
         <damageDef>Bullet</damageDef>
         <damageAmountBase>25</damageAmountBase>
-        <stoppingPower>0.3</stoppingPower>
+        <stoppingPower>0.35</stoppingPower>
         <armorPenetrationBase>0.25</armorPenetrationBase>
         <speed>80</speed>
       </projectile>
