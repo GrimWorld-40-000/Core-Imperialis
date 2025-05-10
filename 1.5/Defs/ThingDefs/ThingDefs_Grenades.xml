@@ -25,7 +25,7 @@
       <Chemfuel>80</Chemfuel>
     </costList>
     <weaponTags>
-      <li>GrenadeDestructive</li>
+      <li>40kImperialGrenade</li>
     </weaponTags>
     <thingCategories>
       <li>Grenades</li>
@@ -102,7 +102,7 @@
       <Chemfuel>80</Chemfuel>
     </costList>
     <weaponTags>
-      <li>GrenadeDestructive</li>
+      <li>40kAstarteGrenade</li>
     </weaponTags>
     <thingCategories>
       <li>Grenades</li>
