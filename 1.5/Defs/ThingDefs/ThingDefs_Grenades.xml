@@ -67,7 +67,8 @@
     <projectile>
       <explosionRadius>1.6</explosionRadius >
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>130</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <damageAmountBase>60</damageAmountBase>
       <explosionDelay>100</explosionDelay>
     </projectile>
   </ThingDef>
