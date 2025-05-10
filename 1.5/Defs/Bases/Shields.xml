@@ -30,6 +30,7 @@
             <bodyPartGroups>
                 <li>LeftHand</li>
                 <li>Arms</li>
+                <li>Torso</li>
             </bodyPartGroups>
             <layers>
                 <li>VFEC_OuterShell</li>
