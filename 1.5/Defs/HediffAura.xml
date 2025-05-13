@@ -88,6 +88,7 @@
 				<minSeverity>0.1</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.1</MoveSpeed>
+					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
@@ -102,7 +103,11 @@
 				<minSeverity>2</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
+					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
+				<statFactors>
+					<MeleeDodgeChance>1.1</MeleeDodgeChance>
+				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -116,8 +121,12 @@
 				<minSeverity>3</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<PainShockThreshold>0.5</PainShockThreshold>
+					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
+				<statFactors>
+					<MeleeDodgeChance>1.1</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -131,9 +140,13 @@
 				<minSeverity>4</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<PainShockThreshold>0.5</PainShockThreshold>
-					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
+				<statFactors>
+					<MeleeDodgeChance>1.1</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+					<MeleeDamageFactor>1.1</MeleeDamageFactor>
+				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -147,10 +160,14 @@
 				<minSeverity>5</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<PainShockThreshold>0.5</PainShockThreshold>
-					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
-					<InjuryHealingFactor>0.7</InjuryHealingFactor>
+					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
+				<statFactors>
+					<MeleeDodgeChance>1.1</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+					<MeleeDamageFactor>1.1</MeleeDamageFactor>
+					<IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
