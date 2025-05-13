@@ -13,11 +13,11 @@
         <stackLimit>50</stackLimit>
         <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
-            <MaxHitPoints>150</MaxHitPoints>
-            <MarketValue>3500</MarketValue>
-            <Mass>1</Mass>
+            <MaxHitPoints>450</MaxHitPoints>
+            <MarketValue>400</MarketValue>
+            <Mass>0.2</Mass>
             <Flammability>0.3</Flammability>
-            <DeteriorationRate>1.0</DeteriorationRate>
+            <DeteriorationRate>2.0</DeteriorationRate>
         </statBases>
         <intricate>true</intricate>
         <thingCategories>
@@ -47,7 +47,7 @@
                     <li>ComponentIndustrial</li>
                 </thingDefs>
                 </filter>
-                <count>5</count>
+                <count>2</count>
             </li>
             <li>
                 <filter>
@@ -55,7 +55,7 @@
                     <li>ComponentSpacer</li>
                 </thingDefs>
                 </filter>
-                <count>2</count>
+                <count>1</count>
             </li>
             <li>
                 <filter>
@@ -63,7 +63,7 @@
                     <li>HP_Ceramite</li>
                 </thingDefs>
                 </filter>
-                <count>25</count>
+                <count>30</count>
             </li>
             <li>
                 <filter>
@@ -79,7 +79,15 @@
                     <li>Gold</li>
                 </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Plasteel</li>
+                </thingDefs>
+                </filter>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -87,7 +95,7 @@
                     <li>Steel</li>
                 </thingDefs>
                 </filter>
-                <count>250</count>
+                <count>100</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
