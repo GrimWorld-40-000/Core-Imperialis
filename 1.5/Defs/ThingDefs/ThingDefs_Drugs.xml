@@ -20,10 +20,11 @@
         <rotatable>false</rotatable>
         <stackLimit>25</stackLimit>
         <statBases>
-            <DeteriorationRate>0.5</DeteriorationRate>
-            <MarketValue>25</MarketValue>
-            <Mass>0.3</Mass>
-            <Flammability>0.5</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+			<MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>70</MarketValue>
+            <Mass>1</Mass>
+            <Flammability>1</Flammability>
             <Nutrition>0.10</Nutrition>
         </statBases>
         <tradeTags>
@@ -37,13 +38,13 @@
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
         <costList>
-            <Beer>4</Beer>
-            <Neutroamine>1</Neutroamine>
+            <Wort>2</Wort>
         </costList>
         <ingestible>
             <foodType>Fluid, Processed, Liquor</foodType>
+			<maxNumToIngestAtOnce>10</maxNumToIngestAtOnce>
             <joyKind>Chemical</joyKind>
-            <joy>0.30</joy>
+            <joy>0.20</joy>
             <nurseable>true</nurseable>
             <drugCategory>Social</drugCategory>
             <ingestSound>Ingest_Beer</ingestSound>
@@ -74,10 +75,10 @@
         <comps>
             <li Class="CompProperties_Drug">
                 <chemical>Alcohol</chemical>
-                <addictiveness>0.020</addictiveness>
+                <addictiveness>0.01</addictiveness>
                 <minToleranceToAddict>0.25</minToleranceToAddict>
                 <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
-                <needLevelOffset>0.9</needLevelOffset>
+                <needLevelOffset>0.2</needLevelOffset>
                 <listOrder>10</listOrder>
             </li>
         </comps>
@@ -101,9 +102,12 @@
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
-            <WorkToMake>1000</WorkToMake>
-            <MarketValue>40</MarketValue>
-            <Mass>0.05</Mass>
+			<MaxHitPoints>120</MaxHitPoints>
+            <WorkToMake>1100</WorkToMake>
+            <MarketValue>120</MarketValue>
+			<Flammability>1.00</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+            <Mass>0.5</Mass>
         </statBases>
         <tradeTags>
             <li>GW_Drugs</li>
@@ -112,10 +116,11 @@
         <minRewardCount>10</minRewardCount>
         <ingestible>
             <foodType>Processed</foodType>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
             <joyKind>Chemical</joyKind>
-            <joy>0.80</joy>
+            <joy>0.50</joy>
             <drugCategory>Hard</drugCategory>
-            <baseIngestTicks>80</baseIngestTicks>
+            <baseIngestTicks>40</baseIngestTicks>
             <ingestSound>Ingest_Inject</ingestSound>
             <ingestHoldOffsetStanding>
                 <northDefault>
@@ -153,14 +158,13 @@
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
         <costList>
-            <Neutroamine>6</Neutroamine>
-            <FieldMedkit>3</FieldMedkit>
-            <Penoxycyline>1</Penoxycyline>
+            <Neutroamine>20</Neutroamine>
+			<GoJuice>3</GoJuice>
         </costList>
         <comps>
         <li Class="CompProperties_Drug">
             <chemical>GW_CombatStims</chemical>
-            <addictiveness>0.1</addictiveness>
+            <addictiveness>0.2</addictiveness>
             <minToleranceToAddict>0.15</minToleranceToAddict>
             <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
             <needLevelOffset>0.9</needLevelOffset>
@@ -184,19 +188,18 @@
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
         <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1.5</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>7500</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
         </comps>
         <stages>
             <li>
                 <painFactor>0.5</painFactor>
                 <statFactors>
-                    <InjuryHealingFactor>1.5</InjuryHealingFactor>
-                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.5</MeleeHitChance>
-                    <MeleeDodgeChance>1.5</MeleeDodgeChance>
+					<IncomingDamageFactor>0.9</IncomingDamageFactor>
+                    <MeleeHitChance>1.0</MeleeHitChance>
+					<AimingDelayFactor>0.8</AimingDelayFactor>
                 </statFactors>
                 <capMods>
                     <li>
@@ -204,12 +207,12 @@
                         <offset>0.25</offset>
                     </li>
                 </capMods>
-                <mentalStateGivers>
-                    <li>
-                        <mentalState>Berserk</mentalState>
-                        <mtbDays>10</mtbDays>
-                    </li>
-                </mentalStateGivers>
+                <!-- <mentalStateGivers> -->
+                    <!-- <li> -->
+                        <!-- <mentalState>Berserk</mentalState> -->
+                        <!-- <mtbDays>10</mtbDays> -->
+                    <!-- </li> -->
+                <!-- </mentalStateGivers> -->
             </li>
         </stages>
     </HediffDef>
