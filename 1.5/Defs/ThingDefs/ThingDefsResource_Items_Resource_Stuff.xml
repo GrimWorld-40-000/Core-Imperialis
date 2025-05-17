@@ -15,15 +15,17 @@
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>11</MarketValue>
-            <Mass>2</Mass>
+            <MarketValue>17</MarketValue>
+			<SellPriceFactor>0.6</SellPriceFactor>
+            <Mass>.9</Mass>
+			<Beauty>-8</Beauty>
             <StuffPower_Armor_Sharp>1.24</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>1.12</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Blunt>0.80</StuffPower_Armor_Blunt>
             <StuffPower_Armor_Heat>1.0</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>2</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.5</SharpDamageMultiplier>
-            <BluntDamageMultiplier>1.3</BluntDamageMultiplier>
+            <StuffPower_Insulation_Cold>9</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+            <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
         </statBases>
         <thingCategories>
             <li>ResourcesRaw</li>
@@ -45,14 +47,17 @@
             <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
             <statFactors>
-                <MaxHitPoints>5.0</MaxHitPoints>
+                <MaxHitPoints>4.5</MaxHitPoints>
                 <Flammability>0</Flammability>
-                <Beauty>1</Beauty>
-				<WorkToMake>3.0</WorkToMake>
+                <Beauty>0.7</Beauty>
+				<WorkToMake>4.0</WorkToMake>
 				<WorkToBuild>3.0</WorkToBuild>
-                <DoorOpenSpeed>0.8</DoorOpenSpeed>
-                <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+                <DoorOpenSpeed>0.7</DoorOpenSpeed>
+                <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
             </statFactors>
+			<statOffsets>
+				<BedRestEffectiveness>1</BedRestEffectiveness>
+			</statOffsets>
         </stuffProps>
     </ThingDef>
 
@@ -71,15 +76,16 @@
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>25</MarketValue>
-            <Mass>0.8</Mass>
-            <StuffPower_Armor_Sharp>1.65</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>1.45</StuffPower_Armor_Blunt>
-            <StuffPower_Armor_Heat>1.4</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>2</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.7</SharpDamageMultiplier>
-            <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+            <MarketValue>20</MarketValue>
+			<Beauty>2.0</Beauty>
+            <Mass>0.7</Mass>
+            <StuffPower_Armor_Sharp>1.4</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>1.00</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>1.23</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+            <BluntDamageMultiplier>1.45</BluntDamageMultiplier>
+            <SharpDamageMultiplier>1.25</SharpDamageMultiplier>
         </statBases>
         <deepCommonality>1</deepCommonality>
         <deepCountPerPortion>300</deepCountPerPortion>
@@ -101,17 +107,19 @@
             <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
 			<statOffsets>
-				<Beauty>25</Beauty>
+				<Beauty>1.0</Beauty>
 			</statOffsets>
             <statFactors>
-                <MaxHitPoints>4.0</MaxHitPoints>
+                <MaxHitPoints>3.5</MaxHitPoints>
+				<Beauty>1.0</Beauty>
                 <Flammability>0</Flammability>
-				<WorkToMake>2.2</WorkToMake>
-				<WorkToBuild>2.2</WorkToBuild>
-                <DoorOpenSpeed>1.7</DoorOpenSpeed>
-                <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+				<WorkToMake>3.2</WorkToMake>
+				<WorkToBuild>2.5</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
+                <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
             </statFactors>
         </stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>		
     </ThingDef>
 
     <ThingDef ParentName="ResourceBase">
@@ -129,16 +137,17 @@
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>50</MarketValue>
-            <Mass>1</Mass>
-            <StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>0.75</StuffPower_Armor_Blunt>
-            <StuffPower_Armor_Heat>1.1</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>1</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>1</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.3</SharpDamageMultiplier>
-            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
-            <SellPriceFactor>0.20</SellPriceFactor>
+            <MarketValue>17</MarketValue>
+            <Mass>0.35</Mass>
+			<Beauty>-4</Beauty>
+            <StuffPower_Armor_Sharp>0.75</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.80</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>9</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>1.0</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+            <SellPriceFactor>0.2</SellPriceFactor>
         </statBases>
         <thingCategories>
             <li>ResourcesRaw</li>
@@ -160,15 +169,19 @@
             <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
             <statFactors>
-                <MaxHitPoints>3.0</MaxHitPoints>
+                <MaxHitPoints>2.0</MaxHitPoints>
                 <Flammability>0</Flammability>
-                <Beauty>0.5</Beauty>
-				<WorkToMake>1.3</WorkToMake>
-				<WorkToBuild>1.3</WorkToBuild>
-                <DoorOpenSpeed>2</DoorOpenSpeed>
-                <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
+                <Beauty>0.9</Beauty>
+				<WorkToMake>2.8</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+                <DoorOpenSpeed>1.15</DoorOpenSpeed>
+                <MeleeWeapon_CooldownMultiplier>1.0</MeleeWeapon_CooldownMultiplier>
             </statFactors>
+			<statOffsets>
+				<Beauty>0.5</Beauty>
+			</statOffsets>
         </stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>		
     </ThingDef>
 
     <ThingDef ParentName="ResourceBase" Name="GW_STC_Fragment">
@@ -193,7 +206,7 @@
         <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
             <MaxHitPoints>70</MaxHitPoints>
-            <MarketValue>6000</MarketValue>
+            <MarketValue>4500</MarketValue>
             <Mass>0.6</Mass>
             <Flammability>0.6</Flammability>
             <DeteriorationRate>2.0</DeteriorationRate>
