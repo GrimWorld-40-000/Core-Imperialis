@@ -133,7 +133,7 @@
 
     <ThingDef ParentName="ResourceBase">
     <defName>GW_VanquisherCannonShellNonCE</defName>
-    <label>120mm battle cannon shell (non CE)</label>
+    <label>120mm Vanquisher cannon shell (non CE)</label>
     <description>A 120mm shell suitable for the Vanquisher Cannon of a Leman Russ battle tank. Suitable for anti-armor operations.</description>
     <graphicData>
       <texPath>Things/Ammo/BattleCannon</texPath>
