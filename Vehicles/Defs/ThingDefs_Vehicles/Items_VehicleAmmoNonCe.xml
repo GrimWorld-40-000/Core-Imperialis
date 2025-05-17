@@ -136,7 +136,7 @@
     <label>120mm Vanquisher cannon shell (non CE)</label>
     <description>A 120mm shell suitable for the Vanquisher Cannon of a Leman Russ battle tank. Suitable for anti-armor operations.</description>
     <graphicData>
-      <texPath>Things/Ammo/BattleCannon</texPath>
+      <texPath>Things/Ammo/Vanquisher</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
