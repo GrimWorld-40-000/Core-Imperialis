@@ -153,9 +153,9 @@
             <damageDef>Burn</damageDef>
             <damageAmountBase>50</damageAmountBase>
             <stoppingPower>1.7</stoppingPower>
-            <explosionRadius>2.1</explosionRadius>
+            <explosionRadius>3.0</explosionRadius>
             <armorPenetrationBase>0.5</armorPenetrationBase>
-            <speed>120</speed>
+            <speed>60</speed>
 			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
         </projectile>
     </ThingDef>
