@@ -138,6 +138,7 @@
             <li>Stony</li>
         </stuffCategories>
         <costStuffCount>5</costStuffCount>		
+        <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
         <uiIconPath>Things/Building/Linked/GW_OrdinaryWalls_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
     </ThingDef>
@@ -163,6 +164,7 @@
             <li>Stony</li>
         </stuffCategories>
         <costStuffCount>15</costStuffCount>	
+        <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
     </ThingDef>
