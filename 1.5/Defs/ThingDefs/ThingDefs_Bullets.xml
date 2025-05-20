@@ -104,43 +104,7 @@
             </li>
         </modExtensions>
     </ThingDef>
-
-    <ThingDef ParentName="BaseBullet">
-        <defName>GW_TwinLascanonShot</defName>
-        <label>Twin-linked Lascannon Shot</label>
-        <description>Two heavily charged beams of focused light fired from twin-likned lascannons.</description>
-        <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
-        <drawOffscreen>true</drawOffscreen>
-        <seeThroughFog>true</seeThroughFog>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Projectiles/Las_Bolt</texPath>
-            <shaderType>TransparentPostLight</shaderType>
-            <drawSize>1</drawSize>
-        </graphicData>
-        <projectile>
-            <damageDef>Burn</damageDef>
-            <damageAmountBase>120</damageAmountBase>
-            <armorPenetrationBase>0.9</armorPenetrationBase>
-            <stoppingPower>1.5</stoppingPower>
-            <speed>1000</speed>
-        </projectile>
-        <modExtensions>
-            <li Class="taranchuk_lasers.LaserProperties">
-                <damageTickRate>9</damageTickRate>
-                <lifetimeTicks>10</lifetimeTicks>
-                <beamWidth>1.2</beamWidth>
-                <beamWidthDrawScale>1.2</beamWidthDrawScale>
-                <sweepRatePerTick>0</sweepRatePerTick>
-                <maxSweepAngle>0</maxSweepAngle>
-                <damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
-                <debugCells>false</debugCells>
-                <textureScrollOffsetPerTick>(0, 0)</textureScrollOffsetPerTick>
-                <lockOnTarget>false</lockOnTarget>
-            </li>
-        </modExtensions>
-    </ThingDef>
-
+    
     <ThingDef ParentName="BaseBullet">
       <defName>GW_Bullet_Assaultcannon</defName>
       <label>assault cannon round</label>
