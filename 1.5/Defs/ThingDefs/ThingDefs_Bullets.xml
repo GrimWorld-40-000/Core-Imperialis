@@ -39,7 +39,7 @@
         <defName>GW_Bullet_BoltPistol</defName>
         <label>bolt</label>
         <graphicData>
-            <texPath>Projectiles/BoltPistol_Proj</texPath>
+            <texPath>Things/Projectiles/BoltPistol_Proj</texPath>
             <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.8</drawSize>
         </graphicData>
@@ -73,6 +73,42 @@
         <defName>GW_LascanonShot</defName>
         <label>Lascannon Shot</label>
         <description>An heavily charged beam of focused light fired from a lascannon.</description>
+        <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Projectiles/Las_Bolt</texPath>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>120</damageAmountBase>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>1000</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="taranchuk_lasers.LaserProperties">
+                <damageTickRate>9</damageTickRate>
+                <lifetimeTicks>10</lifetimeTicks>
+                <beamWidth>1.2</beamWidth>
+                <beamWidthDrawScale>1.2</beamWidthDrawScale>
+                <sweepRatePerTick>0</sweepRatePerTick>
+                <maxSweepAngle>0</maxSweepAngle>
+                <damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
+                <debugCells>false</debugCells>
+                <textureScrollOffsetPerTick>(0, 0)</textureScrollOffsetPerTick>
+                <lockOnTarget>false</lockOnTarget>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>GW_TwinLascanonShot</defName>
+        <label>Twin-linked Lascannon Shot</label>
+        <description>Two heavily charged beams of focused light fired from twin-likned lascannons.</description>
         <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
         <drawOffscreen>true</drawOffscreen>
         <seeThroughFog>true</seeThroughFog>
@@ -178,4 +214,63 @@
 			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
         </projectile>
     </ThingDef>
+
+    	<!--===== Flamer Projectile =====-->
+
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>GW_Bullet_Flamer</defName>
+		<label>flamer shot</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/Flamer_Flame</texPath>
+			<texPathFadeOut>Things/Projectiles/Flamer_End</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>45</speed>
+			<damageAmountBase>3</damageAmountBase>
+		</projectile>
+
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>55</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.15</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+
+  <VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>GW_Bullet_HeavyFlamer</defName>
+		<label>flamer shot</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/Flamer_Flame</texPath>
+			<texPathFadeOut>Things/Projectiles/Flamer_End</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>45</speed>
+			<damageAmountBase>3</damageAmountBase>
+		</projectile>
+
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>55</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.15</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+
 </Defs>
