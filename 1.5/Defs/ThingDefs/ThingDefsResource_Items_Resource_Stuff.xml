@@ -137,7 +137,7 @@
         <useHitPoints>false</useHitPoints>
         <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
         <statBases>
-            <MarketValue>17</MarketValue>
+            <MarketValue>11</MarketValue>
             <Mass>0.35</Mass>
 			<Beauty>-4</Beauty>
             <StuffPower_Armor_Sharp>0.75</StuffPower_Armor_Sharp>

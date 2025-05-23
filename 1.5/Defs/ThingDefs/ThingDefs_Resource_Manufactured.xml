@@ -133,7 +133,7 @@
         <stackLimit>50</stackLimit>
         <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
-            <MarketValue>1.0</MarketValue>
+            <MarketValue>0.3</MarketValue>
             <Mass>1.2</Mass>
             <Flammability>0</Flammability>
             <DeteriorationRate>0</DeteriorationRate>
@@ -224,7 +224,7 @@
         <stackLimit>50</stackLimit>
         <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
-            <MarketValue>11.0</MarketValue>
+            <MarketValue>8.0</MarketValue>
             <Mass>0.3</Mass>
             <Flammability>0</Flammability>
             <DeteriorationRate>0</DeteriorationRate>
