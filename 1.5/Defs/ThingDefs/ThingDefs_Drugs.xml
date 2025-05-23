@@ -74,7 +74,7 @@
         </ingestible>
         <comps>
             <li Class="CompProperties_Drug">
-                <chemical>Alcohol</chemical>
+                <chemical>Psychite</chemical>
                 <addictiveness>0.01</addictiveness>
                 <minToleranceToAddict>0.25</minToleranceToAddict>
                 <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
@@ -163,7 +163,7 @@
         </costList>
         <comps>
         <li Class="CompProperties_Drug">
-            <chemical>GW_CombatStims</chemical>
+            <chemical>Psychite</chemical>
             <addictiveness>0.2</addictiveness>
             <minToleranceToAddict>0.15</minToleranceToAddict>
             <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
