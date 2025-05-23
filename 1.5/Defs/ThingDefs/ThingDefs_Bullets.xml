@@ -192,7 +192,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<speed>45</speed>
+			<speed>20</speed>
 			<damageAmountBase>3</damageAmountBase>
 		</projectile>
 
@@ -220,8 +220,8 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<speed>45</speed>
-			<damageAmountBase>3</damageAmountBase>
+			<speed>25</speed>
+			<damageAmountBase>4</damageAmountBase>
 		</projectile>
 
 		<drawOffscreen>true</drawOffscreen>
