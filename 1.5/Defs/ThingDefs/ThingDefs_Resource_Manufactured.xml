@@ -187,7 +187,7 @@
                         <li>StoneBlocks</li>
                     </categories>
                 </filter>
-                <count>25</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -195,7 +195,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>5</count>
+                <count>2</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -207,7 +207,48 @@
             <li>GW_Furnace</li>
         </recipeUsers>
         <products>
-            <GW_Rockcrete>20</GW_Rockcrete>
+            <GW_Rockcrete>25</GW_Rockcrete>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>GW_Make_RockcreteStoneCutting</defName>
+        <label>make rockcrete</label>
+        <description>Blend stone and steel together to create some rockcrete.</description>
+        <jobString>manufacturing rockcrete.</jobString>
+        <workAmount>3500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>TableStonecutter</li>
+        </recipeUsers>
+        <products>
+            <GW_Rockcrete>25</GW_Rockcrete>
         </products>
     </RecipeDef>
 
