@@ -101,15 +101,19 @@
         <minifiedDef />
         <thingCategories Inherit="false" />
         <size>(3,2)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>75</costStuffCount>
         <costList>
-            <Steel>100</Steel>
-            <HP_Ceramite>50</HP_Ceramite>
+            <Steel>225</Steel>
             <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>900</basePowerConsumption>
                 <shortCircuitInRain>false</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Flickable"/>
