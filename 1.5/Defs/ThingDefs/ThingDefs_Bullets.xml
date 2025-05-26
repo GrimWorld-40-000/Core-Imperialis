@@ -16,6 +16,7 @@
         </projectile>
       </ThingDef>
 
+  <!-- Used by Astartes, Storm Bolters. 0.75 Cal-->
   <ThingDef ParentName="BaseBullet">
     <defName>GW_Bullet_Bolter</defName>
     <label>bolter round</label>
@@ -26,9 +27,9 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>20</damageAmountBase>
+      <damageAmountBase>21</damageAmountBase>
       <stoppingPower>0.4</stoppingPower>
-	  <armorPenetrationBase>0.3</armorPenetrationBase>
+	  <armorPenetrationBase>0.35</armorPenetrationBase>
       <speed>80</speed>
     </projectile>
   </ThingDef>
