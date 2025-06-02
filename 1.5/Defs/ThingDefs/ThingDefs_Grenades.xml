@@ -144,10 +144,11 @@
     </graphicData>
     <projectile>
       <explosionRadius>6</explosionRadius >
-      <damageDef>Vaporize</damageDef>
+      <damageDef>Burn</damageDef>
       <damageAmountBase>90</damageAmountBase>
       <armorPenetrationBase>2.5</armorPenetrationBase>
       <explosionDelay>100</explosionDelay>
+       <explosionEffect>GW_MeltaEffecter</explosionEffect>
     </projectile>
   </ThingDef>
 
