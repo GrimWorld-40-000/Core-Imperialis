@@ -140,23 +140,40 @@
       </projectile>
     </ThingDef>
 
-      <ThingDef ParentName="BaseBullet">
+    <ThingDef ParentName="BaseBullet">
         <defName>GW_Bullet_MultiMelta</defName>
-        <label>melta gun shot</label>
+        <label>multi melta beam</label>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
         <graphicData>
-            <texPath>Things/Projectiles/Melta_Projectile</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Projectiles/Melta_Projectile</texPath>
             <shaderType>TransparentPostLight</shaderType>
             <drawSize>1.5</drawSize>
         </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>80</damageAmountBase>
-            <stoppingPower>2</stoppingPower>
-            <armorPenetrationBase>0.8</armorPenetrationBase>
-            <speed>75</speed>
+            <armorPenetrationBase>0.80</armorPenetrationBase>
+            <stoppingPower>2.0</stoppingPower>
+            <speed>50</speed>
         </projectile>
+        <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+        <modExtensions>
+            <li Class="taranchuk_lasers.LaserProperties">
+                <damageTickRate>9</damageTickRate>
+                <lifetimeTicks>40</lifetimeTicks>
+                <beamWidth>1.5</beamWidth>
+                <beamWidthDrawScale>1</beamWidthDrawScale>
+                <sweepRatePerTick>0</sweepRatePerTick>
+                <maxSweepAngle>0</maxSweepAngle>
+                <damageThingsAcrossBeamLine>true</damageThingsAcrossBeamLine>
+                <debugCells>false</debugCells>
+                <textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
+                <lockOnTarget>false</lockOnTarget>
+                <endEffecterDef>GW_MeltaEffecter</endEffecterDef> 
+            </li>
+        </modExtensions>
     </ThingDef>
 
      <ThingDef ParentName="BaseBullet">
