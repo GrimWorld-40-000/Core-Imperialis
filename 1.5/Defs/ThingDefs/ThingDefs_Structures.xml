@@ -129,6 +129,9 @@
         </graphicData>
         <uiIconPath>Things/Building/Linked/GW_OrdinaryWalls_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
     </ThingDef>
 
     <ThingDef ParentName="Wall">
@@ -148,5 +151,8 @@
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
         <costStuffCount>10</costStuffCount>
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
     </ThingDef>
 </Defs>
