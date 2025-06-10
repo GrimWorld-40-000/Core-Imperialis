@@ -127,7 +127,7 @@
             <texPath>Things/Building/Linked/GW_OrdinaryWalls_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-		<fillPercent>0.75</fillPercent>
+		<fillPercent>1</fillPercent>
 		<statBases>
             <MaxHitPoints>350</MaxHitPoints>
             <WorkToBuild>140</WorkToBuild>
@@ -155,7 +155,7 @@
             <texPath>Things/Building/Linked/GW_ReinforcedWall_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-		<fillPercent>0.75</fillPercent>
+		<fillPercent>1</fillPercent>
         <statBases>
             <MaxHitPoints>500</MaxHitPoints>
             <WorkToBuild>210</WorkToBuild>
