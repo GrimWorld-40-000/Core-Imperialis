@@ -129,6 +129,7 @@
         </graphicData>
         <uiIconPath>Things/Building/Linked/GW_OrdinaryWalls_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
+		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
 		</building>
@@ -151,6 +152,7 @@
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
         <costStuffCount>10</costStuffCount>
+		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
 		</building>
