@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>GW_ComponentRelic</defName>
+        <label>relic component</label>
+        <description>Advanced, ancient pieces of technology, poorly understood even by the Imperium of Man that uses them. Not only are they extremely valuable as resources and commodities, but the Adeptus Mechanicus also values such things as religious artifacts. \n\nRogue Traders - those with a Warrant of Trade issued in the name of the Emperor, which grants them the ability to explore, trade, and fight as they wish - often come across such components and are willing to part with them only for a hefty sum. While being on the wrong side of the Great Rift has greatly hindered them, some Rogue Traders still pass through here, selling their wares to whoever can meet their prices.</description>
+        <graphicData>
+            <texPath>Things/Resource/RelicComponent</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <MarketValue>3500</MarketValue>
+            <Mass>1</Mass>
+            <Flammability>0.3</Flammability>
+            <DeteriorationRate>1.0</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>GW_Exotic</li>
+        </tradeTags>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <allowedArchonexusCount>5</allowedArchonexusCount>
+    </ThingDef>
+
+    <RecipeDef>
+        <defName>GW_Make_ComponentRelic</defName>
+        <label>make relic component</label>
+        <description>Make a relic component.</description>
+        <jobString>Making relic component.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>25000</workAmount>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>ComponentIndustrial</li>
+                </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>ComponentSpacer</li>
+                </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>HP_Ceramite</li>
+                </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>HP_Adamantium</li>
+                </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Gold</li>
+                </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Steel</li>
+                </thingDefs>
+                </filter>
+                <count>250</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+                <li>Steel</li>
+                <li>Plasteel</li>
+                <li>Gold</li>
+                <li>HP_Ceramite</li>
+                <li>HP_Adamantium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <GW_ComponentRelic>1</GW_ComponentRelic>
+        </products>
+        <researchPrerequisite>GW_AdvancedGrimworldMaterials</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>15</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>10</displayPriority>
+    </RecipeDef>
+
+    <ThingDef ParentName="StoneBlocksBase">
+        <defName>GW_Rockcrete</defName>
+        <label>rockcrete</label>
+        <description>An Imperial material used in construction. It consists of crushed stone mixed with binding agents, creating cheap but durable slabs used in walls and floors. While it is tough enough to be used in fortifications, a determined siege will eventually wear down a rockcrete wall or bunker.</description>
+        <graphicData>
+            <texPath>Things/Resource/Rockcrete</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Stone_Drop</soundInteract>
+        <soundDrop>Stone_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <Mass>1.2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <thingCategories Inherit="False">
+            <li>Manufactured</li>
+        </thingCategories>
+        <stuffProps>
+            <color>(225,225,225)</color>
+            <statFactors>
+                <MaxHitPoints>2.3</MaxHitPoints>
+                <Beauty>1</Beauty>
+                <MarketValue>0.6</MarketValue>
+                <WorkToBuild>4.0</WorkToBuild>
+                <WorkToMake>1.2</WorkToMake>
+                <DoorOpenSpeed>0.6</DoorOpenSpeed>
+                <BedRestEffectiveness>0.9</BedRestEffectiveness>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <tradeTags>
+            <li>GW_BuildingMaterials</li>
+        </tradeTags>
+        <allowedArchonexusCount>100</allowedArchonexusCount>
+    </ThingDef>
+
+    <RecipeDef>
+        <defName>GW_Make_Rockcrete</defName>
+        <label>make rockcrete</label>
+        <description>Blend stone and steel together to create some rockcrete.</description>
+        <jobString>manufacturing rockcrete.</jobString>
+        <workAmount>3000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>GW_Furnace</li>
+        </recipeUsers>
+        <products>
+            <GW_Rockcrete>20</GW_Rockcrete>
+        </products>
+    </RecipeDef>
+
+    <ThingDef ParentName="StoneBlocksBase">
+        <defName>GW_Plascrete</defName>
+        <label>plascrete</label>
+        <description>A strong Imperial material used in construction. Mixing stone, plasteel, and Imperial binding agents creates a very robust material, which can then be used in fortifications. While it can be used to build defensive perimeters, the Imperium of Man also used plascrete in prefabricated habitation units and in military outposts.</description>
+        <graphicData>
+            <texPath>Things/Resource/Plascrete</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Stone_Drop</soundInteract>
+        <soundDrop>Stone_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>1.8</MarketValue>
+            <Mass>2.0</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <thingCategories Inherit="False">
+            <li>Manufactured</li>
+        </thingCategories>
+        <stuffProps>
+            <color>(112,144,144)</color>
+            <statFactors>
+                <MaxHitPoints>4</MaxHitPoints>
+                <Beauty>1</Beauty>
+                <MarketValue>1</MarketValue>
+                <WorkToBuild>7.0</WorkToBuild>
+                <WorkToMake>1.8</WorkToMake>
+                <DoorOpenSpeed>0.8</DoorOpenSpeed>
+                <BedRestEffectiveness>0.9</BedRestEffectiveness>
+                <MeleeWeapon_CooldownMultiplier>1.2</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <tradeTags>
+            <li>GW_BuildingMaterials</li>
+        </tradeTags>
+        <allowedArchonexusCount>100</allowedArchonexusCount>
+    </ThingDef>
+
+    <RecipeDef>
+        <defName>GW_Make_Plascrete</defName>
+        <label>make plascrete</label>
+        <description>Blend stone and plasteel together to create some plascrete.</description>
+        <jobString>manufacturing plascrete.</jobString>
+        <workAmount>6000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>GW_Furnace</li>
+        </recipeUsers>
+        <products>
+            <GW_Plascrete>20</GW_Plascrete>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>GW_Make_Ceramite</defName>
+        <label>make ceramite</label>
+        <description>Mix stone into ceramite, a strong type of Imperial ceramic armor.</description>
+        <jobString>manufacturing ceramite.</jobString>
+        <workAmount>10000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>140</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>GW_Furnace</li>
+        </recipeUsers>
+        <products>
+            <HP_Ceramite>20</HP_Ceramite>
+        </products>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,178 @@
+<Defs>
+
+	<HediffDef Name="GW_ParryHediffBase" Abstract="True">		
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>0.001</initialSeverity>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>	
+		<isBad>false</isBad>
+		<comps>
+			<li>
+				<compClass>GWParryShield.HediffComp_GW_Parry</compClass>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="GW_ParryHediffBase">
+		<defName>GW_ParryCooldown</defName>
+		<label>Parry cooldown</label>
+		<description>parry cooldown</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages />
+	</HediffDef>
+	
+	<HediffDef ParentName="GW_ParryHediffBase">
+		<defName>GW_Posebreak</defName>
+		<label>Pose break</label>
+		<description>a pose break. taking more damage</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li>
+				<compClass>GWParryShield.HediffComp_GW_Posebreak</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>		
+					<IncomingDamageFactor>1.75</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- example shield with parry -->
+	<ThingDef Abstract="True">
+		<defName>GW_ExampleShield</defName>
+		<label>example shield with parry</label>
+		<description>a example shield. with basic function \n\nParry window: 30 tick \nParry cooldown: 60 tick \nCan Stun opponent. \nCan reflect projectile. \nreflect projectile range: 1.9</description>
+		<graphicData>
+			<texPath>Things/Items/Apparels/BucklerShield/bucklerShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>100</Steel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<WorkToMake>3500</WorkToMake>
+			<Mass>2.2</Mass>
+		</statBases>
+		<specialDisplayRadius>1.9</specialDisplayRadius>
+		<apparel>
+			<wornGraphicPath>Things/Items/Apparels/BucklerShield/bucklerShield</wornGraphicPath>
+			<drawData>
+				<dataSouth>
+					<offset>(0.1, 0.0, -0.1)</offset>
+					<layer>100</layer>
+				</dataSouth>
+				<dataWest>
+					<offset>(-0.2, 0.0, 0.0)</offset>
+					<layer>72</layer>
+				</dataWest>
+				<dataEast>
+					<offset>(0.2, 0.0, 0.0)</offset>
+					<layer>-1</layer>
+				</dataEast>
+				<dataNorth>
+					<offset>(-0.1, 0.0, -0.1)</offset>
+					<layer>-1</layer>
+				</dataNorth>
+				<scale>0.5</scale>
+			</drawData>
+		</apparel>
+		<comps>
+			<!-- NEEDED-->
+			<li Class="GWParryShield.CompProperties_GW_Parryable">
+				<parryHediff>GW_ExampleParry</parryHediff><!-- the parry hediff-->
+				<parryChance>0.50</parryChance> <!-- 0.50 = 50% -->>
+				<parryWindow>30</parryWindow><!-- duration of parry hediff-->
+				<parryCooldown>60</parryCooldown>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- example parry hediff -->
+	<HediffDef ParentName="GW_ParryHediffBase" Abstract="True">
+		<defName>GW_ExampleParry</defName>
+		<label>Parry window(example)</label>
+		<description>a parry window</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>		
+		<modExtensions>
+			<li Class="GWParryShield.HediffExtension_GW_Parryable">			
+				<!-- NOTE : all Bool option are defaulted to False if omiited -->
+				<isStunTarget>true</isStunTarget>
+				<stunDuration>120</stunDuration>
+				
+				<isNullifyDamage>true</isNullifyDamage>
+				<isReduceDamageTakenWhenParry>false</isReduceDamageTakenWhenParry> <!-- in case isNullifyDamage is false. lower incoming damage on successful parry-->
+				<damageReduction>0.1</damageReduction> <!-- 1.00 = 100%. 0.01 = 1%. in this case it lower damage by 10% -->
+				
+				<isGiveBuff>false</isGiveBuff>
+				<buffHediff />
+				<buffDuration />
+				
+				<isGiveDebuff>true</isGiveDebuff> <!-- give debuff upon parry -->
+				<isDebuffToSelf>false</isDebuffToSelf> <!-- give to self, if False, give to attacker -->
+				<debuffHediff>GW_Posebreak</debuffHediff>
+				<debuffDuration>120</debuffDuration>				
+				
+				<isDamageShieldHp>false</isDamageShieldHp> <!-- damage shield hp on successful parry -->
+				<damageToShieldAmount>10</damageToShieldAmount> <!-- do damage to shield by this amount -->				
+				
+				<isReflectDamage>false</isReflectDamage> 
+				<!-- attacker take damage that you should've take. work separately from isNullifyDamage and isReduceDamageTakenWhenParry. 
+				meaning you can both nullify damage and sent back damage at the same time -->
+				<reflectDamageMultiplier>1.00</reflectDamageMultiplier> <!-- multiply the reflected damage by this amount -->
+				
+				<isDoDamge>false</isDoDamge> <!-- doing damage on successful parry, separate from damage reflection -->
+				<isDoDamageToSelf>false</isDoDamageToSelf> <!-- do damage to self -->
+				<isDoDamageToAttacker>true</isDoDamageToAttacker> <!-- do damage to attacker -->
+				<damageDef>Cut</damageDef> <!-- damageDef --> 			
+				<damageAmount>20</damageAmount>
+				<armorPen>1.0</armorPen>
+				
+				<isDoingExplosion>false</isDoingExplosion> <!-- cause explosion on successful parry, using damage from <damageDef> -->
+				<explosiveRadius>5.0</explosiveRadius>
+				
+				<isKnockbackAttacker>true</isKnockbackAttacker> <!-- knock attacker away-->
+				<knockbackDistance>5.0</knockbackDistance>
+				
+				<isReflectProjectile>true</isReflectProjectile> <!-- when projectile impact pawn(direct onlyl) reflect it back to launcher(if there one). -->
+				
+				<parrySounds>
+					<!-- <li>PG_ParryA</li> -->
+				</parrySounds>
+				
+				<parryEffects> <!-- list of EffecterDef, play at random if multiple -->
+					<!-- <li>PG_EffectA</li> -->
+				</parryEffects> 
+			</li>
+		</modExtensions>
+		<stages />
+	</HediffDef>
+</Defs>

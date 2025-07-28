@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DesignationDef>
+    <defName>GW_OpenGarageDoorRequest</defName>
+    <targetType>Thing</targetType>
+    <texturePath>Things/Building/GarageDoors/GW_GarageDoor_Open</texturePath>
+    <designateCancelable>false</designateCancelable>
+  </DesignationDef>
+  
+  <DesignationDef>
+    <defName>GW_CloseGarageDoorRequest</defName>
+    <targetType>Thing</targetType>
+    <texturePath>Things/Building/GarageDoors/GW_GarageDoor_Close</texturePath>
+    <designateCancelable>false</designateCancelable>
+  </DesignationDef>
+</Defs>
