@@ -45,10 +45,10 @@
 		<stages>
 			<li>
 				<statFactors>
-					<PainShockThreshold>1.2</PainShockThreshold>
-					<IncomingDamageFactor>0.9</IncomingDamageFactor>
-					<AimingDelayFactor>0.8</AimingDelayFactor>
-					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+					<MoveSpeed>1.3</MoveSpeed>
+					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+					<RestFallRateFactor>1.2</RestFallRateFactor>
+					<MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
 				</statFactors>
 			</li>
 		</stages>
@@ -88,7 +88,6 @@
 				<minSeverity>0.1</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.1</MoveSpeed>
-					<MeleeHitChance>1</MeleeHitChance>
 				</statOffsets>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
@@ -102,11 +101,8 @@
 				<label>2</label>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<MeleeHitChance>1</MeleeHitChance>
+					<MoveSpeed>0.3</MoveSpeed>
 				</statOffsets>
-				<statFactors>
-					<MeleeDodgeChance>1.1</MeleeDodgeChance>
-				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -120,12 +116,8 @@
 				<minSeverity>3</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<MeleeHitChance>1</MeleeHitChance>
+					<PainShockThreshold>0.5</PainShockThreshold>
 				</statOffsets>
-				<statFactors>
-					<MeleeDodgeChance>1.1</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
-				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -139,13 +131,9 @@
 				<minSeverity>4</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<MeleeHitChance>1</MeleeHitChance>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
 				</statOffsets>
-				<statFactors>
-					<MeleeDodgeChance>1.1</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
-					<MeleeDamageFactor>1.1</MeleeDamageFactor>
-				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -159,14 +147,10 @@
 				<minSeverity>5</minSeverity>
 				<statOffsets>
 					<MoveSpeed>0.3</MoveSpeed>
-					<MeleeHitChance>1</MeleeHitChance>
+					<PainShockThreshold>0.5</PainShockThreshold>
+					<IncomingDamageFactor>-0.3</IncomingDamageFactor>
+					<InjuryHealingFactor>0.7</InjuryHealingFactor>
 				</statOffsets>
-				<statFactors>
-					<MeleeDodgeChance>1.1</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
-					<MeleeDamageFactor>1.1</MeleeDamageFactor>
-					<IncomingDamageFactor>0.9</IncomingDamageFactor>
-				</statFactors>
 				<hediffGivers>
 					<li Class="HediffGiver_AddSeverity">
 						<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
@@ -427,7 +411,7 @@
 				<label>1</label>
 				<minSeverity>0.1</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.1</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.1</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.1</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -442,7 +426,7 @@
 				<label>2</label>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.2</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.2</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.2</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -457,7 +441,7 @@
 				<label>3</label>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.3</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.3</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.3</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -472,7 +456,7 @@
 				<label>4</label>
 				<minSeverity>4</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.4</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.4</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.4</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -487,7 +471,7 @@
 				<label>5</label>
 				<minSeverity>5</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.5</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.5</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.5</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -502,7 +486,7 @@
 				<label>6</label>
 				<minSeverity>6</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.6</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.6</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.6</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -517,7 +501,7 @@
 				<label>7</label>
 				<minSeverity>7</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.7</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.7</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.7</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -532,7 +516,7 @@
 				<label>8</label>
 				<minSeverity>8</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.8</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.8</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.8</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -547,7 +531,7 @@
 				<label>9</label>
 				<minSeverity>9</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.9</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.9</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.9</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -562,7 +546,7 @@
 				<label>10</label>
 				<minSeverity>10</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.99</VEF_VerbCooldownFactor>
+					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.99</VEF_VerbCooldownFactor>
 					<AimingDelayFactor>-0.99</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
