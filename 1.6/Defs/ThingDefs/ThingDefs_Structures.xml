@@ -127,20 +127,9 @@
             <texPath>Things/Building/Linked/GW_OrdinaryWalls_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-		<fillPercent>1</fillPercent>
-		<statBases>
-            <MaxHitPoints>350</MaxHitPoints>
-            <WorkToBuild>140</WorkToBuild>
-        </statBases>
-		<stuffCategories Inherit="False">
-            <li>Metallic</li>
-            <li>Woody</li>
-            <li>Stony</li>
-        </stuffCategories>
-        <costStuffCount>5</costStuffCount>		
-        <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
         <uiIconPath>Things/Building/Linked/GW_OrdinaryWalls_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
+		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
 		</building>
@@ -155,21 +144,15 @@
             <texPath>Things/Building/Linked/GW_ReinforcedWall_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-		<fillPercent>1</fillPercent>
         <statBases>
             <MaxHitPoints>500</MaxHitPoints>
-            <WorkToBuild>210</WorkToBuild>
+            <WorkToBuild>1000</WorkToBuild>
             <Flammability>0.75</Flammability>
         </statBases>
-		<stuffCategories Inherit="False">
-            <li>Metallic</li>
-            <li>Woody</li>
-            <li>Stony</li>
-        </stuffCategories>
-        <costStuffCount>15</costStuffCount>	
-        <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
         <uiIconPath>Things/Building/Linked/GW_ReinforcedWall_MenuIcon</uiIconPath>
         <uiIconPathsStuff Inherit="False" />
+        <costStuffCount>10</costStuffCount>
+		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
 		</building>

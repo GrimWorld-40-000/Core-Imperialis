@@ -8,7 +8,7 @@
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase" MayRequire="smashphil.vehicleframework">
 		<defName>GW_VehiclesOfGrimworld</defName>
 		<label>Imperial vehicles</label>
-		<description>Begin the first foray into the construction of Imperial vehicles. Construct the vehicle workbench and the vehicle components it can make, and build garage doors for the storage of your war machines.</description>
+		<description>The first step to understanding how to create vehicles used by various factions. This reaserch unlock garage doors, vehcile subparts like engine, suspension. To craft those things you need vehicle workbench.</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
 			<li>Fabrication</li>
@@ -155,14 +155,14 @@
 	<ResearchProjectDef ParentName="GW_Tier1LandVehicleResearch">
 		<defName>GW_ImperialLandVehicleResearch</defName>
 		<label>Imperial bikes</label>
-		<description>Rediscover designs for the warbikes of the Imperium of Man - excellent for scouts and outriders.</description>
+		<description>Bikes used by the Imperium of Man. Core of Imperial bikes from Warhammer 40,000 universe.</description>
 		<researchViewY>0.00</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_Tier2LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryLightVehicleResearch</defName>
 		<label>Imperial land transport</label>
-		<description>Rediscover designs for Imperial ground transports, such as Rhino and the Taurox - sturdy and reliable vehicles built to move armies.</description>
+		<description>Light land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Rhino or Taurox, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialLandVehicleResearch</li>
 		</prerequisites>
@@ -172,7 +172,7 @@
 	<ResearchProjectDef ParentName="GW_Tier3LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryMediumVehicleResearch</defName>
 		<label>Imperial basic tanks</label>
-		<description>Rediscover designs for heavier Imperial ground transports, such as the Chimera - vehicles that can both transport troops and support them in intense battles.</description>
+		<description>Medium land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Chimera, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialLandMilitaryLightVehicleResearch</li>
 		</prerequisites>
@@ -182,7 +182,7 @@
 	<ResearchProjectDef ParentName="GW_Tier4LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryHeavyVehicleResearch</defName>
 		<label>Imperial advanced tanks</label>
-		<description>Rediscover designs for Imperial tanks, such as the Leman Russ and the Predator - the heart of any armored force.</description>
+		<description>Heavy land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Leman Russ, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialLandMilitaryMediumVehicleResearch</li>
 		</prerequisites>
@@ -192,7 +192,7 @@
 	<ResearchProjectDef ParentName="GW_Tier5LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryEliteVehicleResearch</defName>
 		<label>Imperial ultimate tanks</label>
-		<description>Rediscover designs for heavy Imperial tanks, such as the Land Raider and the Baneblade - more than enough to crush any opposition.</description>
+		<description>Elite land military vehicles used by the Imperium of Man. Core of Imperial military vehicles, like the Predator, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialLandMilitaryHeavyVehicleResearch</li>
 		</prerequisites>
@@ -202,7 +202,7 @@
 	<ResearchProjectDef ParentName="GW_Tier6LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryTitanicVehicleResearch</defName>
 		<label>Imperial titanic tanks</label>
-		<description>Rediscover designs for the heaviest and deadliest of Imperial ground vehicles - the Stormhammer and the Astraeus. One ancient and one new, but both so powerful that mortal men weep as they witness them in battle.</description>
+		<description>Titanic land military vehicles used by the Imperium of Man. From "father of all baneblades" Stormhammer and Guilliman`s personal carrier Astraeus those mightiest and biggest tanks in Imperium armada.</description>
 		<prerequisites>
 			<li>GW_ImperialLandMilitaryEliteVehicleResearch</li>
 		</prerequisites>
@@ -211,15 +211,15 @@
 
 	<ResearchProjectDef ParentName="GW_Tier1AirVehicleResearch">
 		<defName>GW_ImperialAirVehicleResearch</defName>
-		<label>Imperial basic aircraft</label>
-		<description>Rediscover designs for the reusable Imperial Drop Pod, used by the Space Marines for deep strikes and surprise attacks.</description>
+		<label>Imperial basic aircrafts</label>
+		<description>Basic air vehicles used by the Imperium of Man. Core of Imperial drop pods from Warhammer 40,000 universe.</description>
 		<researchViewY>1.00</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_Tier2AirMilitaryVehicleResearch">
 		<defName>GW_ImperialAirMilitaryVehicleResearch</defName>
-		<label>Imperial advanced aircraft</label>
-		<description>Rediscover designs for the Valkyrie air transport, used by the Imperial Navy to quickly transport squads of Guardsmen.</description>
+		<label>Imperial advanced aircrafts</label>
+		<description>Light military aircrafts used by the Imperium of Man. Core of Imperial military aircrafts, like the Valkyrie, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialAirVehicleResearch</li>
 		</prerequisites>
@@ -228,8 +228,8 @@
 
 	<ResearchProjectDef ParentName="GW_Tier3AirMilitaryVehicleResearch">
 		<defName>GW_ImperialAirMilitaryEliteVehicleResearch</defName>
-		<label>Imperial ultimate aircraft</label>
-		<description>Rediscover designs for the Overlord gunship, a deadly vehicle that can provide both rapid troop transport and overwhelming fire support.</description>
+		<label>Imperial ultimate aircrafts</label>
+		<description>Elite military aircrafts used by the Imperium of Man. Core of Imperial military aircrafts, like the Overlord, from Warhammer 40,000 universe.</description>
 		<prerequisites>
 			<li>GW_ImperialAirMilitaryVehicleResearch</li>
 		</prerequisites>
