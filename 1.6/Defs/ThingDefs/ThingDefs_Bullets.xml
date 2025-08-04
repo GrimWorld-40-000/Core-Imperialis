@@ -2,35 +2,57 @@
 <Defs>
     <ThingDef ParentName="BaseBullet">
         <defName>GW_Bullet_HeavyBolter</defName>
-        <label>bolter round</label>
+        <label>heavy bolter round</label>
         <graphicData>
           <texPath>Things/Projectiles/Bolter_Projectile</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
           <damageDef>Bullet</damageDef>
-          <damageAmountBase>50</damageAmountBase>
-          	<armorPenetrationBase>0.5</armorPenetrationBase>
-          <stoppingPower>1</stoppingPower>
-          <speed>88</speed>
+          <damageAmountBase>35</damageAmountBase>
+          	<armorPenetrationBase>0.4</armorPenetrationBase>
+          <stoppingPower>0.4</stoppingPower>
+          <speed>70</speed>
         </projectile>
       </ThingDef>
 
+  <!-- Used by Astartes, Storm Bolters. 0.75 Cal-->
   <ThingDef ParentName="BaseBullet">
     <defName>GW_Bullet_Bolter</defName>
     <label>bolter round</label>
     <graphicData>
       <texPath>Things/Projectiles/Bolter_Projectile</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
-      <stoppingPower>1</stoppingPower>
-	  <armorPenetrationBase>0.3</armorPenetrationBase>
+      <damageAmountBase>21</damageAmountBase>
+      <stoppingPower>0.4</stoppingPower>
+	  <armorPenetrationBase>0.35</armorPenetrationBase>
       <speed>80</speed>
     </projectile>
   </ThingDef>
+
+
+  	<!--===== Bolt Pistol Projectile =====-->
+	
+	<ThingDef ParentName="BaseBullet">
+        <defName>GW_Bullet_BoltPistol</defName>
+        <label>bolt</label>
+        <graphicData>
+            <texPath>Things/Projectiles/BoltPistol_Proj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+			<stoppingPower>0.3</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
       <defName>GW_Bullet_Autocannon</defName>
@@ -43,46 +65,48 @@
       <projectile>
         <damageDef>Bullet</damageDef>
         <damageAmountBase>90</damageAmountBase>
-        <stoppingPower>2</stoppingPower>
+        <stoppingPower>1</stoppingPower>
         <armorPenetrationBase>0.7</armorPenetrationBase>
-        <speed>75</speed>
+        <speed>60</speed>
       </projectile>
     </ThingDef>
 
-      <ThingDef Name="GW_LaserBullet" ParentName="BaseBullet">
+    <ThingDef ParentName="BaseBullet">
         <defName>GW_LascanonShot</defName>
-        <label>lascannon shot</label>
+        <label>Lascannon Shot</label>
         <description>An heavily charged beam of focused light fired from a lascannon.</description>
-		<thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+        <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
         <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>Things/Projectiles/Las_Bolt</texPath>
             <shaderType>TransparentPostLight</shaderType>
-            <drawSize>1.5</drawSize>
+            <drawSize>1</drawSize>
         </graphicData>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>120</damageAmountBase>
-            <armorPenetrationBase>1.2</armorPenetrationBase>
-            <stoppingPower>1</stoppingPower>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>1000</speed>
         </projectile>
-		<modExtensions>
-			<li Class="taranchuk_lasers.LaserProperties">
-				<damageTickRate>9</damageTickRate>
-				<lifetimeTicks>8</lifetimeTicks>
-				<beamWidth>1</beamWidth>
-				<beamWidthDrawScale>1</beamWidthDrawScale>
-				<sweepRatePerTick>0</sweepRatePerTick>
-				<maxSweepAngle>0</maxSweepAngle>
-				<damageThingsAcrossBeamLine>False</damageThingsAcrossBeamLine>
-				<debugCells>False</debugCells>
-				<textureScrollOffsetPerTick>(0,0)</textureScrollOffsetPerTick>
-				<lockOnTarget>False</lockOnTarget>
-			</li>
-		</modExtensions>
+        <modExtensions>
+            <li Class="taranchuk_lasers.LaserProperties">
+                <damageTickRate>9</damageTickRate>
+                <lifetimeTicks>10</lifetimeTicks>
+                <beamWidth>1.2</beamWidth>
+                <beamWidthDrawScale>1.2</beamWidthDrawScale>
+                <sweepRatePerTick>0</sweepRatePerTick>
+                <maxSweepAngle>0</maxSweepAngle>
+                <damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
+                <debugCells>false</debugCells>
+                <textureScrollOffsetPerTick>(0, 0)</textureScrollOffsetPerTick>
+                <lockOnTarget>false</lockOnTarget>
+            </li>
+        </modExtensions>
     </ThingDef>
-
+    
     <ThingDef ParentName="BaseBullet">
       <defName>GW_Bullet_Assaultcannon</defName>
       <label>assault cannon round</label>
@@ -94,8 +118,8 @@
       <projectile>
         <damageDef>Bullet</damageDef>
         <damageAmountBase>25</damageAmountBase>
-        <stoppingPower>0.5</stoppingPower>
-        <armorPenetrationBase>0.3</armorPenetrationBase>
+        <stoppingPower>0.35</stoppingPower>
+        <armorPenetrationBase>0.25</armorPenetrationBase>
         <speed>80</speed>
       </projectile>
     </ThingDef>
@@ -110,30 +134,48 @@
       </graphicData>
       <projectile>
         <damageDef>Bullet</damageDef>
-        <damageAmountBase>45</damageAmountBase>
+        <damageAmountBase>30</damageAmountBase>
         <stoppingPower>0.4</stoppingPower>
-        <armorPenetrationBase>0.4</armorPenetrationBase>
-        <speed>80</speed>
+        <armorPenetrationBase>0.35</armorPenetrationBase>
+        <speed>65</speed>
       </projectile>
     </ThingDef>
 
-      <ThingDef ParentName="BaseBullet">
+    <ThingDef ParentName="BaseBullet">
         <defName>GW_Bullet_MultiMelta</defName>
-        <label>melta gun shot</label>
+        <label>multi melta beam</label>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
         <graphicData>
-            <texPath>Things/Projectiles/Melta_Projectile</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Projectiles/Melta_Projectile</texPath>
             <shaderType>TransparentPostLight</shaderType>
             <drawSize>1.5</drawSize>
         </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Burn</damageDef>
-            <damageAmountBase>150</damageAmountBase>
-            <stoppingPower>4</stoppingPower>
-            <armorPenetrationBase>3.5</armorPenetrationBase>
-            <speed>80</speed>
+            <damageAmountBase>80</damageAmountBase>
+            <armorPenetrationBase>0.80</armorPenetrationBase>
+            <stoppingPower>2.0</stoppingPower>
+            <speed>50</speed>
         </projectile>
+        <thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+        <modExtensions>
+            <li Class="taranchuk_lasers.LaserProperties">
+                <damageTickRate>9</damageTickRate>
+                <lifetimeTicks>40</lifetimeTicks>
+                <beamWidth>1.5</beamWidth>
+                <beamWidthDrawScale>1</beamWidthDrawScale>
+                <sweepRatePerTick>0</sweepRatePerTick>
+                <maxSweepAngle>0</maxSweepAngle>
+                <damageThingsAcrossBeamLine>true</damageThingsAcrossBeamLine>
+                <debugCells>false</debugCells>
+                <textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
+                <lockOnTarget>false</lockOnTarget>
+                <endEffecterDef>GW_MeltaEffecter</endEffecterDef> 
+            </li>
+        </modExtensions>
+
     </ThingDef>
 
      <ThingDef ParentName="BaseBullet">
@@ -148,33 +190,34 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Burn</damageDef>
-            <damageAmountBase>70</damageAmountBase>
-            <stoppingPower>2.5</stoppingPower>
-            <explosionRadius>2.4</explosionRadius>
-            <armorPenetrationBase>0.85</armorPenetrationBase>
-            <speed>120</speed>
+            <damageAmountBase>50</damageAmountBase>
+            <stoppingPower>1.7</stoppingPower>
+            <explosionRadius>3.0</explosionRadius>
+            <armorPenetrationBase>0.5</armorPenetrationBase>
+            <speed>60</speed>
 			<explosionEffect>GW_PlasmaEffecter</explosionEffect>
         </projectile>
     </ThingDef>
-	
+
+    	<!--===== Flamer Projectile =====-->
+
 	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>GW_Bullet_Flamer</defName>
 		<label>flamer shot</label>
 		<thingClass>VEF.Weapons.FlamethrowProjectile</thingClass>
 		<graphicData>
-			<texPath>Projectiles/AMFlamer_Flame</texPath>
-			<texPathFadeOut>Projectiles/AMFlamer_End</texPathFadeOut>
+			<texPath>Things/Projectiles/Flamer_Flame</texPath>
+			<texPathFadeOut>Things/Projectiles/Flamer_End</texPathFadeOut>
 			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<speed>45</speed>
-			<damageAmountBase>12</damageAmountBase>
+			<speed>20</speed>
+			<damageAmountBase>3</damageAmountBase>
 		</projectile>
-
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>50</lifeTimeDuration>
-		<widthScaleFactor>0.85</widthScaleFactor>
+		<lifeTimeDuration>55</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
 		<totalSizeScale>1.15</totalSizeScale>
@@ -184,7 +227,7 @@
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>2</minDistanceToAffect>
 	</VEF.Weapons.ExpandableProjectileDef>
-	
+
 	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>GW_Bullet_HeavyFlamer</defName>
 		<label>flamer shot</label>
@@ -196,13 +239,13 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<speed>45</speed>
-			<damageAmountBase>12</damageAmountBase>
+			<speed>25</speed>
+			<damageAmountBase>4</damageAmountBase>
 		</projectile>
 
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>50</lifeTimeDuration>
-		<widthScaleFactor>0.85</widthScaleFactor>
+		<lifeTimeDuration>55</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
 		<totalSizeScale>1.15</totalSizeScale>

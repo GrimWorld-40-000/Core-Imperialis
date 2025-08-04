@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-    <JobDef>
-        <defName>GW_StudySTCFragment</defName>
-        <driverClass>Core_Imp.JobDriver_StudySTCFragment</driverClass>
-        <reportString>applying STC fragments.</reportString>
-        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-  </JobDef>
-</Defs>

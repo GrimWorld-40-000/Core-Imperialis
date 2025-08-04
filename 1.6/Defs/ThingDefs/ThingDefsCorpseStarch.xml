@@ -17,9 +17,10 @@
       <MarketValue>1.0</MarketValue>
       <Mass>0.018</Mass>
       <Flammability>0.6</Flammability>
-      <WorkToMake>700</WorkToMake>
+
+      <WorkToMake>300</WorkToMake>
       <DeteriorationRate>2</DeteriorationRate>
-      <Nutrition>0.75</Nutrition>
+      <Nutrition>0.80</Nutrition>
     </statBases>
 	<uiIconScale>1.6</uiIconScale>
 	  <recipeMaker>
@@ -30,23 +31,23 @@
       <bulkRecipeCount>60</bulkRecipeCount>
 	  <workSkill>Cooking</workSkill>
     </recipeMaker>
-      
     <costList>
       <Meat_Human>5</Meat_Human>
     </costList>
-	
+	  <stackLimit>25</stackLimit>
     <ingestible>
       <foodType>Meal</foodType>
       <preferability>MealSimple</preferability>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
-      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+      <optimalityOffsetHumanlikes>0</optimalityOffsetHumanlikes>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>70</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
+      <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Ingredients">
         <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
       </li>

@@ -25,7 +25,7 @@
       <Chemfuel>80</Chemfuel>
     </costList>
     <weaponTags>
-      <li>GrenadeDestructive</li>
+      <li>40kImperialGrenade</li>
     </weaponTags>
     <thingCategories>
       <li>Grenades</li>
@@ -67,7 +67,8 @@
     <projectile>
       <explosionRadius>1.6</explosionRadius >
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>130</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <damageAmountBase>60</damageAmountBase>
       <explosionDelay>100</explosionDelay>
     </projectile>
   </ThingDef>
@@ -102,7 +103,7 @@
       <Chemfuel>80</Chemfuel>
     </costList>
     <weaponTags>
-      <li>GrenadeDestructive</li>
+      <li>40kAstarteGrenade</li>
     </weaponTags>
     <thingCategories>
       <li>Grenades</li>
@@ -142,11 +143,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>6</explosionRadius >
+      <explosionRadius>6</explosionRadius>
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>90</damageAmountBase>
       <armorPenetrationBase>2.5</armorPenetrationBase>
       <explosionDelay>100</explosionDelay>
+	  <explosionEffect>GW_MeltaEffecter</explosionEffect>
     </projectile>
   </ThingDef>
 

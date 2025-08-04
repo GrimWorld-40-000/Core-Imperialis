@@ -133,10 +133,10 @@
 
     <ThingDef ParentName="ResourceBase">
     <defName>GW_VanquisherCannonShellNonCE</defName>
-    <label>120mm battle cannon shell (non CE)</label>
+    <label>120mm Vanquisher cannon shell (non CE)</label>
     <description>A 120mm shell suitable for the Vanquisher Cannon of a Leman Russ battle tank. Suitable for anti-armor operations.</description>
     <graphicData>
-      <texPath>Things/Ammo/BattleCannon</texPath>
+      <texPath>Things/Ammo/Vanquisher</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
@@ -270,7 +270,7 @@
     <label>250mm battle cannon ammo (non CE)</label>
     <description>A very large 250mm rocket-assisted, fin-stabilized shell used in Baneblade Cannons. Not only can these shells quickly reduce an enemy vehicle to scrap metal, but a tight cluster of infantry can be made to wish they were never born.</description>
     <graphicData>
-      <texPath>Things/Vehicles/Baneblade/MegaBC</texPath>
+      <texPath>Things/Ammo/MegaBC</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
@@ -317,7 +317,7 @@
     <label>380mm demolisher cannon shell (non CE)</label>
     <description>A titanic 380mm rocket-assisted shell used in Demolisher Cannons. Fairly short-ranged, but a solid hit from one of these can destroy almost any target, be they building or vehicle or infantry.</description>
     <graphicData>
-	<texPath>Things/Vehicles/Baneblade/Demolisher</texPath>
+	<texPath>Things/Ammo/Demolisher</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>

@@ -53,7 +53,7 @@
 			</defaultOutfitTags>
 		</apparel>
 		<modExtensions>
-			<li Class="VEF.Apparels.ApparelExtension">
+			<li Class="VFECore.ApparelDrawPosExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
 			</li>
