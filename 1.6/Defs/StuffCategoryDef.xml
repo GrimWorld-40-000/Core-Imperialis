@@ -1,0 +1,12 @@
+<Defs>
+
+	<StuffCategoryDef>
+		<defName>Imperial_Metals</defName>
+		<label>imperial metallic</label>
+		<noun>metal</noun>
+		<destroySoundSmall>BuildingDestroyed_Metal_Small</destroySoundSmall>
+		<destroySoundMedium>BuildingDestroyed_Metal_Medium</destroySoundMedium>
+		<destroySoundLarge>BuildingDestroyed_Metal_Big</destroySoundLarge>
+	</StuffCategoryDef>
+
+</Defs>

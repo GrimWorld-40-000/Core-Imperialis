@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchTabDef>
+		<defName>GW_GrimTech</defName>
+		<label>Grimworld 40,000</label>
+		<generalTitle>Grimworld 40,000</generalTitle>
+    	<generalDescription>Unlock technologies that grant items from the Warhammer universe. Many technologies within this tab require special blueprints to begin research.</generalDescription>
+	</ResearchTabDef>
+
+    <ResearchProjectDef Abstract="True" Name="GW_ImperiumTechBase">
+		<techLevel>Spacer</techLevel>
+		<tab>GW_GrimTech</tab>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_DrugProduction</defName>
+		<label>imperium drug production</label>
+        <description>Synthesise two of the Imperium of Man’s drugs - the enhancing Combat Stims and the incredibly-strong Fenrisian Ale (also known as Mjød).</description>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PlasmaReactor</defName>
+		<label>plasma reactor</label>
+        <description>Allows for the creation of the plasma generator, a massive structure that converts uranium into electricity. Uses uranium to generate massive amount of power.</description>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+        <baseCost>7000</baseCost>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>GW_Cogitator</defName>
+        <label>cogitator</label>
+        <description>Construct the cogitator, an Imperial computer that uses a human brain as a processor. As well as boosting research speed, it can also analyze rare STC fragments.</description>
+        <prerequisites>
+            <li>MultiAnalyzer</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<baseCost>4500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+        <discoveredLetterTitle>About: STC Fragments</discoveredLetterTitle>
+        <discoveredLetterText>You now have the technology to build a cogitator. Many advanced technologies of the Imperium of Man require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>indoctrination_chamber</defName>
+        <label>Indoctrination chamber</label>
+        <description>Construct the Indoctrination Chamber, an Astartes tool to influence subjects into their way of thinking.</description>
+        <prerequisites>
+            <li>MultiAnalyzer</li>
+			<li>Cryptosleep</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<baseCost>4500</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_GrimworldMaterials</defName>
+		<label>grimworld materials</label>
+        <description>Build a Furnace to Imperial specifications, allowing for the production of rockcrete, plascrete, and ceramite, and forge with ceramite, adamantium, and auramite.</description>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+  			<researchViewX>0.00</researchViewX>
+ 			<researchViewY>4.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AdvancedGrimworldMaterials</defName>
+		<label>advanced grimworld materials</label>
+        <description>Produce Imperial-spec relic components, needed for the most powerful Imperial technology.</description>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>GW_GrimworldMaterials</li>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+			<researchViewX>1.00</researchViewX>
+			<researchViewY>4.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+        <defName>GW_BlastDoors</defName>
+        <label>grimworld blast doors</label>
+        <description>Build heavy, Imperial-spec blast doors that can withstand a lot of punishment.</description>
+        <prerequisites>
+            <li>Autodoors</li>
+        </prerequisites>
+		<baseCost>1600</baseCost>
+ 			<researchViewX>0.00</researchViewX>
+ 			<researchViewY>5.70</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Chainswords</defName>
+		<label>Basic melee weapons</label>
+        <description>Design and produce the Imperium’s most basic - but reliable - melee weapons.</description>
+		<prerequisites>
+			<li>Machining</li>
+			<li>LongBlades</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PowerMeleeWeapons</defName>
+		<label>power melee weapons</label>
+        <description>Master the energy field of Imperial Power Weapons - a field that disrupts the molecular bonds of armor and flesh alike.</description>
+		<prerequisites>
+			<li>GW_Chainswords</li>
+		</prerequisites>
+        <baseCost>5500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+				<longLabel>True</longLabel>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_PlasmaWeapons</defName>
+		<label>plasma weapons</label>
+        <description>Rediscover the secrets of the Imperium’s unstable but powerful plasma weaponry.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>4000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_MeltaWeapons</defName>
+		<label>melta weapons</label>
+        <description>Replicate Imperial designs for melta weapons - short-ranged, but making a mockery of any enemy armor.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>4000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Launchers</defName>
+		<label>launchers</label>
+        <description>Produce Imperial designs for grenade and rocket launchers.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Flamers</defName>
+		<label>flamers</label>
+        <description>Produce powerful Imperial flamethrowers that reduce enemy structures and soldiers to ash.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>3500</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Bolters</defName>
+		<label>bolters</label>
+        <description>Produce early-model bolt weapons - guns that fire armor-piercing, high-explosive mini-rockets.</description>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+        <baseCost>3000</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+	</ResearchProjectDef>
+
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_TarantulaTurrets</defName>
+		<label>tarantula turrets</label>
+        <description>Create the Tarantula turret - an Astra Militarum sentry gun.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>GW_Lasguns</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+		</prerequisites>
+        <baseCost>6500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>4.70</researchViewY>
+	</ResearchProjectDef>!-->
+
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_BolterTurrets</defName>
+		<label>Astartes turrets</label>
+        <description>Build manned and unmanned turrets fit for the Adeptus Astartes.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+        <baseCost>5000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.70</researchViewY>
+	</ResearchProjectDef>!-->
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AdvancedBolters</defName>
+		<label>advanced bolters</label>
+        <description>Recover and implement Belisarius Cawl’s designs for improved boltguns.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+		</prerequisites>
+        <baseCost>7000</baseCost>
+ 			<researchViewX>1.00</researchViewX>
+  			<researchViewY>3.00</researchViewY>
+        <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>2</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase" MayRequire="ceteam.combatextended">
+		<defName>GW_AdvancedBolterMunitions</defName>
+		<label>advanced bolter munitions</label>
+        <description>Allows for the production of advanced ammunition used by Imperial bolters.</description>
+		<prerequisites>
+			<li>GW_Bolters</li>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Autoguns</defName>
+		<label>autoguns</label>
+        <description>Produce Imperial autoguns - slugthrowers popular with criminals, Chaos cultists, and mercenaries.</description>
+		<prerequisites>
+			<li>Gunsmithing</li>
+		</prerequisites>
+        <baseCost>1600</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_RepairBench</defName>
+		<label>Ritualistic repair</label>
+        <description>Learn the rituals of maintenance and repair that have served the Adeptus Mechanicus for millennia.</description>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+        <baseCost>2000</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.70</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_AM_ImperiumDefense</defName>
+		<label>Imperial fortifications</label>
+        <description>Research and produce Imperium-style defenses. While researching this allows for the construction of basic field fortifications such as trenches and tank traps, it is also a requirement for other defensive emplacements.</description>
+        <baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>		
+		<prerequisites>
+			<li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li>
+			<li>Fabrication</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_Lasguns</defName>
+		<label>lasguns</label>
+        <description>Produce Imperial lasguns - laser weapons that are the mainstay of the Astra Militarum’s infantry</description>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+        <baseCost>1800</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+	</ResearchProjectDef>!-->
+
+	<!--<ResearchProjectDef ParentName="GW_ImperiumTechBase">
+		<defName>GW_LasCannonTurret</defName>
+		<label>lascannon turret</label>
+        <description>Construct manned and unmanned turrets for a heavy, armor-piercing lascannon.</description>
+		<prerequisites>
+			<li>GW_Lasguns</li>
+			<li>GasOperation</li>
+			<li>GunTurrets</li>
+		</prerequisites>
+        <baseCost>2500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>!-->
+</Defs>

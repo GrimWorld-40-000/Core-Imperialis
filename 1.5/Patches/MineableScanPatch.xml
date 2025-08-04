@@ -5,7 +5,7 @@
         <value>
             <li>MineableHP_Adamantium</li>
             <li>MineableHP_Auramite</li>
-            <li>MineableHP_Ceramite</li>
+            <!-- <li>MineableHP_Ceramite</li> -->
         </value>
     </Operation>
 </Patch>

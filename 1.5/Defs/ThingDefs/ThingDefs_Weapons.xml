@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseWeapon">
+		<defName>GW_SS_Phaseblade</defName>
+        <label>Xenophase Blade</label>
+        <description>Xenophase Blade is a potent, Power Sword-like melee weapon derived from xenos technology used by select warriors of the Deathwatch Chapter who have earned by their deeds and time of service in the Long Vigil the special trust of their watch fortress' watch commander.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_Phaseblade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>1.5</drawSize>
+			<onGroundRandomRotateAngle>45</onGroundRandomRotateAngle>
+        </graphicData>
+        <tradeability>Sellable</tradeability>
+		<uiIconPath>Things/Weapons/GW_Phaseblade</uiIconPath>
+        <techLevel>Spacer</techLevel>
+        <weaponTags>
+            <li>GW_PhaseBlade</li>
+            <li>UltratechMelee</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <statBases>
+			<MaxHitPoints>1400</MaxHitPoints>
+            <WorkToMake>1000</WorkToMake>
+            <Mass>5</Mass>
+			<MarketValue>10000</MarketValue>
+        </statBases>
+		<relicChance>1</relicChance>
+		<thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <equippedAngleOffset>0</equippedAngleOffset>
+        <smeltable>false</smeltable>
+        <thingCategories>
+			<li>WeaponsMelee</li>
+		</thingCategories>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>Ultratech</li>
+		</weaponClasses>
+        <comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>1.3</cooldownTime>
+				<chanceFactor>0.07</chanceFactor>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>60</power>
+                <cooldownTime>2.2</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+				<armorPenetration>3.00</armorPenetration>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>50</power>
+                <cooldownTime>2.75</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
+				<armorPenetration>2.3</armorPenetration>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!--Volk weapons-->
+    <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+        <defName>GW_SS_VolkCulverinBolt</defName>
+        <label>volkite bolt</label>
+        <description>Pew pew.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
+            <drawSize>1.0</drawSize>
+        </graphicData>
+        <textures>
+            <li>Things/Weapons/GW_Volkite_Bolt</li>
+        </textures>
+        <seam>0</seam>
+        <causefireChance>0.08</causefireChance>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>90</damageAmountBase>
+            <armorPenetrationBase>3.0</armorPenetrationBase>
+            <stoppingPower>3</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>GW_SS_VolkCulverin</defName>
+        <label>volkite culverin</label>
+        <description>The Volkite Culverin is a type of Volkite Weapon, and is the heaviest man-portable Volkite Weapon known to have been available to Imperial forces during the Great Crusade and Horus Heresy-eras.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_VolkCulverin</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <tradeability>Sellable</tradeability>
+        <statBases>
+            <WorkToMake>61000</WorkToMake>
+			<MarketValue>10000</MarketValue>
+            <Mass>15</Mass>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+        </statBases>
+            <equippedStatOffsets>
+            <MoveSpeed>-0.50</MoveSpeed>
+        </equippedStatOffsets>
+        <weaponTags>
+            <li>GW_SS_VolkCulverin</li>
+        </weaponTags>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <smeltable>false</smeltable>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>GW_SS_VolkCulverinBolt</defaultProjectile>
+                <warmupTime>5</warmupTime>
+                <range>50</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <burstShotCount>20</burstShotCount>
+                <soundCast>GW_SS_VokiteLight</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+        </tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+        <defName>GW_SS_VolkCaliverBolt</defName>
+        <label>volk bolt</label>
+        <description>Pew pew.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
+        </graphicData>
+        <textures>
+            <li>Things/Weapons/GW_Volkite_Bolt</li>
+        </textures>
+        <seam>0</seam>
+        <causefireChance>0.08</causefireChance>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>70</damageAmountBase>
+            <armorPenetrationBase>2.4</armorPenetrationBase>
+            <stoppingPower>2.3</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>GW_SS_VolkCaliver</defName>
+        <label>Volkite caliver</label>
+        <description>The Volkite Caliver was a Volkite heavy weapon variant carried by Space Marine and Mechanicum infantry forces. A Volkite rifle with a devastating effect on flesh and bone.</description>
+        <graphicData>
+          <texPath>Things/Weapons/GW_VolkCaliver</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <tradeability>Sellable</tradeability>
+        <statBases>
+            <WorkToMake>38000</WorkToMake>
+			<MarketValue>10000</MarketValue>
+            <Mass>10</Mass>
+            <AccuracyTouch>0.85</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>GW_SS_VolkCaliver</li>
+        </weaponTags>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <smeltable>false</smeltable>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>GW_SS_VolkCaliverBolt</defaultProjectile>
+                <warmupTime>3</warmupTime>
+                <range>39</range>
+                <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                <burstShotCount>6</burstShotCount>
+                <soundCast>GW_SS_VokiteMedium</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+        </tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+        <defName>GW_SS_VolkSerpentaBolt</defName>
+        <label>volk bolt</label>
+        <description>Pew pew.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <textures>
+            <li>Things/Weapons/GW_Volkite_Bolt</li>
+        </textures>
+        <seam>0</seam>
+        <causefireChance>0.08</causefireChance>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>30</damageAmountBase>
+            <armorPenetrationBase>1.9</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+		<defName>GW_SM_VolkSerpenta</defName>
+		<label>Volkite serpenta</label>
+		<description>The pistol variant of a Volkite Weapon wielded single-handed, the Volkite Serpenta was sometimes carried by high-ranking soldiers of the Imperial Army and the Tech-priests of the ancient Mechanicum during the Great Crusade era.</description>
+		<graphicData>
+			<texPath>Things/Weapons/GW_VolkSerpenta</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+        <tradeability>Sellable</tradeability>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<MarketValue>10000</MarketValue>
+			<Mass>5</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.10</MoveSpeed>
+		</equippedStatOffsets>
+        <smeltable>false</smeltable>
+		<weaponTags>
+			<li>GW_SM_VolkSerpenta</li>
+		</weaponTags>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>GW_SS_VolkSerpentaBolt</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>22</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>GW_SS_VokiteLight</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2.2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2.1</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
+	</ThingDef>
+
+    <ThingDef ParentName="GW_LaserBullet" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+        <defName>GW_SS_VolkBlastBolt</defName>
+        <label>volk bolt</label>
+        <description>Pew pew.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
+            <drawSize>2.0</drawSize>
+        </graphicData>
+        <textures>
+            <li>Things/Weapons/GW_Volkite_Bolt</li>
+        </textures>
+        <seam>0</seam>
+        <causefireChance>0.08</causefireChance>
+        <projectile>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <armorPenetrationBase>1.5</armorPenetrationBase>
+            <stoppingPower>1.8</stoppingPower>
+        </projectile>
+    </ThingDef>
+    
+    <ThingDef ParentName="BaseGunWithQuality">
+		<defName>GW_SS_VolkBlast</defName>
+		<label>Volkite blaster</label>
+		<description>The Volkite Blaster is one of the few types of Volkite Weapon still used by the military forces of the Imperium in the 41st Millennium. Volkite Blasters are known to be wielded by Adeptus Mechanicus magi dominus.</description>
+		<graphicData>
+			<texPath>Things/Weapons/GW_VolkBlast</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+        <tradeability>Sellable</tradeability>
+		<statBases>
+			<WorkToMake>62000</WorkToMake>
+			<MarketValue>10000</MarketValue>
+			<Mass>7</Mass>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.45</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>5.4</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.20</MoveSpeed>
+		</equippedStatOffsets>
+        <smeltable>false</smeltable>
+		<weaponTags>
+			<li>GW_SS_VolkBlast</li>
+		</weaponTags>
+        <thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>GW_SS_VolkBlastBolt</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>30</range>
+				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>GW_SS_VokiteHeavy</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2.5</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit">
+				<maxNumberCraftable>1</maxNumberCraftable>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
