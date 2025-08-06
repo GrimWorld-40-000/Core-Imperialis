@@ -1,0 +1,138 @@
+<Defs>
+
+	<ThingDef ParentName="BenchBase">
+		<defName>GW_RepairBench</defName>
+		<label>Repair table</label>
+		<description>A workbench with the necessary equipment for repair and maintenance of Imperial equipment - not just mere tools, but incense, blessed oils, and other trappings of worship of the Omnissiah. \n\nThe Adeptus Mechanicus are a religious order just as much as they are technicians and engineers. They deeply believe in "placating the Machine Spirits" with rituals - the actual efficacy of those rituals ranges from being effective but misunderstood to being completely useless. Still, there remains a grain of truth in most of them, even if it is buried in superstition.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/RepairBench/RepairBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<!-- <defaultPlacingRot>South</defaultPlacingRot> -->
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>3000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<size>(3,1)</size>
+		<designationCategory>GrimworldCategory</designationCategory>
+		<uiOrder>2520</uiOrder>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(73,123,138,0)</glowColor>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>GW_RepairBench</li>
+		</researchPrerequisites>
+		<designationHotKey>Misc7</designationHotKey>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+	</ThingDef>
+	
+	<WorkGiverDef>
+		<defName>GW_DoBillsRepairBench</defName>
+		<label>make things at machining table</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>BasicWorker</workType>
+		<priorityInType>75</priorityInType>
+		<fixedBillGiverDefs>
+			<li>GW_RepairBench</li>
+		</fixedBillGiverDefs>
+		<verb>work</verb>
+		<gerund>working at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<RecipeDef>
+		<defName>GW_RepairEquipment</defName>
+		<label>repair equipment</label>
+		<description>WIP</description>
+		<workerClass>RecipeMod.RecipeWorker_RepairItem</workerClass>
+		<recipeUsers>
+			<li>GW_RepairBench</li>
+		</recipeUsers>
+		<jobString>Repair equipment.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Interact_ConstructMetal</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<allowedHitPointsPercents>0.01~0.99</allowedHitPointsPercents>
+			<categories>
+				<li>Weapons</li>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<modExtensions>
+			<li Class="RecipeMod.RecipeExtension_RepairItem">
+				<isUsingPercentage>true</isUsingPercentage>
+				<percentOfMaxHitpoint>0.08</percentOfMaxHitpoint>
+				<repairAmount>10</repairAmount> <!-- only work if using percentage is false -->
+				<chance>1.0</chance>
+				<isDisplayRepairText>true</isDisplayRepairText>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+</Defs>

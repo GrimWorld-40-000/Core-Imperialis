@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>CorpseStarch</defName>
+    <label>Corpse starch</label>
+    <description>A can of synthetic food derived from human corpses. The Imperium of Man often uses it as a staple food for hiveworld citizens and Astra Militarum soldiers. This is especially true on the planet of Necromunda, where the hiveworld’s Corpse Guild collects thousands of dead every day.\n\nThere is no shortage of corpses in the Imperium, and there are many mouths to feed. Without corpse starch, the hiveworlds would starve and the corpses of the dead would spread disease widely.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Food/Corpse Starch</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.0</MarketValue>
+      <Mass>0.018</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>700</WorkToMake>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.75</Nutrition>
+    </statBases>
+	<uiIconScale>1.6</uiIconScale>
+	  <recipeMaker>
+      <recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+      </recipeUsers>
+      <bulkRecipeCount>60</bulkRecipeCount>
+	  <workSkill>Cooking</workSkill>
+    </recipeMaker>
+      
+    <costList>
+      <Meat_Human>5</Meat_Human>
+    </costList>
+	
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>70</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+</Defs>
