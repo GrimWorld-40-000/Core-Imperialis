@@ -187,6 +187,7 @@
         </fixedIngredientFilter>
         <recipeUsers>
             <li>GW_Furnace</li>
+            <li>TableStonecutter</li>
         </recipeUsers>
         <products>
             <GW_Rockcrete>20</GW_Rockcrete>
@@ -269,6 +270,7 @@
         </fixedIngredientFilter>
         <recipeUsers>
             <li>GW_Furnace</li>
+            <li>TableStonecutter</li>
         </recipeUsers>
         <products>
             <GW_Plascrete>20</GW_Plascrete>
