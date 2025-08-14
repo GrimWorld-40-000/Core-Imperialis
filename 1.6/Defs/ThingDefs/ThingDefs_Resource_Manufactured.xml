@@ -187,6 +187,45 @@
         </fixedIngredientFilter>
         <recipeUsers>
             <li>GW_Furnace</li>
+        </recipeUsers>
+        <products>
+            <GW_Rockcrete>20</GW_Rockcrete>
+        </products>
+    </RecipeDef>
+    <RecipeDef>
+        <defName>GW_Make_RockcreteSlow</defName>
+        <label>make rockcrete</label>
+        <description>Blend stone and steel together to create some rockcrete.</description>
+        <jobString>manufacturing rockcrete.</jobString>
+        <workAmount>4500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
             <li>TableStonecutter</li>
         </recipeUsers>
         <products>
@@ -270,6 +309,45 @@
         </fixedIngredientFilter>
         <recipeUsers>
             <li>GW_Furnace</li>
+        </recipeUsers>
+        <products>
+            <GW_Plascrete>20</GW_Plascrete>
+        </products>
+    </RecipeDef>
+    <RecipeDef>
+        <defName>GW_Make_PlascreteSlow</defName>
+        <label>make plascrete</label>
+        <description>Blend stone and plasteel together to create some plascrete.</description>
+        <jobString>manufacturing plascrete.</jobString>
+        <workAmount>9000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <targetCountAdjustment>20</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
             <li>TableStonecutter</li>
         </recipeUsers>
         <products>
