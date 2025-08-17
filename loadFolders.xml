@@ -11,7 +11,7 @@
 		<li>Common</li>
 		<li>1.5</li>
         <li IfModActive="Keshash.LayeredWallDestruction">1.5/Mods/LWD</li>
-        <li IfModActive="ceteam.combatextended">1.5/Mods/CombatExtended</li>
+        <!-- <li IfModActive="ceteam.combatextended">1.5/Mods/CombatExtended</li> -->
 		<li IfModActive="SmashPhil.VehicleFramework">1.5/Mods/Vehicles</li>
 	</v1.5>
 	<v1.6>
