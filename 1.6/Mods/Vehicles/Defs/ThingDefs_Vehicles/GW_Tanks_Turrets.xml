@@ -66,8 +66,8 @@
 
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>GW_Vehicle_StormBolter</defName>
-		<label>Storm Bolter</label>
-		<description>WIP</description>
+		<label>Storm bolter</label>
+		<description>Storm bolter is a versatile, twin-barreled rapid-fire weapon mounted on vehicles and troops, designed to deliver sustained fire against infantry and lightly armored targets.</description>
 		<turretType>Rotatable</turretType>
 		<shotSound>GW_Heavy_Bolt_Gun_Sound</shotSound>
 		<projectile>GW_Bullet_Bolter</projectile>

@@ -96,7 +96,7 @@
 	<RecipeDef>
 		<defName>GW_RepairEquipment</defName>
 		<label>repair equipment</label>
-		<description>WIP</description>
+		<description>Repair equipment</description>
 		<workerClass>RecipeMod.RecipeWorker_RepairItem</workerClass>
 		<recipeUsers>
 			<li>GW_RepairBench</li>
