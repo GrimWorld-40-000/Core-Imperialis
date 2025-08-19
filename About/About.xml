@@ -20,6 +20,7 @@
 		<li>SmashPhil.VehicleFramework</li>
 		<li>Grimworld.Framework</li>
 		<li>Keshash.LayeredWallDestruction</li>
+		<li>cvngrimworld.framework</li>
 	</loadAfter>
 	<modDependenciesByVersion>
 		<v1.5>
