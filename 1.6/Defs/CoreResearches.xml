@@ -62,19 +62,19 @@
         <discoveredLetterText>You now have the technology to build a cogitator. Many advanced technologies of the Imperium of Man require studying STC fragments at a cogitator before research can begin.\n\nYou can begin studying at the cogitator building after obtaining STC fragments from certain traders.</discoveredLetterText>
 	</ResearchProjectDef>
 	
-	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
-        <defName>indoctrination_chamber</defName>
-        <label>Indoctrination chamber</label>
-        <description>Construct the Indoctrination Chamber, an Astartes tool to influence subjects into their way of thinking.</description>
-        <prerequisites>
-            <li>MultiAnalyzer</li>
-			<li>Cryptosleep</li>
-        </prerequisites>
-		<techLevel>Spacer</techLevel>
-		<baseCost>4500</baseCost>
-		<researchViewX>3.00</researchViewX>
-		<researchViewY>0.00</researchViewY>
-	</ResearchProjectDef>
+	<!-- <ResearchProjectDef ParentName="GW_ImperiumTechBase"> -->
+        <!-- <defName>indoctrination_chamber</defName> -->
+        <!-- <label>Indoctrination chamber</label> -->
+        <!-- <description>Construct the Indoctrination Chamber, an Astartes tool to influence subjects into their way of thinking.</description> -->
+        <!-- <prerequisites> -->
+            <!-- <li>MultiAnalyzer</li> -->
+			<!-- <li>Cryptosleep</li> -->
+        <!-- </prerequisites> -->
+		<!-- <techLevel>Spacer</techLevel> -->
+		<!-- <baseCost>4500</baseCost> -->
+		<!-- <researchViewX>3.00</researchViewX> -->
+		<!-- <researchViewY>0.00</researchViewY> -->
+	<!-- </ResearchProjectDef> -->
 
 	<ResearchProjectDef ParentName="GW_ImperiumTechBase">
 		<defName>GW_GrimworldMaterials</defName>
