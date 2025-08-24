@@ -80,14 +80,13 @@
     </ThingDef>
 
     <!--Volk weapons-->
-    <ThingDef ParentName="GW_LaserBullet">
+    <ThingDef ParentName="GW_LaserBullet" Class="VEF.Weapons.LaserBeamDef">
         <defName>GW_SS_VolkCulverinBolt</defName>
         <label>volkite bolt</label>
         <description>Pew pew.</description>
-        <graphicData>
-            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
-            <drawSize>1.0</drawSize>
-        </graphicData>
+		<textures>
+			<li>Things/Weapons/GW_Volkite_Bolt</li>
+		</textures>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>90</damageAmountBase>
@@ -167,13 +166,13 @@
 		</comps>
     </ThingDef>
 
-    <ThingDef ParentName="GW_LaserBullet">
+    <ThingDef ParentName="GW_LaserBullet" Class="VEF.Weapons.LaserBeamDef">
         <defName>GW_SS_VolkCaliverBolt</defName>
         <label>volk bolt</label>
         <description>Pew pew.</description>
-        <graphicData>
-            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
-        </graphicData>
+        <textures>
+			<li>Things/Weapons/GW_Volkite_Bolt</li>
+		</textures>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>70</damageAmountBase>
@@ -250,14 +249,13 @@
 		</comps>
     </ThingDef>
 
-    <ThingDef ParentName="GW_LaserBullet">
+    <ThingDef ParentName="GW_LaserBullet" Class="VEF.Weapons.LaserBeamDef">
         <defName>GW_SS_VolkSerpentaBolt</defName>
         <label>volk bolt</label>
         <description>Pew pew.</description>
-        <graphicData>
-            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
-            <drawSize>1</drawSize>
-        </graphicData>
+		<textures>
+			<li>Things/Weapons/GW_Volkite_Bolt</li>
+		</textures>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>30</damageAmountBase>
@@ -337,14 +335,13 @@
 		</comps>
 	</ThingDef>
 
-    <ThingDef ParentName="GW_LaserBullet">
+    <ThingDef ParentName="GW_LaserBullet" Class="VEF.Weapons.LaserBeamDef">
         <defName>GW_SS_VolkBlastBolt</defName>
         <label>volk bolt</label>
         <description>Pew pew.</description>
-        <graphicData>
-            <texPath>Things/Weapons/GW_Volkite_Bolt</texPath>
-            <drawSize>2.0</drawSize>
-        </graphicData>
+        <textures>
+			<li>Things/Weapons/GW_Volkite_Bolt</li>
+		</textures>
         <projectile>
             <damageDef>Burn</damageDef>
             <damageAmountBase>45</damageAmountBase>
