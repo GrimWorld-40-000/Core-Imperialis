@@ -39,11 +39,6 @@
 		</v1.5>
 		<v1.6>
 			<li>
-				<packageId>cvngrimworld.framework</packageId>
-				<displayName>CVN/GrimWorld 40,000 - Ocularis Terribus</displayName>
-				<downloadUrl>https://github.com/ShunTheWitch/Chaos-core</downloadUrl>
-			</li>
-			<li>
 				<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
 				<displayName>Vanilla Expanded Framework</displayName>
 				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
