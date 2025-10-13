@@ -16,6 +16,9 @@
                 <enabled>false</enabled>
             </damageData>
         </graphicData>
+		<building>
+			<isAirtight>true</isAirtight>
+		</building>
     </ThingDef>
 
     <ThingDef ParentName="GW_DoorBase" Name="GW_AutoDoorBase" Abstract="True">
@@ -132,6 +135,7 @@
 		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
+			<isAirtight>true</isAirtight>
 		</building>
     </ThingDef>
 
@@ -155,6 +159,7 @@
 		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
+			<isAirtight>true</isAirtight>
 		</building>
     </ThingDef>
 </Defs>
