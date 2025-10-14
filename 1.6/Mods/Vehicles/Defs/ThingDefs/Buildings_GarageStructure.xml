@@ -25,6 +25,7 @@
 		<drawerType>RealtimeOnly</drawerType>
 		<building>
 			<isInert>true</isInert>
+			<isAirtight>True</isAirtight>
 			<canPlaceOverWall>true</canPlaceOverWall>
 			<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
 			<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
