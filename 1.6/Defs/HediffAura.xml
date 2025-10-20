@@ -411,7 +411,7 @@
 				<label>1</label>
 				<minSeverity>0.1</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.1</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.1</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.1</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -426,7 +426,7 @@
 				<label>2</label>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.2</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.2</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.2</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -441,7 +441,7 @@
 				<label>3</label>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.3</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.3</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.3</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -456,7 +456,7 @@
 				<label>4</label>
 				<minSeverity>4</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.4</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.4</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.4</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -471,7 +471,7 @@
 				<label>5</label>
 				<minSeverity>5</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.5</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.5</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.5</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -486,7 +486,7 @@
 				<label>6</label>
 				<minSeverity>6</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.6</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.6</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.6</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -501,7 +501,7 @@
 				<label>7</label>
 				<minSeverity>7</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.7</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.7</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.7</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -516,7 +516,7 @@
 				<label>8</label>
 				<minSeverity>8</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.8</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.8</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.8</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -531,7 +531,7 @@
 				<label>9</label>
 				<minSeverity>9</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.9</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.9</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.9</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -546,7 +546,7 @@
 				<label>10</label>
 				<minSeverity>10</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.99</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">-0.99</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.99</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
