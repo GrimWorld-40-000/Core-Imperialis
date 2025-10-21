@@ -80,6 +80,9 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="GW_GarageDoor" Name="GW_5x1GarageDoor" MayRequire="smashphil.vehicleframework">
@@ -117,6 +120,9 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="GW_GarageDoor" Name="GW_7x1GarageDoor" MayRequire="smashphil.vehicleframework">
@@ -154,6 +160,9 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="GW_GarageDoor" Name="GW_4x1GarageAutodoor" MayRequire="smashphil.vehicleframework">
@@ -203,6 +212,9 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="GW_GarageDoor" Name="GW_5x1GarageAutodoor" MayRequire="smashphil.vehicleframework">
@@ -252,6 +264,9 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="GW_GarageDoor" Name="GW_7x1GarageAutodoor" MayRequire="smashphil.vehicleframework">
@@ -301,5 +316,8 @@
 		<blockLight>false</blockLight>
 		<researchPrerequisites IsNull="True"/>
 		<designationCategory IsNull="True"/>
+		<building>
+			<isAirtight>false</isAirtight>
+		</building>
 	</ThingDef>
 </Defs>
