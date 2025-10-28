@@ -97,7 +97,7 @@
 		<seam>0</seam>
 		<causefireChance>0.08</causefireChance>
 		<projectile>
-			<damageDef>Burn</damageDef>
+			<damageDef>Beam</damageDef>
 			<damageAmountBase>120</damageAmountBase>
 			<armorPenetrationBase>1.2</armorPenetrationBase>
 			<stoppingPower>1</stoppingPower>
@@ -151,7 +151,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<damageDef>Burn</damageDef>
+			<damageDef>Vaporize</damageDef>
 			<damageAmountBase>150</damageAmountBase>
 			<stoppingPower>4</stoppingPower>
 			<armorPenetrationBase>3.5</armorPenetrationBase>
@@ -170,7 +170,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<damageDef>Burn</damageDef>
+			<damageDef>Vaporize</damageDef>
 			<damageAmountBase>70</damageAmountBase>
 			<stoppingPower>2.5</stoppingPower>
 			<explosionRadius>2.4</explosionRadius>
