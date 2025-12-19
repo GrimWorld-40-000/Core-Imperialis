@@ -105,7 +105,7 @@
 		<workAmount>1600</workAmount>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
-		<soundWorking>Interact_ConstructMetal</soundWorking>
+		<!-- <soundWorking>Interact_ConstructMetal</soundWorking> -->
 		<ingredients>
 			<li>
 				<filter>
