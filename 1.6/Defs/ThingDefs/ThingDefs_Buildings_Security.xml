@@ -43,33 +43,4 @@
       <li>PlaceWorker_NeverAdjacentTrap</li>
     </placeWorkers>
   </ThingDef>
-
-  <ThingDef ParentName="TrapATBase">
-    <defName>Trap_plasmaMine</defName>
-    <label>Plasma Charge</label>
-    <description>AT Mine, required 300kg to detonate. Doesn't discriminate if something is friend or foe.</description>
-    <graphicData>
-      <texPath>Things/Building/Mines/Mine_planted</texPath>
-    </graphicData>
-    <costList>
-        <Steel>25</Steel>
-      <Chemfuel>5</Chemfuel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-    </costList>
-    <designationHotKey>Misc7</designationHotKey>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>5.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <damageAmountBase>70</damageAmountBase>
-        <armorPenetrationBase>4</armorPenetrationBase>
-        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
-        <wickTicks>5</wickTicks>
-        <startWickOnDamageTaken>
-          <li>Bomb</li>
-        </startWickOnDamageTaken>
-      </li>
-    </comps>
-    <specialDisplayRadius>5.9</specialDisplayRadius>
-  </ThingDef>
 </Defs>
