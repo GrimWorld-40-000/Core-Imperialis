@@ -1,0 +1,181 @@
+<Defs>
+
+	<!-- Barbed Wire -->
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>DefensiveBarbedWire</defName>
+		<label>Barbed wire</label>
+		<description>A row of barbed wire which can be placed to slow down targets and damage them if they dare to cross.</description>
+		<thingClass>Building_TrapDamager</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/TrenchAlternative/BarbWire/Trench_BarbWire_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom6</li>
+			</linkFlags>
+		</graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>15</costStuffCount>
+		<statBases>
+			<TrapMeleeDamage>5</TrapMeleeDamage>
+			<TrapSpringChance>0.8</TrapSpringChance>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Beauty>-10</Beauty>
+			<WorkToBuild>350</WorkToBuild>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<designationCategory>GrimworldCategory</designationCategory>
+		<uiIconPath>Things/Building/TrenchAlternative/BarbWire/Trench_BarbedWire_UI</uiIconPath>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>150</pathCost>
+		<fillPercent>0.20</fillPercent>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<coversFloor>false</coversFloor>
+		<blockWind>false</blockWind>
+		<holdsRoof>false</holdsRoof>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>false</castEdgeShadows>
+		<tickerType>Normal</tickerType>
+		<building>
+			<allowAutoroof>false</allowAutoroof>
+			<isTrap>true</isTrap>
+			<isFence>true</isFence>
+			<isInert>true</isInert>
+			<trapDestroyOnSpring>false</trapDestroyOnSpring>
+			<trapDamageCategory>Sharp</trapDamageCategory>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/TrenchAlternative/BarbWire/Trench_BarbWire_Blueprint_Atlas</texPath>
+				<linkType>Basic</linkType>
+				<linkFlags>
+					<li>Custom6</li>
+				</linkFlags>
+			</blueprintGraphicData>
+		</building>
+		<researchPrerequisites>
+			<li>GW_AM_BasicImperiumDefense</li>
+		</researchPrerequisites>
+		<drawStyleCategory>Walls</drawStyleCategory>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+	</ThingDef>
+	
+	<!-- Tank Traps -->
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>DefensiveTankTrapA</defName>
+		<label>Tank trap A</label>
+		<description>A metallic structure that was used to block tanks.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<drawSize>(1.1,1.1)</drawSize>
+			<texPath>Things/Building/TrenchAlternative/TankTraps/Trench_TankTrap_Metalic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<designationCategory>GrimworldCategory</designationCategory>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError><!--Required due to shape of building not being like a solid wall, but it needs to be impassable-->
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>0.5</fillPercent>
+		<pathCost>75</pathCost>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<coversFloor>false</coversFloor>
+		<holdsRoof>false</holdsRoof>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Mass>10</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>-12</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<researchPrerequisites>
+			<li>GW_AM_BasicImperiumDefense</li>
+		</researchPrerequisites>
+		<costStuffCount>20</costStuffCount>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<drawStyleCategory>Walls</drawStyleCategory>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>DefensiveTankTrapB</defName>
+		<label>Tank trap B</label>
+		<description>A stony structure that was used to block tanks.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<drawSize>(1.1,1.1)</drawSize>
+			<texPath>Things/Building/TrenchAlternative/TankTraps/Trench_TankTrap_Stony</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<designationCategory>GrimworldCategory</designationCategory>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError><!--Required due to shape of building not being like a solid wall, but it needs to be impassable-->
+		<fillPercent>0.5</fillPercent>
+		<pathCost>75</pathCost>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<coversFloor>false</coversFloor>
+		<holdsRoof>false</holdsRoof>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Mass>10</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>-12</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<researchPrerequisites>
+			<li>GW_AM_BasicImperiumDefense</li>
+		</researchPrerequisites>
+		<costStuffCount>20</costStuffCount>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<drawStyleCategory>Walls</drawStyleCategory>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+
+</Defs>

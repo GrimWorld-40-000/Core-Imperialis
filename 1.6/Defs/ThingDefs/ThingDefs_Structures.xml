@@ -162,4 +162,167 @@
 			<isAirtight>true</isAirtight>
 		</building>
     </ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>GW_HOI_Embrasure</defName>
+		<label>imperium embrasure</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<description>A wall with a firing port to allow shooting from relative safety.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/Embrasure/GW_OrdinaryWalls_Emb_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<!-- <li>Rock</li> -->
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/Embrasure/GW_OrdinaryWalls_Emb_Icon</uiIconPath>
+		<!-- <uiIconPathsStuff> -->
+		<!-- <li> -->
+		<!-- <appearance>Planks</appearance> -->
+		<!-- <iconPath>Things/Building/Linked/VanillaEmbrasure/HRK_EmbrasurePlanks_Icon</iconPath> -->
+		<!-- </li> -->
+		<!-- <li> -->
+		<!-- <appearance>Bricks</appearance> -->
+		<!-- <iconPath>Things/Building/Linked/VanillaEmbrasure/HRK_EmbrasureBricks_Icon</iconPath> -->
+		<!-- </li> -->
+		<!-- </uiIconPathsStuff> -->
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>400</WorkToBuild>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<researchPrerequisites>
+			<li>GW_AM_BasicImperiumDefense</li>
+		</researchPrerequisites>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.60</fillPercent>
+		<coversFloor>true</coversFloor>
+		<drawStyleCategory>Walls</drawStyleCategory>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+        <designationCategory>GrimworldCategory</designationCategory>
+		<staticSunShadowHeight>1</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>7</costStuffCount>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Embrasure/GW_OrdinaryWalls_Emb_Atlas</texPath>
+			</blueprintGraphicData>
+			<paintable MayRequire="Rimworld.Biotech">true</paintable>
+		</building>
+		<comps>
+		</comps>
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>GW_HOI_EmbrasureArmored</defName>
+		<label>imperium reinforced embrasure</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<description>A wall with a firing port to allow shooting from relative safety.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/Embrasure/GW_ReinforcedWall_Emb_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<!-- <li>Rock</li> -->
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/Embrasure/GW_ReinforcedWall_Emb_Icon</uiIconPath>
+		<!-- <uiIconPathsStuff> -->
+		<!-- <li> -->
+		<!-- <appearance>Planks</appearance> -->
+		<!-- <iconPath>Things/Building/Linked/VanillaEmbrasure/HRK_EmbrasurePlanks_Icon</iconPath> -->
+		<!-- </li> -->
+		<!-- <li> -->
+		<!-- <appearance>Bricks</appearance> -->
+		<!-- <iconPath>Things/Building/Linked/VanillaEmbrasure/HRK_EmbrasureBricks_Icon</iconPath> -->
+		<!-- </li> -->
+		<!-- </uiIconPathsStuff> -->
+		<statBases>
+			<MaxHitPoints>410</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<researchPrerequisites>
+			<li>GW_AM_BasicImperiumDefense</li>
+		</researchPrerequisites>
+		<costStuffCount>17</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.60</fillPercent>
+		<coversFloor>true</coversFloor>
+		<drawStyleCategory>Walls</drawStyleCategory>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+        <designationCategory>GrimworldCategory</designationCategory>
+		<staticSunShadowHeight>1</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Embrasure/GW_ReinforcedWall_Emb_Atlas</texPath>
+			</blueprintGraphicData>
+			<paintable MayRequire="Rimworld.Biotech">true</paintable>
+		</building>
+		<comps>
+		</comps>
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+	</ThingDef>
+	
 </Defs>
