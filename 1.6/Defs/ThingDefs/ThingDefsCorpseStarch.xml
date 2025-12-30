@@ -41,6 +41,7 @@
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
       <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+	  <specialThoughtDirect>AteHumanlikeMeatDirect</specialThoughtDirect>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
