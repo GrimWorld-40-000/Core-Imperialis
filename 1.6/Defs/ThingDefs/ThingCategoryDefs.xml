@@ -5,4 +5,9 @@
       <label>two handed</label>
       <parent>Weapons</parent>
     </ThingCategoryDef>
+    <ThingCategoryDef>
+      <defName>GWBolter</defName>
+      <label>Bolters</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef> 
 </Defs>
