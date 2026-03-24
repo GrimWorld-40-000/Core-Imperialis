@@ -7,7 +7,7 @@
     </ThingCategoryDef>
     <ThingCategoryDef>
       <defName>GWBolter</defName>
-      <label>Imperial Bolters</label>
-      <parent>WeaponsRanged</parent>
-    </ThingCategoryDef>
+      <label>Bolters</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef> 
 </Defs>
