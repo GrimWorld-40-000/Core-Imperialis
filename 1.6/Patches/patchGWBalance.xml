@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- patchGWBalance.xml                                           -->
+<!-- GW Balance Patch.                                            -->
+<!-- Gates weapons and buildings behind appropriate research.     -->
+<!-- Also handles label fixes and misc balance changes.           -->
+<!-- ============================================================ -->
+<Patch>
+
+  <Operation Class="GW_Frame.PatchOperation_GWPatch">
+    <patchName>GWBalance</patchName>
+    <operations>
+	
+	<!-- ============== MPI Categories =================== -->
+    <!-- MPI_GW_Lasguns — unlock and reposition  --> 
+	  <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_Lasguns"]/researchViewX</xpath>
+        <value><researchViewX>3.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_Lasguns"]/researchViewY</xpath>
+        <value><researchViewY>5.00</researchViewY></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_Lasguns"]/requiredResearchBuilding</xpath>
+      </li>
+    <!-- MPI_GW_AdvancedLasguns — unlock and reposition  --> 
+	  <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_AdvancedLasguns"]/researchViewX</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_AdvancedLasguns"]/researchViewY</xpath>
+        <value><researchViewY>5.00</researchViewY></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_AdvancedLasguns"]/requiredResearchBuilding</xpath>
+      </li>
+    <!-- MPI_GW_ForceWeaponry — unlock and reposition  --> 
+	  <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_ForceWeaponry"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_ForceWeaponry"]/requiredResearchBuilding</xpath>
+      </li>
+    <!-- MPI_GW_AerythmeticaDiscontinuity — unlock and reposition  --> 
+	  <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_AerythmeticaDiscontinuity"]/researchViewX</xpath>
+        <value><researchViewX>12.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="MPI_GW_AerythmeticaDiscontinuity"]/requiredResearchBuilding</xpath>
+      </li>
+
+      <!-- MOVED TO patchGene.xml GW_AM_TacticaImperium — add GeneSeeding prereq, remove Electronics 
+      
+	  <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.Core">GW_GeneSeeding</li></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites/li[.="Electricity"]</xpath>
+      </li>	   -->
+	  
+
+
+
+      <!-- ==================== Core Imperialis ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Core Imperialis</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Walls + Doors → require Imperial Infrastructure research -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Wall"]</xpath>
+              <value><researchPrerequisites><li>GW_AM_BasicImperiumDefense</li></researchPrerequisites></value>
+            </li>
+            <!-- GW_ReinforcedWall → Imperial Fortifications -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]</xpath>
+              <value><researchPrerequisites><li>GW_AM_ImperiumDefense</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_EmbrasureArmored"]/researchPrerequisites</xpath>
+              <value><researchPrerequisites><li>GW_AM_ImperiumDefense</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_ImperialisDoor"]</xpath>
+              <value><researchPrerequisites><li>GW_AM_BasicImperiumDefense</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_MechanicusDoor"]</xpath>
+              <value><researchPrerequisites><li>GW_AM_BasicImperiumDefense</li></researchPrerequisites></value>
+            </li>
+
+            <!-- GW_VehicleToolCabinet → require ComplexFurniture research -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_VehicleToolCabinet"]</xpath>
+              <value><researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites></value>
+            </li>
+
+            <!-- Barbed wire + tank traps → Smithing -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveBarbedWire"]</xpath>
+              <value><researchPrerequisites><li>Smithing</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveTankTrapA"]</xpath>
+              <value><researchPrerequisites><li>Smithing</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveTankTrapB"]</xpath>
+              <value><researchPrerequisites><li>Smithing</li></researchPrerequisites></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Aspectus Imperialis ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Aspectus Imperialis</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Candelabra + CandleStand → require Smithing research -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Candelabra"]</xpath>
+              <value><researchPrerequisites><li>Smithing</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CandleStand"]</xpath>
+              <value><researchPrerequisites><li>Smithing</li></researchPrerequisites></value>
+            </li>
+			
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Hammer of the Imperium ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Hammer of the Imperium</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Codex Astartes ===== -->
+            <!-- GW_SM_CodexAstartes → require MicroelectronicsBasics instead of AdvancedFabrication -->
+            <!-- Note: prereq change is handled in patchGWResearch.xml -->
+
+            <!-- Astartes bolter turret → require AdvancedBolters + GunTurrets -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Building_HeavyBolter"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_AdvancedBolters</li>
+                  <li>GunTurrets</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Astartes lascannon turret → require AdvancedLasguns + GunTurrets -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Building_Lascannon"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>MPI_GW_AdvancedLasguns</li>
+                  <li>GunTurrets</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+
+            <!-- ===== Astartes Fabrication ===== -->
+            <!-- Note: prereq change (require AdvancedFabrication) handled in patchGWResearch.xml -->
+            <!-- Scout armor, helmets, shoulder pads, Fibrovest → handled in Angels of Death section below -->
+
+            <!-- ===== Imperial Fortifications (GW_AM_ImperiumDefense) ===== -->
+            <!-- Heavy bolter turret → GunTurrets + GW_Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_HeavyBolter"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GunTurrets</li>
+                  <li>GW_Bolters</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Mannable autocannon turret → GW_Autoguns + HeavyTurrets -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_Autocannon"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_Autoguns</li>
+                  <li>HeavyTurrets</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Mannable lascannon turret → GunTurrets + MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_Lascannon"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GunTurrets</li>
+                  <li>MPI_GW_Lasguns</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Tarantula heavy bolter → GunTurrets + MicroelectronicsBasics + GW_Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_TarantulaHeavyBolter"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GunTurrets</li>
+                  <li>MicroelectronicsBasics</li>
+                  <li>GW_Bolters</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Tarantula lascannon → GunTurrets + MicroelectronicsBasics + MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_TarantulaLascannon"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GunTurrets</li>
+                  <li>MicroelectronicsBasics</li>
+                  <li>MPI_GW_Lasguns</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Earthshaker cannon → add PrecisionRifling -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Turret_Earthshaker"]</xpath>
+              <value><researchPrerequisites><li>PrecisionRifling</li></researchPrerequisites></value>
+            </li>
+            <!-- 132mm shells → Mortars -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_132mm_HighExplosive"]</xpath>
+              <value><researchPrerequisites><li>Mortars</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_132mm_Smoke"]</xpath>
+              <value><researchPrerequisites><li>Mortars</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_132mm_Incendiary"]</xpath>
+              <value><researchPrerequisites><li>Mortars</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_132mm_AP"]</xpath>
+              <value><researchPrerequisites><li>Mortars</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Officers of Astra Militarum ===== -->
+            <!-- Cadian officer armor sharp armor buff -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianOfficerArmor"]/statBases/ArmorRating_Sharp</xpath>
+              <value><ArmorRating_Sharp>0.865</ArmorRating_Sharp></value>
+            </li>
+            <!-- Cadian flamer webbing → also require GW_Flamers -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianFlamerWebbing"]</xpath>
+              <value><researchPrerequisites><li>GW_Flamers</li></researchPrerequisites></value>
+            </li>
+            <!-- Inferno pistol → also require GW_MeltaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_InfernoPistol"]</xpath>
+              <value><researchPrerequisites><li>GW_MeltaWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Plasma pistol → also require GW_PlasmaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_PlasmaPistol"]</xpath>
+              <value><researchPrerequisites><li>GW_PlasmaWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Eviscerator + Omni Axe → also require GW_PowerMeleeWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Melee_Eviscerator"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Melee_OmniAxe"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Force Staff → require MPI_GW_ForceWeaponry (replaces OfficersOfAM gate) -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Melee_PsykerForceStaff"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>MPI_GW_ForceWeaponry</researchPrerequisite></value>
+            </li>
+            <!-- Sanctioned Psyker jacket + helmet → move to MPI_GW_ForceWeaponry -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianPsykerJacket"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>MPI_GW_ForceWeaponry</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianPsyker_Helmet"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>MPI_GW_ForceWeaponry</researchPrerequisite></value>
+            </li>
+
+            <!-- ===== Base HoI weapons — no existing prereq → Add ===== -->
+            <!-- Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_BoltPistol"]</xpath>
+              <value><researchPrerequisites><li>GW_Bolters</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Bolter"]</xpath>
+              <value><researchPrerequisites><li>GW_Bolters</li></researchPrerequisites></value>
+            </li>
+            <!-- Autoguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Agripinaamkii"]</xpath>
+              <value><researchPrerequisites><li>GW_Autoguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Agripinaamkiitanker"]</xpath>
+              <value><researchPrerequisites><li>GW_Autoguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Shotgun"]</xpath>
+              <value><researchPrerequisites><li>GW_Autoguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Lasguns (adds MPI_GW_Lasguns alongside existing prereqs) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Kantrael"]/recipeMaker</xpath>
+              <value><researchPrerequisite>MPI_GW_Lasguns</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Kantraeldefender"]/recipeMaker</xpath>
+              <value><researchPrerequisite>MPI_GW_Lasguns</researchPrerequisite></value>
+            </li>
+
+            <!-- ===== Catachan Jungle Fighters ===== -->
+            <!-- MK4 lascarbine + sanctified variant → add MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_Lascarbinefour"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_Lascarbinefoursanctified"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Officers of Astra Militarum ===== -->
+            <!-- Cadian commissar breastplate → ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CommissarMiddle"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Death Korps commissar helmet → FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegCommissarHelmet"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Lucifer Blacks ===== -->
+            <!-- Guns are RoR items — handled in RoR block below -->
+
+            <!-- Power Sword + Power Fist Munitorum patterns → add GW_PowerMeleeWeapons (GW_HOI_ = HoI items) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Melee_PowerSword"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Melee_PowerFist"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tempestus Scions ===== -->
+            <!-- Hellgun Cadian pattern → MPI_GW_AdvancedLasguns (HoI item) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_TempestusScion_Hellgun"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AdvancedLasguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Scion carapace is RoR — handled in RoR block below -->
+
+    <!-- ===== Militarum Armor — Flak Armor gate ===== -->
+            <!-- Replace recipeMaker prereq → MilitariumArmor (crafting category) -->
+            <!-- Add recipeMaker researchPrerequisites → FlakArmor ("Unlocked with" display) -->
+            <!-- Also patch RecipeDefs directly (more reliable than ThingDef/recipeMaker) -->
+            <!-- Cadian flak + helmets -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_FlakArmor"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_FlakArmor"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_FlakArmor"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_FlakArmor"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewArmor"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewArmor"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewArmor"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewArmor"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_Helmet"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_Helmet"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_Helmet"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_Helmet"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmet"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmet"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmet"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmet"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmetSoft"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmetSoft"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmetSoft"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CrewHelmetSoft"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_WhiteShieldHelmet"]/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_WhiteShieldHelmet"][not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_WhiteShieldHelmet"][not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_WhiteShieldHelmet"]/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_FlakArmor"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_FlakArmor"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_FlakArmor"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_FlakArmor"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewArmor"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewArmor"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewArmor"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewArmor"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Helmet"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Helmet"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Helmet"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Helmet"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmet"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmet"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmet"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmet"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmetSoft"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmetSoft"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmetSoft"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewHelmetSoft"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_WhiteShieldHelmet"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_WhiteShieldHelmet"]/recipeMaker[not(researchPrerequisite)]</xpath>
+              <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_WhiteShieldHelmet"]/recipeMaker[not(researchPrerequisites)]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_WhiteShieldHelmet"]/recipeMaker/researchPrerequisites</xpath>
+              <value><li>FlakArmor</li></value>
+            </li>
+
+            <!-- ===== Castellan armor + helmet — also require GW_TotE_Castellan if TotE loaded ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>GrimWorld 40,000 - Talons of the Emperor</li></mods>
+              <match Class="PatchOperationSequence">
+                <operations>
+                  <!-- Castellan gear RecipeDefs (primary category + secondary unlock gates) -->
+                  <li Class="PatchOperationReplace" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_CadianCommanderArmor"]/researchPrerequisite</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_CadianCommanderArmor"][not(researchPrerequisite)]</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_CadianCommanderArmor"][not(researchPrerequisites)]</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>GW_TotE_Castellan</li>
+                        <li>FlakArmor</li>
+                      </researchPrerequisites>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_CadianCommanderArmor"]/researchPrerequisites</xpath>
+                    <value><li>GW_TotE_Castellan</li></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_CadianCommanderArmor"]/researchPrerequisites</xpath>
+                    <value><li>FlakArmor</li></value>
+                  </li>
+
+                  <!-- Helmet: hedge both spellings -->
+                  <li Class="PatchOperationReplace" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellenHelmet"]/researchPrerequisite</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellenHelmet"][not(researchPrerequisite)]</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellenHelmet"][not(researchPrerequisites)]</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>GW_TotE_Castellan</li>
+                        <li>FlakArmor</li>
+                      </researchPrerequisites>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellenHelmet"]/researchPrerequisites</xpath>
+                    <value><li>GW_TotE_Castellan</li></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellenHelmet"]/researchPrerequisites</xpath>
+                    <value><li>FlakArmor</li></value>
+                  </li>
+
+                  <li Class="PatchOperationReplace" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellanHelmet"]/researchPrerequisite</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellanHelmet"][not(researchPrerequisite)]</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellanHelmet"][not(researchPrerequisites)]</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>GW_TotE_Castellan</li>
+                        <li>FlakArmor</li>
+                      </researchPrerequisites>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellanHelmet"]/researchPrerequisites</xpath>
+                    <value><li>GW_TotE_Castellan</li></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/RecipeDef[defName="Make_GW_HOI_Cadian_CastellanHelmet"]/researchPrerequisites</xpath>
+                    <value><li>FlakArmor</li></value>
+                  </li>
+
+                  <li Class="PatchOperationReplace" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker/researchPrerequisite</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker[not(researchPrerequisite)]</xpath>
+                    <value>
+                      <researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker[not(researchPrerequisites)]</xpath>
+                    <value><researchPrerequisites><li>GW_TotE_Castellan</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker/researchPrerequisites</xpath>
+                    <value><li>GW_TotE_Castellan</li></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker[not(researchPrerequisites)]</xpath>
+                    <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderArmor"]/recipeMaker/researchPrerequisites</xpath>
+                    <value><li>FlakArmor</li></value>
+                  </li>
+                  <li Class="PatchOperationReplace" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker/researchPrerequisite</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker[not(researchPrerequisite)]</xpath>
+                    <value><researchPrerequisite>GW_AM_MilitariumArmor</researchPrerequisite></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker[not(researchPrerequisites)]</xpath>
+                    <value><researchPrerequisites><li>GW_TotE_Castellan</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker/researchPrerequisites</xpath>
+                    <value><li>GW_TotE_Castellan</li></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker[not(researchPrerequisites)]</xpath>
+                    <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CastellenHelmet"]/recipeMaker/researchPrerequisites</xpath>
+                    <value><li>FlakArmor</li></value>
+                  </li>
+                </operations>
+              </match>
+            </li>
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Regiments of Renown ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Regiments of Renown</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Catachan Jungle Fighters ===== -->
+            <!-- Catachan armor → FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_CatachanArmor"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Catachan fang — move to Catachan research, unlocked by GW_Chainswords -->
+            <!-- Source has no recipeMaker — Add a full block with both prereqs -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AM_MeleeWeapon_CatachanFang"]</xpath>
+              <value>
+                <recipeMaker>
+                  <researchPrerequisite>GW_AM_Catachan</researchPrerequisite>
+                  <researchPrerequisites>
+                    <li>GW_Chainswords</li>
+                  </researchPrerequisites>
+                </recipeMaker>
+              </value>
+            </li>
+
+            <!-- ===== Lucifer Blacks ===== -->
+            <!-- Armor → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_LuciferBlack_Armor"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Helmets → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_LuciferBlackSkull"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_LuciferBlackAlt"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_LuciferBlackMask"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Power Glaive + Power Sabre → add GW_PowerMeleeWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Melee_PowerGlaive"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Melee_PowerSaber"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tallarn Desert Raiders ===== -->
+            <!-- Desert Gear → FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_TDR_DesertGear"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tanith First and Only ===== -->
+            <!-- Tanith monocular → Gunlink research -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Tanith1stGoggle"]</xpath>
+              <value><researchPrerequisites><li>Gunlink</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Lucifer Blacks ===== -->
+            <!-- Armor + helmets already in RoR block above -->
+            <!-- Hellgun + Hellpistol → MPI_GW_AdvancedLasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_LuciferHellgun"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AdvancedLasguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_LuciferPistol"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AdvancedLasguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Bolter → GW_Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_LuciferBolter"]</xpath>
+              <value><researchPrerequisites><li>GW_Bolters</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tempestus Scions ===== -->
+            <!-- Helmet already in RoR block above -->
+            <!-- Scion carapace → PoweredArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_TempestusScion_CarapaceArmor"]</xpath>
+              <value><researchPrerequisites><li>PoweredArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Valhallan Ice Warriors ===== -->
+            <!-- Valhallan flak armor → add FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Valhallan_Armor"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Vostroyan Firstborn ===== -->
+            <!-- Las-lock → move to Tactica Imperium category, unlocked by Gunsmithing -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_lasLock"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_AM_TacticaImperium</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_lasLock"]</xpath>
+              <value><researchPrerequisites><li>Gunsmithing</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tempestus Scions ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_TempestusScion_Helmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Kasrkin Elite Troops ===== -->
+            <!-- Rename Kasrkin vox-caster backpack -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_KarskinVoxBackpack"]/label</xpath>
+              <value><label>Kasrkin vox-caster backpack</label></value>
+            </li>
+            <!-- Kasrkin carapace armor + helmet → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianKasrkin_FlakArmor"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianKasrkin_Helmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Kasrkin heavy armor → add CataphractArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_CadianKasrkin_HeavyArmor"]</xpath>
+              <value><researchPrerequisites><li>CataphractArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Kasrkin backpacks → VAE_MilitaryClothing handled in patchVEHook RoR block -->
+            <!-- Meltagun Cadian pattern → add GW_MeltaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_MeltaGun"]</xpath>
+              <value><researchPrerequisites><li>GW_MeltaWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Plasma gun M35 Magnacore → add GW_PlasmaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_PlasmaGun"]</xpath>
+              <value><researchPrerequisites><li>GW_PlasmaWeapons</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Armageddon Steel Legion ===== -->
+            <!-- Voss MKI → add MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_VossPattern"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Tanith First and Only ===== -->
+            <!-- Long-las Cadian pattern → unlocked by MPI_GW_AdvancedLasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Gun_Longlas"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AdvancedLasguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Tanith monocular → Gunlink research (already in RoR block below) -->
+
+            <!-- ===== Elysian Drop Troopers ===== -->
+            <!-- Accatran MKIV → MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_Accatranfive"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Accatran plasma → GW_PlasmaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_PlasmaGun"]</xpath>
+              <value><researchPrerequisites><li>GW_PlasmaWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Accatran melta → GW_MeltaWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Gun_MeltaGun"]</xpath>
+              <value><researchPrerequisites><li>GW_MeltaWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Elysian helmet (closed) → ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Elysian_Helmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Elysian helmet (open) + flak armor → FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_ElysianHelmetOpen"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Elysian_Armor"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Elysian jetpack → GW_SM_Jump_Packs if AoD present, else JumpPack -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+              <match Class="PatchOperationAdd" MayFail="true">
+                <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Elysian_Jetpack"]</xpath>
+                <value><researchPrerequisites><li>GW_SM_Jump_Packs</li></researchPrerequisites></value>
+              </match>
+              <nomatch Class="PatchOperationAdd" MayFail="true">
+                <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Elysian_Jetpack"]</xpath>
+                <value><researchPrerequisites><li>JumpPack</li></researchPrerequisites></value>
+              </nomatch>
+            </li>
+
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Dead Men of Krieg ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Dead Men</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Death Korps of Krieg ===== -->
+            <!-- Lucius lasguns → add MPI_GW_Lasguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_Gun_Lucius"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_Gun_LuciusXIV"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_Gun_LuciusHellgun"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_Lasguns</li></researchPrerequisites></value>
+            </li>
+            <!-- Lucius shotgun → add GW_Autoguns -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_Gun_LuciusShotgun"]</xpath>
+              <value><researchPrerequisites><li>GW_Autoguns</li></researchPrerequisites></value>
+            </li>
+            <!-- DK guard helmet → add FlakArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegGuardHelmet"]</xpath>
+              <value><researchPrerequisites><li>FlakArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- DK engineer armor + helmet → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegEngineerMiddle"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegEngineerHelmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- DK grenadier armor + helmet → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegGrenadierArmor"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegGrenadierHelmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- DK officer cuirass + helmet → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegOfficerArmor"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegOfficerHelmet"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Talons of the Emperor ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Talons of the Emperor</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== TotE Weapons ===== -->
+            <!-- Sentinel Blade → Power Melee Weapons (tooltip only — no recipeMaker in source) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Sentinel_Blade"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Vaultsword → Aerythmetica Discontinuity (tooltip only — no recipeMaker in source) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Vaultsword"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <!-- Vratine Bolter → Advanced Bolters + Force Weaponry -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_AdvancedBolters</li>
+                  <li>MPI_GW_ForceWeaponry</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+
+            <!-- Guardian Spear → Power Melee Weapons + Advanced Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_GuardianSpear"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_PowerMeleeWeapons</li>
+                  <li>GW_AdvancedBolters</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Adrathic Spear → Power Melee Weapons + Aerythmetica Discontinuity -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_AdrathicSpear"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_AdrathicSpear"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <!-- Kinetic Destroyer → Aerythmetica Discontinuity -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Kinetic_Destructor"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <!-- Misericordia → Aerythmetica Discontinuity -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Misericordia"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <!-- Pyrithite Spear → Power Melee Weapons + Melta Weapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpear"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_PowerMeleeWeapons</li>
+                  <li>GW_MeltaWeapons</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <!-- Executioner Greatblade → Force Weaponry -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SoSSword"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_ForceWeaponry</li></researchPrerequisites></value>
+            </li>
+            <!-- Bolt Caliver → Advanced Bolters -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Bolt_Caliver"]</xpath>
+              <value><researchPrerequisites><li>GW_AdvancedBolters</li></researchPrerequisites></value>
+            </li>
+            <!-- Incendium Firepike → Flamers -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_Firepike"]</xpath>
+              <value><researchPrerequisites><li>GW_Flamers</li></researchPrerequisites></value>
+            </li>
+
+            <!-- Castellan Axe → Basic Melee Weapons + Bolters (stays in Castellan category) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CastellanAxe"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_Chainswords</li>
+                  <li>GW_Bolters</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+
+            <!-- Watcher's Axe → Power Melee Weapons + Advanced Bolters (stays in Castellan category) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_WatchersAxe"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>GW_PowerMeleeWeapons</li>
+                  <li>GW_AdvancedBolters</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+
+            <!-- ===== Allarus Terminator set → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_AllarusArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_AllarusHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_AllarusShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Custodes Guard tier → Astartes Heavy Armors ===== -->
+            <!-- Blade Champion -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_BladeOfChamp"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_BladeChampHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Custodes Shield Host -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesGuardArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesGuardHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesGuardShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Custodes Warden -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesWardenArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesWardenHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CustodesWardenShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Eye of the Emperor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_EyeOfTheEmperor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_EyeOfTheEmperorHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_EyeoftheEmperorShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Sagittarum helmet -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SagittarumHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Shield Captain -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_ShieldCaptianHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_ShieldCaptainShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <!-- Sister of Silence -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SisterOfSilence"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SoSHelmetA"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SoSHelmetB"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SoSShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Venatari mask → Astartes Light Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_VenatariHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesLight</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Venatari jump pack → GW_SM_Jump_Packs if AoD present, else JumpPack + label fix ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+              <match Class="PatchOperationAdd" MayFail="true">
+                <xpath>Defs/ThingDef[defName="GW_TotE_VenatariBackpack"]</xpath>
+                <value><researchPrerequisites><li>GW_SM_Jump_Packs</li></researchPrerequisites></value>
+              </match>
+              <nomatch Class="PatchOperationAdd" MayFail="true">
+                <xpath>Defs/ThingDef[defName="GW_TotE_VenatariBackpack"]</xpath>
+                <value><researchPrerequisites><li>JumpPack</li></researchPrerequisites></value>
+              </nomatch>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_VenatariBackpack"]/label</xpath>
+              <value><label>Venatari jump pack</label></value>
+            </li>
+
+            <!-- ===== Custodes Shields → Astartes Shields research ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GM_TotE_ShieldPraesidium"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesBasicShields</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GM_TotE_ShieldSCaptain"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesBasicShields</li></researchPrerequisites></value>
+            </li>
+
+            <!-- Castellan Plate, Plate Helmet, Plate Shoulder Pads → require Astartes Heavy Armors -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CastellanArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CastellanPlateHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_TotE_CastellanPlateShoulder"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Angels of Death ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Astartes Scout gear → add ReconArmor ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Scout"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutHelmet_A"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutHelmet_B"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutHelmet_C"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutHelmet_D"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutHelmet_E"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutShoulderPads_TypeA"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutShoulderPads_TypeB"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScoutShoulderPads_TypeC"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+            <!-- Fibrovest → add ReconArmor -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_FibroVest"]</xpath>
+              <value><researchPrerequisites><li>ReconArmor</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Astartes melee — move to Astartes Fabrication category via recipeMaker ===== -->
+            <!-- Astartes chainsword → Replace recipeMaker prereq to GW_SM_AstartesFabrication -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Chainsword"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_SM_AstartesFabrication</researchPrerequisite></value>
+            </li>
+            <!-- Unlocked with Basic melee weapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Chainsword"]</xpath>
+              <value><researchPrerequisites><li>GW_Chainswords</li></researchPrerequisites></value>
+            </li>
+            <!-- Astartes combat knife → Replace recipeMaker prereq to GW_SM_AstartesFabrication -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_CombatKnife"]/recipeMaker/researchPrerequisite</xpath>
+              <value><researchPrerequisite>GW_SM_AstartesFabrication</researchPrerequisite></value>
+            </li>
+            <!-- Unlocked with Basic melee weapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_CombatKnife"]</xpath>
+              <value><researchPrerequisites><li>GW_Chainswords</li></researchPrerequisites></value>
+            </li>
+
+            <!-- Bolt Pistol (Astartes) → add GW_Bolters to recipeMaker (moves to Bolters category) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_BoltPistol"]/recipeMaker</xpath>
+              <value><researchPrerequisite>GW_Bolters</researchPrerequisite></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_MeltaGun"]/recipeMaker</xpath>
+              <value><researchPrerequisite>GW_MeltaWeapons</researchPrerequisite></value>
+            </li>
+
+            <!-- ===== Astartes power melee + hammers — stay in category, unlocked by PowerMeleeWeapons ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Powersword"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Relic_Powersword"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Powerfist"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_ThunderHammer"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Terminator variants -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_TermPowerFist"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_TermSword"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Term_Thunder1hHammer"]</xpath>
+              <value><researchPrerequisites><li>GW_PowerMeleeWeapons</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Astartes Heavy weapons gates ===== -->
+            <!-- Reaper autocannon → GW_Autoguns + MultibarrelWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_ReaperCannon"]</xpath>
+              <value><researchPrerequisites><li>GW_Autoguns</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_ReaperCannon"]</xpath>
+              <value><researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Assault cannon → Aerythmetica Discontinuity + MultibarrelWeapons (note: typo in source defName) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_AssualtCannon"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_AssualtCannon"]</xpath>
+              <value><researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Graviton cannon → Aerythmetica Discontinuity (already gated by AstartesHeavy via recipeMaker) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_GravCannon"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <!-- Heavy flamer → GW_Flamers -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_HeavyFlamer"]</xpath>
+              <value><researchPrerequisites><li>GW_Flamers</li></researchPrerequisites></value>
+            </li>
+            <!-- Terminator plasma cannon → GW_PlasmaWeapons + MultibarrelWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_PlasmaCannon"]</xpath>
+              <value><researchPrerequisites><li>GW_PlasmaWeapons</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_PlasmaCannon"]</xpath>
+              <value><researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites></value>
+            </li>
+            <!-- Umbra storm bolter → GW_AdvancedBolters + MultibarrelWeapons -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_StormBolter"]</xpath>
+              <value><researchPrerequisites><li>GW_AdvancedBolters</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Gun_StormBolter"]</xpath>
+              <value><researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Astartes missile launcher → also require Launchers ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_RocketLauncher"]</xpath>
+              <value><researchPrerequisites><li>GW_Launchers</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Graviton rifle + pistol → Aerythmetica Discontinuity ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Gun_GravRifle"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Gun_GravPistol"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Multi-melta → unlocked by MultibarrelWeapons ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AOD_Multimelta"]</xpath>
+              <value><researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+
+      <!-- ==================== Scattered Sons ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Grimworld 40,000 - Scattered Sons</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Imperial Regent set → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ChapterMasterArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ChapterMasterHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ChapterMasterShoulderPads"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Armor of Fate set → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_GuillimanArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_GuillimanHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_GuillimanShoulderPads"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Emperor's sword → Aerythmetica Discontinuity ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Melee_FlameSword"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Imperial Warden armor set → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenrArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenHood"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenHooded"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenrShoulderPads"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Lion's armor set → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmor"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmorHood"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmorHooded"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmorHelmet"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmorShoulderPads"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== Emperor's Shield + Imperial Warden shield → Astartes Shields + Disco ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GM_SS_ShieldLionsW"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesBasicShields</li>
+                  <li>MPI_GW_AerythmeticaDiscontinuity</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GM_SS_ShieldLionsC"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesBasicShields</li>
+                  <li>MPI_GW_AerythmeticaDiscontinuity</li>
+                </researchPrerequisites>
+              </value>
+            </li>
+
+            <!-- ===== Fealty → Aerythmetica Discontinuity ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SS_LionSword"]</xpath>
+              <value><researchPrerequisites><li>MPI_GW_AerythmeticaDiscontinuity</li></researchPrerequisites></value>
+            </li>
+
+            <!-- ===== All backpacks → Astartes Heavy Armors ===== -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ChapterMasterBackpack"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_GuillimanBackpack"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ImperialWardenrBackpack"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_LionArmorBackpack"]</xpath>
+              <value><researchPrerequisites><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li></researchPrerequisites></value>
+            </li>
+
+
+          </operations>
+        </match>
+      </li>
+	  <!-- ========================== From patchGWResearch ============================== -->
+      <!-- ==================== Masters of Mankind + Angels of Death ==================== -->
+      <!-- Conditional: Salamander prereq for Vulkan's Autoforge only when both active -->
+      <li Class="PatchOperationFindMod" Logic="All">
+        <mods>
+          <li>GrimWorld 40,000 - Masters of Mankind</li>
+          <li>Grimworld 40,000 - Angels of Death</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_MasterForge"]/prerequisites</xpath>
+          <value><li MayRequire="happypurging.ageofdarkness">GW_SM_Salamander</li></value>
+        </match>
+      </li>
+      <!-- Disco prereq for Vulkan's Autoforge whenever Masters of Mankind is active -->
+      <li Class="PatchOperationFindMod" MayFail="true">
+        <mods><li>GrimWorld 40,000 - Masters of Mankind</li></mods>
+        <match Class="PatchOperationAdd" MayFail="true">
+          <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_MasterForge"]/prerequisites</xpath>
+          <value><li>MPI_GW_AerythmeticaDiscontinuity</li></value>
+        </match>
+      </li>
+	  
+      <!-- ==================== PREREQUISITE ADDITIONS ==================== -->
+
+      <!-- f GW_AM_MilitariumArmor — requires ComplexClothing -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_MilitariumArmor"]/prerequisites</xpath>
+        <value><li>ComplexClothing</li></value>
+      </li>
+
+      <!-- f GW_PlasmaWeapons — requires Astartes Fabrication if Angels of Death present -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/prerequisites</xpath>
+        <value><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesFabrication</li></value>
+      </li>
+
+      <!-- f GW_Bolters — requires Regiments of Renown -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Bolters"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_RegimentsOfRenown</li></value>
+      </li>
+
+      <!-- f GW_Flamers — requires Regiments of Renown -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Flamers"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_RegimentsOfRenown</li></value>
+      </li>
+
+      <!-- f GW_GrimworldMaterials — requires Imperial Fortifications -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_ImperiumDefense</li></value>
+      </li>
+
+      <!-- f GW_Autoguns — requires Tactica Imperium -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Autoguns"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>
+
+      <!-- f GW_Launchers — requires Tactica Imperium -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Launchers"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>
+
+      <!-- GW_Chainswords — requires Tactica Imperium -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Chainswords"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>
+
+		<!-- GW_AM_BasicImperiumDefense — prereq -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_BasicImperiumDefense"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>		
+		
+		<!-- GW_AM_ImperiumDefense — prereq -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ImperiumDefense"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li>GW_AM_BasicImperiumDefense</li>
+            <li>Machining</li>
+          </prerequisites>
+        </value>
+      </li>
+      <!-- GW_BlastDoors — add ImperiumDefense prereq -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_BlastDoors"]/prerequisites</xpath>
+        <value><li>GW_AM_ImperiumDefense</li></value>
+      </li>
+
+      <!-- GW_DrugProduction — replace prereqs -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_DrugProduction"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li>DrugProduction</li>
+            <li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_AM_TacticaImperium — add GeneSeeding prereq, remove Electronics this section came from patchGWResearch MOVED TO patchGWGene -->
+      <!--<li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.Core">GW_GeneSeeding</li></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites/li[.="Electricity"]</xpath>
+      </li> -->
+	 
+
+      <!-- GW_IF_CommonStuff — add TacticaImperium prereq -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_IF_CommonStuff"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>
+
+      <!-- GW_SM_CodexAstartes — add RegimentsOfRenown prereq -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_CodexAstartes"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_RegimentsOfRenown</li></value>
+      </li>
+
+      <!-- GW_SM_NightLord — only AstartesHeavy prereq -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_NightLord"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_SM_Salamander — only AstartesHeavy prereq -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Salamander"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AstartesHeavy</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_Primarchfabrication — require AdvancedFabrication always;
+           CustodesFabrication if Talons present -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Primarchfabrication"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li>AdvancedFabrication</li>
+            <li MayRequire="grimworld.talonOfTheEmperor">GW_TotE_CustodesFabrication</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_TotE_CustodesFabrication — add Cogitator as prerequisite -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_CustodesFabrication"]/prerequisites</xpath>
+        <value><li>GW_Cogitator</li></value>
+      </li>
+
+      <!-- GW_PlasmaReactor — require AdvancedFabrication only (remove Electricity) -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaReactor"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li>AdvancedFabrication</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_Cogitator — require AdvancedFabrication only (remove MultiAnalyzer) -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Cogitator"]/prerequisites</xpath>
+        <value>
+          <prerequisites>
+            <li>AdvancedFabrication</li>
+          </prerequisites>
+        </value>
+      </li>
+
+      <!-- GW_Autoguns — remove Gunsmithing, add BlowbackOperation -->
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Autoguns"]/prerequisites/li[.="Gunsmithing"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Autoguns"]/prerequisites</xpath>
+        <value><li>BlowbackOperation</li></value>
+      </li>
+
+      <!-- GW_Flamers — remove Gunsmithing, add GasOperation -->
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Flamers"]/prerequisites/li[.="Gunsmithing"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Flamers"]/prerequisites</xpath>
+        <value><li>GasOperation</li></value>
+      </li>
+
+      <!-- GW_Launchers — add MicroelectronicsBasics -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Launchers"]/prerequisites</xpath>
+        <value><li>MicroelectronicsBasics</li></value>
+      </li>
+
+      <!-- GW_PlasmaWeapons — remove Gunsmithing, add GasOperation + AdvancedFabrication -->
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/prerequisites/li[.="Gunsmithing"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/prerequisites</xpath>
+        <value><li>GasOperation</li></value>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/prerequisites</xpath>
+        <value><li>AdvancedFabrication</li></value>
+      </li>
+
+      <!-- GW_MeltaWeapons — add Fabrication + TacticaImperium -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_MeltaWeapons"]/prerequisites</xpath>
+        <value><li>Fabrication</li></value>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_MeltaWeapons"]/prerequisites</xpath>
+        <value><li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li></value>
+      </li>
+
+      <!-- GW_AdvancedGrimworldMaterials — remove Fabrication prereq, rename, new description -->
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedGrimworldMaterials"]/prerequisites/li[.="Fabrication"]</xpath>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedGrimworldMaterials"]/label</xpath>
+        <value><label>Rites of the Omnissiah</label></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedGrimworldMaterials"]/description</xpath>
+        <value><description>Through sacred rite and ancient liturgy, your tech-adepts have unlocked the knowledge to fabricate Relic Components — fragments of a bygone age when the Imperium's technological mastery was without equal. These are not merely manufactured; they are consecrated. Each component is assembled through a series of devotional rituals passed down through the Adeptus Mechanicus, invoking the blessing of the Omnissiah upon each part. To produce such components without proper sanctification would be not merely wasteful, but heretical.</description></value>
+      </li>
+
+      <!-- GW_RepairBench — add AdvancedFabrication, remove Electricity -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_RepairBench"]/prerequisites</xpath>
+        <value><li>AdvancedFabrication</li></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_RepairBench"]/prerequisites/li[.="Electricity"]</xpath>
+      </li>
+
+      <!-- GW_Bolters — add BlowbackOperation -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Bolters"]/prerequisites</xpath>
+        <value><li>BlowbackOperation</li></value>
+      </li>
+
+      <!-- GW_AdvancedBolters — add GasOperation -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedBolters"]/prerequisites</xpath>
+        <value><li>GasOperation</li></value>
+      </li>
+
+      <!-- GW_SM_AstartesLight → also require ReconArmor -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesLight"]/prerequisites</xpath>
+        <value><li>ReconArmor</li></value>
+      </li>
+
+      <!-- GW_SM_AstartesMedium → also require PoweredArmor -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesMedium"]/prerequisites</xpath>
+        <value><li>PoweredArmor</li></value>
+      </li>
+
+      <!-- GW_SM_Jump_Packs → add vanilla JumpPack as prerequisite (AoD) -->
+      <li Class="PatchOperationFindMod" MayFail="true">
+        <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+        <match Class="PatchOperationAdd" MayFail="true">
+          <xpath>Defs/ResearchProjectDef[defName="GW_SM_Jump_Packs"]/prerequisites</xpath>
+          <value><li>JumpPack</li></value>
+        </match>
+      </li>
+
+      <!-- GW_SM_AstartesHeavy → also require CataphractArmor -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesHeavy"]/prerequisites</xpath>
+        <value><li>CataphractArmor</li></value>
+      </li>
+
+      <!-- GW_SM_CodexAstartes — change AdvancedFabrication prereq to Fabrication -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_CodexAstartes"]/prerequisites/li[.="AdvancedFabrication"]</xpath>
+        <value><li>Fabrication</li></value>
+      </li>
+
+		
+    </operations>
+  </Operation>
+
+</Patch>

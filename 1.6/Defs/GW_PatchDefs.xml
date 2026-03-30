@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- GW_PatchDefs.xml                                             -->
+<!-- Native GW Defs for GW patches.                               -->
+<!-- GW_GeneSeeding is defined here so cross-references resolve   -->
+<!-- correctly at load time. It is unresearchable by default —    -->
+<!-- patchGWResearch unlocks and repositions it when toggle is on.-->
+<!-- ============================================================ -->
+
+
+<Defs>
+
+  <!-- MPI_PatchDisabled: a dummy ThingDef used as requiredResearchBuilding
+       on research defs when the corresponding patch toggle is off. Since it is
+       never placed in the world, the research is permanently unresearchable.
+       Removed by the relevant patch when the toggle is on. -->
+  <ThingDef>
+    <defName>MPI_ModMissing_AngelsOfDeath</defName>
+    <label>Mod Missing: Grimworld 40,000 - Angels of Death</label>
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>MPI_PatchDisabled</defName>
+    <label>Patch Disabled - See Mod Config</label>
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+  </ThingDef>
+
+  <!-- GW_GeneSeeding: defined natively so cross-references       -->
+  <!-- resolve at load time. Locked behind MPI_PatchDisabled and  -->
+  <!-- WoodLog bench by default. patchGWResearch removes the lock -->
+  <!-- and moves it to its real position when toggle is on.       -->
+  <ResearchProjectDef MayRequire="Grimworld.Core" ParentName="GW_ImperiumTechBase">
+    <defName>GW_GeneSeeding</defName>
+    <label>gene seeding</label>
+    <description>Master the ancient Imperial science of genetic manipulation — the same arts used to create the Adeptus Astartes themselves. With this knowledge, the most powerful gene-forged technologies of the Imperium become accessible.\n\nThe secrets of gene-seeding are among the most closely guarded in the Imperium, known only to the Adeptus Mechanicus and the highest ranks of the Astartes Chapters.</description>
+    <techLevel>Spacer</techLevel>
+    <baseCost>2500</baseCost>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>5.60</researchViewY>
+    <requiredResearchBuilding>MPI_PatchDisabled</requiredResearchBuilding>
+    <prerequisites>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Xenogermination</li>
+      <li>Electricity</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- MPI_GW_Lasguns: new research unlocking additional lasgun variants from
+       Hammer of the Imperium and other GW mods as they are researched.
+       Positioned below Melta Weapons in the research tree. -->
+  <ResearchProjectDef MayRequire="Grimworld.Core" ParentName="GW_ImperiumTechBase">
+    <defName>MPI_GW_Lasguns</defName>
+    <label>lasguns</label>
+    <description>The lasgun is the most common weapon in the Imperium of Man — cheap, reliable, and produced in such staggering numbers that entire armies can be armed with them. It is said that the Emperor's armies march on lasbolts — and the forge worlds of the Imperium have never stopped producing them.</description>
+    <techLevel>Industrial</techLevel>
+    <baseCost>3000</baseCost>
+    <prerequisites>
+      <li>Gunsmithing</li>
+      <li MayRequire="Grimworld.AstraMilitarum">GW_AM_TacticaImperium</li>
+    </prerequisites>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>5.60</researchViewY>
+    <requiredResearchBuilding>MPI_PatchDisabled</requiredResearchBuilding>
+    <modExtensions>
+      <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+        <StudyLocation>GW_Cogitator</StudyLocation>
+        <ItemStudyRequirements>
+          <li Class="GW_Frame.StudyRequirement">
+            <StudyObject>GW_STC_Fragment</StudyObject>
+            <NumberRequired>1</NumberRequired>
+          </li>
+        </ItemStudyRequirements>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- MPI_GW_ForceWeaponry: new research unlocking Force Weapons for sanctioned
+       psykers and Librarians. Positioned below Plasma Reactor. -->
+  <ResearchProjectDef MayRequire="Grimworld.Core" ParentName="GW_ImperiumTechBase">
+    <defName>MPI_GW_ForceWeaponry</defName>
+    <label>force weaponry artificia</label>
+    <description>Unlock the secrets of Force Weapons — psi-enhanced, power-activated weapons forged at the intersection of technology and psychic science. Commonly wielded by sanctioned psykers and Space Marine Librarians, these weapons channel their bearer's psychic might into devastating strikes. Each blade is as much a psychic focus as it is a weapon, and their construction demands both the finest artificers and the blessing of a sanctioned psyker.</description>
+    <techLevel>Spacer</techLevel>
+    <baseCost>3000</baseCost>
+    <prerequisites>
+      <li>GW_PowerMeleeWeapons</li>
+      <li>GW_Cogitator</li>
+    </prerequisites>
+    <researchViewX>12.00</researchViewX>
+    <researchViewY>5.50</researchViewY>
+    <requiredResearchBuilding>MPI_PatchDisabled</requiredResearchBuilding>
+    <modExtensions>
+      <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+        <StudyLocation>GW_Cogitator</StudyLocation>
+        <ItemStudyRequirements>
+          <li Class="GW_Frame.StudyRequirement">
+            <StudyObject>GW_STC_Fragment</StudyObject>
+            <NumberRequired>1</NumberRequired>
+          </li>
+        </ItemStudyRequirements>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- MPI_GW_AdvancedLasguns: new research unlocking advanced lasgun variants.
+       Positioned below Armageddon Steel Legion in the research tree. -->
+  <ResearchProjectDef MayRequire="Grimworld.Core" ParentName="GW_ImperiumTechBase">
+    <defName>MPI_GW_AdvancedLasguns</defName>
+    <label>advanced lasguns</label>
+    <description>The lasgun may be the backbone of the Imperial Guard, but the Adeptus Mechanicus never stopped refining it. Hellguns, hotshot lasguns, and the esoteric long-las represent the bleeding edge of laser weapons technology — weapons that demand more from their wielder, but reward that mastery with far greater lethality.</description>
+    <techLevel>Spacer</techLevel>
+    <baseCost>7000</baseCost>
+    <prerequisites>
+      <li>MPI_GW_Lasguns</li>
+      <li MayRequire="Grimworld.AstraMilitarum">GW_AM_RegimentsOfRenown</li>
+    </prerequisites>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>5.60</researchViewY>
+    <requiredResearchBuilding>MPI_PatchDisabled</requiredResearchBuilding>
+    <modExtensions>
+      <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+        <StudyLocation>GW_Cogitator</StudyLocation>
+        <ItemStudyRequirements>
+          <li Class="GW_Frame.StudyRequirement">
+            <StudyObject>GW_STC_Fragment</StudyObject>
+            <NumberRequired>2</NumberRequired>
+          </li>
+        </ItemStudyRequirements>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- MPI_GW_AerythmeticaDiscontinuity: new research unlocking Archaeotech
+       weapons of the Dark Mechanicum. Requires Force Weaponry Artificia. -->
+  <ResearchProjectDef MayRequire="Grimworld.Core" ParentName="GW_ImperiumTechBase">
+    <defName>MPI_GW_AerythmeticaDiscontinuity</defName>
+    <label>Aerythmetica Discontinuity</label>
+    <description>Uncover forbidden principles of the Dark Mechanicum to produce terrifying Archaeotech weaponry. By generating entropic fields that sever nuclear bonds, these arms do not merely wound; they unravel the target's atomic structure, reducing ceramite, flesh, and soul alike.</description>
+    <techLevel>Spacer</techLevel>
+    <baseCost>8000</baseCost>
+    <prerequisites>
+      <li>MPI_GW_ForceWeaponry</li>
+    </prerequisites>
+    <researchViewX>13.00</researchViewX>
+    <researchViewY>5.50</researchViewY>
+    <requiredResearchBuilding>MPI_PatchDisabled</requiredResearchBuilding>
+    <modExtensions>
+      <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+        <StudyLocation>GW_Cogitator</StudyLocation>
+        <ItemStudyRequirements>
+          <li Class="GW_Frame.StudyRequirement">
+            <StudyObject>GW_STC_Fragment</StudyObject>
+            <NumberRequired>3</NumberRequired>
+          </li>
+        </ItemStudyRequirements>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+</Defs>

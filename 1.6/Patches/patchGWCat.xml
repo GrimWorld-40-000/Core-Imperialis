@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- patchGWCat.xml                                               -->
+<!-- Moves Grimworld items into appropriate vanilla categories.   -->
+<!-- Each section uses a single FindMod + PatchOperationSequence  -->
+<!-- with MayFail="true" on each individual operation inside so   -->
+<!-- one failure never aborts the rest.                           -->
+<!-- ============================================================ -->
+<Patch>
+
+  <Operation Class="GW_Frame.PatchOperation_GWPatch">
+    <patchName>GWCat</patchName>
+    <operations>
+
+      <!-- ==================== Core Imperialis ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Core Imperialis</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Walls → Structure -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Wall"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_ReinforcedWall"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+
+            <!-- Embrasures → Structure -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Embrasure"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_EmbrasureArmored"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+
+            <!-- Doors → Structure (Add since inherited from abstract parent) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_ImperialisDoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_ImperialisAutodoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_MechanicusDoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_MechanicusAutodoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_BlastDoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+
+            <!-- Barbed wire → Security -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveBarbedWire"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+
+            <!-- Tank traps → Security -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveTankTrapA"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="DefensiveTankTrapB"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+
+            <!-- Repair bench → Production -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_RepairBench"]/designationCategory</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+            <!-- Plasma generator → Power -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_PlasmaGenerator"]/designationCategory</xpath>
+              <value><designationCategory>Power</designationCategory></value>
+            </li>
+
+            <!-- Furnace → Production -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Furnace"]/designationCategory</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+            <!-- Cogitator → Production -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Cogitator"]/designationCategory</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+            <!-- Warhammer table → Joy -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_WarhammerTable"]/designationCategory</xpath>
+              <value><designationCategory>Joy</designationCategory></value>
+            </li>
+
+            <!-- Imperial Tool Cabinet → Misc -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_VehicleToolCabinet"]/designationCategory</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+
+            <!-- Remove GrimworldCategory -->
+            <li Class="PatchOperationRemove" MayFail="true">
+              <xpath>Defs/DesignationCategoryDef[defName="GrimworldCategory"]</xpath>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Hammer of the Imperium ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Hammer of the Imperium</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Militarum workbenches → Production (Add since inherited from abstract parent) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="HP_AM_MilitarumFabricationBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_AM_MilitarumArmorBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+            <!-- Turrets → Security (designationCategory on concrete def → Replace) -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_HeavyBolter"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_Autocannon"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_Lascannon"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_TarantulaHeavyBolter"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Building_TarantulaLascannon"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_HOI_Turret_Earthshaker"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+
+            <!-- Trenches → Security (designationCategory on concrete def → Replace) -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Trenches"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="TrenchBarricade"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Aspectus Imperialis ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Aspectus Imperialis</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Wall lamp → Furniture -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_WallLamp"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+			            <!-- All candles → Furniture -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Candle"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+			
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CandlesWax"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CandleSkull"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Candelabra — Furniture -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Candelabra"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- CandleStand — Furniture -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CandleStand"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Gates → Structure
+                 GW40k_2x1Gate and GW40k_3x1Gate: designationCategory on concrete def → Replace -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_2x1Gate"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_3x1Gate"]/designationCategory</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+
+            <!-- Royal tables + chairs → Furniture
+                 GW_IF_Royal_1x1c..3x3c and GW_IF_Royal_Chair: designationCategory on concrete def → Replace -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_1x1c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_2x1c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_2x2c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_2x4c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_3x3c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Royal_Chair"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Statues → Art
+                 All statue defs have designationCategory COMMENTED OUT in GW source.
+                 Replace will find nothing. Use Add instead. -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_Statues_1x1Janitor"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_Statues_1x1Sister"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_Statues_1x1Flag"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_1x1StatuesHoodGuy"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_1x1StatuesOfficer"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_1x1StatuesSisterMace"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_2x2Statues"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_3x3Statues"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_4x4StatuesGuil"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_4x4StatuesLion"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW40k_4x4StatuesVald"]</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+
+            <!-- Golden Throne (Imperial psythrone) → Furniture
+                 GWGT_GoldenThrone: designationCategory on concrete def → Replace -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GWGT_GoldenThrone"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Beds → Furniture
+                 All GW_IF bed defs have designationCategory on the concrete def → Replace.
+                 GW_IF_UpperHivebed is commented out in GW source — skipped. -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CommonSingle"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_CommonDouble"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_PrisonerSingle"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_RoyalSingle"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_RoyalDouble"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_MedicaeBed"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Hearths → Furniture
+                 designationCategory is on the ABSTRACT parent GW_IF_Hearth, NOT the concrete defs.
+                 Replace on the concrete def xpath would find nothing — use Add. -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Hearth"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_RoyalHearth"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Rugs → Furniture
+                 designationCategory is on the ABSTRACT parent GW_IF_RugBase, NOT the concrete defs.
+                 Replace on the concrete def xpath would find nothing — use Add. -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_4x4MundaneRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_4x6MundaneRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_3x6MundaneRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_8x8MundaneRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_4x4RoyalRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_4x6RoyalRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_3x6RoyalRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_8x8RoyalRug"]</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Tables + chairs → Furniture
+                 All have designationCategory on the concrete def → Replace. -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_1x1c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_2x1c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_2x2c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_2x4c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_3x3c"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_IF_Chair"]/designationCategory</xpath>
+              <value><designationCategory>Furniture</designationCategory></value>
+            </li>
+
+            <!-- Remove GW_IF_Furniture -->
+            <li Class="PatchOperationRemove" MayFail="true">
+              <xpath>Defs/DesignationCategoryDef[defName="GW_IF_Furniture"]</xpath>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Angels of Death ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Astartes workbenches → Production
+                 Inherit from GrimworldFabricationBenchBase (no designationCategory on concrete def) → Add -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="HP_ImperialFabricationBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ArmorBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+            <!-- Astartes turrets → Security (designationCategory on concrete def → Replace) -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Building_HeavyBolter"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_Building_Lascannon"]/designationCategory</xpath>
+              <value><designationCategory>Security</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Talons of the Emperor ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Talons of the Emperor</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Talons workbenches → Production
+                 Inherit from GrimworldFabricationBenchBase (no designationCategory on concrete def) → Add -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_TalonOfTheEmperor_ArmorBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_TalonOfTheEmperor_WeaponBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Scattered Sons ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Grimworld 40,000 - Scattered Sons</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Scattered Sons workbenches → Production
+                 Inherit from GrimworldFabricationBenchBase (no designationCategory on concrete def) → Add -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScatteredSons_ArmorBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_SM_ScatteredSons_WeaponBench"]</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Masters of Mankind ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Masters of Mankind</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- Vulkan's Autoforge → Production
+                 designationCategory on concrete def → Replace -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_Autoforge"]/designationCategory</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Vehicle Framework ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Vehicle Framework</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- GW_GarageDoor abstract → Structure
+                 designationCategory on abstract parent — Add covers all 12
+                 garage door variants (4x1/5x1/7x1 Closed+Open, manual+auto) -->
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ThingDef[@Name="GW_GarageDoor"]</xpath>
+              <value><designationCategory>Structure</designationCategory></value>
+            </li>
+
+            <!-- GW_VehicleBench → Production
+                 designationCategory on concrete def → Replace -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="GW_VehicleBench"]/designationCategory</xpath>
+              <value><designationCategory>Production</designationCategory></value>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>

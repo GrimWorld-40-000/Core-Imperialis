@@ -17,7 +17,7 @@
             </damageData>
         </graphicData>
 		<building>
-			<isAirtight>true</isAirtight>
+			<isStuffableAirtight>true</isStuffableAirtight> <!-- Only metallic doors airtight -->
 		</building>
     </ThingDef>
 
@@ -40,6 +40,9 @@
             <Steel>40</Steel>
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
+		<building>
+			<isStuffableAirtight>true</isStuffableAirtight> <!-- Only metallic doors airtight -->
+		</building>
     </ThingDef>
 
     <ThingDef ParentName="GW_DoorBase" Name="GW_BlastDoorBase" Abstract="True">
@@ -67,6 +70,9 @@
             <Steel>100</Steel>
             <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
+		<building>
+			<isAirtight>true</isAirtight> <!-- door can only be metallic so airtight by default -->
+		</building>
     </ThingDef>
 
         <!--The doors-->
@@ -135,7 +141,7 @@
 		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
-			<isAirtight>true</isAirtight>
+			<isStuffableAirtight>true</isStuffableAirtight> <!-- Only metallic walls airtight -->
 		</building>
     </ThingDef>
 
@@ -159,7 +165,7 @@
 		<fillPercent>1</fillPercent>		
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
-			<isAirtight>true</isAirtight>
+			<isStuffableAirtight>true</isStuffableAirtight> <!-- Only metallic walls airtight -->
 		</building>
     </ThingDef>
 	
@@ -238,6 +244,7 @@
 				<texPath>Things/Building/Linked/Embrasure/GW_OrdinaryWalls_Emb_Atlas</texPath>
 			</blueprintGraphicData>
 			<paintable MayRequire="Rimworld.Biotech">true</paintable>
+			<isAirtight>false</isAirtight> <!-- never airtight -->
 		</building>
 		<comps>
 		</comps>
@@ -319,6 +326,7 @@
 				<texPath>Things/Building/Linked/Embrasure/GW_ReinforcedWall_Emb_Atlas</texPath>
 			</blueprintGraphicData>
 			<paintable MayRequire="Rimworld.Biotech">true</paintable>
+			<isAirtight>false</isAirtight> <!-- never airtight -->
 		</building>
 		<comps>
 		</comps>

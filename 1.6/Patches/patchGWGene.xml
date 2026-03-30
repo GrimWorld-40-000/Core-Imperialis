@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- patchGWGene.xml                                              -->
+<!-- subset of GW Balance Patch.                                  -->
+<!-- Handles presence of Gene Seeding                             -->
+<!-- ============================================================ -->
+<Patch>
+
+  <Operation Class="GW_Frame.PatchOperation_GWPatch">
+    <patchName>GWGene</patchName>
+    <operations>
+                 <!-- GW_GeneSeeding — unlock and reposition  --> 
+	  <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/researchViewX</xpath>
+        <value><researchViewX>0.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/requiredResearchBuilding</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]</xpath>
+        <value>
+          <requiredResearchBuilding MayRequire="Ludeon.RimWorld.Biotech">HiTechResearchBench</requiredResearchBuilding>
+          <requiredResearchFacilities MayRequire="Ludeon.RimWorld.Biotech">
+            <li>MultiAnalyzer</li>
+          </requiredResearchFacilities>
+        </value>
+      </li>	
+
+      <!-- GW_AM_TacticaImperium — add GeneSeeding prereq, remove Electronics -->
+      
+		<li Class="PatchOperationFindMod">
+		  <mods>
+			<li>GrimWorld 40,000 - Hammer of the Imperium</li>
+		  </mods>
+		  <match Class="PatchOperationSequence">
+			<operations>
+			  <li Class="PatchOperationAdd" MayFail="true">
+				<xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites</xpath>
+				<value>
+				  <li MayRequire="grimworld.astramilitarum">GW_GeneSeeding</li> <!-- removed  MayRequire="Grimworld.Core" -->
+				</value>
+			  </li>
+			  <li Class="PatchOperationRemove" MayFail="true">
+				<xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/prerequisites/li[.="Electricity"]</xpath>
+			  </li>
+			</operations>
+		  </match>
+		</li>	   
+
+	  
+    </operations>
+  </Operation>
+
+</Patch>

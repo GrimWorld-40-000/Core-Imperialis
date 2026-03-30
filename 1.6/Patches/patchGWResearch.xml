@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- patchGWResearch.xml                                          -->
+<!-- Better GW Research patch.                                    -->
+<!-- Position changes use flat MayFail replaces — no FindMod      -->
+<!-- needed since defs are spread across multiple mods.           -->
+<!-- Prerequisite changes still use FindMod to gate correctly.    -->
+<!-- ============================================================ -->
+<Patch>
+
+  <Operation Class="GW_Frame.PatchOperation_GWPatch">
+    <patchName>GWResearch</patchName>
+    <operations>
+
+      <!-- ==================== Core Imperialis ==================== -->
+      <!-- FindMod kept only as a structural marker — all operations -->
+      <!-- moved to flat section below for reliable application      -->
+	  
+      <!-- MOVED TO OWN PATCH <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Core Imperialis</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/researchViewX</xpath>
+              <value><researchViewX>0.00</researchViewX></value>
+            </li>
+          </operations>
+        </match>
+      </li> -->
+
+
+      <!-- ==================== Vehicle Framework ==================== -->
+      <!-- Prereq (CodexAstartes on GW_VehiclesOfGrimworld) handled in C# via LongEventHandler -->
+      <!-- Positions use flat MayFail replaces — these work because GW_VehiclesOfGrimworld      -->
+      <!-- is a GW Core def; the VF loadFolders defs below also apply flat.                     -->
+
+      <!-- GW_VehiclesOfGrimworld → require Imperium Materials + Codex Astartes (GW Core def — XML timing OK) -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_VehiclesOfGrimworld"]/prerequisites</xpath>
+        <value><li>GW_GrimworldMaterials</li></value>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_VehiclesOfGrimworld"]/prerequisites</xpath>
+        <value><li MayRequire="HappyPurging.AgeofDarkness">GW_SM_CodexAstartes</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/researchViewY</xpath>
+        <value><researchViewY>0.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_VehiclesOfGrimworld"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_VehiclesOfGrimworld"]/researchViewY</xpath>
+        <value><researchViewY>0.80</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandVehicleResearch"]</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryLightVehicleResearch"]</xpath>
+        <value><researchViewX>9.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryLightVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryMediumVehicleResearch"]</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryMediumVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryHeavyVehicleResearch"]</xpath>
+        <value><researchViewX>11.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryHeavyVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryEliteVehicleResearch"]</xpath>
+        <value><researchViewX>12.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryEliteVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryTitanicVehicleResearch"]</xpath>
+        <value><researchViewX>13.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialLandMilitaryTitanicVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.00</researchViewY></value>
+      </li>
+
+      <!-- Air vehicle X positions — must patch abstract parents since concrete defs inherit X from them -->
+      <li Class="PatchOperationReplace" MayFail="true"> <!-- basic air -->
+        <xpath>Defs/ResearchProjectDef[@Name="GW_Tier1AirVehicleResearch"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true"> <!-- advanced air -->
+        <xpath>Defs/ResearchProjectDef[@Name="GW_Tier2AirMilitaryVehicleResearch"]/researchViewX</xpath>
+        <value><researchViewX>11.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true"> <!-- ultimate air -->
+        <xpath>Defs/ResearchProjectDef[@Name="GW_Tier3AirMilitaryVehicleResearch"]/researchViewX</xpath>
+        <value><researchViewX>12.00</researchViewX></value>
+      </li>
+
+      <!-- Air vehicle Y positions — concrete defs define researchViewY themselves → Replace works fine -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialAirVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.60</researchViewY></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialAirMilitaryVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.70</researchViewY></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_ImperialAirMilitaryEliteVehicleResearch"]/researchViewY</xpath>
+        <value><researchViewY>0.70</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/researchViewY</xpath>
+        <value><researchViewY>0.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedGrimworldMaterials"]/researchViewX</xpath>
+        <value><researchViewX>7.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedGrimworldMaterials"]/researchViewY</xpath>
+        <value><researchViewY>0.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_DrugProduction"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_DrugProduction"]/researchViewY</xpath>
+        <value><researchViewY>1.80</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaReactor"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaReactor"]/researchViewY</xpath>
+        <value><researchViewY>4.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Cogitator"]/researchViewX</xpath>
+        <value><researchViewX>7.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Cogitator"]/researchViewY</xpath>
+        <value><researchViewY>4.80</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_RepairBench"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_RepairBench"]/researchViewY</xpath>
+        <value><researchViewY>4.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Chainswords"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Chainswords"]/researchViewY</xpath>
+        <value><researchViewY>5.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PowerMeleeWeapons"]/researchViewX</xpath>
+        <value><researchViewX>3.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PowerMeleeWeapons"]/researchViewY</xpath>
+        <value><researchViewY>5.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]/researchViewY</xpath>
+        <value><researchViewY>3.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_MeltaWeapons"]/researchViewX</xpath>
+        <value><researchViewX>3.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_MeltaWeapons"]/researchViewY</xpath>
+        <value><researchViewY>4.30</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Launchers"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Launchers"]/researchViewY</xpath>
+        <value><researchViewY>4.80</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Flamers"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Flamers"]/researchViewY</xpath>
+        <value><researchViewY>4.30</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Bolters"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Bolters"]/researchViewY</xpath>
+        <value><researchViewY>4.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedBolters"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedBolters"]/researchViewY</xpath>
+        <value><researchViewY>4.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Autoguns"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Autoguns"]/researchViewY</xpath>
+        <value><researchViewY>4.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_BasicImperiumDefense"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_BasicImperiumDefense"]/researchViewY</xpath>
+        <value><researchViewY>0.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ImperiumDefense"]/researchViewX</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ImperiumDefense"]/researchViewY</xpath>
+        <value><researchViewY>0.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_BlastDoors"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_BlastDoors"]/researchViewY</xpath>
+        <value><researchViewY>0.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/researchViewX</xpath>
+        <value><researchViewX>1.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TacticaImperium"]/researchViewY</xpath>
+        <value><researchViewY>2.40</researchViewY></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_MilitariumArmor"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_MilitariumArmor"]/researchViewY</xpath>
+        <value><researchViewY>3.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_RegimentsOfRenown"]/researchViewX</xpath>
+        <value><researchViewX>3.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_RegimentsOfRenown"]/researchViewY</xpath>
+        <value><researchViewY>3.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_OfficersOfAM"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_OfficersOfAM"]/researchViewY</xpath>
+        <value><researchViewY>2.00</researchViewY></value>
+      </li>
+	  
+      <!-- ==================== More ==================== -->
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_DeathKorpsOfKrieg"]</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_DeathKorpsOfKrieg"]/researchViewY</xpath>
+        <value><researchViewY>2.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Catachan"]</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Catachan"]/researchViewY</xpath>
+        <value><researchViewY>2.60</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TallarnDesertRaiders"]</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TallarnDesertRaiders"]/researchViewY</xpath>
+        <value><researchViewY>1.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Mordian"]</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Mordian"]/researchViewY</xpath>
+        <value><researchViewY>3.80</researchViewY></value>
+      </li>
+      <!-- GW_AM_Mordian — reduce cost to 1000 -->
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Mordian"][not(baseCost)]</xpath>
+        <value><baseCost>1000</baseCost></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Mordian"]/baseCost</xpath>
+        <value><baseCost>1000</baseCost></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ElysianDropTroopers"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ElysianDropTroopers"]/researchViewY</xpath>
+        <value><researchViewY>2.70</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Valhallan"]</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_Valhallan"]/researchViewY</xpath>
+        <value><researchViewY>3.30</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_CadianShockTroops"]</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_CadianShockTroops"]/researchViewY</xpath>
+        <value><researchViewY>3.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_VostoyanFirstborn"]</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_VostoyanFirstborn"]/researchViewY</xpath>
+        <value><researchViewY>3.80</researchViewY></value>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_VostoyanFirstborn"][not(baseCost)]</xpath>
+        <value><baseCost>1000</baseCost></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_VostoyanFirstborn"]/baseCost</xpath>
+        <value><baseCost>1000</baseCost></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_SteelLegion"]</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_SteelLegion"]/researchViewY</xpath>
+        <value><researchViewY>4.30</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TempestusScions"]</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_TempestusScions"]/researchViewY</xpath>
+        <value><researchViewY>3.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_LuciferBlack"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_LuciferBlack"]/researchViewY</xpath>
+        <value><researchViewY>3.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Tanith1st"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Tanith1st"]/researchViewY</xpath>
+        <value><researchViewY>2.10</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_IF_CommonStuff"]/researchViewX</xpath>
+        <value><researchViewX>2.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_IF_CommonStuff"]/researchViewY</xpath>
+        <value><researchViewY>1.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_IF_RoyalStuff"]/researchViewX</xpath>
+        <value><researchViewX>4.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_IF_RoyalStuff"]/researchViewY</xpath>
+        <value><researchViewY>1.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GoldenThrone"]/researchViewX</xpath>
+        <value><researchViewX>7.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GoldenThrone"]/researchViewY</xpath>
+        <value><researchViewY>1.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_CodexAstartes"]/researchViewX</xpath>
+        <value><researchViewX>5.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_CodexAstartes"]/researchViewY</xpath>
+        <value><researchViewY>1.50</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesFabrication"]/researchViewX</xpath>
+        <value><researchViewX>6.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesFabrication"]/researchViewY</xpath>
+        <value><researchViewY>1.50</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Jump_Packs"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Jump_Packs"]/researchViewY</xpath>
+        <value><researchViewY>1.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesBasicShields"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesBasicShields"]/researchViewY</xpath>
+        <value><researchViewY>2.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesLight"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesLight"]/researchViewY</xpath>
+        <value><researchViewY>1.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesMedium"]/researchViewX</xpath>
+        <value><researchViewX>9.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesMedium"]/researchViewY</xpath>
+        <value><researchViewY>1.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesHeavy"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_AstartesHeavy"]/researchViewY</xpath>
+        <value><researchViewY>1.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Ultarmarines"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Ultarmarines"]/researchViewY</xpath>
+        <value><researchViewY>2.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_DarkAngels"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_DarkAngels"]/researchViewY</xpath>
+        <value><researchViewY>2.70</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_NightLord"]/researchViewX</xpath>
+        <value><researchViewX>11.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_NightLord"]/researchViewY</xpath>
+        <value><researchViewY>1.40</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Salamander"]/researchViewX</xpath>
+        <value><researchViewX>11.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Salamander"]/researchViewY</xpath>
+        <value><researchViewY>2.00</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_CustodesFabrication"]/researchViewX</xpath>
+        <value><researchViewX>8.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_CustodesFabrication"]/researchViewY</xpath>
+        <value><researchViewY>3.50</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_CustodesGuard"]/researchViewX</xpath>
+        <value><researchViewX>9.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_CustodesGuard"]/researchViewY</xpath>
+        <value><researchViewY>3.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_Allarus"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_Allarus"]/researchViewY</xpath>
+        <value><researchViewY>3.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_Castellan"]/researchViewX</xpath>
+        <value><researchViewX>11.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_TotE_Castellan"]/researchViewY</xpath>
+        <value><researchViewY>3.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Primarchfabrication"]/researchViewX</xpath>
+        <value><researchViewX>9.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Primarchfabrication"]/researchViewY</xpath>
+        <value><researchViewY>3.90</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Guilliman"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_Guilliman"]/researchViewY</xpath>
+        <value><researchViewY>3.70</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_LionArmor"]/researchViewX</xpath>
+        <value><researchViewX>10.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_SM_LionArmor"]/researchViewY</xpath>
+        <value><researchViewY>4.20</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_MasterForge"]/researchViewX</xpath>
+        <value><researchViewX>14.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_MasterForge"]/researchViewY</xpath>
+        <value><researchViewY>4.70</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_OneTrueArmor"]/researchViewX</xpath>
+        <value><researchViewX>15.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_OneTrueArmor"]/researchViewY</xpath>
+        <value><researchViewY>4.80</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_FirstCaptainr"]/researchViewX</xpath>
+        <value><researchViewX>15.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_FirstCaptainr"]/researchViewY</xpath>
+        <value><researchViewY>4.30</researchViewY></value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_EmperorRightHand"]/researchViewX</xpath>
+        <value><researchViewX>15.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_Rulers_EmperorRightHand"]/researchViewY</xpath>
+        <value><researchViewY>5.40</researchViewY></value>
+      </li>
+	  
+      <!-- ==================== End of ALL POSITION CHANGES ==================== -->
+      <!-- Flat MayFail replaces — no FindMod needed                     -->
+      <!-- These will silently skip if the def is not loaded             -->
+
+      <!-- GW_GeneSeeding — unlock and reposition MOVED TO OWN PATCH -->
+      <!--<li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/researchViewX</xpath>
+        <value><researchViewX>0.00</researchViewX></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/researchViewY</xpath>
+        <value><researchViewY>0.10</researchViewY></value>
+      </li>
+      <li Class="PatchOperationRemove" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]/requiredResearchBuilding</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GeneSeeding"]</xpath>
+        <value>
+          <requiredResearchBuilding MayRequire="Ludeon.RimWorld.Biotech">HiTechResearchBench</requiredResearchBuilding>
+          <requiredResearchFacilities MayRequire="Ludeon.RimWorld.Biotech">
+            <li>MultiAnalyzer</li>
+          </requiredResearchFacilities>
+        </value>
+      </li> -->
+
+
+      <!-- ==================== LABEL CHANGES ==================== -->
+
+      <!-- GW_GrimworldMaterials → Imperium Materials -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_GrimworldMaterials"]/label</xpath>
+        <value><label>Imperium Materials</label></value>
+      </li>
+
+      <!-- GW_BlastDoors → Imperium blast doors -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_BlastDoors"]/label</xpath>
+        <value><label>Imperium blast doors</label></value>
+      </li>
+      <!-- GW_BlastDoors → replace autodoor prereq with SecurityDoor if Anomaly present -->
+      <li Class="PatchOperationFindMod" MayFail="true">
+        <mods><li>Ludeon.RimWorld.Anomaly</li></mods>
+        <match Class="PatchOperationReplace" MayFail="true">
+          <xpath>Defs/ResearchProjectDef[defName="GW_BlastDoors"]/prerequisites/li[.="Autodoor"]</xpath>
+          <value><li>SecurityDoor</li></value>
+        </match>
+      </li>
+
+      <!-- GW_AM_BasicImperiumDefense — rename + description-->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_BasicImperiumDefense"]/label</xpath>
+        <value><label>Imperial Infrastructure</label></value>
+      </li>
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_BasicImperiumDefense"]/description</xpath>
+        <value><description>Study the fundamental engineering doctrines of the Imperium of Man. From coils of barbed wire to prefabricated strongpoints, the Imperium has spent ten thousand years perfecting the art of turning any ground into a fortress. This knowledge forms the backbone of all Imperial defensive construction.</description></value>
+      </li>
+
+      <!-- GW_AM_ImperiumDefense — description -->
+      <li Class="PatchOperationReplace" MayFail="true">
+        <xpath>Defs/ResearchProjectDef[defName="GW_AM_ImperiumDefense"]/description</xpath>
+        <value><description>Apply the full weight of Imperial military engineering to your defenses. Where lesser armies dig foxholes, the Imperium builds cathedrals of war — towering bastions, interlocking fields of fire, and kill zones consecrated in the blood of those foolish enough to assault them.</description></value>
+      </li>
+
+
+      <!-- Hide AdvancedBolters and PlasmaWeapons when Angels of Death is not present -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>Grimworld 40,000 - Angels of Death</li></mods>
+        <nomatch Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ResearchProjectDef[defName="GW_AdvancedBolters"]</xpath>
+              <value><requiredResearchBuilding>MPI_ModMissing_AngelsOfDeath</requiredResearchBuilding></value>
+            </li>
+            <li Class="PatchOperationAdd" MayFail="true">
+              <xpath>Defs/ResearchProjectDef[defName="GW_PlasmaWeapons"]</xpath>
+              <value><requiredResearchBuilding>MPI_ModMissing_AngelsOfDeath</requiredResearchBuilding></value>
+            </li>
+          </operations>
+        </nomatch>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>
