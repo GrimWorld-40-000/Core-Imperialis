@@ -53,6 +53,7 @@
                 <DoorOpenSpeed>0.8</DoorOpenSpeed>
                 <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
             </statFactors>
+			<isAirtight>true</isAirtight> <!-- PATCHED -->
         </stuffProps>
     </ThingDef>
 
@@ -111,6 +112,7 @@
                 <DoorOpenSpeed>1.7</DoorOpenSpeed>
                 <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
             </statFactors>
+			<isAirtight>true</isAirtight> <!-- PATCHED -->
         </stuffProps>
     </ThingDef>
 
@@ -168,6 +170,7 @@
                 <DoorOpenSpeed>2</DoorOpenSpeed>
                 <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
             </statFactors>
+			<isAirtight>true</isAirtight> <!-- PATCHED -->
         </stuffProps>
     </ThingDef>
 

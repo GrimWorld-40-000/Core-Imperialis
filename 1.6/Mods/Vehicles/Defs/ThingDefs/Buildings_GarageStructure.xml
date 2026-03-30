@@ -25,7 +25,7 @@
 		<drawerType>RealtimeOnly</drawerType>
 		<building>
 			<isInert>true</isInert>
-			<isAirtight>True</isAirtight>
+			<isStuffableAirtight>true</isStuffableAirtight> <!-- Fixed capitilazition / when metallic = airtight, should be inherited -->
 			<canPlaceOverWall>true</canPlaceOverWall>
 			<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
 			<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
@@ -82,6 +82,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 
@@ -122,6 +123,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 
@@ -162,6 +164,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 
@@ -214,6 +217,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 
@@ -266,6 +270,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 
@@ -318,6 +323,7 @@
 		<designationCategory IsNull="True"/>
 		<building>
 			<isAirtight>false</isAirtight>
+			<isStuffableAirtight>false</isStuffableAirtight> <!-- added in case needed -->
 		</building>
 	</ThingDef>
 </Defs>

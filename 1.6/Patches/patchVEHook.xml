@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================ -->
+<!-- patchVEHook.xml                                              -->
+<!-- Vanilla Expanded + GW Hook Patch.                            -->
+<!-- Gates GW items behind Vanilla Expanded research when the     -->
+<!-- relevant VE mods are loaded alongside GW mods.               -->
+<!-- Organized by GW mod, with nested FindMod checks for each VE  -->
+<!-- mod. Controlled by the VEHook toggle in MPI settings.        -->
+<!-- ============================================================ -->
+<Patch>
+
+  <Operation Class="GW_Frame.PatchOperation_GWPatch">
+    <patchName>VEHook</patchName>
+    <operations>
+
+      <!-- ==================== Hammer of the Imperium ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Hammer of the Imperium</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Vanilla Apparel Expanded ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Vanilla Apparel Expanded</li></mods>
+              <match Class="PatchOperationSequence">
+                <operations>
+
+                  <!-- Cadian fatigues, fieldcap, officer uniform, gorgets → VAE_MilitaryClothing -->
+                  <!-- <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Fatigues"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li> -->
+                  <!-- <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_FatiguesGreen"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li> -->
+                  <!-- <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderFatigues"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li> -->
+                  <!-- <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_Fieldcap"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li> -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_OfficerGorget"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CommissarGorget"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Cadian jumpsuit → VAE_WorkAttire -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_Cadian_CrewJumpsuit"]</xpath>
+                    <value><researchPrerequisites><li>VAE_WorkAttire</li></researchPrerequisites></value>
+                  </li>
+
+                  <!-- Valhallan officer cap + officer ushanka → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_AM_Valhallan_OfficerCap"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_AM_Valhallan_OfficerUshanka"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Cadian officer uniform → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_CadianCommanderFatigues"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Tallarn officer headwrap → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_AM_TDR_OfficerHeadwrap"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+
+                  <!-- Cadian backpacks -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_BattlelineBackpack"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Kasrkin backpacks -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_MedicalBackpack"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_VoxBackpack"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+
+                </operations>
+              </match>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- ==================== Regiments of Renown ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Regiments of Renown</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Vanilla Apparel Expanded ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Vanilla Apparel Expanded</li></mods>
+              <match Class="PatchOperationSequence">
+                <operations>
+
+                  <!-- Scion beret + fatigues → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_ROR_TempestusScion_Beret"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="ODZ_40k_IM_TempestusScion_Fatigues"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Catachan vest → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_ROR_CatachanOuter"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Valhallan officer greatcoat → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Valhallan_OfficerGreatCoat"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- Kasrkin medicae backpack + vox backpack → handled in HoI VAE block -->
+
+                </operations>
+              </match>
+            </li>
+
+            <!-- ===== Vanilla Armour Expanded ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Vanilla Armour Expanded</li></mods>
+              <match Class="PatchOperationSequence">
+                <operations>
+
+                  <!-- Tanith ghillie suit → VAE_MlitaryCamouflage (typo is correct, matches mod source) -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_ROR_Tanith1stGhili"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MlitaryCamouflage</li></researchPrerequisites></value>
+                  </li>
+
+                </operations>
+              </match>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+      <!-- GW_AM_OfficersOfAM → require VAE_MilitaryClothing if Vanilla Apparel Expanded present -->
+      <li Class="PatchOperationFindMod" MayFail="true">
+        <mods><li>Vanilla Apparel Expanded</li></mods>
+        <match Class="PatchOperationAdd" MayFail="true">
+          <xpath>Defs/ResearchProjectDef[defName="GW_AM_OfficersOfAM"]/prerequisites</xpath>
+          <value><li>VAE_MilitaryClothing</li></value>
+        </match>
+      </li>
+	  
+      <!-- ==================== Dead Men of Krieg ==================== -->
+      <li Class="PatchOperationFindMod">
+        <mods><li>GrimWorld 40,000 - Dead Men</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Vanilla Apparel Expanded ===== -->
+            <li Class="PatchOperationFindMod" MayFail="true">
+              <mods><li>Vanilla Apparel Expanded</li></mods>
+              <match Class="PatchOperationSequence">
+                <operations>
+
+                  <!-- DK officer greatcoat → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegOfficerUniform"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- DK webbing → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegBelt"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+                  <!-- DK engineer webbing → VAE_MilitaryClothing -->
+                  <li Class="PatchOperationAdd" MayFail="true">
+                    <xpath>Defs/ThingDef[defName="GW_HOI_DM_KriegEngineerPack"]</xpath>
+                    <value><researchPrerequisites><li>VAE_MilitaryClothing</li></researchPrerequisites></value>
+                  </li>
+
+                </operations>
+              </match>
+            </li>
+
+          </operations>
+        </match>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>
