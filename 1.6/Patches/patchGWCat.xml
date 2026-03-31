@@ -112,6 +112,12 @@
               <value><designationCategory>Misc</designationCategory></value>
             </li>
 
+            <!-- Indoctrination Chamber → Misc (same category as cryptosleep caskets) -->
+            <li Class="PatchOperationReplace" MayFail="true">
+              <xpath>Defs/ThingDef[defName="IndoctrinationChamber"]/designationCategory</xpath>
+              <value><designationCategory>Misc</designationCategory></value>
+            </li>
+
             <!-- Remove GrimworldCategory -->
             <li Class="PatchOperationRemove" MayFail="true">
               <xpath>Defs/DesignationCategoryDef[defName="GrimworldCategory"]</xpath>
