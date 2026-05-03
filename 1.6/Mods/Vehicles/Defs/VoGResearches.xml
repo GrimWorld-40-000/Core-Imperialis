@@ -177,7 +177,7 @@
 			<li>GW_ImperialLandMilitaryLightVehicleResearch</li>
 		</prerequisites>
 		<researchViewY>0.00</researchViewY>
-	</ResearchProjectDef>0
+	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_Tier4LandMilitaryVehicleResearch">
 		<defName>GW_ImperialLandMilitaryHeavyVehicleResearch</defName>
