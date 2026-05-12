@@ -387,4 +387,72 @@
             <HP_Ceramite>20</HP_Ceramite>
         </products>
     </RecipeDef>
+
+    <RecipeDef>
+        <defName>GW_ExtractMetalFromSlag</defName>
+        <label>smelt metal from slag</label>
+        <description>Use the furnace's intense heat to extract useful metal from slag chunks.</description>
+        <jobString>Smelting metal from slag.</jobString>
+        <workAmount>348</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkSlagSteel</li>
+                        <li>ChunkMechanoidSlag</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <Steel>15</Steel>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkSlagSteel</li>
+                <li>ChunkMechanoidSlag</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>GW_Furnace</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>GW_ExtractMetalFromSlagBulk</defName>
+        <label>smelt metal from slag x3</label>
+        <description>Use the furnace's intense heat to extract useful metal from several slag chunks at once.</description>
+        <jobString>Smelting metal from slag x3.</jobString>
+        <workAmount>1044</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkSlagSteel</li>
+                        <li>ChunkMechanoidSlag</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <Steel>60</Steel>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkSlagSteel</li>
+                <li>ChunkMechanoidSlag</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>GW_Furnace</li>
+        </recipeUsers>
+    </RecipeDef>
 </Defs>
