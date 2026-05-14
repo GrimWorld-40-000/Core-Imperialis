@@ -8,17 +8,18 @@
 		<maxSeverity>1</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="GW40kHediffAura.HediffCompProperties_AuraAndMote">
-				<!-- <allyOrNeutralHediff>GW40k_SS_InspiringAura_Reciever</allyOrNeutralHediff> -->
-				<!-- <hostileHediff>GW40k_SS_InspiringAura_Reciever</hostileHediff> -->
-				<ownerFactionHediff>GW40k_SS_InspiringAura_Reciever</ownerFactionHediff>
-				<affectWearer>false</affectWearer>
-				<severityPerTrigger>1</severityPerTrigger>
-				<tickInterval>120</tickInterval>
-				<radius>5</radius>
-				<mote>GW40k_SS_Aura</mote>
-				<uiIconEnabled>UI/Icon-PowerGuilliman-Active</uiIconEnabled>
-				<uiIconDisabled>UI/Icon-PowerGuilliman-Inactive</uiIconDisabled>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>5</range>
+				<mote>GW40k_SS_InspiringAuraMote</mote>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<canTargetSubhumans>false</canTargetSubhumans>
+				</targetingParameters>
+				<hediff>GW40k_SS_InspiringAura_Reciever</hediff>
+				<initialSeverity>1</initialSeverity>
+				<onlyPawnsInSameFaction>true</onlyPawnsInSameFaction>
 			</li>
 		</comps>
 		<stages>
@@ -38,14 +39,13 @@
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<showRemainingTime>true</showRemainingTime>
-				<disappearsAfterTicks>2500</disappearsAfterTicks>
+				<showRemainingTime>false</showRemainingTime>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<statFactors>
-					<MoveSpeed>1.3</MoveSpeed>
+					<MoveSpeed>1.14</MoveSpeed>
 					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
 					<RestFallRateFactor>1.2</RestFallRateFactor>
 					<MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
